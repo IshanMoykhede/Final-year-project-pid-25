@@ -3,8 +3,8 @@ from supabase import create_client, Client
 from dotenv import load_dotenv
 import logging
 
-# Ensure env variables are loaded before accessing them
-load_dotenv()
+# Ensure env variables are loaded before accessing them and override cached ones
+load_dotenv(override=True)
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
