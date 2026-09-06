@@ -259,3 +259,33 @@ async def delete_file(
                 "message": str(e)
             }
         )
+
+# -----------------------------------
+# TEMP TESTING ROUTE
+# -----------------------------------
+from app.services.ocr_service import process_document
+
+@router.get("/test-ocr/{file_id}")
+async def test_ocr_route(
+    file_id: str,
+    current_user=Depends(get_current_user)
+):
+    """
+    TEMPORARY ROUTE: Used to test LlamaParse output directly in the browser.
+    """
+    try:
+        # Note: In a real app we'd verify ownership here too!
+        result = process_document(file_id)
+        
+        return {
+            "success": True,
+            "data": result
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "success": False,
+                "message": str(e)
+            }
+        )
