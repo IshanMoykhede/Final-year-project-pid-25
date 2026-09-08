@@ -1,11 +1,14 @@
 import os
 import tempfile
+import logging
 
 from llama_cloud import LlamaCloud
 from app.core.supabase import connectSupa
 
+logger = logging.getLogger(__name__)
 
 def process_document(file_id: str):
+    logger.info(f"Starting OCR processing for file_id: {file_id}")
 
     supabase = connectSupa()
 
@@ -50,12 +53,14 @@ def process_document(file_id: str):
         )
 
         # Upload file to LlamaCloud
+        logger.info(f"Uploading file_id: {file_id} to LlamaCloud")
         llama_file = client.files.create(
             file=temp_path,
             purpose="parse"
         )
 
         # Parse document
+        logger.info(f"Parsing document for file_id: {file_id} (LlamaCloud File ID: {llama_file.id})")
         result = client.parsing.parse(
             file_id=llama_file.id,
             tier="agentic",
@@ -63,20 +68,30 @@ def process_document(file_id: str):
             expand=["markdown_full", "text_full", "items"]
         )
 
-        # Update database with raw markdown
+        # Safely convert the entire result to a dict first to avoid serialization errors
+        result_dict = result.model_dump() if hasattr(result, "model_dump") else result.dict() if hasattr(result, "dict") else {}
+        raw_items_list = result_dict.get("items", [])
+        
         (
             supabase
             .table("files")
-            .update({"raw_markdown": result.markdown_full or ""})
+            .update({
+                "raw_items": raw_items_list
+            })
             .eq("id", file_id)
             .execute()
         )
+        logger.info(f"Successfully stored {len(raw_items_list)} OCR items for file_id: {file_id}")
 
         return {
             "markdown": result.markdown_full or "",
             "text": result.text_full or "",
             "raw_llama_json": getattr(result, "items", [])
         }
+        
+    except Exception as e:
+        logger.exception(f"OCR processing failed for file_id: {file_id}")
+        raise
 
     finally:
         # Delete temporary file

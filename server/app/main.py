@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from app.core.supabase import connectSupa
+from app.core.logging import setup_logging
 from app.router.auth import router as auth_router
 from app.router.file_upload import router as file_upload_router
+
+# Initialize central logging configuration once
+setup_logging()
 
 app = FastAPI(title="Legal-do-ai API")
 

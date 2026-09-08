@@ -1,8 +1,11 @@
 from fastapi import APIRouter, UploadFile, File, Depends, HTTPException
 from uuid import uuid4
+import logging
 
 from app.core.supabase import connectSupa
 from app.dependencies.auth import get_current_user
+
+logger = logging.getLogger(__name__)
 
 
 router = APIRouter(
@@ -42,6 +45,8 @@ async def upload_file(
     try:
         user_id = str(current_user["id"])
         file_id = str(uuid4())
+        
+        logger.info(f"Received file upload request from user: {user_id}. Generated file_id: {file_id}")
 
         extension = file.filename.split(".")[-1]
         storage_path = f"{user_id}/{file_id}.{extension}"
@@ -66,6 +71,8 @@ async def upload_file(
             "content_type": file.content_type,
             "status": "uploaded"
         }).execute()
+        
+        logger.info(f"Successfully uploaded and stored database record for file_id: {file_id}")
 
         return {
             "success": True,
@@ -77,6 +84,7 @@ async def upload_file(
         }
 
     except Exception as e:
+        logger.exception(f"File upload failed for user {current_user.get('id')}")
         raise HTTPException(
             status_code=500,
             detail={
@@ -275,12 +283,48 @@ async def test_ocr_route(
     """
     try:
         # Note: In a real app we'd verify ownership here too!
+        logger.info(f"Starting OCR test route for file_id: {file_id}")
         result = process_document(file_id)
+        logger.info(f"Completed OCR test route for file_id: {file_id}")
         
         return {
             "success": True,
             "data": result
         }
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "success": False,
+                "message": str(e)
+            }
+        )
+
+
+# -----------------------------------
+# TEMP TESTING ROUTE: CHUNKING
+# -----------------------------------
+from app.services.chunking_service import chunk_document
+
+@router.get("/test-chunk/{file_id}")
+async def test_chunk_route(
+    file_id: str,
+    current_user=Depends(get_current_user)
+):
+    """
+    TEMPORARY ROUTE: Runs chunking on a file and returns first 7 chunks.
+    """
+    try:
+        logger.info(f"Starting chunk test route for file_id: {file_id}")
+        chunks = chunk_document(file_id)
+        logger.info(f"Completed chunk test route for file_id: {file_id}")
+
+        return {
+            "success": True,
+            "total_chunks": len(chunks),
+            "sample_chunks": chunks[:7]
+        }
+
     except Exception as e:
         raise HTTPException(
             status_code=500,
