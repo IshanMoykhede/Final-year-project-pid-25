@@ -333,3 +333,57 @@ async def test_chunk_route(
                 "message": str(e)
             }
         )
+
+# -----------------------------------
+# TEMP TESTING ROUTE: CLASSIFICATION
+# -----------------------------------
+from app.services.classification_service import process_document_classification
+
+@router.get("/test-classify/{file_id}")
+async def test_classify_route(
+    file_id: str,
+    current_user=Depends(get_current_user)
+):
+    """
+    TEMPORARY ROUTE: Runs batch classification and alias generation on chunks.
+    """
+    try:
+        logger.info(f"Starting classification test route for file_id: {file_id}")
+        result = process_document_classification(file_id)
+        logger.info(f"Completed classification test route for file_id: {file_id}")
+
+        return result
+
+    except Exception as e:
+        logger.exception(f"Classification failed for {file_id}")
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "success": False,
+                "message": str(e)
+            }
+        )
+
+# -----------------------------------
+# THE MAIN PIPELINE ROUTE (SSE)
+# -----------------------------------
+from fastapi.responses import StreamingResponse
+from app.services.pipeline_service import preprocess_document_sse
+
+@router.get("/preprocess/{file_id}")
+async def run_preprocessing_pipeline(
+    file_id: str,
+    current_user=Depends(get_current_user)
+):
+    """
+    Runs the entire preprocessing pipeline (OCR -> Chunking -> Classification -> Linking)
+    as a Server-Sent Events (SSE) stream. This keeps the frontend connection alive for minutes
+    and streams progress updates.
+    """
+    logger.info(f"Starting SSE Preprocessing pipeline for file_id: {file_id}")
+    
+    # We return a StreamingResponse that consumes the async generator
+    return StreamingResponse(
+        preprocess_document_sse(file_id),
+        media_type="text/event-stream"
+    )

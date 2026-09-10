@@ -41,7 +41,7 @@ def chunk_document(file_id: str):
     #         into one big list so we can loop
     #         through them in order
     # -----------------------------------------
-
+    logger.info("[CHUNKING_SERVICE] Flattening document pages into a list of items...")
     all_items = []
 
     # raw_items can be a dict with "pages" key or a list of pages
@@ -60,6 +60,8 @@ def chunk_document(file_id: str):
             # Tag each item with its page number so we can track it
             item["_page_number"] = page_number
             all_items.append(item)
+
+    logger.info(f"[CHUNKING_SERVICE] Successfully flattened {len(all_items)} total structural items (paragraphs, tables, headings).")
 
     # -----------------------------------------
     # STEP 3: Walk through all items and chunk

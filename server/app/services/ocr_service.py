@@ -28,6 +28,7 @@ def process_document(file_id: str):
         raise ValueError("File not found")
 
     # Download file from Supabase Storage
+    logger.info(f"[OCR_SERVICE] Downloading file {file['file_name']} from Supabase Storage...")
     file_data = (
         supabase
         .storage
@@ -48,25 +49,27 @@ def process_document(file_id: str):
 
     try:
         # Connect to LlamaCloud
+        logger.info("[OCR_SERVICE] Authenticating with LlamaCloud...")
         client = LlamaCloud(
             api_key=os.getenv("LLAMA_CLOUD_API_KEY")
         )
 
         # Upload file to LlamaCloud
-        logger.info(f"Uploading file_id: {file_id} to LlamaCloud")
+        logger.info(f"[OCR_SERVICE] Uploading {file['file_name']} to LlamaCloud servers...")
         llama_file = client.files.create(
             file=temp_path,
             purpose="parse"
         )
 
         # Parse document
-        logger.info(f"Parsing document for file_id: {file_id} (LlamaCloud File ID: {llama_file.id})")
+        logger.info(f"[OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...")
         result = client.parsing.parse(
             file_id=llama_file.id,
             tier="agentic",
             version="latest",
             expand=["markdown_full", "text_full", "items"]
         )
+        logger.info("[OCR_SERVICE] LlamaCloud parsing complete! Extracting data...")
 
         # Safely convert the entire result to a dict first to avoid serialization errors
         result_dict = result.model_dump() if hasattr(result, "model_dump") else result.dict() if hasattr(result, "dict") else {}

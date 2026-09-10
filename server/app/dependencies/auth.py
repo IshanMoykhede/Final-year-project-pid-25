@@ -1,56 +1,75 @@
-from fastapi import Request, Depends, HTTPException, status
+from fastapi import Request, HTTPException
 from app.core.supabase import connectSupa
 
+
 def get_current_user(request: Request):
-    """
-    Dependency to extract the JWT token from cookies,
-    verify it with Supabase Auth, and return the user profile.
-    """
-    # Look for the token in cookies (assuming you named the cookie 'access_token')
+
+    # Get token from cookie
     token = request.cookies.get("access_token")
-    
+
     if not token:
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Not authenticated. Missing access_token cookie."
+            status_code=401,
+            detail={
+                "success": False,
+                "message": "Authentication token not found"
+            }
         )
-        
+
     supabase = connectSupa()
-    
+
     if not supabase:
         raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Database connection failed"
+            status_code=500,
+            detail={
+                "success": False,
+                "message": "Failed to connect to Supabase"
+            }
         )
-    
+
     try:
-        # 1. Verify token and get the user from Supabase Auth
-        auth_response = supabase.auth.get_user(token)
-        auth_user = auth_response.user
-        
-        if not auth_user:
+        # Verify token and get authenticated user
+        user = supabase.auth.get_user(token).user
+
+        if not user:
             raise HTTPException(
-                status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid authentication token",
-                headers={"WWW-Authenticate": "Bearer"},
+                status_code=401,
+                detail={
+                    "success": False,
+                    "message": "Invalid or expired token"
+                }
             )
-            
-        # 2. Fetch the user's profile from the 'profiles' table
-        profile_response = supabase.table("profiles").select("*").eq("id", auth_user.id).single().execute()
-        profile_data = profile_response.data
-        
-        if not profile_data:
-            # If for some reason they are in Auth but not in profiles table
+
+        # Get user's profile
+        profile = (
+            supabase
+            .table("profiles")
+            .select("*")
+            .eq("id", user.id)
+            .single()
+            .execute()
+        )
+
+        if not profile.data:
             raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="User profile not found in database"
+                status_code=404,
+                detail={
+                    "success": False,
+                    "message": "User profile not found"
+                }
             )
-            
-        return profile_data
+
+        # Return current user's profile
+        return profile.data
+
+    except HTTPException:
+        raise
 
     except Exception as e:
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail=f"Not authenticated: {str(e)}",
-            headers={"WWW-Authenticate": "Bearer"},
+            status_code=401,
+            detail={
+                "success": False,
+                "message": f"Authentication failed: {str(e)}"
+            }
         )

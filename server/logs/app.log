@@ -8,3 +8,670 @@
 2026-09-08 14:01:58,039 | INFO | root | Centralized logging system initialized
 2026-09-08 14:04:37,461 | root | INFO | Centralized logging system initialized!
 2026-09-08 14:04:39,564 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:40:50,502 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:41:30,383 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 400 Bad Request"
+2026-09-09 18:42:26,631 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-09 18:42:55,750 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:42:57,188 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:42:57,189 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:42:57,189 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:42:58,790 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:43:03,060 | app.services.chunkBatching | INFO | Grouped 41 chunks into 1 batches.
+2026-09-09 18:43:03,060 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (41 chunks)
+2026-09-09 18:43:03,238 | groq._base_client | INFO | Retrying request to /openai/v1/chat/completions in 0.387566 seconds
+2026-09-09 18:43:03,702 | groq._base_client | INFO | Retrying request to /openai/v1/chat/completions in 0.943718 seconds
+2026-09-09 18:43:04,833 | app.services.classification_service | ERROR | Error during LLM batch analysis: Connection error.
+2026-09-09 18:43:04,833 | app.services.classification_service | INFO | Saving classification and aliases to database...
+2026-09-09 18:43:04,833 | app.services.classification_service | INFO | Classification process complete for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:43:04,833 | app.router.file_upload | INFO | Completed classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:45:20,192 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:45:22,949 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:48:31,893 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:48:33,028 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:48:33,028 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:48:33,028 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:48:34,480 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:48:34,603 | app.services.chunkBatching | INFO | Grouped 41 chunks into 1 batches.
+2026-09-09 18:48:34,603 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (41 chunks)
+2026-09-09 18:48:34,930 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-09-09 18:48:34,931 | app.router.file_upload | ERROR | Classification failed for 804e2c53-ba3c-4186-b0a8-03aba1226153
+Traceback (most recent call last):
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\router\file_upload.py", line 352, in test_classify_route
+    result = process_document_classification(file_id)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 91, in process_document_classification
+    results = analyze_batch(batch)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 48, in analyze_batch
+    response = groq_client.chat.completions.create(
+        # Using the 120b model as requested!
+    ...<6 lines>...
+        temperature=0.0
+    )
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\resources\chat\completions.py", line 466, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-09-09 18:48:57,460 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:48:58,007 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:48:58,009 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:48:58,009 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:48:59,174 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:48:59,181 | app.services.chunkBatching | INFO | Grouped 41 chunks into 1 batches.
+2026-09-09 18:48:59,181 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (41 chunks)
+2026-09-09 18:48:59,622 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-09-09 18:48:59,623 | app.router.file_upload | ERROR | Classification failed for 804e2c53-ba3c-4186-b0a8-03aba1226153
+Traceback (most recent call last):
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\router\file_upload.py", line 352, in test_classify_route
+    result = process_document_classification(file_id)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 91, in process_document_classification
+    results = analyze_batch(batch)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 48, in analyze_batch
+    response = groq_client.chat.completions.create(
+        # Using the 120b model as requested!
+    ...<6 lines>...
+        temperature=0.0
+    )
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\resources\chat\completions.py", line 466, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-09-09 18:49:57,040 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:49:59,687 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:50:19,917 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:50:20,785 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:50:20,787 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:50:20,787 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:50:22,231 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:50:22,357 | app.services.chunkBatching | INFO | Grouped 41 chunks into 1 batches.
+2026-09-09 18:50:22,358 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (41 chunks)
+2026-09-09 18:50:31,245 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 18:50:31,259 | app.services.classification_service | INFO | Saving classification and aliases to database...
+2026-09-09 18:50:32,568 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:50:33,049 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.2c0b7485-4d5a-4863-b2da-7f6ab38f53f8 "HTTP/2 200 OK"
+2026-09-09 18:50:33,054 | app.services.classification_service | INFO | Classification process complete for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:50:33,054 | app.router.file_upload | INFO | Completed classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:51:35,643 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:51:46,965 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:52:23,732 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:52:26,784 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:52:26,787 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:52:26,787 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:52:30,017 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:52:30,154 | app.services.chunkBatching | INFO | Grouped 41 chunks into 1 batches.
+2026-09-09 18:52:30,154 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (41 chunks)
+2026-09-09 18:52:32,059 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 413 Payload Too Large"
+2026-09-09 18:52:32,061 | app.router.file_upload | ERROR | Classification failed for 804e2c53-ba3c-4186-b0a8-03aba1226153
+Traceback (most recent call last):
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\router\file_upload.py", line 352, in test_classify_route
+    result = process_document_classification(file_id)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 97, in process_document_classification
+    results = analyze_batch(batch)
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\classification_service.py", line 54, in analyze_batch
+    response = groq_client.chat.completions.create(
+        # Using the 120b model as requested!
+    ...<6 lines>...
+        temperature=0.0
+    )
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\resources\chat\completions.py", line 466, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `openai/gpt-oss-120b` in organization `org_01knc61qk7e1kabcx646xzj3a7` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 8869, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-09-09 18:53:12,111 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:53:14,749 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:53:42,458 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 18:53:43,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 18:53:43,246 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:53:43,246 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:53:44,863 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 18:53:44,985 | app.services.chunkBatching | INFO | Grouped 41 chunks into 3 batches.
+2026-09-09 18:53:44,986 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (12 chunks)
+2026-09-09 18:53:49,854 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 18:53:49,862 | app.services.classification_service | INFO | Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-09 18:53:59,863 | app.services.classification_service | INFO | Saving classification and aliases to database...
+2026-09-09 18:54:00,535 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:01,050 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.18197a47-b165-4148-978f-8b2ad017f833 "HTTP/2 200 OK"
+2026-09-09 18:54:01,337 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:01,845 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.a9d458d4-6363-44ca-a159-8c5a1592bc96 "HTTP/2 200 OK"
+2026-09-09 18:54:02,137 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:02,646 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.4fb84b61-ed2a-423e-8af8-934c5560b9b2 "HTTP/2 200 OK"
+2026-09-09 18:54:03,145 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 18:54:03,416 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.7a897ea4-c373-41f9-8415-c34a40534169 "HTTP/2 200 OK"
+2026-09-09 18:54:03,737 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:04,063 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:04,277 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.59680481-6700-4d67-8175-c6244d1e7c6a "HTTP/2 200 OK"
+2026-09-09 18:54:04,541 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:04,858 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:05,178 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:05,497 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:05,685 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-09 18:54:05,977 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 18:54:06,296 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.3952255b-fb03-44a2-9286-8e69857aee06 "HTTP/2 200 OK"
+2026-09-09 18:54:06,878 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 18:54:07,096 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.874daf50-2358-47ee-967f-3c366ea28f16 "HTTP/2 200 OK"
+2026-09-09 18:54:07,642 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 18:54:08,147 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.4f6fb688-34f5-40e3-81bc-6dbe599afd16 "HTTP/2 200 OK"
+2026-09-09 18:54:08,376 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:09,022 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.216293b1-ad9f-4fe5-b8cb-1d7570907d23 "HTTP/2 200 OK"
+2026-09-09 18:54:09,220 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-09 18:54:09,416 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.cdb1b8b2-8711-4c77-b180-09b2c4f69933 "HTTP/2 200 OK"
+2026-09-09 18:54:09,659 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:09,978 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.033fd00a-ab12-4841-9383-faf017fb2c8a "HTTP/2 200 OK"
+2026-09-09 18:54:10,166 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-09 18:54:10,457 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.cc0c55d1-db5a-415b-a36a-1a4e99f438b4 "HTTP/2 200 OK"
+2026-09-09 18:54:10,457 | app.services.classification_service | INFO | Classification process complete for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:54:10,457 | app.router.file_upload | INFO | Completed classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 18:54:46,419 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:54:57,923 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:55:06,588 | root | INFO | Centralized logging system initialized!
+2026-09-09 18:55:09,264 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:06:32,773 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:06:35,570 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:06:38,231 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:06:44,721 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:08:31,183 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 19:08:32,670 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1a3b67c8-8bbe-40d3-9523-4de215672cd6 "HTTP/2 200 OK"
+2026-09-09 19:08:32,674 | app.router.file_upload | INFO | Starting classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 19:08:32,674 | app.services.classification_service | INFO | Starting classification for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 19:08:34,169 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 19:08:34,300 | app.services.chunkBatching | INFO | Grouped 41 chunks into 4 batches.
+2026-09-09 19:08:34,300 | app.services.classification_service | INFO | Processing TEST batch 1 of 1 (15 chunks)
+2026-09-09 19:08:39,567 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-09 19:08:39,576 | app.services.classification_service | INFO | Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-09 19:08:49,576 | app.services.classification_service | INFO | Saving classification and aliases to database...
+2026-09-09 19:08:50,404 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:50,769 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.a9d458d4-6363-44ca-a159-8c5a1592bc96 "HTTP/2 200 OK"
+2026-09-09 19:08:51,278 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:51,477 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.59680481-6700-4d67-8175-c6244d1e7c6a "HTTP/2 200 OK"
+2026-09-09 19:08:52,048 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:52,564 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.874daf50-2358-47ee-967f-3c366ea28f16 "HTTP/2 200 OK"
+2026-09-09 19:08:52,754 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:53,003 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.4f6fb688-34f5-40e3-81bc-6dbe599afd16 "HTTP/2 200 OK"
+2026-09-09 19:08:53,505 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:53,702 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.216293b1-ad9f-4fe5-b8cb-1d7570907d23 "HTTP/2 200 OK"
+2026-09-09 19:08:54,203 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:54,694 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.eb2a686f-7cfc-440e-80d1-f8f35c021994 "HTTP/2 200 OK"
+2026-09-09 19:08:55,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:55,566 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.09b77aee-9a2d-415c-8a7a-d777037c347b "HTTP/2 200 OK"
+2026-09-09 19:08:55,768 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:55,977 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.cbb50072-391c-4d11-ad7b-d06078403516 "HTTP/2 200 OK"
+2026-09-09 19:08:56,185 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-09 19:08:56,381 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.6c3b5d57-04b5-40f3-9888-4a4e8abd031b "HTTP/2 200 OK"
+2026-09-09 19:08:56,685 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:56,905 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.033fd00a-ab12-4841-9383-faf017fb2c8a "HTTP/2 200 OK"
+2026-09-09 19:08:57,120 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:57,647 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.cc0c55d1-db5a-415b-a36a-1a4e99f438b4 "HTTP/2 200 OK"
+2026-09-09 19:08:58,160 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-09 19:08:58,371 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.4002b467-2293-4757-a67a-86c462a3d972 "HTTP/2 200 OK"
+2026-09-09 19:08:58,590 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:58,798 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.39ca1783-a23e-440a-9391-0f4ee0e9a113 "HTTP/2 200 OK"
+2026-09-09 19:08:59,008 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:59,245 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.6c1164c4-bc83-491b-a458-7c2d06f2a61f "HTTP/2 200 OK"
+2026-09-09 19:08:59,491 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Work+Culture "HTTP/2 200 OK"
+2026-09-09 19:08:59,724 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.0cdb57a9-b0c7-4521-98a2-e44da7eb825a "HTTP/2 200 OK"
+2026-09-09 19:08:59,725 | app.services.classification_service | INFO | Classification process complete for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 19:08:59,727 | app.services.linking_service | INFO | Starting cross-reference resolution for document_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 19:09:01,325 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Caliases&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153 "HTTP/2 200 OK"
+2026-09-09 19:09:01,572 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=id%2Creference_text&document_id=eq.804e2c53-ba3c-4186-b0a8-03aba1226153&link_type=eq.AI_SUGGESTED "HTTP/2 200 OK"
+2026-09-09 19:09:01,572 | app.services.linking_service | INFO | Found 6 AI_SUGGESTED references to resolve.
+2026-09-09 19:09:01,803 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.8e8abd54-beba-41b2-abc2-3b4a156f57bc "HTTP/2 200 OK"
+2026-09-09 19:09:02,123 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.74f20f52-a583-48c0-af39-511992880ab7 "HTTP/2 200 OK"
+2026-09-09 19:09:02,448 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.ed451acc-b408-4341-890f-35a032ef3e04 "HTTP/2 200 OK"
+2026-09-09 19:09:02,767 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.98d6b78c-7dab-44e8-bd1a-c0628a7b89d7 "HTTP/2 200 OK"
+2026-09-09 19:09:02,968 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.f69a24f2-2eeb-4e6c-87a4-77e6e84c0147 "HTTP/2 200 OK"
+2026-09-09 19:09:03,245 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.78c20339-5621-49aa-a64d-984282a59376 "HTTP/2 200 OK"
+2026-09-09 19:09:03,245 | app.services.linking_service | INFO | Resolution complete: 0 EXACT_MATCH, 6 UNRESOLVED.
+2026-09-09 19:09:03,245 | app.router.file_upload | INFO | Completed classification test route for file_id: 804e2c53-ba3c-4186-b0a8-03aba1226153
+2026-09-09 19:20:36,519 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:20:39,254 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:20:41,968 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:24:33,225 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:24:36,302 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:30:08,549 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:30:11,503 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:21,716 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:24,382 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:36,478 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:38,956 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:51,317 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:33:53,913 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:38:17,345 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:38:20,179 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:38:37,481 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:42:18,386 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:42:43,234 | root | INFO | Centralized logging system initialized!
+2026-09-09 19:49:38,751 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/signup "HTTP/2 422 Unprocessable Entity"
+2026-09-09 19:49:47,550 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/signup "HTTP/2 422 Unprocessable Entity"
+2026-09-09 19:59:33,747 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/signup "HTTP/2 200 OK"
+2026-09-09 19:59:35,148 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles "HTTP/2 403 Forbidden"
+2026-09-09 20:00:03,354 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-09 20:05:26,577 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:05:27,787 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:05:34,899 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:05:36,152 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:06:00,625 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-09 20:07:06,578 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:07:07,666 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:09:12,745 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/signup "HTTP/2 422 Unprocessable Entity"
+2026-09-09 20:09:38,293 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-09 20:09:53,748 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:09:54,579 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:10:10,228 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:10:11,187 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:10:14,877 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-09 20:10:15,824 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-09 20:11:17,248 | root | INFO | Centralized logging system initialized!
+2026-09-09 20:11:19,835 | root | INFO | Centralized logging system initialized!
+2026-09-10 17:31:11,612 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-10 17:31:19,892 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-10 17:31:22,548 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.477e3c9b-abe7-4728-9344-f430a7866913 "HTTP/2 406 Not Acceptable"
+2026-09-10 17:36:19,316 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/signup "HTTP/2 200 OK"
+2026-09-10 17:36:21,833 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles "HTTP/2 201 Created"
+2026-09-10 17:36:50,426 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-10 17:37:12,271 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-10 17:37:14,288 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.06fea894-cf1b-4c80-8841-785654d8761d "HTTP/2 200 OK"
+2026-09-10 17:37:14,290 | app.router.file_upload | INFO | Received file upload request from user: 06fea894-cf1b-4c80-8841-785654d8761d. Generated file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:37:17,269 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/06fea894-cf1b-4c80-8841-785654d8761d/242b451f-c178-4b64-827b-ed35ea096765.pdf "HTTP/2 200 OK"
+2026-09-10 17:37:19,317 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files "HTTP/2 201 Created"
+2026-09-10 17:37:19,318 | app.router.file_upload | INFO | Successfully uploaded and stored database record for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:39:18,135 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-10 17:39:19,934 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.06fea894-cf1b-4c80-8841-785654d8761d "HTTP/2 200 OK"
+2026-09-10 17:39:19,936 | app.router.file_upload | INFO | Starting SSE Preprocessing pipeline for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:39:21,164 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:39:21,165 | app.services.pipeline_service | INFO | [PIPELINE - OCR] PROCESSING: Starting OCR with LlamaParse...
+2026-09-10 17:39:21,718 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:39:21,720 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:21,721 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:39:23,627 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:39:23,628 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file Commercial_Office_Lease_Agreement (1).pdf from Supabase Storage...
+2026-09-10 17:39:25,773 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/06fea894-cf1b-4c80-8841-785654d8761d/242b451f-c178-4b64-827b-ed35ea096765.pdf "HTTP/2 200 OK"
+2026-09-10 17:39:26,040 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-10 17:39:26,471 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading Commercial_Office_Lease_Agreement (1).pdf to LlamaCloud servers...
+2026-09-10 17:39:26,735 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:31,604 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-10 17:39:31,609 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-10 17:39:31,741 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:32,149 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-10 17:39:33,499 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:35,807 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:36,757 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:39,299 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:41,766 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:44,511 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:46,769 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:50,531 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:51,780 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:56,784 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:39:56,857 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt "HTTP/1.1 200 OK"
+2026-09-10 17:39:57,728 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-vg28kdvvarcj7hxyzall3h76embt?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-10 17:39:58,389 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-10 17:39:59,652 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:39:59,692 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:40:02,535 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:02,578 | app.services.pipeline_service | INFO | [PIPELINE - OCR] COMPLETED: OCR successful
+2026-09-10 17:40:03,143 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:03,144 | app.services.pipeline_service | INFO | [PIPELINE - CHUNKING] PROCESSING: Chunking document text...
+2026-09-10 17:40:03,968 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:04,013 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:04,015 | app.services.chunking_service | INFO | Starting chunking process for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:40:07,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=raw_items&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:07,249 | app.services.chunking_service | INFO | [CHUNKING_SERVICE] Flattening document pages into a list of items...
+2026-09-10 17:40:07,249 | app.services.chunking_service | INFO | [CHUNKING_SERVICE] Successfully flattened 93 total structural items (paragraphs, tables, headings).
+2026-09-10 17:40:07,249 | app.services.chunking_service | INFO | Generated 26 chunks for document_id: 242b451f-c178-4b64-827b-ed35ea096765. Storing to database...
+2026-09-10 17:40:07,576 | httpx | INFO | HTTP Request: DELETE https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:08,166 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?columns=%22bbox%22%2C%22document_id%22%2C%22text%22%2C%22chunk_no%22%2C%22classification_id%22 "HTTP/2 201 Created"
+2026-09-10 17:40:08,173 | app.services.chunking_service | INFO | Successfully stored 26 chunks in database for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:40:09,650 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:09,689 | app.services.pipeline_service | INFO | [PIPELINE - CHUNKING] COMPLETED: Chunking successful
+2026-09-10 17:40:10,184 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:10,185 | app.services.pipeline_service | INFO | [PIPELINE - CLASSIFICATION] PROCESSING: Classifying chunks & resolving links...
+2026-09-10 17:40:11,021 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:11,044 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:11,045 | app.services.classification_service | INFO | Starting classification for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:40:12,694 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:40:12,705 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Initializing TikToken Engine to pack 26 chunks into 2000-token batches...
+2026-09-10 17:40:13,062 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Successfully packed 26 chunks into 3 optimal batches!
+2026-09-10 17:40:13,062 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 1 of 3 to Groq (openai/gpt-oss-120b). Processing 10 chunks...
+2026-09-10 17:40:16,048 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:17,171 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 17:40:17,199 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Batch 1 complete! Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-10 17:40:21,054 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:26,067 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:27,200 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 2 of 3 to Groq (openai/gpt-oss-120b). Processing 12 chunks...
+2026-09-10 17:40:31,071 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:32,839 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 17:40:32,844 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Batch 2 complete! Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-10 17:40:36,073 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:41,083 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:42,845 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 3 of 3 to Groq (openai/gpt-oss-120b). Processing 4 chunks...
+2026-09-10 17:40:45,130 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 17:40:45,133 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] All batches complete. Saving 26 classified chunks to Supabase...
+2026-09-10 17:40:46,080 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:46,094 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:46,769 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.44fe6e72-38d8-44d3-9078-02ef1b25bce1 "HTTP/2 200 OK"
+2026-09-10 17:40:47,093 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:47,692 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e793b8f3-4162-42f5-9f42-6ce4e25b539c "HTTP/2 200 OK"
+2026-09-10 17:40:47,907 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-10 17:40:48,170 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.b6a9466d-f453-46e2-836b-153430f3fb36 "HTTP/2 200 OK"
+2026-09-10 17:40:48,386 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:48,586 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:49,102 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.830f92d6-f259-40f6-85f7-88e172d66013 "HTTP/2 200 OK"
+2026-09-10 17:40:49,288 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:49,490 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:49,690 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:40:49,892 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.72a8f26f-fcd8-4ee7-b02f-c82d52aa5780 "HTTP/2 200 OK"
+2026-09-10 17:40:50,095 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:50,271 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:50,974 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1e8cc038-170e-4f47-bf01-1b393f25f866 "HTTP/2 200 OK"
+2026-09-10 17:40:51,110 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:51,175 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-10 17:40:51,647 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bfb0eef5-dcee-4f9c-96f5-f01b1c7f0e5b "HTTP/2 200 OK"
+2026-09-10 17:40:51,850 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:52,031 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:52,372 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-10 17:40:52,811 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1ce71309-c929-457b-938f-593cea0a91c4 "HTTP/2 200 OK"
+2026-09-10 17:40:53,010 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:53,275 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Financial "HTTP/2 200 OK"
+2026-09-10 17:40:53,477 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e34c8bc7-f5c4-43b4-82d1-bde6079b063b "HTTP/2 200 OK"
+2026-09-10 17:40:53,937 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:54,294 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.847146e2-9b6c-4e61-8b3b-3d0e2f80b980 "HTTP/2 200 OK"
+2026-09-10 17:40:54,612 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:54,877 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:55,056 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.8450e24f-8100-4565-ace9-5aac49a2ce8f "HTTP/2 200 OK"
+2026-09-10 17:40:55,255 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:55,684 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.c0dc1875-a30c-4402-918a-678400a264f7 "HTTP/2 200 OK"
+2026-09-10 17:40:55,898 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Liability "HTTP/2 200 OK"
+2026-09-10 17:40:56,104 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.ffa5479a-bac6-47f9-b745-298c11d8b6b5 "HTTP/2 200 OK"
+2026-09-10 17:40:56,117 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:40:56,315 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Liability "HTTP/2 200 OK"
+2026-09-10 17:40:56,531 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.49f497b8-cf83-4b28-89c5-62d0e8c18c73 "HTTP/2 200 OK"
+2026-09-10 17:40:56,851 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:57,173 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:57,416 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-10 17:40:57,629 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Liability "HTTP/2 200 OK"
+2026-09-10 17:40:57,825 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.d1a2c6f8-e1b2-4073-a924-6515533adcd7 "HTTP/2 200 OK"
+2026-09-10 17:40:58,002 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:40:58,347 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1f2a14cd-8840-4505-8f7a-32f448766282 "HTTP/2 200 OK"
+2026-09-10 17:40:58,611 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:40:58,896 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.7f080a84-afb6-4112-96e7-49c91247fd82 "HTTP/2 200 OK"
+2026-09-10 17:40:59,100 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:40:59,411 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bc8e29a6-d223-454e-83bb-19d3d72d230f "HTTP/2 200 OK"
+2026-09-10 17:40:59,620 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:40:59,823 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e9983221-7239-44b5-97d9-aa91177f5243 "HTTP/2 200 OK"
+2026-09-10 17:41:00,055 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:41:00,314 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.023b0e19-c0b8-4838-a870-e46b77a6b38b "HTTP/2 200 OK"
+2026-09-10 17:41:00,529 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:41:00,718 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.524aa0f9-e877-4538-82a1-ffaeaef6953b "HTTP/2 200 OK"
+2026-09-10 17:41:00,899 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:41:01,124 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:41:01,203 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.0f05cdc3-8425-4832-be2b-96661463a743 "HTTP/2 200 OK"
+2026-09-10 17:41:01,380 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:41:01,650 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.52eb0054-3014-49cf-b59c-f00d16af02ec "HTTP/2 200 OK"
+2026-09-10 17:41:01,972 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Termination "HTTP/2 200 OK"
+2026-09-10 17:41:02,176 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.07599ef6-fb3a-4dc7-a853-48ca9c340f20 "HTTP/2 200 OK"
+2026-09-10 17:41:02,416 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:41:02,804 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.3f57761d-96f1-42a6-8719-383529e868ef "HTTP/2 200 OK"
+2026-09-10 17:41:03,032 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-10 17:41:03,239 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.db1da8d4-4822-41d6-8b26-a6843cddf97c "HTTP/2 200 OK"
+2026-09-10 17:41:03,241 | app.services.classification_service | INFO | Classification process complete for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:41:03,246 | app.services.linking_service | INFO | Starting cross-reference resolution for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 17:41:04,516 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Caliases&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:41:04,897 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=id%2Creference_text&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765&link_type=eq.AI_SUGGESTED "HTTP/2 200 OK"
+2026-09-10 17:41:04,898 | app.services.linking_service | INFO | Found 11 AI_SUGGESTED references to resolve.
+2026-09-10 17:41:05,172 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.1ecf3186-8e37-4861-a94a-6d1f905b01d7 "HTTP/2 200 OK"
+2026-09-10 17:41:05,425 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.6e5822c5-5496-49e6-8258-97f6146a35c2 "HTTP/2 200 OK"
+2026-09-10 17:41:05,654 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.ef47eb8a-1f5f-48d8-93bf-faff852dad71 "HTTP/2 200 OK"
+2026-09-10 17:41:05,975 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.eb7155cb-7cee-495d-8ea1-d96227a6eafe "HTTP/2 200 OK"
+2026-09-10 17:41:06,129 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 17:41:06,320 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.47f85450-4e30-431d-b63f-0aacd3f76cc5 "HTTP/2 200 OK"
+2026-09-10 17:41:06,517 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.67abd865-4ca4-4666-8de3-d83b80402af1 "HTTP/2 200 OK"
+2026-09-10 17:41:06,771 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.cf3c60b1-3873-4ff4-910b-6931f26de2be "HTTP/2 200 OK"
+2026-09-10 17:41:07,099 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.32e81589-e932-4cf4-b373-fb35213c3106 "HTTP/2 200 OK"
+2026-09-10 17:41:07,411 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.d4d4f980-ec03-4b8c-8b72-b9a0a542e3c4 "HTTP/2 200 OK"
+2026-09-10 17:41:08,176 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.ba910b05-1671-4f0a-9179-afc87f3e226c "HTTP/2 200 OK"
+2026-09-10 17:41:08,534 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.f1acbba4-75da-478e-8a11-a4edebe89325 "HTTP/2 200 OK"
+2026-09-10 17:41:08,535 | app.services.linking_service | INFO | Resolution complete: 7 EXACT_MATCH, 4 UNRESOLVED.
+2026-09-10 17:41:11,494 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:41:11,511 | app.services.pipeline_service | INFO | [PIPELINE - CLASSIFICATION] COMPLETED: Classification and Linking successful
+2026-09-10 17:41:11,733 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 17:41:11,735 | app.services.pipeline_service | INFO | [PIPELINE - PIPELINE] COMPLETED: All preprocessing steps finished successfully!
+2026-09-10 18:00:41,803 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:00:50,522 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:39:03,604 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:39:14,047 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:40:43,993 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:40:57,955 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:41:08,605 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:01,724 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:08,340 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:15,421 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:27,206 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:42,122 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:42:53,224 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:06,555 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:20,468 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:30,308 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:40,030 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:49,678 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:43:59,318 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:44:07,134 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:46:17,877 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:46:27,983 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:46:37,687 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:47:16,108 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:47:24,469 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:47:32,098 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:47:54,516 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:48:09,007 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:48:19,113 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:48:28,953 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:50:12,977 | root | INFO | Centralized logging system initialized!
+2026-09-10 18:53:54,961 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 403 Forbidden"
+2026-09-10 18:55:32,759 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-10 18:55:40,274 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-10 18:55:43,512 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.06fea894-cf1b-4c80-8841-785654d8761d "HTTP/2 200 OK"
+2026-09-10 18:55:43,514 | app.router.file_upload | INFO | Starting SSE Preprocessing pipeline for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 18:55:48,142 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:55:48,670 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:55:48,904 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:55:49,954 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:55:49,955 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] PROCESSING: Generating semantic vectors for Agentic RAG...
+2026-09-10 18:55:50,604 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:56:51,130 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace model...
+2026-09-10 18:56:51,138 | sentence_transformers.base.model | INFO | No device provided, using cpu
+2026-09-10 18:56:53,295 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/agent-harnesses "HTTP/1.1 200 OK"
+2026-09-10 18:56:53,613 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:53,614 | huggingface_hub.utils._http | WARNING | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-10 18:56:53,665 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:53,755 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:54,082 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:54,154 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:54,280 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:54,322 | sentence_transformers.base.model | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-09-10 18:56:54,620 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:54,691 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:54,939 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:55,035 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2FREADME.md=&etag=%2244af2e3b0fa3a0b6239e48422972bf755f28fde0%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:55,108 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2FREADME.md=&etag=%2244af2e3b0fa3a0b6239e48422972bf755f28fde0%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:55,470 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:55,558 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:55,903 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:56,159 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%2259d594003bf59880a884c574bf88ef7555bb0202%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:56,333 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%2259d594003bf59880a884c574bf88ef7555bb0202%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:56,760 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:56:57,022 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:56:57,201 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:57,375 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 18:56:57,864 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-09-10 18:56:59,310 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/xet-read-token/1110a243fdf4706b3f48f1d95db1a4f5529b4d41 "HTTP/1.1 200 OK"
+2026-09-10 18:57:27,387 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:27,667 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:27,926 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:28,199 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:28,475 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:28,541 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:28,612 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:28,918 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:28,972 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:29,252 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:29,305 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:29,598 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:29,672 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:29,953 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:30,243 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 18:57:30,506 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:30,572 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/vocab.txt?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:30,660 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/vocab.txt?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fvocab.txt=&etag=%22fb140275c155a9c7c5a3b3e0e77a9e839594a938%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:31,069 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:31,156 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer.json=&etag=%22cb202bfe2e3c98645018a6d12f182a434c9d3e02%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:31,246 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer.json=&etag=%22cb202bfe2e3c98645018a6d12f182a434c9d3e02%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:31,726 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:32,009 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/special_tokens_map.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:32,076 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/special_tokens_map.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fspecial_tokens_map.json=&etag=%22e7b0375001f109a6b8873d756ad4f7bbb15fbaa5%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:32,163 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/special_tokens_map.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fspecial_tokens_map.json=&etag=%22e7b0375001f109a6b8873d756ad4f7bbb15fbaa5%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:32,545 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:33,007 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 18:57:33,075 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%22d1514c3162bbe87b343f565fadc62e6c06f04f03%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:33,150 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%22d1514c3162bbe87b343f565fadc62e6c06f04f03%22 "HTTP/1.1 200 OK"
+2026-09-10 18:57:33,452 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-10 18:57:33,725 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-09-10 18:57:33,736 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 18:57:33,739 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Starting embedding generation for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 18:57:37,634 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Caliases%2Cclassification_id&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:57:37,641 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Found 26 chunks. Formatting rich context strings...
+2026-09-10 18:57:38,137 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-10 18:57:38,748 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 18:57:40,393 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Vectors generated. Saving to Supabase...
+2026-09-10 18:57:43,760 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 18:57:44,330 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?columns=%22embedding%22%2C%22id%22 "HTTP/2 400 Bad Request"
+2026-09-10 18:57:44,332 | app.services.embedding_service | ERROR | [EMBEDDING_SERVICE] Failed to save embeddings: {'message': 'null value in column "document_id" of relation "chunks" violates not-null constraint', 'code': '23502', 'hint': None, 'details': 'Failing row contains (830f92d6-f259-40f6-85f7-88e172d66013, null, null, null, null, null, 2026-09-10 13:27:44.273083+00, [], [0.07683587,0.040498745,0.022978697,-0.019570934,0.024497613,0.0...).'}
+Traceback (most recent call last):
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\embedding_service.py", line 77, in generate_embeddings
+    .execute()
+     ~~~~~~~^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': 'null value in column "document_id" of relation "chunks" violates not-null constraint', 'code': '23502', 'hint': None, 'details': 'Failing row contains (830f92d6-f259-40f6-85f7-88e172d66013, null, null, null, null, null, 2026-09-10 13:27:44.273083+00, [], [0.07683587,0.040498745,0.022978697,-0.019570934,0.024497613,0.0...).'}
+2026-09-10 18:57:52,240 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:57:52,312 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] COMPLETED: Semantic vectors successfully generated
+2026-09-10 18:57:54,026 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 18:57:54,027 | app.services.pipeline_service | INFO | [PIPELINE - PIPELINE] COMPLETED: All preprocessing steps finished successfully!
+2026-09-10 19:02:40,376 | root | INFO | Centralized logging system initialized!
+2026-09-10 19:03:45,177 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-10 19:03:48,278 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.06fea894-cf1b-4c80-8841-785654d8761d "HTTP/2 200 OK"
+2026-09-10 19:03:48,280 | app.router.file_upload | INFO | Starting SSE Preprocessing pipeline for file_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 19:03:52,699 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:03:53,377 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:03:53,992 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:03:54,717 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:03:54,719 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] PROCESSING: Generating semantic vectors for Agentic RAG...
+2026-09-10 19:03:55,064 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:04:11,065 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace model...
+2026-09-10 19:04:11,067 | sentence_transformers.base.model | INFO | No device provided, using cpu
+2026-09-10 19:04:12,315 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:12,316 | huggingface_hub.utils._http | WARNING | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-09-10 19:04:12,395 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:12,665 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:12,726 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:12,728 | sentence_transformers.base.model | INFO | Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-09-10 19:04:12,997 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:13,071 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config_sentence_transformers.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig_sentence_transformers.json=&etag=%22fd1b291129c607e5d49799f87cb219b27f98acdf%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:13,321 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:13,387 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/README.md?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2FREADME.md=&etag=%2244af2e3b0fa3a0b6239e48422972bf755f28fde0%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:13,639 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:13,706 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/modules.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fmodules.json=&etag=%22952a9b81c0bfd99800fabf352f69c7ccd46c5e43%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:13,963 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:14,027 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/sentence_bert_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fsentence_bert_config.json=&etag=%2259d594003bf59880a884c574bf88ef7555bb0202%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:14,290 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:14,572 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:14,654 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:15,294 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:15,564 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:15,821 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:16,091 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:16,377 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:16,463 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:16,836 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:16,905 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:17,182 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:17,244 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Fconfig.json=&etag=%2272b987fd805cfa2b58c4c8c952b274a11bfd5a00%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:17,517 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:17,584 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/tokenizer_config.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2Ftokenizer_config.json=&etag=%22c79f2b6a0cea6f4b564fed1938984bace9d30ff0%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:17,875 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:18,156 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-09-10 19:04:18,477 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-09-10 19:04:18,549 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/1_Pooling%2Fconfig.json?%2Fsentence-transformers%2Fall-MiniLM-L6-v2%2Fresolve%2Fmain%2F1_Pooling%2Fconfig.json=&etag=%22d1514c3162bbe87b343f565fadc62e6c06f04f03%22 "HTTP/1.1 200 OK"
+2026-09-10 19:04:18,816 | httpx | INFO | HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-09-10 19:04:19,184 | httpx | INFO | HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-09-10 19:04:19,189 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 19:04:19,191 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Starting embedding generation for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-10 19:04:21,030 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Caliases%2Cclassification_id&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:04:21,032 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Found 26 chunks. Formatting rich context strings...
+2026-09-10 19:04:21,265 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-10 19:04:21,975 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.830f92d6-f259-40f6-85f7-88e172d66013 "HTTP/2 200 OK"
+2026-09-10 19:04:22,360 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.72a8f26f-fcd8-4ee7-b02f-c82d52aa5780 "HTTP/2 200 OK"
+2026-09-10 19:04:23,175 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1e8cc038-170e-4f47-bf01-1b393f25f866 "HTTP/2 200 OK"
+2026-09-10 19:04:24,193 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 19:04:24,304 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1ce71309-c929-457b-938f-593cea0a91c4 "HTTP/2 200 OK"
+2026-09-10 19:04:24,966 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.847146e2-9b6c-4e61-8b3b-3d0e2f80b980 "HTTP/2 200 OK"
+2026-09-10 19:04:25,576 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.8450e24f-8100-4565-ace9-5aac49a2ce8f "HTTP/2 200 OK"
+2026-09-10 19:04:26,267 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.ffa5479a-bac6-47f9-b745-298c11d8b6b5 "HTTP/2 200 OK"
+2026-09-10 19:04:26,574 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.d1a2c6f8-e1b2-4073-a924-6515533adcd7 "HTTP/2 200 OK"
+2026-09-10 19:04:26,995 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1f2a14cd-8840-4505-8f7a-32f448766282 "HTTP/2 200 OK"
+2026-09-10 19:04:27,497 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.7f080a84-afb6-4112-96e7-49c91247fd82 "HTTP/2 200 OK"
+2026-09-10 19:04:27,956 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bc8e29a6-d223-454e-83bb-19d3d72d230f "HTTP/2 200 OK"
+2026-09-10 19:04:28,278 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e9983221-7239-44b5-97d9-aa91177f5243 "HTTP/2 200 OK"
+2026-09-10 19:04:28,614 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.44fe6e72-38d8-44d3-9078-02ef1b25bce1 "HTTP/2 200 OK"
+2026-09-10 19:04:28,959 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.0f05cdc3-8425-4832-be2b-96661463a743 "HTTP/2 200 OK"
+2026-09-10 19:04:29,209 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-10 19:04:29,313 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.52eb0054-3014-49cf-b59c-f00d16af02ec "HTTP/2 200 OK"
+2026-09-10 19:04:29,637 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.07599ef6-fb3a-4dc7-a853-48ca9c340f20 "HTTP/2 200 OK"
+2026-09-10 19:04:29,979 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.3f57761d-96f1-42a6-8719-383529e868ef "HTTP/2 200 OK"
+2026-09-10 19:04:30,410 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.db1da8d4-4822-41d6-8b26-a6843cddf97c "HTTP/2 200 OK"
+2026-09-10 19:04:30,737 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e793b8f3-4162-42f5-9f42-6ce4e25b539c "HTTP/2 200 OK"
+2026-09-10 19:04:31,141 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.b6a9466d-f453-46e2-836b-153430f3fb36 "HTTP/2 200 OK"
+2026-09-10 19:04:31,994 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bfb0eef5-dcee-4f9c-96f5-f01b1c7f0e5b "HTTP/2 200 OK"
+2026-09-10 19:04:32,337 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e34c8bc7-f5c4-43b4-82d1-bde6079b063b "HTTP/2 200 OK"
+2026-09-10 19:04:32,685 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.c0dc1875-a30c-4402-918a-678400a264f7 "HTTP/2 200 OK"
+2026-09-10 19:04:33,027 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.49f497b8-cf83-4b28-89c5-62d0e8c18c73 "HTTP/2 200 OK"
+2026-09-10 19:04:33,363 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.023b0e19-c0b8-4838-a870-e46b77a6b38b "HTTP/2 200 OK"
+2026-09-10 19:04:33,674 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.524aa0f9-e877-4538-82a1-ffaeaef6953b "HTTP/2 200 OK"
+2026-09-10 19:04:33,676 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Successfully saved 26 embeddings to the database!
+2026-09-10 19:04:34,746 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:04:34,766 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] COMPLETED: Semantic vectors successfully generated
+2026-09-10 19:04:34,990 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 19:04:34,990 | app.services.pipeline_service | INFO | [PIPELINE - PIPELINE] COMPLETED: All preprocessing steps finished successfully!
