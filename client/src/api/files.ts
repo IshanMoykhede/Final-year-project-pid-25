@@ -48,14 +48,32 @@ export const getFilePreview = async (fileId: string): Promise<GenericResponse<st
 };
 
 export const viewFile = async (fileId: string) => {
-  const response = await apiClient.get(`/file-upload/view/${fileId}`, {
-    responseType: 'blob',
-    headers: {
-      Accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/octet-stream',
-    },
-  });
+  const response = await apiClient.get<GenericResponse<{ signedUrl?: string; signedURL?: string; url?: string } | string>>(
+    `/file-upload/preview/${fileId}`
+  );
 
-  return response;
+  const previewData = response.data?.data;
+  let signedUrl = '';
+
+  if (typeof previewData === 'string') {
+    signedUrl = previewData;
+  } else if (previewData && typeof previewData === 'object') {
+    signedUrl = previewData.signedUrl || previewData.signedURL || previewData.url || '';
+  }
+
+  // Fetch the actual file blob using the temporary signed URL
+  if (signedUrl) {
+    const fileResponse = await fetch(signedUrl);
+    const blob = await fileResponse.blob();
+    return {
+      data: blob,
+      headers: {
+        'content-type': fileResponse.headers.get('content-type') || 'application/pdf',
+      },
+    };
+  }
+
+  throw new Error('Signed URL could not be generated for preview.');
 };
 
 export const deleteFile = async (fileId: string): Promise<{ success: boolean; message: string }> => {
