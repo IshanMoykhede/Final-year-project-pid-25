@@ -675,3 +675,162 @@ postgrest.exceptions.APIError: {'message': 'null value in column "document_id" o
 2026-09-10 19:04:34,766 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] COMPLETED: Semantic vectors successfully generated
 2026-09-10 19:04:34,990 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
 2026-09-10 19:04:34,990 | app.services.pipeline_service | INFO | [PIPELINE - PIPELINE] COMPLETED: All preprocessing steps finished successfully!
+2026-09-10 20:29:08,185 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:30:16,805 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:30:16,807 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] No cache found. Generating deterministic overview for 242b451f-c178-4b64-827b-ed35ea096765...
+2026-09-10 20:30:17,035 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:30:17,258 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-10 20:30:17,260 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Calling LLM (Call 1) for Document Identity...
+2026-09-10 20:30:18,103 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+2026-09-10 20:30:18,105 | app.router.analyzer | ERROR | Failed to generate overview
+Traceback (most recent call last):
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\router\analyzer.py", line 20, in get_document_overview
+    result = await generate_document_overview(file_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\app\services\overview_service.py", line 58, in generate_document_overview
+    identity_completion = groq_client.chat.completions.create(
+        model="llama-3.1-8b-instant",  # We can use the fast/cheap model for this simple task
+    ...<5 lines>...
+        temperature=0.1
+    )
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\resources\chat\completions.py", line 466, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/openai/v1/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<45 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1284, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\igmoy\OneDrive\Desktop\PID25\server\venv\Lib\site-packages\groq\_base_client.py", line 1071, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.1-8b-instant` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2026-09-10 20:30:57,582 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:34:42,837 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:35:17,547 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:35:17,549 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] No cache found. Generating deterministic overview for 242b451f-c178-4b64-827b-ed35ea096765...
+2026-09-10 20:35:17,803 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:35:18,470 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-10 20:35:18,471 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Calling LLM (Call 1) for Document Identity...
+2026-09-10 20:35:19,712 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:35:19,780 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Calling LLM (Call 2) for Roadmap...
+2026-09-10 20:35:20,378 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-10 20:35:20,380 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Overview generated successfully. Caching...
+2026-09-10 20:35:20,976 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:36:48,318 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:37:07,610 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:37:18,362 | root | INFO | Centralized logging system initialized!
+2026-09-10 20:40:49,917 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-10 20:40:49,920 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-11 15:15:01,005 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:03,651 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:06,490 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:09,134 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:34,607 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:46,440 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:48,974 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:15:51,624 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:18:23,501 | root | INFO | Centralized logging system initialized!
+2026-09-11 15:18:54,879 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-11 15:20:33,608 | app.services.classification_service | INFO | Starting classification for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-11 15:20:35,780 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-11 15:20:35,943 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Starting Dynamic Category Discovery with Rolling Batches...
+2026-09-11 15:20:35,944 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Initializing TikToken Engine to pack 26 chunks into 3500-token batches...
+2026-09-11 15:20:36,146 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Successfully packed 26 chunks into 2 optimal batches!
+2026-09-11 15:20:36,147 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Discovery Batch 1 of 2...
+2026-09-11 15:20:37,678 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 15:20:43,687 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Discovery Batch 2 of 2...
+2026-09-11 15:20:50,215 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 15:20:52,139 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&name=in.%28Rent+And+Operating+Expenses%2CSecurity+Deposit%2CNotices%2C%22Assignment%2C+Subletting%2C+And+Subordination%22%2CGeneral%2C%22Use%2C+Alterations%2C+And+Maintenance%22%2C%22Indemnification%2C+Insurance%2C+And+Default%22%2CMiscellaneous%2C%22Term%2C+Renewal%2C+And+Termination%22%29 "HTTP/2 200 OK"
+2026-09-11 15:20:52,139 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Upserting 8 new categories to global pool...
+2026-09-11 15:20:52,353 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?columns=%22name%22 "HTTP/2 201 Created"
+2026-09-11 15:20:52,354 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Final Discovered categories: ['Rent And Operating Expenses', 'Security Deposit', 'Notices', 'Assignment, Subletting, And Subordination', 'General', 'Use, Alterations, And Maintenance', 'Indemnification, Insurance, And Default', 'Miscellaneous', 'Term, Renewal, And Termination']
+2026-09-11 15:20:52,355 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Initializing TikToken Engine to pack 26 chunks into 2000-token batches...
+2026-09-11 15:20:52,357 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Successfully packed 26 chunks into 3 optimal batches!
+2026-09-11 15:20:52,358 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 1 of 3 to Groq (openai/gpt-oss-120b). Processing 12 chunks...
+2026-09-11 15:20:56,339 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 15:20:56,341 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Batch 1 complete! Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-11 15:21:06,341 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 2 of 3 to Groq (openai/gpt-oss-120b). Processing 9 chunks...
+2026-09-11 15:21:09,695 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 15:21:09,697 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Batch 2 complete! Sleeping for 10 seconds to respect Groq rate limits...
+2026-09-11 15:21:19,697 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 3 of 3 to Groq (openai/gpt-oss-120b). Processing 5 chunks...
+2026-09-11 15:21:22,163 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 15:21:22,167 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] All batches complete. Saving 26 classified chunks to Supabase...
+2026-09-11 15:21:23,027 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Use%2C+Alterations%2C+And+Maintenance "HTTP/2 200 OK"
+2026-09-11 15:21:23,532 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1e8cc038-170e-4f47-bf01-1b393f25f866 "HTTP/2 200 OK"
+2026-09-11 15:21:23,752 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 15:21:23,952 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.830f92d6-f259-40f6-85f7-88e172d66013 "HTTP/2 200 OK"
+2026-09-11 15:21:24,160 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:24,343 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:24,818 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Term%2C+Renewal%2C+And+Termination "HTTP/2 200 OK"
+2026-09-11 15:21:25,295 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.72a8f26f-fcd8-4ee7-b02f-c82d52aa5780 "HTTP/2 200 OK"
+2026-09-11 15:21:25,473 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:25,932 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Security+Deposit "HTTP/2 200 OK"
+2026-09-11 15:21:26,134 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1ce71309-c929-457b-938f-593cea0a91c4 "HTTP/2 200 OK"
+2026-09-11 15:21:26,329 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:26,523 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Use%2C+Alterations%2C+And+Maintenance "HTTP/2 200 OK"
+2026-09-11 15:21:26,985 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.847146e2-9b6c-4e61-8b3b-3d0e2f80b980 "HTTP/2 200 OK"
+2026-09-11 15:21:27,199 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:27,396 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Rent+And+Operating+Expenses "HTTP/2 200 OK"
+2026-09-11 15:21:27,641 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.8450e24f-8100-4565-ace9-5aac49a2ce8f "HTTP/2 200 OK"
+2026-09-11 15:21:27,829 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Assignment%2C+Subletting%2C+And+Subordination "HTTP/2 200 OK"
+2026-09-11 15:21:28,019 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bc8e29a6-d223-454e-83bb-19d3d72d230f "HTTP/2 200 OK"
+2026-09-11 15:21:28,212 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:28,710 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e9983221-7239-44b5-97d9-aa91177f5243 "HTTP/2 200 OK"
+2026-09-11 15:21:28,889 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:29,078 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.d1a2c6f8-e1b2-4073-a924-6515533adcd7 "HTTP/2 200 OK"
+2026-09-11 15:21:29,262 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:29,437 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.1f2a14cd-8840-4505-8f7a-32f448766282 "HTTP/2 200 OK"
+2026-09-11 15:21:29,760 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Term%2C+Renewal%2C+And+Termination "HTTP/2 200 OK"
+2026-09-11 15:21:29,972 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.7f080a84-afb6-4112-96e7-49c91247fd82 "HTTP/2 200 OK"
+2026-09-11 15:21:30,154 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Notices "HTTP/2 200 OK"
+2026-09-11 15:21:30,622 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.3f57761d-96f1-42a6-8719-383529e868ef "HTTP/2 200 OK"
+2026-09-11 15:21:30,913 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Miscellaneous "HTTP/2 200 OK"
+2026-09-11 15:21:31,249 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.db1da8d4-4822-41d6-8b26-a6843cddf97c "HTTP/2 200 OK"
+2026-09-11 15:21:31,552 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Assignment%2C+Subletting%2C+And+Subordination "HTTP/2 200 OK"
+2026-09-11 15:21:31,739 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.0f05cdc3-8425-4832-be2b-96661463a743 "HTTP/2 200 OK"
+2026-09-11 15:21:31,938 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Term%2C+Renewal%2C+And+Termination "HTTP/2 200 OK"
+2026-09-11 15:21:32,129 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.52eb0054-3014-49cf-b59c-f00d16af02ec "HTTP/2 200 OK"
+2026-09-11 15:21:32,359 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Term%2C+Renewal%2C+And+Termination "HTTP/2 200 OK"
+2026-09-11 15:21:32,552 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.07599ef6-fb3a-4dc7-a853-48ca9c340f20 "HTTP/2 200 OK"
+2026-09-11 15:21:32,740 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Rent+And+Operating+Expenses "HTTP/2 200 OK"
+2026-09-11 15:21:32,962 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.bfb0eef5-dcee-4f9c-96f5-f01b1c7f0e5b "HTTP/2 200 OK"
+2026-09-11 15:21:33,141 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:33,378 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:33,565 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Rent+And+Operating+Expenses "HTTP/2 200 OK"
+2026-09-11 15:21:33,754 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e34c8bc7-f5c4-43b4-82d1-bde6079b063b "HTTP/2 200 OK"
+2026-09-11 15:21:33,943 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Use%2C+Alterations%2C+And+Maintenance "HTTP/2 200 OK"
+2026-09-11 15:21:34,167 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.c0dc1875-a30c-4402-918a-678400a264f7 "HTTP/2 200 OK"
+2026-09-11 15:21:34,372 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:34,872 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.ffa5479a-bac6-47f9-b745-298c11d8b6b5 "HTTP/2 200 OK"
+2026-09-11 15:21:35,197 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:35,519 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.49f497b8-cf83-4b28-89c5-62d0e8c18c73 "HTTP/2 200 OK"
+2026-09-11 15:21:35,766 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Indemnification%2C+Insurance%2C+And+Default "HTTP/2 200 OK"
+2026-09-11 15:21:35,964 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.023b0e19-c0b8-4838-a870-e46b77a6b38b "HTTP/2 200 OK"
+2026-09-11 15:21:36,172 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 15:21:36,367 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.524aa0f9-e877-4538-82a1-ffaeaef6953b "HTTP/2 200 OK"
+2026-09-11 15:21:36,568 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 15:21:36,757 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.44fe6e72-38d8-44d3-9078-02ef1b25bce1 "HTTP/2 200 OK"
+2026-09-11 15:21:36,936 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 15:21:37,131 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.e793b8f3-4162-42f5-9f42-6ce4e25b539c "HTTP/2 200 OK"
+2026-09-11 15:21:37,366 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Rent+And+Operating+Expenses "HTTP/2 200 OK"
+2026-09-11 15:21:37,568 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.b6a9466d-f453-46e2-836b-153430f3fb36 "HTTP/2 200 OK"
+2026-09-11 15:21:37,908 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references "HTTP/2 201 Created"
+2026-09-11 15:21:37,908 | app.services.classification_service | INFO | Classification process complete for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-11 15:21:37,910 | app.services.linking_service | INFO | Starting cross-reference resolution for document_id: 242b451f-c178-4b64-827b-ed35ea096765
+2026-09-11 15:21:38,940 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Caliases&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765 "HTTP/2 200 OK"
+2026-09-11 15:21:39,132 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=id%2Creference_text&document_id=eq.242b451f-c178-4b64-827b-ed35ea096765&link_type=eq.AI_SUGGESTED "HTTP/2 200 OK"
+2026-09-11 15:21:39,133 | app.services.linking_service | INFO | Found 8 AI_SUGGESTED references to resolve.
+2026-09-11 15:21:39,338 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.5326fc03-e65b-4c19-ae75-ac36c2a3d4a2 "HTTP/2 200 OK"
+2026-09-11 15:21:39,536 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.806839c7-682a-4850-af44-d78677db9b1e "HTTP/2 200 OK"
+2026-09-11 15:21:39,783 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.807f5abf-70f0-402c-96cf-9f2e029ab4c0 "HTTP/2 200 OK"
+2026-09-11 15:21:39,965 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.3b07e1de-7444-4c7b-9fcc-fd7b4307a51f "HTTP/2 200 OK"
+2026-09-11 15:21:40,167 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.cf77584d-b8f0-4f95-aef0-848da0d96109 "HTTP/2 200 OK"
+2026-09-11 15:21:40,362 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.6855eca5-ba4d-49da-83c5-dd3e4e1d64f3 "HTTP/2 200 OK"
+2026-09-11 15:21:40,573 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.fd53b349-44cb-418f-84b8-d9c8ee1e9459 "HTTP/2 200 OK"
+2026-09-11 15:21:40,767 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.739d859c-ea61-4e35-92e6-95b3dbd4e262 "HTTP/2 200 OK"
+2026-09-11 15:21:40,768 | app.services.linking_service | INFO | Resolution complete: 2 EXACT_MATCH, 6 UNRESOLVED.
