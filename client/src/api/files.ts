@@ -93,3 +93,60 @@ export const processDocument = async (fileId: string): Promise<GenericResponse<O
 };
 
 export const testOcrRoute = processDocument;
+
+export interface PreprocessEvent {
+  step: string;
+  status: string;
+  message: string;
+}
+
+export const preprocessDocument = async (
+  fileId: string,
+  onEvent?: (event: PreprocessEvent) => void
+): Promise<PreprocessEvent[]> => {
+  const baseUrl = apiClient.defaults.baseURL || '';
+  const response = await fetch(`${baseUrl}/file-upload/preprocess/${fileId}`, {
+    credentials: 'include',
+  });
+
+  if (!response.ok) {
+    const detail = await response.text();
+    throw new Error(detail || `Document preprocessing failed (${response.status}).`);
+  }
+
+  if (!response.body) {
+    throw new Error('Document preprocessing did not return a progress stream.');
+  }
+
+  const events: PreprocessEvent[] = [];
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+
+  const consumeBuffer = (flush = false) => {
+    const lines = buffer.split('\n');
+    buffer = flush ? '' : lines.pop() || '';
+
+    for (const line of lines) {
+      if (!line.startsWith('data:')) continue;
+      const payload = line.slice(5).trim();
+      if (!payload) continue;
+
+      const event = JSON.parse(payload) as PreprocessEvent;
+      events.push(event);
+      onEvent?.(event);
+      if (event.status === 'error') {
+        throw new Error(event.message || `Document preprocessing failed during ${event.step.toLowerCase()}.`);
+      }
+    }
+  };
+
+  while (true) {
+    const { value, done } = await reader.read();
+    buffer += decoder.decode(value || new Uint8Array(), { stream: !done });
+    consumeBuffer(done);
+    if (done) break;
+  }
+
+  return events;
+};

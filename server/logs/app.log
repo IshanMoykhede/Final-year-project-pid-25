@@ -834,3 +834,418 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.
 2026-09-11 15:21:40,573 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.fd53b349-44cb-418f-84b8-d9c8ee1e9459 "HTTP/2 200 OK"
 2026-09-11 15:21:40,767 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.739d859c-ea61-4e35-92e6-95b3dbd4e262 "HTTP/2 200 OK"
 2026-09-11 15:21:40,768 | app.services.linking_service | INFO | Resolution complete: 2 EXACT_MATCH, 6 UNRESOLVED.
+2026-09-11 22:37:26,342 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:44:34,852 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:47:22,744 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:50:23,939 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:50:23,946 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:50:23,959 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:52:11,761 | root | INFO | Centralized logging system initialized!
+2026-09-11 22:52:20,328 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-11 22:52:21,236 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:22,169 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:23,397 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:24,624 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:26,080 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:26,365 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:30,362 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:31,193 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:31,486 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:32,615 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:33,842 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:34,151 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:35,072 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:35,923 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:36,197 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 22:52:37,628 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/4247e234-6801-4203-abd2-825c9e594215.pdf "HTTP/2 200 OK"
+2026-09-11 22:52:40,192 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:52:41,212 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:52:41,218 | app.router.file_upload | INFO | Starting OCR test route for file_id: 4247e234-6801-4203-abd2-825c9e594215
+2026-09-11 22:52:41,218 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 4247e234-6801-4203-abd2-825c9e594215
+2026-09-11 22:52:42,546 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 22:52:42,546 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file CAST.pdf from Supabase Storage...
+2026-09-11 22:52:43,662 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/4247e234-6801-4203-abd2-825c9e594215.pdf "HTTP/2 200 OK"
+2026-09-11 22:52:43,829 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 22:52:44,279 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading CAST.pdf to LlamaCloud servers...
+2026-09-11 22:52:53,208 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 22:52:53,208 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 22:52:53,809 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 22:52:55,193 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu "HTTP/1.1 200 OK"
+2026-09-11 22:52:57,681 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu "HTTP/1.1 200 OK"
+2026-09-11 22:53:01,117 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu "HTTP/1.1 200 OK"
+2026-09-11 22:53:05,490 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu "HTTP/1.1 200 OK"
+2026-09-11 22:53:10,911 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu "HTTP/1.1 200 OK"
+2026-09-11 22:53:12,038 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-akspa2b5v6nrsf2tsj2xmd25umpu?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 22:53:12,091 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 22:53:13,168 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 22:53:13,238 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 4247e234-6801-4203-abd2-825c9e594215
+2026-09-11 22:53:13,240 | app.router.file_upload | INFO | Completed OCR test route for file_id: 4247e234-6801-4203-abd2-825c9e594215
+2026-09-11 22:54:29,806 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:54:31,403 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:54:33,242 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 22:54:33,242 | app.services.chat_service | INFO | Answering question for document_id: 4247e234-6801-4203-abd2-825c9e594215. 1-Hop Expansion: True
+2026-09-11 22:54:34,719 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 22:55:04,169 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 22:55:05,296 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 22:55:06,760 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 22:55:06,762 | app.services.chat_service | INFO | Answering question for document_id: 4247e234-6801-4203-abd2-825c9e594215. 1-Hop Expansion: False
+2026-09-11 22:55:09,085 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:00:09,226 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:10,568 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:11,068 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:12,106 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:13,624 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:14,244 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:21,257 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:22,541 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:22,543 | app.router.file_upload | INFO | Received file upload request from user: 1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea. Generated file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:00:23,994 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:00:25,084 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files "HTTP/2 201 Created"
+2026-09-11 23:00:25,084 | app.router.file_upload | INFO | Successfully uploaded and stored database record for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:00:26,558 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:26,740 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:28,378 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:28,381 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:28,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 23:00:29,093 | httpx | INFO | HTTP Request: DELETE https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files "HTTP/2 200 OK"
+2026-09-11 23:00:29,502 | httpx | INFO | HTTP Request: DELETE https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.4247e234-6801-4203-abd2-825c9e594215 "HTTP/2 200 OK"
+2026-09-11 23:00:29,945 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:32,679 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:33,528 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:33,762 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:34,685 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:35,545 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:35,852 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:36,979 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:37,914 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:38,615 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:00:39,232 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:00:41,178 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:00:42,099 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:00:42,130 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:00:42,130 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:00:43,332 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:00:43,332 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:00:45,199 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:00:45,273 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:00:45,704 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:00:48,653 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:00:48,653 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:00:49,370 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:00:50,903 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:00:53,278 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:00:56,652 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:01:01,038 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:01:06,468 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:01:07,390 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:01:07,402 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:01:08,935 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:01:08,948 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:01:08,949 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:03:44,532 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:03:45,881 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:46,827 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:48,316 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:03:49,289 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:49,597 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:50,623 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:03:51,954 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:52,261 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:03:53,280 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:03:55,440 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:03:56,357 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:03:56,358 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:03:56,358 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:03:57,792 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:03:57,792 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:03:59,119 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:03:59,126 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:03:59,593 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:04:01,882 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:04:01,887 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:04:02,402 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:04:03,798 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:04:04,651 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:04:04,661 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:04:05,370 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:04:05,382 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:04:05,382 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:04:35,372 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:04:36,170 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:04:37,829 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:04:37,829 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:04:39,260 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:05:18,686 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:05:20,533 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:05:21,657 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:05:21,659 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-11 23:05:23,091 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:05:42,958 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:05:44,090 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:05:45,581 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:05:45,587 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-11 23:05:47,088 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:09:38,311 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:09:39,548 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:09:40,062 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:09:40,830 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:09:44,206 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:09:44,408 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:09:44,816 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:09:46,165 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:09:46,894 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:09:46,894 | app.router.file_upload | INFO | Starting SSE Preprocessing pipeline for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:09:48,497 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:09:48,503 | app.services.pipeline_service | INFO | [PIPELINE - OCR] PROCESSING: Starting OCR with LlamaParse...
+2026-09-11 23:09:48,732 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:09:48,739 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:09:48,747 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:09:49,954 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:09:49,955 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:09:51,496 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:09:51,503 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:09:51,919 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:09:53,731 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:09:55,787 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:09:55,793 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:09:56,300 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:09:57,633 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:09:58,509 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:09:58,516 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:09:58,750 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:09:59,376 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:09:59,431 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:04,229 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:04,235 | app.services.pipeline_service | INFO | [PIPELINE - OCR] COMPLETED: OCR successful
+2026-09-11 23:10:04,430 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:04,430 | app.services.pipeline_service | INFO | [PIPELINE - CHUNKING] PROCESSING: Chunking document text...
+2026-09-11 23:10:04,645 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:04,659 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:04,659 | app.services.chunking_service | INFO | Starting chunking process for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:06,256 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=raw_items&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:06,263 | app.services.chunking_service | INFO | [CHUNKING_SERVICE] Flattening document pages into a list of items...
+2026-09-11 23:10:06,263 | app.services.chunking_service | INFO | [CHUNKING_SERVICE] Successfully flattened 23 total structural items (paragraphs, tables, headings).
+2026-09-11 23:10:06,263 | app.services.chunking_service | INFO | Generated 7 chunks for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. Storing to database...
+2026-09-11 23:10:06,742 | httpx | INFO | HTTP Request: DELETE https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:07,256 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?columns=%22classification_id%22%2C%22document_id%22%2C%22text%22%2C%22chunk_no%22%2C%22bbox%22 "HTTP/2 201 Created"
+2026-09-11 23:10:07,261 | app.services.chunking_service | INFO | Successfully stored 7 chunks in database for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:10,264 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:10,275 | app.services.pipeline_service | INFO | [PIPELINE - CHUNKING] COMPLETED: Chunking successful
+2026-09-11 23:10:10,574 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:10,574 | app.services.pipeline_service | INFO | [PIPELINE - CLASSIFICATION] PROCESSING: Classifying chunks & resolving links...
+2026-09-11 23:10:11,095 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:11,108 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:11,108 | app.services.classification_service | INFO | Starting classification for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:12,007 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:12,007 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Starting Dynamic Category Discovery with Rolling Batches...
+2026-09-11 23:10:12,007 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Initializing TikToken Engine to pack 7 chunks into 3500-token batches...
+2026-09-11 23:10:16,114 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:17,768 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Successfully packed 7 chunks into 1 optimal batches!
+2026-09-11 23:10:17,768 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Discovery Batch 1 of 1...
+2026-09-11 23:10:18,094 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-11 23:10:18,094 | groq._base_client | INFO | Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-09-11 23:10:21,105 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:22,285 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-09-11 23:10:22,291 | groq._base_client | INFO | Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-09-11 23:10:26,110 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:30,650 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:10:31,116 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:31,206 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&name=in.%28Parties%2CProperty+%26+Rental+Terms%2CTermination+%26+Subletting%2CDispute+Resolution%2CMaintenance+%26+Repairs%2CPayment+%26+Deposit%2CUtilities%2CExecution%2CGeneral%29 "HTTP/2 200 OK"
+2026-09-11 23:10:31,207 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Upserting 8 new categories to global pool...
+2026-09-11 23:10:31,409 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?columns=%22name%22 "HTTP/2 201 Created"
+2026-09-11 23:10:31,414 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Final Discovered categories: ['Parties', 'Property & Rental Terms', 'Termination & Subletting', 'Dispute Resolution', 'Maintenance & Repairs', 'Payment & Deposit', 'Utilities', 'Execution', 'General']
+2026-09-11 23:10:31,414 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Initializing TikToken Engine to pack 7 chunks into 2000-token batches...
+2026-09-11 23:10:31,415 | app.services.chunkBatching | INFO | [BATCHING_SERVICE] Successfully packed 7 chunks into 1 optimal batches!
+2026-09-11 23:10:31,415 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] Sending Batch 1 of 1 to Groq (openai/gpt-oss-120b). Processing 7 chunks...
+2026-09-11 23:10:33,751 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:10:33,755 | app.services.classification_service | INFO | [CLASSIFICATION_SERVICE] All batches complete. Saving 7 classified chunks to Supabase...
+2026-09-11 23:10:34,267 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 23:10:34,497 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-09-11 23:10:35,288 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 23:10:36,114 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:36,164 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-09-11 23:10:37,323 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Parties "HTTP/2 200 OK"
+2026-09-11 23:10:37,573 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-09-11 23:10:37,920 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Parties "HTTP/2 200 OK"
+2026-09-11 23:10:38,295 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-09-11 23:10:38,538 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Property+%26+Rental+Terms "HTTP/2 200 OK"
+2026-09-11 23:10:38,816 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-09-11 23:10:39,135 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.General "HTTP/2 200 OK"
+2026-09-11 23:10:39,350 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.503f0729-dcaf-4997-a02f-5a2621039ef7 "HTTP/2 200 OK"
+2026-09-11 23:10:39,872 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id&name=eq.Execution "HTTP/2 200 OK"
+2026-09-11 23:10:40,088 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-09-11 23:10:40,088 | app.services.classification_service | INFO | Classification process complete for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:40,091 | app.services.linking_service | INFO | Starting cross-reference resolution for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:41,100 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:41,516 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Caliases&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:42,064 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=id%2Creference_text&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&link_type=eq.AI_SUGGESTED "HTTP/2 200 OK"
+2026-09-11 23:10:42,065 | app.services.linking_service | INFO | No AI_SUGGESTED references found to resolve.
+2026-09-11 23:10:46,459 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:46,469 | app.services.pipeline_service | INFO | [PIPELINE - CLASSIFICATION] COMPLETED: Classification and Linking successful
+2026-09-11 23:10:46,952 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:46,952 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] PROCESSING: Generating semantic vectors for Agentic RAG...
+2026-09-11 23:10:47,174 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:47,196 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace model...
+2026-09-11 23:10:47,199 | sentence_transformers.SentenceTransformer | INFO | Use pytorch device_name: cpu
+2026-09-11 23:10:47,199 | sentence_transformers.SentenceTransformer | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-09-11 23:10:51,764 | app.services.pipeline_service | INFO | [PIPELINE - HEARTBEAT] Still working...
+2026-09-11 23:10:51,764 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Starting embedding generation for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:52,881 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:52,881 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Found 7 chunks. Formatting rich context strings...
+2026-09-11 23:10:53,116 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-11 23:10:53,602 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-09-11 23:10:54,081 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-09-11 23:10:54,402 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-09-11 23:10:54,761 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-09-11 23:10:55,442 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-09-11 23:10:55,847 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.503f0729-dcaf-4997-a02f-5a2621039ef7 "HTTP/2 200 OK"
+2026-09-11 23:10:56,491 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-09-11 23:10:56,494 | app.services.embedding_service | INFO | [EMBEDDING_SERVICE] Successfully saved 7 embeddings to the database!
+2026-09-11 23:10:57,652 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:57,657 | app.services.pipeline_service | INFO | [PIPELINE - EMBEDDING] COMPLETED: Semantic vectors successfully generated
+2026-09-11 23:10:57,860 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=status&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:10:57,860 | app.services.pipeline_service | INFO | [PIPELINE - PIPELINE] COMPLETED: All preprocessing steps finished successfully!
+2026-09-11 23:10:58,638 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:10:59,228 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:10:59,228 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:10:59,228 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:11:00,073 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:11:00,073 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:11:00,836 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:11:00,864 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:11:01,170 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:11:03,516 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:11:03,516 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:11:04,040 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:11:05,444 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:11:06,383 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:11:06,412 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:11:07,496 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:11:07,505 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:11:07,506 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:11:34,154 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:34,938 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:35,285 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:36,097 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:36,812 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:37,093 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:37,751 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:38,397 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:38,610 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:39,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:39,973 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:40,416 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:40,644 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:40,644 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:40,860 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:41,487 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:42,148 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:42,349 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:43,494 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:44,560 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:44,778 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:45,473 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:46,315 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:46,596 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:47,476 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:48,244 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:48,519 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:11:49,169 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:11:50,771 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:11:51,886 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:11:51,886 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:11:51,886 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:11:53,056 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:11:53,056 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:11:54,411 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:11:54,419 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:11:54,806 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:11:56,974 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:11:56,974 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:11:57,440 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:11:59,000 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:11:59,966 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:11:59,967 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:12:00,751 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:12:00,764 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:12:00,764 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:13:24,622 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:13:25,330 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:13:26,322 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:13:26,322 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:13:27,746 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:13:30,057 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:15:01,628 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:15:02,760 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:15:03,759 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:15:03,759 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:15:06,182 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:15:37,792 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:15:39,006 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:15:40,401 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:15:40,401 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:15:41,970 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:15:44,449 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:18:09,011 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:18:10,344 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:18:11,323 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:18:11,323 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:18:12,440 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:18:13,461 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:18:43,479 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:18:44,424 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:18:45,660 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:18:45,660 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: False
+2026-09-11 23:18:49,097 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-11 23:18:50,222 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-11 23:31:48,401 | root | INFO | Centralized logging system initialized!
+2026-09-11 23:40:06,829 | root | INFO | Centralized logging system initialized!
+2026-09-11 23:58:14,003 | root | INFO | Centralized logging system initialized!
+2026-09-11 23:58:59,663 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-11 23:59:01,826 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:05,097 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:07,605 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:09,843 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:11,302 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:11,869 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:14,769 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:15,784 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:16,004 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:17,193 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:18,323 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:18,517 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:19,439 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:20,422 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:20,623 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:59:21,933 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:59:24,114 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-11 23:59:25,148 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-11 23:59:25,148 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:59:25,148 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:59:27,779 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:59:27,779 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-11 23:59:28,782 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-11 23:59:28,793 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-11 23:59:29,323 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-11 23:59:34,807 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-11 23:59:34,811 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-11 23:59:35,342 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-11 23:59:37,112 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k "HTTP/1.1 200 OK"
+2026-09-11 23:59:38,727 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-hft2n4qdbxitqlj1cb4mii3c6t1k?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-11 23:59:38,755 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-11 23:59:46,058 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-11 23:59:46,072 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-11 23:59:46,072 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-12 00:00:42,838 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-12 00:00:44,049 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:00:45,381 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-12 00:00:45,381 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-12 00:00:47,402 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-12 00:00:47,658 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=target_chunk_id%2Creference_text&source_chunk_id=in.%2850b91341-eb57-48b1-9579-fa9c1421a6b4%2C503f0729-dcaf-4997-a02f-5a2621039ef7%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%29&link_type=eq.EXACT_MATCH "HTTP/2 200 OK"
+2026-09-12 00:00:48,943 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-12 00:01:10,603 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-12 00:01:11,901 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:01:12,598 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:01:13,401 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-12 00:01:14,692 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:01:14,920 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { getMyFiles, processDocument, viewFile } from '../api/files';
+import { getMyFiles, preprocessDocument, processDocument, viewFile } from '../api/files';
 import type { FileData } from '../api/files';
 import { Button } from '../components/common/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/common/Card';
+import { DocumentChat } from '../components/documents/DocumentChat';
 import { ArrowLeft, FileText, Loader2, ShieldAlert, Sparkles } from 'lucide-react';
 
 interface AnalysisResult {
@@ -25,6 +26,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
   const [isPreviewLoading, setIsPreviewLoading] = useState(true);
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [preprocessingMessage, setPreprocessingMessage] = useState('');
   const [error, setError] = useState('');
 
   useEffect(() => {
@@ -53,7 +55,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
         if (fileMatch) {
           try {
             const response = await viewFile(fileId);
-            const rawContentType = response.headers?.['content-type'] ?? response.headers?.['Content-Type'] ?? '';
+            const rawContentType = response.headers?.['content-type'] ?? '';
             const contentType = Array.isArray(rawContentType) ? rawContentType[0] ?? '' : String(rawContentType);
             const blob = new Blob([response.data], {
               type: contentType || 'application/pdf',
@@ -79,6 +81,15 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
         }
 
         if (!previewOnly) {
+          if (fileMatch && fileMatch.status.toUpperCase() !== 'COMPLETED') {
+            await preprocessDocument(fileId, (event) => {
+              if (isMounted && event.status === 'processing') {
+                setPreprocessingMessage(event.message || `Running ${event.step.toLowerCase()}...`);
+              }
+            });
+            if (isMounted) setPreprocessingMessage('');
+          }
+
           const analysisResponse = await processDocument(fileId);
           if (isMounted && analysisResponse?.data) {
             setAnalysis(analysisResponse.data);
@@ -149,8 +160,8 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
         </Button>
       </div>
 
-      <div className={previewOnly ? 'flex justify-center' : 'grid gap-6 xl:grid-cols-[1.3fr_0.7fr]'}>
-        <Card className={previewOnly ? 'w-full max-w-5xl' : undefined}>
+      <div className={previewOnly ? 'flex justify-center' : 'space-y-6'}>
+        {previewOnly && <Card className="w-full max-w-5xl">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <FileText className="h-5 w-5 text-accent" />
@@ -181,7 +192,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
               </div>
             )}
           </CardContent>
-        </Card>
+        </Card>}
 
         {!previewOnly && <div className="space-y-6">
           <Card>
@@ -254,6 +265,12 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
           )}
         </CardContent>
       </Card>}
+
+      {!previewOnly && preprocessingMessage && (
+        <p className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700">{preprocessingMessage}</p>
+      )}
+
+      {!previewOnly && <DocumentChat documentId={file.id} />}
     </div>
   );
 };

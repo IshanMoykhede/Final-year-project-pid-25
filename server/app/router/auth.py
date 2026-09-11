@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException, Request, Response
+from fastapi import APIRouter, HTTPException, Response
 from app.schemas.auth import RegisterRequest, LoginRequest
 from app.core.supabase import connectSupa
 
@@ -6,28 +6,6 @@ router = APIRouter(
     prefix="/auth",
     tags=["Authentication"]
 )
-
-ACCESS_COOKIE = "access_token"
-REFRESH_COOKIE = "refresh_token"
-
-
-def set_auth_cookies(response: Response, session) -> None:
-    response.set_cookie(
-        key=ACCESS_COOKIE,
-        value=session.access_token,
-        httponly=True,
-        secure=False,
-        samesite="lax",
-        path="/",
-    )
-    response.set_cookie(
-        key=REFRESH_COOKIE,
-        value=session.refresh_token,
-        httponly=True,
-        secure=False,
-        samesite="lax",
-        path="/",
-    )
 
 # Connect to Supabase
 supabase = connectSupa()
@@ -75,35 +53,15 @@ def login(data: LoginRequest, response: Response):
             raise HTTPException(status_code=401, detail="Invalid credentials")
 
         # Store JWT in HttpOnly cookie
-        set_auth_cookies(response, result.session)
+        response.set_cookie(
+            key="access_token",
+            value=result.session.access_token,
+            httponly=True,
+            secure=False, # Make sure to set this to True in production (HTTPS)
+            samesite="lax"
+        )
 
         return {"message": "Login successful"}
 
     except Exception as e:
         raise HTTPException(status_code=401, detail=f"Invalid email or password: {str(e)}")
-
-
-@router.post("/refresh")
-def refresh(request: Request, response: Response):
-    refresh_token = request.cookies.get(REFRESH_COOKIE)
-    if not refresh_token:
-        raise HTTPException(status_code=401, detail="Refresh session expired")
-
-    try:
-        result = supabase.auth.refresh_session(refresh_token)
-        if not result.session:
-            raise HTTPException(status_code=401, detail="Refresh session expired")
-
-        set_auth_cookies(response, result.session)
-        return {"message": "Session refreshed"}
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=401, detail=f"Unable to refresh session: {str(e)}")
-
-
-@router.post("/logout")
-def logout(response: Response):
-    response.delete_cookie(ACCESS_COOKIE, path="/")
-    response.delete_cookie(REFRESH_COOKIE, path="/")
-    return {"message": "Logout successful"}
