@@ -2,10 +2,10 @@ import os
 import logging
 from typing import List, Dict, Any
 from sentence_transformers import SentenceTransformer
-from groq import Groq
 from app.core.supabase import connectSupa
 from app.schemas.chat import RetrievedClause
 from app.core.prompts import build_chat_system_prompt
+from app.core.llm import generate_chat_completion
 
 logger = logging.getLogger(__name__)
 
@@ -17,7 +17,6 @@ except Exception as e:
     logger.error(f"[CHAT_SERVICE] Failed to load embedding model: {e}")
     embedding_model = None
 
-groq_client = Groq(api_key=os.getenv("GROQ_API_KEY", ""))
 
 def answer_question(document_id: str, question: str, use_1hop_expansion: bool = True, generate_answer: bool = True) -> Dict[str, Any]:
     logger.info(f"Answering question for document_id: {document_id}. 1-Hop Expansion: {use_1hop_expansion}")
@@ -91,24 +90,28 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     # 4. LLM Generation
     all_evidence = primary_clauses + expanded_clauses
     
-    context_str = ""
-    for chunk in all_evidence:
+    context_str = "=== PRIMARY RELEVANT CLAUSES ===\n"
+    for chunk in primary_clauses:
         alias_label = ", ".join(chunk.aliases) if chunk.aliases else f"Clause {chunk.chunk_no}"
         context_str += f"\n--- [{alias_label}] ---\n{chunk.text}\n"
+
+    if expanded_clauses:
+        context_str += "\n=== CROSS-REFERENCED SUPPORTING CLAUSES ===\n"
+        for chunk in expanded_clauses:
+            alias_label = ", ".join(chunk.aliases) if chunk.aliases else f"Clause {chunk.chunk_no}"
+            context_str += f"\n--- [{alias_label}] ---\n{chunk.text}\n"
 
     system_prompt = build_chat_system_prompt(context_str)
 
     answer = ""
     if generate_answer:
-        response = groq_client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+        answer = generate_chat_completion(
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": question}
             ],
             temperature=0.1
         )
-        answer = response.choices[0].message.content
 
     return {
         "success": True,

@@ -1,0 +1,839 @@
+[
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the Basic Lease Terms covered in Article 1?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 1 covers the Basic Lease Terms of the agreement."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "Does Article 4 outline the rules for paying rent?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Yes, Article 4 outlines the rules for paying Base Rent."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What is discussed in Article 5?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 5 discusses the Security Deposit."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "Where are the operating expenses and taxes defined?",
+    "gold_chunk_nos": [
+      8
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Operating expenses and taxes are defined in Article 6."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What is the title of Article 7?",
+    "gold_chunk_nos": [
+      9
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 7 is titled 'Use of Premises'."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "Based on the rent obligations in Article 4, how do operating expenses in Article 6 affect the total payment?",
+    "gold_chunk_nos": [
+      6,
+      8
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "Article 4 requires payment of Base Rent, while Article 6 dictates that operating expenses and taxes are calculated additionally or as defined."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the rent described in Article 4 relate to the Basic Lease Terms in Article 1?",
+    "gold_chunk_nos": [
+      6,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 4 references the Basic Lease Terms in Article 1 to establish the specific base rent amounts and schedules."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "What does Article 2 state about the Premises, and how does that tie into the Basic Lease Terms in Article 1?",
+    "gold_chunk_nos": [
+      4,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 2 describes the Premises, which are formally defined and summarized within the Basic Lease Terms in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the Security Deposit outlined in Article 5 connect to the Basic Lease Terms in Article 1?",
+    "gold_chunk_nos": [
+      7,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The details of the Security Deposit mentioned in Article 5 refer back to the specific deposit amount stated in the Basic Lease Terms of Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the relationship between the use of premises in Article 7 and the Basic Lease Terms in Article 1?",
+    "gold_chunk_nos": [
+      9,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 7 restricts the use of the premises to the permitted uses expressly outlined in the Basic Lease Terms in Article 1."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the main duties and best efforts required of the Marketing Affiliate under Section 3?",
+    "gold_chunk_nos": [
+      2
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "MA agrees to use its best efforts to market and license the Technology to Clients and execute a Company License Agreement with Clients."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the commitment obligations of the Company under Section 4?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "So long as MA is not in default, Company agrees to provide Technology to MA in accordance with the terms of the Agreement."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "How must sales records be kept and when must they be made available under Section 3.7?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "MA shall keep accurate records of the sales of the Technology and Maintenance, and make them available within ten business days following month end."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the governing law and notice provisions under Section 23 and 24?",
+    "gold_chunk_nos": [
+      11
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 23 defines notice delivery via standard mail, and Section 24 defines the governing law."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What is required regarding error notification and technical assistance under Section 8?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "MA must notify Company in writing of any errors within thirty days of discovery, and Company will provide reasonable technical assistance."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "According to Section 6, what is the defined Territory for the MA, and where are the specific territorial terms found in Schedule A?",
+    "gold_chunk_nos": [
+      5,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 6 dictates that the Territory for MA is defined in Schedule A, which details the specific territory and technology matrix."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the payment terms and currency requirements in Section 7 connect to the fee structures outlined in Schedule A?",
+    "gold_chunk_nos": [
+      5,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 7 outlines payment terms and deliverables, which directly reference the pricing terms and matrix set forth in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "What rights and term are granted in Sections 1 and 2, and how do they incorporate the terms matrix in Schedule A?",
+    "gold_chunk_nos": [
+      1,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Sections 1 and 2 define the term and grant of rights to license technology, cross-referencing Schedule A for pricing and terms."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the Company deliverables under Section 4 relate to the Technology Pricing and Terms Matrix in Schedule A?",
+    "gold_chunk_nos": [
+      4,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 4 obligates Company to provide deliverables at prices or fees in effect or mutually agreed, governed by Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "In light of MA duties in Section 3, how does Schedule A govern the scope of authorized territory and service fees?",
+    "gold_chunk_nos": [
+      2,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 3 sets forth MA licensing duties, while Schedule A defines the specific territory and service fees under which marketing is authorized."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the Landlord obligations regarding maintenance and repairs under Article 9?",
+    "gold_chunk_nos": [
+      11
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Article 9, Landlord is obligated to maintain and repair the foundation, exterior walls, roof, and common areas of the Building."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "Can Tenant make alterations or additions to the Premises under Article 10 without consent?",
+    "gold_chunk_nos": [
+      12
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Article 10, Tenant shall not make alterations or additions without Landlord prior written consent."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What insurance policies must the Tenant maintain under Article 11?",
+    "gold_chunk_nos": [
+      13,
+      14
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Tenant must maintain commercial general liability insurance, personal property insurance, and workers compensation coverage as stated in Article 11."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What indemnity obligations does the Tenant have under Article 12?",
+    "gold_chunk_nos": [
+      15
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Tenant shall indemnify, defend, and hold harmless Landlord from claims arising from Tenant use of the Premises or breach of Lease under Article 12."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What happens if the premises are damaged or destroyed according to Article 13?",
+    "gold_chunk_nos": [
+      16
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 13 dictates procedures and termination rights if the Premises or Building are damaged by fire or other casualty."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the rules regarding assignment and subletting under Article 15?",
+    "gold_chunk_nos": [
+      18
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Article 15, Tenant shall not assign the Lease or sublet the Premises without Landlord prior written consent."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What constitutes an Event of Default and what are Landlord remedies under Article 16?",
+    "gold_chunk_nos": [
+      19,
+      20
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 16 defines Events of Default, including nonpayment of rent and failure to perform covenants, and provides Landlord rights of re-entry and damages."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What does Article 17 state regarding quiet enjoyment of the premises?",
+    "gold_chunk_nos": [
+      21
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 17 guarantees that provided Tenant performs all obligations, Tenant shall peacefully and quietly enjoy the Premises."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the conditions for surrendering the premises upon expiration under Article 19?",
+    "gold_chunk_nos": [
+      23
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 19 requires Tenant to surrender the Premises broom-clean and in good condition, reasonable wear and tear excepted."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the consequences if Tenant holds over after lease termination under Article 20?",
+    "gold_chunk_nos": [
+      24
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Article 20, holding over creates a month-to-month tenancy at an increased percentage of the final Base Rent."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "How must formal notices be delivered under Article 21?",
+    "gold_chunk_nos": [
+      25
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 21 specifies that notices must be in writing and delivered via registered mail, certified mail, or recognized overnight courier."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What utilities and building services are provided by Landlord under Article 8?",
+    "gold_chunk_nos": [
+      10
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 8 obligates Landlord to provide standard building utilities, HVAC during normal business hours, and janitorial services."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What are the rules governing condemnation and eminent domain taking under Article 14?",
+    "gold_chunk_nos": [
+      17
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 14 provides termination rights and allocation of condemnation awards if all or part of the Premises is taken by eminent domain."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What subordination terms and estoppel certificate requirements are set forth in Article 18?",
+    "gold_chunk_nos": [
+      22
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 18 states the Lease is subordinate to existing and future mortgages and requires Tenant to execute estoppel certificates upon request."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "Direct",
+    "question": "What does Article 22 state regarding the entire agreement and severability?",
+    "gold_chunk_nos": [
+      26
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Article 22 confirms the Lease constitutes the entire agreement between the parties and contains standard severability provisions."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the Lease Term in Article 3 incorporate the Commencement and Expiration Dates defined in Article 1?",
+    "gold_chunk_nos": [
+      5,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 3 defines the initial term duration by directly referencing the Commencement Date and Expiration Date specified in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "When calculating the late charges described in Article 4, what Base Rent figure from Article 1 serves as the basis?",
+    "gold_chunk_nos": [
+      6,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 4 establishes late charge percentages on delinquent rent based upon the initial Base Rent figures set forth in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the operating expenses outlined in Article 6 draw upon the proportionate share defined in the Basic Lease Terms of Article 1?",
+    "gold_chunk_nos": [
+      8,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 6 establishes Tenant responsibility for operating expenses and taxes, using the proportionate share percentage defined in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the renewal option in Article 3 reference the initial base terms and rent schedule in Article 1?",
+    "gold_chunk_nos": [
+      5,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 3 provides renewal rights governed by the initial terms and conditions documented in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "In Article 1, how does the Rent summary reference the detailed payment procedures set forth in Article 4?",
+    "gold_chunk_nos": [
+      3,
+      6
+    ],
+    "gold_referenced_chunk_no": 6,
+    "reference_answer": "Article 1 summarizes the basic lease rent and cross-references Article 4 for comprehensive payment terms and escalations."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the restrictions on distribution channels for the MA under Section 11?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 11 stipulates that MA agrees to distribute Technology only through authorized direct channels without unauthorized sub-licensing."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "How are trade secrets and confidential proprietary information protected under Section 12?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 12 requires both parties to maintain the secrecy of proprietary information and prevent disclosure to third parties."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What is the nature of the relationship between the parties under Section 14?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 14 establishes that the parties are independent contractors and neither party is an agent, partner, or joint venturer of the other."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What obligations does MA have regarding unauthorized use of Technology under Section 15?",
+    "gold_chunk_nos": [
+      8
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Section 15, MA must promptly notify Company in writing of any unauthorized use or copyright infringement that comes to its attention."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What warranties are provided by Company under Section 16?",
+    "gold_chunk_nos": [
+      8
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 16 states that Company warrants that it has the power and authority to grant the rights and licenses under this Agreement."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the grounds and notice period for termination under Section 18?",
+    "gold_chunk_nos": [
+      9
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 18 outlines termination conditions, including material breach with written cure notice and immediate termination for bankruptcy."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What obligations exist regarding non-assignment under Section 20?",
+    "gold_chunk_nos": [
+      10
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 20 provides that MA may not assign or transfer its rights under the Agreement without prior written consent from Company."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What are the rules regarding amendments and modifications under Section 21?",
+    "gold_chunk_nos": [
+      10
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 21 mandates that no amendment or modification to the Agreement will be valid unless made in writing and signed by both parties."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What equitable relief remedies are provided under Section 25?",
+    "gold_chunk_nos": [
+      11
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 25 establishes that in the event of a breach of intellectual property or confidentiality, money damages are inadequate and injunctive relief is available."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "Direct",
+    "question": "What does Section 26 state regarding the entire agreement?",
+    "gold_chunk_nos": [
+      11
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 26 states that the Agreement, together with Schedule A, constitutes the entire understanding and supersedes all prior agreements."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the marketing plan and support obligations in Section 3.10 and 3.12 depend on the terms matrix in Schedule A?",
+    "gold_chunk_nos": [
+      3,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 3.10 and 3.12 require MA to establish service centers and marketing plans aligned with the territories and pricing matrices in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the annual quota obligation of Company in Section 5 tie into the unit prices set forth in Schedule A?",
+    "gold_chunk_nos": [
+      4,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 5 establishes annual quotas and delivery obligations that are measured against the unit prices and terms documented in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do technical training and support deliverables under Section 4.2 depend on the service fee terms in Schedule A?",
+    "gold_chunk_nos": [
+      4,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 4.2 obligates Company to provide technical training and updates subject to the service fee and pricing structure defined in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "Under Section 7.4, how is payment for training and support services governed by the Schedule A matrix?",
+    "gold_chunk_nos": [
+      5,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 7.4 specifies that payment for services, training, and support must conform to the fee schedules outlined in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do version upgrades and error modifications in Section 8 connect to the technology licensing rights in Schedule A?",
+    "gold_chunk_nos": [
+      6,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 8 requires modifications and error notifications to follow the licensed technology specifications identified in Schedule A."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "How does an applicant complete enrollment into the Chase Affiliate Program under Section 1?",
+    "gold_chunk_nos": [
+      1
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Section 1, applicants must complete and submit the Affiliate Registration Form and click Agree, subject to acceptance by Chase."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "Who is responsible for processing credit card customer applications under Section 7?",
+    "gold_chunk_nos": [
+      2
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Section 7, Chase is solely responsible for processing each credit card order and application placed by customers through the Links."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What happens to affiliate commission if an approved account cannot be tracked under Section 8?",
+    "gold_chunk_nos": [
+      2
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Section 8, no commission shall be paid if the approved account cannot be tracked by Chase system."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What are the commercial use rules for the affiliate program under Section 13?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 13 specifies the program is intended for commercial use, though affiliates using links for their own card applications are not in violation."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What restrictions exist on the use of Chase trademarks and logos under Section 14?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 14 provides that Chase reserves full ownership of the Marks and all use requires prior written approval from Chase."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What is Chase aggregate limitation of liability under Section 21?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Under Section 21, Chase aggregate liability shall not exceed the total commissions paid or payable to Affiliate under the Agreement."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What acknowledgment does the Affiliate make regarding independent investigation under Section 22?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Section 22 requires Affiliate to acknowledge having read the agreement, consulted advisers, and agreed to all terms independently."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What governing law applies to the Chase Affiliate Agreement under the governing law clause?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "The governing law clause specifies that Delaware law governs the Agreement without giving effect to conflict of laws principles."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "Can Chase reject credit card applications submitted via affiliate links under Section 7?",
+    "gold_chunk_nos": [
+      2
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "Yes, Section 7 gives Chase the express right to reject any credit card application in its sole discretion."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "Direct",
+    "question": "What trademark search terms are restricted for affiliates in the Appendix?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": null,
+    "reference_answer": "The Appendix lists restricted airline partner terms including United Airlines schedule and Continental Airlines travel."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "1-Hop Dependent",
+    "question": "How does Section 1 restrict keyword search terms by cross-referencing the partner airline terms in the Appendix?",
+    "gold_chunk_nos": [
+      1,
+      4
+    ],
+    "gold_referenced_chunk_no": 4,
+    "reference_answer": "Section 1 bars affiliates from bidding on specific product keyword search terms, explicitly directing affiliates to the Restricted Trademark Terms in the Appendix."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "1-Hop Dependent",
+    "question": "When Section 1 defines affiliate commissions based on Approved Accounts, how does it cross-reference Section 4 for the qualifying definition?",
+    "gold_chunk_nos": [
+      1,
+      1
+    ],
+    "gold_referenced_chunk_no": 1,
+    "reference_answer": "Section 1 states commissions are paid per Approved Account as defined in Section 4, incorporating the criteria for account approval."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the prohibition on search marketing in Section 1 depend on the prohibited brand keywords detailed in the Appendix?",
+    "gold_chunk_nos": [
+      1,
+      4
+    ],
+    "gold_referenced_chunk_no": 4,
+    "reference_answer": "Section 1 obligates affiliates to comply with marketing restrictions that are substantively enumerated in the Appendix."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "1-Hop Dependent",
+    "question": "Under Section 1, how is the scope of unauthorized search engine bidding determined by the terms in the Appendix?",
+    "gold_chunk_nos": [
+      1,
+      4
+    ],
+    "gold_referenced_chunk_no": 4,
+    "reference_answer": "Section 1 prohibits keyword search marketing whose boundaries are defined by the restricted airline partner list in the Appendix."
+  },
+  {
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the commission qualifications in Section 1 incorporate the account validation criteria in Section 4?",
+    "gold_chunk_nos": [
+      1,
+      1
+    ],
+    "gold_referenced_chunk_no": 1,
+    "reference_answer": "Section 1 links monthly payable commissions directly to Approved Accounts qualified under Section 4."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "When evaluating tenant permitted use under Article 7, how does it depend on the permitted use definition set forth in Article 1?",
+    "gold_chunk_nos": [
+      9,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 7 restricts tenant occupancy strictly to permitted uses that are enumerated in the Basic Lease Terms of Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the calculation of Additional Rent in Article 6 draw upon the initial Base Rent figures stated in Article 1?",
+    "gold_chunk_nos": [
+      8,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 6 defines Additional Rent obligations that compound upon the foundational base rent provisions defined in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "Under Article 4, how are monthly rental installments structured according to the payment commencement provisions in Article 1?",
+    "gold_chunk_nos": [
+      6,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 4 establishes advance monthly payments commencing on the specific Commencement Date stipulated in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the premises descriptions in Article 2 cross-reference the suite and building details in Article 1?",
+    "gold_chunk_nos": [
+      4,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 2 defines leased premises by explicit reference to the suite numbers and rentable square footage defined in Article 1."
+  },
+  {
+    "document_id": "ae855a12-385c-4935-8d36-29956d2bf41c",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the Security Deposit retention in Article 5 relate to the initial deposit sum specified in Article 1?",
+    "gold_chunk_nos": [
+      7,
+      3
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 5 sets forth conditions for holding and returning the Security Deposit amount specified in the summary table of Article 1."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do the best efforts marketing covenants in Section 3 depend on the target territory defined in Schedule A?",
+    "gold_chunk_nos": [
+      2,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 3 best efforts covenants apply specifically to promoting and licensing Technology within the geographic Territory outlined in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "Under Section 4.1, how does the Company commitment to supply Technology depend on the technology list in Schedule A?",
+    "gold_chunk_nos": [
+      4,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 4.1 requires Company to supply Technology in accordance with terms and product specifications cataloged in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How do shipment delivery schedules in Section 7.5 incorporate the terms and lead times defined in Schedule A?",
+    "gold_chunk_nos": [
+      5,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 7.5 establishes delivery timelines and shipping obligations that are governed by the terms specified in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "In Section 2, how does the grant of marketing rights incorporate the fee and territory provisions of Schedule A?",
+    "gold_chunk_nos": [
+      1,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 2 grants licensing rights whose geographical scope and fee parameters are defined in Schedule A."
+  },
+  {
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "query_type": "1-Hop Dependent",
+    "question": "How does the technical assistance requirement under Section 8.4 connect to the technology products listed in Schedule A?",
+    "gold_chunk_nos": [
+      6,
+      11
+    ],
+    "gold_referenced_chunk_no": 11,
+    "reference_answer": "Section 8.4 mandates technical assistance for errors arising in the licensed Technology items identified in Schedule A."
+  }
+]
