@@ -28,11 +28,27 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     # 1. Embed Query
     query_vector = embedding_model.encode(question).tolist()
 
+    # Detect summary / global overview intent
+    summary_keywords = [
+        "summarize", "summary", "overview", "all policies", "key provisions",
+        "what is this document about", "all rules", "main points", "all leaves",
+        "leave policy", "leave policies", "entire policy", "full policy"
+    ]
+    is_summary_query = any(kw in question.lower() for kw in summary_keywords)
+
+    if is_summary_query:
+        match_count = 15
+        match_threshold = 0.15
+        logger.info(f"[CHAT_SERVICE] Summary intent detected for query. Using adaptive match_count={match_count}, threshold={match_threshold}")
+    else:
+        match_count = 5
+        match_threshold = 0.2
+
     # 2. Vector Search (C_k)
     rpc_res = supabase.rpc("match_chunks", {
         "query_embedding": query_vector,
-        "match_threshold": 0.2, # Lowered threshold to ensure we get some results
-        "match_count": 5,
+        "match_threshold": match_threshold,
+        "match_count": match_count,
         "filter_document_id": document_id
     }).execute()
     
