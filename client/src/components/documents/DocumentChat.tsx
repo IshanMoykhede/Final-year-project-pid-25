@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
-import { Bot, ChevronDown, ChevronUp, MessageSquare, Send, User } from 'lucide-react';
+import { Bot, ChevronDown, ChevronUp, LocateFixed, MessageSquare, Send, User } from 'lucide-react';
 import { askDocumentQuestion } from '../../api/chat';
 import type { RetrievedClause } from '../../api/chat';
 import { Button } from '../common/Button';
@@ -17,6 +17,7 @@ interface ChatMessage {
 
 interface DocumentChatProps {
   documentId: string;
+  onCitation?: (clause: RetrievedClause) => void;
 }
 
 const getErrorMessage = (error: unknown): string => {
@@ -32,7 +33,11 @@ const getErrorMessage = (error: unknown): string => {
   return 'Unable to get an answer right now. Please try again.';
 };
 
-const ClauseList: React.FC<{ clauses: RetrievedClause[]; title: string }> = ({ clauses, title }) => {
+const ClauseList: React.FC<{
+  clauses: RetrievedClause[];
+  title: string;
+  onCitation?: (clause: RetrievedClause) => void;
+}> = ({ clauses, title, onCitation }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!clauses.length) return null;
@@ -52,9 +57,21 @@ const ClauseList: React.FC<{ clauses: RetrievedClause[]; title: string }> = ({ c
         <div className="space-y-2 border-t border-gray-200 px-3 py-3">
           {clauses.map((clause) => (
             <div key={clause.chunk_id} className="rounded-md bg-white p-3 text-xs text-gray-600">
-              <p className="mb-1 font-medium text-gray-800">
-                {clause.aliases.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
-              </p>
+              <div className="mb-1 flex items-center justify-between gap-2">
+                <p className="font-medium text-gray-800">
+                  {clause.aliases.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
+                </p>
+                {onCitation && <button
+                  type="button"
+                  onClick={() => onCitation(clause)}
+                  disabled={!clause.bbox.length}
+                  title={clause.bbox.length ? 'Highlight this citation in the document' : 'No coordinates available for this citation'}
+                  className="inline-flex items-center gap-1 rounded border border-gray-200 px-2 py-1 text-[11px] font-medium text-accent transition hover:border-accent disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  <LocateFixed className="h-3 w-3" />
+                  Cite
+                </button>}
+              </div>
               <p className="whitespace-pre-wrap">{clause.text}</p>
             </div>
           ))}
@@ -64,12 +81,29 @@ const ClauseList: React.FC<{ clauses: RetrievedClause[]; title: string }> = ({ c
   );
 };
 
-export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId }) => {
+export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitation }) => {
   const [question, setQuestion] = useState('');
   const [useExpansion, setUseExpansion] = useState(true);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>(() => {
+    if (typeof window === 'undefined') return [];
+
+    try {
+      const savedMessages = window.localStorage.getItem(`document-chat:${documentId}`);
+      const parsedMessages: unknown = savedMessages ? JSON.parse(savedMessages) : [];
+      return Array.isArray(parsedMessages) ? (parsedMessages as ChatMessage[]) : [];
+    } catch {
+      return [];
+    }
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(`document-chat:${documentId}`, JSON.stringify(messages));
+    } catch {
+    }
+  }, [documentId, messages]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -131,8 +165,8 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId }) => {
                       <ReactMarkdown>{message.answer || 'No answer was generated.'}</ReactMarkdown>
                     </div>
                   </div>
-                  <ClauseList clauses={message.primaryClauses} title="Primary clauses" />
-                  <ClauseList clauses={message.expandedClauses} title="Related clauses" />
+                  <ClauseList clauses={message.primaryClauses} title="Primary clauses" onCitation={onCitation} />
+                  <ClauseList clauses={message.expandedClauses} title="Related clauses" onCitation={onCitation} />
                 </div>
               </div>
             ))}

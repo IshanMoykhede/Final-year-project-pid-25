@@ -7,6 +7,7 @@ export interface RetrievedClause {
   aliases: string[];
   similarity?: number | null;
   is_expanded: boolean;
+  bbox: Array<Record<string, unknown>>;
 }
 
 export interface ChatRequest {

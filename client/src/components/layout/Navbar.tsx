@@ -22,6 +22,10 @@ export const Navbar: React.FC = () => {
             <span className="font-bold text-xl tracking-tight">Legal<span className="text-accent">ze</span></span>
           </Link>
           <div className="flex items-center space-x-4">
+            {!isAuthenticated && <div className="hidden items-center gap-5 md:flex">
+              <a href="/#services" className="text-sm font-medium text-gray-600 transition-colors hover:text-accent">Services</a>
+              <a href="/#about" className="text-sm font-medium text-gray-600 transition-colors hover:text-accent">About us</a>
+            </div>}
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard" className="text-sm font-medium text-gray-700 hover:text-accent transition-colors">

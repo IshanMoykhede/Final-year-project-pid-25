@@ -5,7 +5,7 @@ import type { FileData } from '../api/files';
 import { FileUpload } from '../components/documents/FileUpload';
 import { Button } from '../components/common/Button';
 import { Card, CardContent } from '../components/common/Card';
-import { FileText, Trash2, Eye, File, Loader2, ScanEye } from 'lucide-react';
+import { FileText, Trash2, Eye, File, Loader2, ScanEye, Upload, Sparkles } from 'lucide-react';
 
 export const Dashboard: React.FC = () => {
   const [files, setFiles] = useState<FileData[]>([]);
@@ -47,19 +47,25 @@ export const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="space-y-8">
-      <div>
-        <h1 className="text-2xl font-bold text-gray-900 mb-1">Dashboard</h1>
-        <p className="text-gray-500">Manage and analyze your legal documents.</p>
+    <div className="space-y-10">
+      <div className="flex flex-col gap-5 border-b border-gray-200 pb-8 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent">Workspace</p><h1 className="text-3xl font-bold text-gray-950">Your document desk</h1><p className="mt-2 text-gray-500">Upload, organize, and review your legal documents in one place.</p></div>
+        <div className="flex items-center gap-2 text-sm text-gray-500"><Sparkles className="h-4 w-4 text-accent" />AI-assisted review</div>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-3">
+        <div className="rounded-xl border border-gray-200 bg-white p-5"><p className="text-sm text-gray-500">Total documents</p><p className="mt-2 text-3xl font-semibold text-gray-950">{files.length}</p></div>
+        <div className="rounded-xl border border-gray-200 bg-white p-5"><p className="text-sm text-gray-500">Ready to review</p><p className="mt-2 text-3xl font-semibold text-gray-950">{files.filter((file) => file.status.toUpperCase() === 'COMPLETED').length}</p></div>
+        <div className="rounded-xl border border-gray-200 bg-sky-50 p-5"><p className="text-sm text-sky-700">Next step</p><p className="mt-2 text-sm font-semibold text-sky-950">Upload a document to begin</p></div>
       </div>
 
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Upload New Document</h2>
+        <div className="mb-4 flex items-center gap-2"><Upload className="h-5 w-5 text-accent" /><h2 className="text-lg font-semibold text-gray-900">Upload new document</h2></div>
         <FileUpload onUploadSuccess={fetchFiles} />
       </section>
 
       <section>
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Recent Documents</h2>
+        <div className="mb-4 flex items-center justify-between"><div><h2 className="text-lg font-semibold text-gray-900">Your documents</h2><p className="mt-1 text-sm text-gray-500">Open a file to preview, chat, or review risk.</p></div><span className="text-sm text-gray-500">{files.length} total</span></div>
         {isLoading ? (
           <div className="flex justify-center py-12">
             <Loader2 className="w-8 h-8 text-accent animate-spin" />

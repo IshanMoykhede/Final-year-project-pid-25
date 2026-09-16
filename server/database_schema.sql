@@ -31,6 +31,7 @@ CREATE TABLE chunks (
     classification_id UUID REFERENCES classifications(id) ON DELETE SET NULL,
     text TEXT NOT NULL,
     aliases JSONB, -- E.g., ["Article 4", "Section 4.1", "Base Rent"]
+    bbox JSONB, -- OCR coordinates with page_number for citation highlighting
     embedding VECTOR(384), -- Generated via HuggingFace Sentence-Transformers (all-MiniLM-L6-v2)
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
