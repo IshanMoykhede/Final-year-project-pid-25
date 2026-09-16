@@ -33,7 +33,7 @@ async def get_document_overview(
         logger.exception("Failed to generate overview")
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.get("/risks/{file_id}", response_model=DocumentRiskResponse)
+@router.get("/risk/{file_id}", response_model=DocumentRiskResponse)
 async def get_document_risks(
     file_id: str,
     force_refresh: bool = False,
