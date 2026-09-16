@@ -3,7 +3,7 @@ from uuid import uuid4
 import logging
 
 from app.core.supabase import connectSupa
-from app.dependencies.auth import get_current_user
+from app.dependencies.auth import get_current_user, verify_file_ownership
 
 logger = logging.getLogger(__name__)
 
@@ -101,41 +101,9 @@ async def upload_file(
 @router.get("/preview/{file_id}")
 async def preview_file(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
-
     try:
-        # Get file details
-        result = (
-            supabase
-            .table("files")
-            .select("*")
-            .eq("id", file_id)
-            .maybe_single()
-            .execute()
-        )
-
-        file = result.data if result else None
-
-        if not file:
-            raise HTTPException(
-                status_code=404,
-                detail={
-                    "success": False,
-                    "message": "File not found"
-                }
-            )
-
-        # Check ownership
-        if file["user_id"] != str(current_user["id"]):
-            raise HTTPException(
-                status_code=403,
-                detail={
-                    "success": False,
-                    "message": "You cannot access this file"
-                }
-            )
-
         # Generate temporary URL
         url = supabase.storage.from_(BUCKET_NAME).create_signed_url(
             file["storage_path"],
@@ -202,41 +170,9 @@ async def get_my_files(
 @router.delete("/{file_id}")
 async def delete_file(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
-
     try:
-        # Find the file
-        result = (
-            supabase
-            .table("files")
-            .select("*")
-            .eq("id", file_id)
-            .maybe_single()
-            .execute()
-        )
-
-        file = result.data if result else None
-
-        if not file:
-            raise HTTPException(
-                status_code=404,
-                detail={
-                    "success": False,
-                    "message": "File not found"
-                }
-            )
-
-        # Check ownership
-        if file["user_id"] != str(current_user["id"]):
-            raise HTTPException(
-                status_code=403,
-                detail={
-                    "success": False,
-                    "message": "You cannot delete this file"
-                }
-            )
-
         # Delete from Storage
         supabase.storage.from_(BUCKET_NAME).remove(
             [file["storage_path"]]
@@ -247,7 +183,7 @@ async def delete_file(
             supabase
             .table("files")
             .delete()
-            .eq("id", file_id)
+            .eq("id", file["id"])
             .execute()
         )
 
@@ -276,16 +212,15 @@ from app.services.ocr_service import process_document
 @router.get("/test-ocr/{file_id}")
 async def test_ocr_route(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
     """
     TEMPORARY ROUTE: Used to test LlamaParse output directly in the browser.
     """
     try:
-        # Note: In a real app we'd verify ownership here too!
-        logger.info(f"Starting OCR test route for file_id: {file_id}")
-        result = process_document(file_id)
-        logger.info(f"Completed OCR test route for file_id: {file_id}")
+        logger.info(f"Starting OCR test route for file_id: {file['id']}")
+        result = process_document(file["id"])
+        logger.info(f"Completed OCR test route for file_id: {file['id']}")
         
         return {
             "success": True,
@@ -309,15 +244,15 @@ from app.services.chunking_service import chunk_document
 @router.get("/test-chunk/{file_id}")
 async def test_chunk_route(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
     """
     TEMPORARY ROUTE: Runs chunking on a file and returns first 7 chunks.
     """
     try:
-        logger.info(f"Starting chunk test route for file_id: {file_id}")
-        chunks = chunk_document(file_id)
-        logger.info(f"Completed chunk test route for file_id: {file_id}")
+        logger.info(f"Starting chunk test route for file_id: {file['id']}")
+        chunks = chunk_document(file["id"])
+        logger.info(f"Completed chunk test route for file_id: {file['id']}")
 
         return {
             "success": True,
@@ -342,20 +277,20 @@ from app.services.classification_service import process_document_classification
 @router.get("/test-classify/{file_id}")
 async def test_classify_route(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
     """
     TEMPORARY ROUTE: Runs batch classification and alias generation on chunks.
     """
     try:
-        logger.info(f"Starting classification test route for file_id: {file_id}")
-        result = process_document_classification(file_id)
-        logger.info(f"Completed classification test route for file_id: {file_id}")
+        logger.info(f"Starting classification test route for file_id: {file['id']}")
+        result = process_document_classification(file["id"])
+        logger.info(f"Completed classification test route for file_id: {file['id']}")
 
         return result
 
     except Exception as e:
-        logger.exception(f"Classification failed for {file_id}")
+        logger.exception(f"Classification failed for {file['id']}")
         raise HTTPException(
             status_code=500,
             detail={
@@ -373,17 +308,18 @@ from app.services.pipeline_service import preprocess_document_sse
 @router.get("/preprocess/{file_id}")
 async def run_preprocessing_pipeline(
     file_id: str,
-    current_user=Depends(get_current_user)
+    file: dict = Depends(verify_file_ownership)
 ):
     """
     Runs the entire preprocessing pipeline (OCR -> Chunking -> Classification -> Linking)
     as a Server-Sent Events (SSE) stream. This keeps the frontend connection alive for minutes
     and streams progress updates.
+    Enforces user document ownership via verify_file_ownership.
     """
-    logger.info(f"Starting SSE Preprocessing pipeline for file_id: {file_id}")
+    logger.info(f"Starting SSE Preprocessing pipeline for file_id: {file['id']}")
     
     # We return a StreamingResponse that consumes the async generator
     return StreamingResponse(
-        preprocess_document_sse(file_id),
+        preprocess_document_sse(file["id"]),
         media_type="text/event-stream"
     )

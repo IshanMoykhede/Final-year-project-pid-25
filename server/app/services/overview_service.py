@@ -1,5 +1,6 @@
 import logging
 import json
+import asyncio
 from app.core.supabase import connectSupa
 from groq import Groq
 from app.schemas.AnalyzerSchemas import DocumentIdentity, RoadmapResult, OverviewResponse, CategoryCount
@@ -31,13 +32,15 @@ async def generate_document_overview(file_id: str, force_refresh: bool = False) 
     # 2. SQL Query -> Count chunks per category (No LLM)
     # Get all chunks for the document with their classification names
     # Because Supabase Python doesn't support complex aggregations easily, we'll fetch classifications and map
-    chunks_res = supabase.table("chunks").select("id, text, classification_id").eq("document_id", file_id).execute()
+    chunks_res = await asyncio.to_thread(
+        supabase.table("chunks").select("id, text, classification_id").eq("document_id", file_id).execute
+    )
     chunks = chunks_res.data
     
     if not chunks:
         raise ValueError("No chunks found. Is the document preprocessed?")
 
-    class_res = supabase.table("classifications").select("id, name").execute()
+    class_res = await asyncio.to_thread(supabase.table("classifications").select("id, name").execute)
     class_map = {c["id"]: c["name"] for c in class_res.data}
 
     # Count them
@@ -56,7 +59,8 @@ async def generate_document_overview(file_id: str, force_refresh: bool = False) 
     top_chunks_text = "\n\n---\n\n".join(valid_chunks[:5])
 
     logger.info("[OVERVIEW_SERVICE] Calling LLM (Call 1) for Document Identity...")
-    identity_completion = groq_client.chat.completions.create(
+    identity_completion = await asyncio.to_thread(
+        groq_client.chat.completions.create,
         model="openai/gpt-oss-20b",  # We can use the fast/cheap model for this simple task
         messages=[
             {"role": "system", "content": "You are a legal document analyzer. Read the preamble/top chunks of this document and return a strict JSON according to the schema. Make sure to accurately extract the exact party names, jurisdiction, and explicitly map the document type to the provided enum."},
@@ -84,7 +88,8 @@ For example, for a Lease, the ideal order is often [Financial, Termination, Liab
 For an NDA, it might be [Liability, Confidentiality, Termination, General].
 Return strict JSON."""
     
-    roadmap_completion = groq_client.chat.completions.create(
+    roadmap_completion = await asyncio.to_thread(
+        groq_client.chat.completions.create,
         model="openai/gpt-oss-20b",
         messages=[
             {"role": "system", "content": "You are a UX guide for a legal tech app. Return strict JSON according to the schema."},

@@ -1,7 +1,7 @@
 import os
 import logging
 from typing import List, Dict, Any
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder
 from app.core.supabase import connectSupa
 from app.schemas.chat import RetrievedClause
 from app.core.prompts import build_chat_system_prompt
@@ -9,24 +9,43 @@ from app.core.llm import generate_chat_completion
 
 logger = logging.getLogger(__name__)
 
-# Initialize models
-try:
-    logger.info("[CHAT_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace model...")
-    embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
-except Exception as e:
-    logger.error(f"[CHAT_SERVICE] Failed to load embedding model: {e}")
-    embedding_model = None
+# Initialize models lazily
+embedding_model = None
+reranker_model = None
+
+def get_embedding_model():
+    global embedding_model
+    if embedding_model is None:
+        try:
+            logger.info("[CHAT_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace embedding model...")
+            embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        except Exception as e:
+            logger.error(f"[CHAT_SERVICE] Failed to load embedding model: {e}")
+            raise RuntimeError("Embedding model failed to load.")
+    return embedding_model
+
+def get_reranker_model():
+    global reranker_model
+    if reranker_model is None:
+        try:
+            logger.info("[CHAT_SERVICE] Loading cross-encoder/ms-marco-MiniLM-L-6-v2 reranker model...")
+            reranker_model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+        except Exception as e:
+            logger.warning(f"[CHAT_SERVICE] Failed to load cross-encoder model: {e}. Fallback to standard bi-encoder scores.")
+            # Set to a dummy object or handle gracefully
+            reranker_model = False # Use False to distinguish from None (not loaded yet)
+    return reranker_model if reranker_model is not False else None
 
 
 def answer_question(document_id: str, question: str, use_1hop_expansion: bool = True, generate_answer: bool = True) -> Dict[str, Any]:
     logger.info(f"Answering question for document_id: {document_id}. 1-Hop Expansion: {use_1hop_expansion}")
     supabase = connectSupa()
 
-    if embedding_model is None:
-        raise RuntimeError("Embedding model is not loaded.")
+    emb_model = get_embedding_model()
+    rerank_model = get_reranker_model()
 
     # 1. Embed Query
-    query_vector = embedding_model.encode(question).tolist()
+    query_vector = emb_model.encode(question).tolist()
 
     # Detect summary / global overview intent
     summary_keywords = [
@@ -37,30 +56,48 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     is_summary_query = any(kw in question.lower() for kw in summary_keywords)
 
     if is_summary_query:
-        match_count = 15
-        match_threshold = 0.15
-        logger.info(f"[CHAT_SERVICE] Summary intent detected for query. Using adaptive match_count={match_count}, threshold={match_threshold}")
+        # Fetch broader candidate pool for summary
+        candidate_count = 25
+        final_top_k = 15
+        match_threshold = 0.10
+        logger.info(f"[CHAT_SERVICE] Summary intent detected. Candidate count={candidate_count}, final_top_k={final_top_k}")
     else:
-        match_count = 5
-        match_threshold = 0.2
+        # Standard Q&A: Fetch top 20 candidates for Stage 2 Cross-Encoder reranking
+        candidate_count = 20
+        final_top_k = 5
+        match_threshold = 0.15
 
-    # 2. Vector Search (C_k)
+    # 2. Stage 1: Vector Search Candidates (Bi-Encoder Retrieval)
     rpc_res = supabase.rpc("match_chunks", {
         "query_embedding": query_vector,
         "match_threshold": match_threshold,
-        "match_count": match_count,
+        "match_count": candidate_count,
         "filter_document_id": document_id
     }).execute()
     
-    top_k_chunks = rpc_res.data
+    candidates = rpc_res.data
     
-    if not top_k_chunks:
+    if not candidates:
         return {
             "success": True,
             "answer": "I could not find any relevant information in this document to answer your question.",
             "primary_clauses": [],
             "expanded_clauses": []
         }
+
+    # 3. Stage 2: Cross-Encoder Reranking (High precision semantic ranking)
+    if rerank_model is not None and len(candidates) > 1:
+        try:
+            pairs = [[question, c["text"]] for c in candidates]
+            scores = rerank_model.predict(pairs)
+            for i, c in enumerate(candidates):
+                c["rerank_score"] = float(scores[i])
+            candidates = sorted(candidates, key=lambda x: x["rerank_score"], reverse=True)
+            logger.info(f"[CHAT_SERVICE] CrossEncoder successfully reranked {len(candidates)} candidates. Top score: {candidates[0]['rerank_score']:.4f}")
+        except Exception as re:
+            logger.error(f"[CHAT_SERVICE] CrossEncoder reranking failed, falling back to vector similarity: {re}")
+
+    top_k_chunks = candidates[:final_top_k]
 
     primary_clauses = []
     for c in top_k_chunks:
@@ -69,7 +106,7 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             chunk_no=c["chunk_no"],
             text=c["text"],
             aliases=c.get("aliases") or [],
-            similarity=c.get("similarity"),
+            similarity=c.get("rerank_score") if "rerank_score" in c else c.get("similarity"),
             is_expanded=False
         ))
 

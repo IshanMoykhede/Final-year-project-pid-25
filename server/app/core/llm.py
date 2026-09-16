@@ -52,12 +52,22 @@ def get_llm_model_name() -> str:
     else:
         return os.getenv("OLLAMA_MODEL", "qwen2.5:3b")
 
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=1.5, min=2, max=15),
+    retry=retry_if_exception_type(Exception),
+    before_sleep=lambda retry_state: logger.warning(
+        f"[LLM] Error calling provider. Retrying in {retry_state.next_action.sleep}s "
+        f"(attempt {retry_state.attempt_number}/5)... Exception: {retry_state.outcome.exception()}"
+    )
+)
 def generate_chat_completion(messages: List[Dict[str, str]], temperature: float = 0.1, max_tokens: Optional[int] = None) -> str:
     """
     Unified function to generate chat completions using either Ollama or Groq,
-    with automatic rate-limit (HTTP 429) backoff and retries.
+    with automatic rate-limit (HTTP 429) backoff and retries via tenacity.
     """
-    import time
     client, provider = get_llm_client()
     model = get_llm_model_name()
 
@@ -69,24 +79,6 @@ def generate_chat_completion(messages: List[Dict[str, str]], temperature: float 
     if max_tokens:
         kwargs["max_tokens"] = max_tokens
 
-    max_retries = 5
-    backoff = 3.0
-
-    for attempt in range(1, max_retries + 1):
-        try:
-            logger.debug(f"[LLM] Calling {provider} (model={model}, attempt={attempt})...")
-            response = client.chat.completions.create(**kwargs)
-            return response.choices[0].message.content or ""
-        except Exception as e:
-            err_msg = str(e).lower()
-            if "429" in err_msg or "rate limit" in err_msg or "too many requests" in err_msg:
-                logger.warning(f"[LLM] Rate limit hit on {provider}. Waiting {backoff:.1f}s before retry (attempt {attempt}/{max_retries})...")
-                time.sleep(backoff)
-                backoff *= 2.0
-            elif attempt == max_retries:
-                logger.error(f"[LLM] Error calling {provider}: {e}")
-                raise
-            else:
-                logger.warning(f"[LLM] Transient error: {e}. Retrying in 2s...")
-                time.sleep(2.0)
-    return ""
+    logger.debug(f"[LLM] Calling {provider} (model={model})...")
+    response = client.chat.completions.create(**kwargs)
+    return response.choices[0].message.content or ""

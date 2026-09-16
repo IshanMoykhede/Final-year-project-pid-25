@@ -10,6 +10,7 @@ CREATE TABLE files (
     file_url TEXT NOT NULL, -- Supabase Storage URL
     status TEXT NOT NULL DEFAULT 'UPLOADED', -- 'OCR_COMPLETED', 'COMPLETED', etc.
     overview_cache JSONB, -- Added for Phase 1 of DeepClause Analyzer
+    risk_cache JSONB, -- Added for Phase 2 of DeepClause Analyzer (Document Risk Analysis)
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 

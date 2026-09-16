@@ -13,6 +13,8 @@ router = APIRouter(
     tags=["Chat"]
 )
 
+import asyncio
+
 @router.post("/ask", response_model=ChatResponse)
 async def ask_document_question(
     data: ChatRequest,
@@ -31,7 +33,10 @@ async def ask_document_question(
         raise HTTPException(status_code=403, detail="You do not have access to this document")
         
     try:
-        response = answer_question(data.document_id, data.question, data.use_1hop_expansion)
+        # Wrap CPU-bound and synchronous DB operations in a thread to prevent event loop blocking
+        response = await asyncio.to_thread(
+            answer_question, data.document_id, data.question, data.use_1hop_expansion
+        )
         return response
     except Exception as e:
         logger.exception(f"Chat failed for document {data.document_id}")
