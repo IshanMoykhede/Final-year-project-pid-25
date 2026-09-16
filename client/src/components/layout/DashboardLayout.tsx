@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { Navbar } from './Navbar';
+import { Footer } from './Footer';
 
 export const DashboardLayout: React.FC = () => {
   const { isAuthenticated } = useAuth();
@@ -16,6 +17,7 @@ export const DashboardLayout: React.FC = () => {
       <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };
@@ -27,6 +29,7 @@ export const RootLayout: React.FC = () => {
       <main className="flex-1">
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };

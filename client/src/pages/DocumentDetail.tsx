@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ReactMarkdown from 'react-markdown';
-import { getMyFiles, preprocessDocument, processDocument, viewFile } from '../api/files';
+import { getMyFiles, preprocessDocument, viewFile } from '../api/files';
 import type { FileData } from '../api/files';
+import { getDocumentOverview } from '../api/analyzer';
+import type { DocumentOverview } from '../api/analyzer';
+import type { RetrievedClause } from '../api/chat';
 import { Button } from '../components/common/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/common/Card';
 import { DocumentChat } from '../components/documents/DocumentChat';
-import { ArrowLeft, FileText, Loader2, ShieldAlert, Sparkles } from 'lucide-react';
-
-interface AnalysisResult {
-  markdown: string;
-  text: string;
-  raw_llama_json: unknown[];
-}
+import { RiskAnalysis } from '../components/documents/RiskAnalysis';
+import { DocumentPdfViewer } from '../components/documents/DocumentPdfViewer';
+import { ArrowLeft, FileText, Loader2, MessageSquare, Sparkles, AlertTriangle } from 'lucide-react';
 
 interface DocumentDetailProps {
   previewOnly?: boolean;
@@ -24,10 +22,12 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [previewError, setPreviewError] = useState<string>('');
   const [isPreviewLoading, setIsPreviewLoading] = useState(true);
-  const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
+  const [overview, setOverview] = useState<DocumentOverview | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [preprocessingMessage, setPreprocessingMessage] = useState('');
   const [error, setError] = useState('');
+  const [activeFeature, setActiveFeature] = useState<'chat' | 'risk'>('chat');
+  const [selectedCitation, setSelectedCitation] = useState<RetrievedClause | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -90,10 +90,8 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
             if (isMounted) setPreprocessingMessage('');
           }
 
-          const analysisResponse = await processDocument(fileId);
-          if (isMounted && analysisResponse?.data) {
-            setAnalysis(analysisResponse.data);
-          }
+          const overviewResponse = await getDocumentOverview(fileId);
+          if (isMounted) setOverview(overviewResponse);
         }
       } catch (err: any) {
         if (isMounted) {
@@ -194,83 +192,40 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
           </CardContent>
         </Card>}
 
-        {!previewOnly && <div className="space-y-6">
+        {!previewOnly && <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)]">
+          <div className="space-y-6">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <ShieldAlert className="h-5 w-5 text-amber-500" />
-                Document status
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-3 text-sm text-gray-700">
-              <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
-                <span>Status</span>
-                <span className="rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 capitalize">{file.status}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
-                <span>Uploaded</span>
-                <span>{file.created_at ? new Date(file.created_at).toLocaleDateString() : 'Unknown'}</span>
-              </div>
-              <div className="flex items-center justify-between rounded-lg bg-gray-50 p-3">
-                <span>Type</span>
-                <span>{file.content_type || 'Unknown'}</span>
-              </div>
+            <CardHeader><CardTitle className="flex items-center gap-2"><FileText className="h-5 w-5 text-accent" />Document preview</CardTitle></CardHeader>
+            <CardContent>
+              {isPreviewLoading ? <div className="flex min-h-[520px] items-center justify-center text-sm text-gray-500"><Loader2 className="mr-2 h-5 w-5 animate-spin text-accent" />Loading preview...</div> : previewUrl ? <DocumentPdfViewer url={previewUrl} selectedClause={selectedCitation} /> : <div className="flex min-h-[320px] items-center justify-center rounded-lg bg-gray-50 p-6 text-center text-sm text-gray-600">{previewError || 'No preview is available.'}</div>}
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Sparkles className="h-5 w-5 text-accent" />
-                AI extraction
-              </CardTitle>
-            </CardHeader>
+          {overview && <Card>
+            <CardHeader><CardTitle className="flex items-center gap-2"><Sparkles className="h-5 w-5 text-accent" />Document overview</CardTitle></CardHeader>
             <CardContent className="space-y-3 text-sm text-gray-700">
-              {analysis ? (
-                <>
-                  <p className="rounded-lg bg-accent/5 p-3 text-gray-700">
-                    {analysis.text ? analysis.text.slice(0, 220) : 'No text extracted yet.'}
-                    {analysis.text && analysis.text.length > 220 ? '...' : ''}
-                  </p>
-                  {analysis.raw_llama_json?.length ? (
-                    <div className="rounded-lg border border-gray-200 bg-gray-50 p-3">
-                      <p className="mb-2 font-medium text-gray-800">Parsed items</p>
-                      <ul className="list-inside list-disc space-y-1 text-xs text-gray-600">
-                        {analysis.raw_llama_json.slice(0, 5).map((item, index) => (
-                          <li key={`${(item as any)?.id ?? index}`}>
-                            {(item as any)?.label || (item as any)?.title || 'Extracted content'}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ) : null}
-                </>
-              ) : (
-                <p className="text-gray-500">No AI extraction has been generated yet for this document.</p>
-              )}
+              <p>{overview.summary}</p>
+              <div className="grid gap-2 sm:grid-cols-3"><div className="rounded bg-gray-50 p-2"><span className="block text-xs text-gray-500">Type</span>{overview.document_type}</div><div className="rounded bg-gray-50 p-2"><span className="block text-xs text-gray-500">Clauses</span>{overview.total_clauses}</div><div className="rounded bg-gray-50 p-2"><span className="block text-xs text-gray-500">Jurisdiction</span>{overview.jurisdiction}</div></div>
+              {overview.parties.length > 0 && <p><strong>Parties:</strong> {overview.parties.join(', ')}</p>}
             </CardContent>
-          </Card>
+          </Card>}
+          </div>
+
+          <div className="min-w-0 space-y-4">
+            <div className="flex rounded-xl border border-gray-200 bg-gray-50 p-1" role="tablist" aria-label="Document tools">
+              <button type="button" role="tab" aria-selected={activeFeature === 'chat'} onClick={() => setActiveFeature('chat')} className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${activeFeature === 'chat' ? 'bg-white text-accent shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}><MessageSquare className="h-4 w-4" />Chat</button>
+              <button type="button" role="tab" aria-selected={activeFeature === 'risk'} onClick={() => setActiveFeature('risk')} className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${activeFeature === 'risk' ? 'bg-white text-amber-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}><AlertTriangle className="h-4 w-4" />Risk analysis</button>
+            </div>
+            {activeFeature === 'chat' ? <DocumentChat documentId={file.id} onCitation={setSelectedCitation} /> : <RiskAnalysis documentId={file.id} />}
+          </div>
         </div>}
       </div>
-
-      {!previewOnly && <Card>
-        <CardHeader>
-          <CardTitle>Document markdown</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-slate max-w-none px-6 pb-6">
-          {analysis?.markdown ? (
-            <ReactMarkdown>{analysis.markdown}</ReactMarkdown>
-          ) : (
-            <p className="text-gray-500">No markdown content is available yet.</p>
-          )}
-        </CardContent>
-      </Card>}
 
       {!previewOnly && preprocessingMessage && (
         <p className="rounded-lg bg-blue-50 p-3 text-sm text-blue-700">{preprocessingMessage}</p>
       )}
 
-      {!previewOnly && <DocumentChat documentId={file.id} />}
+
     </div>
   );
 };

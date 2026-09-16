@@ -1,5 +1,5 @@
-from pydantic import BaseModel
-from typing import List, Optional
+from pydantic import BaseModel, Field
+from typing import Any, Dict, List, Optional
 
 class ChatRequest(BaseModel):
     document_id: str
@@ -13,6 +13,7 @@ class RetrievedClause(BaseModel):
     aliases: List[str] = []
     similarity: Optional[float] = None
     is_expanded: bool = False
+    bbox: List[Dict[str, Any]] = Field(default_factory=list)
 
 class ChatResponse(BaseModel):
     success: bool

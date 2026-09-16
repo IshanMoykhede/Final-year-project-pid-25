@@ -1249,3 +1249,856 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.
 2026-09-12 00:01:13,401 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
 2026-09-12 00:01:14,692 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
 2026-09-12 00:01:14,920 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:10:09,606 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-12 00:10:11,076 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:10:12,214 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:10:13,365 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-12 00:10:14,723 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-12 00:10:14,916 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:37:06,849 | root | INFO | Centralized logging system initialized!
+2026-09-16 16:46:14,346 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-16 16:46:19,203 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:21,456 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:22,766 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:26,602 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:28,513 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:29,811 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:31,301 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:35,156 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:36,681 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:37,591 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:39,055 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:39,546 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:41,277 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:43,080 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:43,816 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:46:46,565 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 16:46:51,438 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:46:52,930 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:46:52,930 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:46:52,930 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:46:54,482 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:46:54,485 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-16 16:46:56,076 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 16:46:56,087 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-16 16:46:56,291 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-16 16:46:59,329 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-16 16:46:59,330 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-16 16:46:59,952 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-16 16:47:01,455 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:04,182 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:07,689 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:12,342 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:19,095 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:25,262 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:47:26,495 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-16 16:47:26,505 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-16 16:47:28,817 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:47:28,826 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:47:28,826 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:52:22,641 | root | INFO | Centralized logging system initialized!
+2026-09-16 16:52:24,030 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:52:24,931 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:52:26,051 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:52:26,966 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:52:27,674 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:52:27,923 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:28,567 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 16:52:30,319 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:52:30,338 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 16:52:31,024 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:52:31,256 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 16:52:34,832 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:35,868 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:35,869 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] No cache found. Generating deterministic overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf...
+2026-09-16 16:52:36,434 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:37,005 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 16:52:37,006 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Calling LLM (Call 1) for Document Identity...
+2026-09-16 16:52:38,497 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-16 16:52:38,506 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Calling LLM (Call 2) for Roadmap...
+2026-09-16 16:52:39,305 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-16 16:52:39,306 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Overview generated successfully. Caching...
+2026-09-16 16:52:39,887 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:39,891 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:52:39,891 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:52:40,911 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:40,913 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-16 16:52:42,383 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 16:52:42,389 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-16 16:52:42,586 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-16 16:52:46,637 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-16 16:52:46,638 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-16 16:52:47,143 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-16 16:52:48,528 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 16:52:49,412 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-16 16:52:49,422 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-16 16:52:49,919 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 16:52:49,923 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:52:49,923 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 16:54:00,915 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:04:57,338 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:05:10,130 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:05:12,572 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:05:15,290 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:05:16,465 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:05:18,300 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:05:19,668 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:05:20,227 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:05:21,259 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:05:23,101 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:05:23,108 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:05:23,876 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:05:23,877 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:05:24,729 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:05:27,631 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:05:27,631 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:05:27,633 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:05:27,633 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:05:28,891 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:05:28,902 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-16 17:05:29,641 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:05:29,656 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-16 17:05:29,921 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-16 17:05:33,618 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-16 17:05:33,619 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-16 17:05:34,519 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-16 17:05:36,369 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 17:05:37,978 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-16 17:05:37,989 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-16 17:05:39,800 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:05:39,803 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:05:39,804 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:06:16,807 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:08:19,145 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:08:20,388 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:21,588 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:22,806 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:08:25,072 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:25,761 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:26,795 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:08:27,473 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:27,749 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:08:28,488 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:08:30,852 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:08:30,978 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:08:32,904 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:32,905 | app.router.file_upload | INFO | Starting OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:08:32,905 | app.services.ocr_service | INFO | Starting OCR processing for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:08:33,158 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:08:34,153 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:08:34,155 | app.services.ocr_service | INFO | [OCR_SERVICE] Downloading file rental_agreement_RENT-2026-001.pdf from Supabase Storage...
+2026-09-16 17:08:35,070 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:08:35,078 | app.services.ocr_service | INFO | [OCR_SERVICE] Authenticating with LlamaCloud...
+2026-09-16 17:08:35,459 | app.services.ocr_service | INFO | [OCR_SERVICE] Uploading rental_agreement_RENT-2026-001.pdf to LlamaCloud servers...
+2026-09-16 17:08:38,075 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v1/beta/files "HTTP/1.1 201 Created"
+2026-09-16 17:08:38,079 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud is now parsing the document. This may take 60-120 seconds! Please wait...
+2026-09-16 17:08:38,628 | httpx | INFO | HTTP Request: POST https://api.cloud.llamaindex.ai/api/v2/parse "HTTP/1.1 200 OK"
+2026-09-16 17:08:40,003 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc "HTTP/1.1 200 OK"
+2026-09-16 17:08:40,967 | httpx | INFO | HTTP Request: GET https://api.cloud.llamaindex.ai/api/v2/parse/pjb-ur75ficfxhdvxa7s8phn4fnr5rrc?expand=markdown_full&expand=text_full&expand=items "HTTP/1.1 200 OK"
+2026-09-16 17:08:40,975 | app.services.ocr_service | INFO | [OCR_SERVICE] LlamaCloud parsing complete! Extracting data...
+2026-09-16 17:08:42,288 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:08:42,294 | app.services.ocr_service | INFO | Successfully stored 1 OCR items for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:08:42,295 | app.router.file_upload | INFO | Completed OCR test route for file_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:08:43,169 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:08:44,358 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:08:44,359 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:09:14,150 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:14,965 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:16,173 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:17,589 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:17,823 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:18,383 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:18,383 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:19,154 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:20,196 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:21,233 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:22,425 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:22,669 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:22,920 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:22,920 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:27,454 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:28,592 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:29,590 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:30,856 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:31,253 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:31,455 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:32,071 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:32,072 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:34,684 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:36,189 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:37,608 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:37,844 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:38,159 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:38,160 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:39,264 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:40,177 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:41,595 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:42,690 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:42,956 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:43,247 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:43,249 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:49,176 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:49,873 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:50,751 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:50,956 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:51,405 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:51,921 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:52,143 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:52,545 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:52,694 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:52,694 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:54,042 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:54,557 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:54,788 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:54,789 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:09:55,363 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:09:55,968 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:09:57,056 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:57,952 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:09:58,192 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:09:58,749 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:09:58,750 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:10:55,961 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:10:58,621 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:11:00,724 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:11:03,762 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:11:04,033 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:11:04,320 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:11:04,321 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:13:48,112 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:13:49,943 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:13:51,924 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:13:54,560 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:13:55,613 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:13:56,306 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:13:57,465 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:14:00,970 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:03,176 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:05,465 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:07,039 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:07,040 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:14:18,418 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:19,185 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:20,389 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:21,709 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:21,966 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:14:22,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:14:22,246 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:14:23,361 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:24,131 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:25,280 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:26,452 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:26,682 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:14:26,955 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:14:26,956 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:14:28,028 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:28,837 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:30,028 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:32,953 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:33,197 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:14:33,730 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:14:33,731 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:14:34,556 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:35,513 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:37,010 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:38,637 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:38,858 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:14:39,328 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:14:39,331 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:14:52,723 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:14:53,695 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:14:54,970 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:14:54,971 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-16 17:14:56,799 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-16 17:14:57,421 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=target_chunk_id%2Creference_text&source_chunk_id=in.%28503f0729-dcaf-4997-a02f-5a2621039ef7%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%29&link_type=eq.EXACT_MATCH "HTTP/2 200 OK"
+2026-09-16 17:14:59,467 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-16 17:15:35,839 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:15:36,864 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:38,367 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:15:39,283 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:15:39,682 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:15:39,909 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:15:40,115 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:40,187 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:15:40,512 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:40,523 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:15:41,749 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:15:42,536 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:42,750 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:43,922 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:15:44,528 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:44,785 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:15:45,311 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:15:47,212 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:15:47,807 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:15:48,733 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:15:49,892 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:15:49,892 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:18:11,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:12,376 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:13,613 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:18:13,614 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-16 17:18:14,968 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-16 17:18:15,185 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=target_chunk_id%2Creference_text&source_chunk_id=in.%28503f0729-dcaf-4997-a02f-5a2621039ef7%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%29&link_type=eq.EXACT_MATCH "HTTP/2 200 OK"
+2026-09-16 17:18:16,494 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-16 17:18:22,869 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:23,652 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:24,159 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:24,994 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:25,953 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:26,169 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:27,450 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:28,206 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:28,478 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:29,235 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:30,044 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:30,395 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:33,279 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:34,064 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:34,281 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:18:34,769 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:18:36,654 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:37,472 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:38,526 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:18:40,046 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:18:40,047 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:18:55,367 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:56,086 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:56,456 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:57,185 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:57,991 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:58,224 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:58,992 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:18:59,761 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:18:59,971 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:00,390 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:19:02,982 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:19:03,733 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:19:05,905 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:07,557 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:07,558 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:19:18,702 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:19:19,388 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:19:20,402 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:21,462 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:21,686 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:19:21,920 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:19:21,920 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:19:22,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:19:23,446 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:19:24,459 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:25,548 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:19:25,751 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:19:26,000 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:19:26,000 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:20:45,739 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:20:46,959 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:47,979 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:49,668 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:20:50,602 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:50,850 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:52,258 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:20:53,187 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:53,427 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:54,459 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:20:55,343 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:55,616 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:56,426 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:20:57,218 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:20:57,801 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:20:58,204 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:21:08,449 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:21:09,177 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:21:09,603 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:21:10,331 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:21:10,995 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:21:11,202 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:18,405 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:28:18,663 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:28:19,445 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:19,681 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:20,112 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:20,332 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:21,102 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:28:22,001 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:28:22,231 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:12,703 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-16 17:29:13,700 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:14,382 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:15,261 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:16,290 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:17,364 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:17,572 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:18,646 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:19,929 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:20,457 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:21,141 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:24,485 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:25,002 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:25,764 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:26,461 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:26,696 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:27,079 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:29:28,882 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:29,481 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:30,230 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:31,495 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:31,495 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:29:38,083 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:38,746 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:39,774 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:40,845 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:41,099 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:29:41,349 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:29:41,349 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:29:42,084 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:29:42,783 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:29:43,760 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:44,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:29:44,913 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:29:45,444 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:29:45,444 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:37:22,888 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:37:36,649 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-16 17:37:37,922 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:37:39,133 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:37:40,474 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:37:41,729 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:37:42,983 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:37:43,213 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:42:33,135 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:43:38,266 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:43:39,523 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:43:40,386 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:43:41,243 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:43:41,848 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:43:42,068 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:44:57,174 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:44:58,152 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:44:59,141 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:44:59,802 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:45:01,067 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:45:01,262 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:45:21,074 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:46:01,604 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:46:03,725 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:46:04,307 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:46:05,677 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:46:08,115 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:46:08,333 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:47:18,601 | root | INFO | Centralized logging system initialized!
+2026-09-16 17:47:56,004 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-16 17:47:56,908 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:47:59,916 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:00,906 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:01,864 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:02,610 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:02,841 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:16,030 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:16,902 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:17,865 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:18,775 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:19,389 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:19,638 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:20,191 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:21,023 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:21,243 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:21,951 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:48:23,947 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:24,522 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:25,352 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:26,350 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:26,350 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:48:35,979 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:36,535 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:36,885 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:37,485 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:38,041 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:38,264 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:38,984 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:39,561 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:39,765 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:40,508 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:41,218 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:41,426 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:42,508 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:43,251 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:43,661 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:44,064 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:48:45,109 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:45,661 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:46,469 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:47,459 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:48:47,459 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:48:56,899 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:48:57,923 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:58,339 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:48:59,348 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:49:00,186 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:49:00,426 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:49:01,222 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:49:01,962 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:49:02,196 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:49:02,603 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:49:05,842 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:49:06,682 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:49:07,468 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:49:08,443 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:49:08,444 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:49:31,009 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:49:31,766 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:49:32,845 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:49:32,846 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop Expansion: True
+2026-09-16 17:49:34,244 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-16 17:49:34,450 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cbbox&id=in.%28d6068db0-275a-44f1-8024-729e23c669fb%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cc7e84125-b631-404b-9080-5cdd1474944b%29 "HTTP/2 200 OK"
+2026-09-16 17:49:34,652 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=target_chunk_id%2Creference_text&source_chunk_id=in.%28d6068db0-275a-44f1-8024-729e23c669fb%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cc7e84125-b631-404b-9080-5cdd1474944b%29&link_type=eq.EXACT_MATCH "HTTP/2 200 OK"
+2026-09-16 17:49:35,631 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-16 17:50:00,494 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:50:01,870 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:02,559 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:03,656 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:50:04,762 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:05,018 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:06,358 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:50:07,080 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:07,298 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:50:07,996 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-09-16 17:50:10,948 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:50:11,706 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:50:12,938 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:50:14,346 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:50:14,346 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-09-16 17:51:53,818 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:51:54,700 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:51:55,719 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:51:56,745 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:51:56,967 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:51:57,523 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:51:57,523 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}
+2026-09-16 17:51:58,677 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-09-16 17:51:59,561 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-09-16 17:52:00,589 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:52:01,761 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Ctext%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-09-16 17:52:01,999 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-09-16 17:52:02,244 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=in.%282963460f-bb8f-4846-8c5a-550fb1269bb1%2Cc7e84125-b631-404b-9080-5cdd1474944b%2C17805e28-c8f1-4166-a0f3-ccb7a8350a6e%2Cd6068db0-275a-44f1-8024-729e23c669fb%2C50b91341-eb57-48b1-9579-fa9c1421a6b4%2C92ab3f50-1784-436a-84a3-b73525bd62c6%2C503f0729-dcaf-4997-a02f-5a2621039ef7%29 "HTTP/2 404 Not Found"
+2026-09-16 17:52:02,245 | app.router.analyzer | ERROR | Failed to generate risk analysis
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\analyzer.py", line 79, in get_document_risk
+    return await asyncio.to_thread(analyze_document_risk, file_id, force_refresh)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\risk_service.py", line 28, in analyze_document_risk
+    cached_result = supabase.table("clause_analysis").select("*").in_("chunk_id", [item["id"] for item in chunks]).execute()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\postgrest\_sync\request_builder.py", line 96, in execute
+    raise APIError(dict(json_obj))
+postgrest.exceptions.APIError: {'message': "Could not find the table 'public.clause_analysis' in the schema cache", 'code': 'PGRST205', 'hint': "Perhaps you meant the table 'public.classifications'", 'details': None}

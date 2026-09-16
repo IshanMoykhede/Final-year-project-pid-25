@@ -47,6 +47,10 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             "expanded_clauses": []
         }
 
+    primary_ids = [c["id"] for c in top_k_chunks]
+    bbox_res = supabase.table("chunks").select("id, bbox").in_("id", primary_ids).execute()
+    bbox_by_id = {item["id"]: item.get("bbox") or [] for item in (bbox_res.data or [])}
+
     primary_clauses = []
     for c in top_k_chunks:
         primary_clauses.append(RetrievedClause(
@@ -55,7 +59,8 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             text=c["text"],
             aliases=c.get("aliases") or [],
             similarity=c.get("similarity"),
-            is_expanded=False
+            is_expanded=False,
+            bbox=bbox_by_id.get(c["id"], c.get("bbox") or [])
         ))
 
     expanded_clauses = []
@@ -73,7 +78,7 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
         target_ids = list(set(r["target_chunk_id"] for r in refs.data if r["target_chunk_id"]))
         
         if target_ids:
-            expanded_res = supabase.table("chunks").select("id, chunk_no, text, aliases").in_("id", target_ids).execute()
+            expanded_res = supabase.table("chunks").select("id, chunk_no, text, aliases, bbox").in_("id", target_ids).execute()
             
             # Avoid adding clauses that are already in the primary set
             existing_ids = {c["id"] for c in top_k_chunks}
@@ -86,6 +91,7 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
                         aliases=c.get("aliases") or [],
                         similarity=None,
                         is_expanded=True
+                        ,bbox=c.get("bbox") or []
                     ))
                     
     # 4. LLM Generation
