@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Bot, ChevronDown, ChevronUp, LocateFixed, MessageSquare, Send, User } from 'lucide-react';
 import { askDocumentQuestion } from '../../api/chat';
 import type { RetrievedClause } from '../../api/chat';
@@ -43,36 +44,55 @@ const ClauseList: React.FC<{
   if (!clauses.length) return null;
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-gray-50">
+    <div className="overflow-hidden rounded-xl border border-sand bg-[#FAF7F0]/60 shadow-xs transition-colors">
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="flex w-full items-center justify-between px-3 py-2 text-left text-xs font-medium text-gray-700"
+        className="flex w-full items-center justify-between px-3.5 py-2.5 text-left text-xs font-medium text-[#57534E] hover:bg-[#F4EDE6]/60 transition-colors"
         aria-expanded={isOpen}
       >
-        <span>{title} ({clauses.length})</span>
-        {isOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
+        <span className="flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#B08D57]" />
+          <span>{title}</span>
+          <span className="rounded-full bg-sand/60 px-1.5 py-0.2 font-mono text-[10px] text-muted">
+            {clauses.length}
+          </span>
+        </span>
+        {isOpen ? <ChevronUp className="h-3.5 w-3.5 text-muted" /> : <ChevronDown className="h-3.5 w-3.5 text-muted" />}
       </button>
+
       {isOpen && (
-        <div className="space-y-2 border-t border-gray-200 px-3 py-3">
+        <div className="space-y-3 border-t border-sand/70 p-3 bg-white">
           {clauses.map((clause) => (
-            <div key={clause.chunk_id} className="rounded-md bg-white p-3 text-xs text-gray-600">
-              <div className="mb-1 flex items-center justify-between gap-2">
-                <p className="font-medium text-gray-800">
+            <div
+              key={clause.chunk_id}
+              className="rounded-lg border border-sand/80 bg-[#FAF7F0]/30 p-3.5 text-xs text-charcoal shadow-2xs hover:border-[#B08D57]/40 transition-colors"
+            >
+              <div className="mb-2 flex items-center justify-between gap-2 border-b border-sand/50 pb-2">
+                <span className="font-serif font-semibold tracking-tight text-charcoal">
                   {clause.aliases.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
-                </p>
-                {onCitation && <button
-                  type="button"
-                  onClick={() => onCitation(clause)}
-                  disabled={!clause.bbox.length}
-                  title={clause.bbox.length ? 'Highlight this citation in the document' : 'No coordinates available for this citation'}
-                  className="inline-flex items-center gap-1 rounded border border-gray-200 px-2 py-1 text-[11px] font-medium text-accent transition hover:border-accent disabled:cursor-not-allowed disabled:opacity-40"
-                >
-                  <LocateFixed className="h-3 w-3" />
-                  Cite
-                </button>}
+                </span>
+
+                {onCitation && (
+                  <button
+                    type="button"
+                    onClick={() => onCitation(clause)}
+                    disabled={!clause.bbox.length}
+                    title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
+                    className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                  >
+                    <LocateFixed className="h-3 w-3 text-brass" />
+                    Cite
+                  </button>
+                )}
               </div>
-              <p className="whitespace-pre-wrap">{clause.text}</p>
+
+              {/* Rendered content with full Markdown table and typography support */}
+              <div className="prose prose-xs max-w-none text-charcoal prose-p:my-1 prose-headings:text-xs prose-headings:font-bold prose-headings:text-charcoal prose-table:my-2 prose-th:bg-parchment prose-th:p-2 prose-th:text-left prose-th:font-semibold prose-th:text-xs prose-td:p-2 prose-td:border-t prose-td:border-sand prose-td:text-xs overflow-x-auto">
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                  {clause.text}
+                </ReactMarkdown>
+              </div>
             </div>
           ))}
         </div>
@@ -162,7 +182,9 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitati
                   <div className="flex gap-2">
                     <Bot className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
                     <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-headings:my-2 prose-p:my-1.5 prose-ul:my-1.5 prose-li:my-0.5 text-gray-800 leading-relaxed overflow-x-auto">
-                      <ReactMarkdown>{message.answer || 'No answer was generated.'}</ReactMarkdown>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {message.answer || 'No answer was generated.'}
+                      </ReactMarkdown>
                     </div>
                   </div>
                   <ClauseList clauses={message.primaryClauses} title="Primary clauses" onCitation={onCitation} />

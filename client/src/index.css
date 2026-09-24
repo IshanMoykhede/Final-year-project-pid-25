@@ -1,14 +1,140 @@
 @import "tailwindcss";
 
+/* Makes `dark:` utilities follow the .dark class (v4 defaults to prefers-color-scheme) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-primary: #111827;
-  --color-secondary: #4b5563;
-  --color-accent: #3b82f6;
-  --color-background: #f9fafb;
+  /* Warm Architectural Corporate Legal Palette matching Stitch Design System */
+  --color-charcoal: #1E1B17;
+  --color-charcoal-deep: #161411;
+  --color-stone: #33302C;
+  --color-stone-muted: #5F5E59;
+
+  --color-ivory: #FFF8F2;
+  --color-parchment: #F4EDE6;
+  --color-parchment-low: #FAF2EB;
+  --color-sand: #E8E1DB;
+  --color-border-hairline: #D0C4BE;
+
+  /* FIX: these two were used by the components (bg-surface, text-muted) but never defined */
+  --color-surface: #FFFFFF;
+  --color-muted: #6B625C;            /* ~5.6:1 on ivory, ~5:1 on parchment (old #7E7570 was ~4.3:1 / ~3.9:1) */
+
+  --color-brass: #B08D57;            /* decorative use: icons, borders, fills */
+  --color-brass-deep: #84642E;       /* text use: ~5:1 on ivory and parchment (old #8E6D38 was borderline) */
+  --color-brass-soft: #D4B98B;
+  --color-brass-subtle: #FDF9F3;
+
+  --color-crimson: #BA1A1A;
+  --color-crimson-deep: #93000A;
+  --color-crimson-soft: #FFDAD6;
+
+  --color-olive: #5E8C6A;            /* decorative use; for text use olive-deep */
+  --color-olive-deep: #43694D;
+  --color-olive-soft: #E8F2EA;
+
+  --color-amber: #C9962B;
+  --color-amber-deep: #7A5C20;       /* old #A07E4A was ~2.9:1 on amber-soft */
+  --color-amber-soft: #FFDEAE;
+
+  /* Typography (fonts must be loaded, see note in reply) */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-clause: "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --shadow-subtle: 0 1px 4px rgba(30, 27, 23, 0.04);
+  --shadow-card: 0 4px 14px rgba(30, 27, 23, 0.06);
+  --shadow-hover: 0 8px 24px rgba(30, 27, 23, 0.08);
+}
+
+:root {
+  --bg: #FFF8F2;
+  --surface: #FFFFFF;
+  --surface-alt: #F4EDE6;
+  --ink: #1E1B17;
+  --ink-soft: #4D4540;
+  --muted: #6B625C;
+  --border: #E8E1DB;
+  --accent: #B08D57;
+  --accent-deep: #84642E;
+  --accent-soft: #D4B98B;
+}
+
+/* NOTE: components use the static @theme colors above, so this block only affects
+   body/scrollbars for now. Full dark mode needs the tokens mapped to these variables. */
+.dark {
+  --bg: #14181E;
+  --surface: #1E232A;
+  --surface-alt: #262D36;
+  --ink: #F9F8F5;
+  --ink-soft: #A3ABB8;
+  --muted: #7E8694;
+  --border: #353D4A;
+  --accent: #CBB48A;
+  --accent-deep: #9E7D47;
+  --accent-soft: #E5D7BF;
+}
+
+@layer base {
+  /* v4 default border color is currentColor; keep the warm hairline instead */
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-sand);
+  }
+
+  /* Sticky capsule navbar would otherwise cover #how-it-works, #features, #faq targets */
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: rgba(158, 125, 71, 0.22);
+  color: var(--ink);
+}
+
+/* Restrained focus ring */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Subtle parchment grain (warm tint to match the palette) */
+.parchment-grain {
+  background-image: radial-gradient(rgba(30, 27, 23, 0.035) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbars for sidebars and legal text */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-hairline);
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: var(--border);
 }

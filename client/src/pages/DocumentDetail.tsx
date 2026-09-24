@@ -8,9 +8,8 @@ import type { RetrievedClause } from '../api/chat';
 import { Button } from '../components/common/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/common/Card';
 import { DocumentChat } from '../components/documents/DocumentChat';
-import { RiskAnalysis } from '../components/documents/RiskAnalysis';
 import { DocumentPdfViewer } from '../components/documents/DocumentPdfViewer';
-import { ArrowLeft, FileText, Loader2, MessageSquare, Sparkles, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, FileText, Loader2, Sparkles } from 'lucide-react';
 
 interface DocumentDetailProps {
   previewOnly?: boolean;
@@ -26,7 +25,6 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
   const [isLoading, setIsLoading] = useState(true);
   const [preprocessingMessage, setPreprocessingMessage] = useState('');
   const [error, setError] = useState('');
-  const [activeFeature, setActiveFeature] = useState<'chat' | 'risk'>('chat');
   const [selectedCitation, setSelectedCitation] = useState<RetrievedClause | null>(null);
 
   useEffect(() => {

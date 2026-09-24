@@ -18,3 +18,13 @@ __pycache__/
 
 # Supabase
 .supabase/
+
+# Stitch Assets & Downloads
+stitch_assets/
+client/public/stitch_*.zip
+
+# Evaluation artifacts & datasets
+evaluation/
+**/evaluation/contracts_reference/
+**/evaluation/results*
+server/app/evaluation/

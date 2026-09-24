@@ -4,8 +4,7 @@ import { getMyFiles, deleteFile } from '../api/files';
 import type { FileData } from '../api/files';
 import { FileUpload } from '../components/documents/FileUpload';
 import { Button } from '../components/common/Button';
-import { Card, CardContent } from '../components/common/Card';
-import { FileText, Trash2, Eye, File, Loader2, ScanEye, Upload, Sparkles } from 'lucide-react';
+import { FileText, Trash2, Eye, File, Loader2, ScanEye } from 'lucide-react';
 
 export const Dashboard: React.FC = () => {
   const [files, setFiles] = useState<FileData[]>([]);
@@ -30,7 +29,7 @@ export const Dashboard: React.FC = () => {
   }, []);
 
   const handleDelete = async (fileId: string) => {
-    if (!window.confirm('Are you sure you want to delete this file?')) return;
+    if (!window.confirm('Delete this contract and purge its audit trail? This cannot be undone.')) return;
     try {
       await deleteFile(fileId);
       setFiles((currentFiles) => currentFiles.filter((file) => file.id !== fileId));
@@ -46,75 +45,155 @@ export const Dashboard: React.FC = () => {
     }
   };
 
+  const getStatusBadge = (status: string) => {
+    const norm = (status || '').toUpperCase();
+    if (norm === 'COMPLETED' || norm === 'READY') {
+      return (
+        <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-olive-soft text-olive dark:text-emerald-300 border border-olive/30">
+          Audited
+        </span>
+      );
+    }
+    if (norm === 'FAILED' || norm === 'NEEDS ATTENTION') {
+      return (
+        <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-crimson-soft text-crimson dark:text-rose-300 border border-crimson/30">
+          Review Needed
+        </span>
+      );
+    }
+    return (
+      <span className="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium bg-amber-soft text-amber-deep dark:text-amber-soft border border-amber/30">
+        Parsing Layout
+      </span>
+    );
+  };
+
   return (
-    <div className="space-y-10">
-      <div className="flex flex-col gap-5 border-b border-gray-200 pb-8 sm:flex-row sm:items-end sm:justify-between">
-        <div><p className="mb-2 text-sm font-semibold uppercase tracking-widest text-accent">Workspace</p><h1 className="text-3xl font-bold text-gray-950">Your document desk</h1><p className="mt-2 text-gray-500">Upload, organize, and review your legal documents in one place.</p></div>
-        <div className="flex items-center gap-2 text-sm text-gray-500"><Sparkles className="h-4 w-4 text-accent" />AI-assisted review</div>
+    <div className="p-6 lg:p-8 space-y-8 max-w-7xl mx-auto">
+      {/* Header */}
+      <div className="flex flex-col gap-2 border-b border-sand dark:border-stone-muted pb-6 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-brass mb-1">
+            STATUTORY REPOSITORY & BENCHMARKING
+          </p>
+          <h1 className="font-display text-2xl sm:text-3xl font-bold text-charcoal dark:text-ivory tracking-tight">
+            Active Review Console
+          </h1>
+          <p className="mt-1 text-xs text-stone-muted dark:text-sand/80 font-sans">
+            Contracts ingested into isolated graph stores with clause-level coordinate indexing.
+          </p>
+        </div>
       </div>
 
+      {/* Metrics strip */}
       <div className="grid gap-4 sm:grid-cols-3">
-        <div className="rounded-xl border border-gray-200 bg-white p-5"><p className="text-sm text-gray-500">Total documents</p><p className="mt-2 text-3xl font-semibold text-gray-950">{files.length}</p></div>
-        <div className="rounded-xl border border-gray-200 bg-white p-5"><p className="text-sm text-gray-500">Ready to review</p><p className="mt-2 text-3xl font-semibold text-gray-950">{files.filter((file) => file.status.toUpperCase() === 'COMPLETED').length}</p></div>
-        <div className="rounded-xl border border-gray-200 bg-sky-50 p-5"><p className="text-sm text-sky-700">Next step</p><p className="mt-2 text-sm font-semibold text-sky-950">Upload a document to begin</p></div>
+        <div className="rounded border border-sand dark:border-stone-muted bg-surface dark:bg-stone p-5 shadow-subtle">
+          <p className="text-xs font-mono uppercase text-muted">Audited Contracts</p>
+          <p className="mt-2 font-display text-3xl font-bold text-charcoal dark:text-ivory">{files.length}</p>
+        </div>
+        <div className="rounded border border-sand dark:border-stone-muted bg-surface dark:bg-stone p-5 shadow-subtle">
+          <p className="text-xs font-mono uppercase text-muted">Verified & Indexed</p>
+          <p className="mt-2 font-display text-3xl font-bold text-charcoal dark:text-ivory">
+            {files.filter((f) => f.status.toUpperCase() === 'COMPLETED').length}
+          </p>
+        </div>
+        <div className="rounded border border-sand dark:border-stone-muted bg-surface dark:bg-stone p-5 shadow-subtle">
+          <p className="text-xs font-mono uppercase text-muted">Awaiting Processing</p>
+          <p className="mt-2 font-display text-3xl font-bold text-charcoal dark:text-ivory">
+            {files.filter((f) => f.status.toUpperCase() !== 'COMPLETED').length}
+          </p>
+        </div>
       </div>
 
+      {/* Upload Drop Zone */}
       <section>
-        <div className="mb-4 flex items-center gap-2"><Upload className="h-5 w-5 text-accent" /><h2 className="text-lg font-semibold text-gray-900">Upload new document</h2></div>
+        <div className="mb-3">
+          <h2 className="font-display text-base font-bold text-charcoal dark:text-ivory">
+            Ingest Agreement
+          </h2>
+        </div>
         <FileUpload onUploadSuccess={fetchFiles} />
       </section>
 
+      {/* Document cards / table */}
       <section>
-        <div className="mb-4 flex items-center justify-between"><div><h2 className="text-lg font-semibold text-gray-900">Your documents</h2><p className="mt-1 text-sm text-gray-500">Open a file to preview, chat, or review risk.</p></div><span className="text-sm text-gray-500">{files.length} total</span></div>
+        <div className="mb-4 flex items-center justify-between">
+          <div>
+            <h2 className="font-display text-base font-bold text-charcoal dark:text-ivory">
+              Contract Inventory
+            </h2>
+            <p className="text-xs text-muted mt-0.5">
+              Select an agreement to launch the dual-pane review workspace or interrogate clauses.
+            </p>
+          </div>
+          <span className="text-xs font-mono text-muted">{files.length} active</span>
+        </div>
+
         {isLoading ? (
-          <div className="flex justify-center py-12">
-            <Loader2 className="w-8 h-8 text-accent animate-spin" />
+          <div className="flex justify-center py-16">
+            <Loader2 className="w-6 h-6 text-brass animate-spin" />
           </div>
         ) : files.length === 0 ? (
-          <div className="text-center py-12 border-2 border-dashed border-gray-200 rounded-xl bg-gray-50">
-            <File className="w-10 h-10 text-gray-300 mx-auto mb-3" />
-            <p className="text-gray-500 font-medium">No documents uploaded yet</p>
-            <p className="text-sm text-gray-400 mt-1">Upload a document above to get started.</p>
+          <div className="text-center py-16 border border-dashed border-sand dark:border-stone-muted rounded bg-surface dark:bg-stone">
+            <File className="w-10 h-10 text-muted mx-auto mb-3 stroke-[1.25]" />
+            <p className="text-sm font-medium text-charcoal dark:text-ivory">
+              No contracts loaded in this workspace.
+            </p>
+            <p className="text-xs text-muted mt-1">
+              Upload an executed or draft agreement above to begin statutory review.
+            </p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {files.map((file) => (
-              <Card key={file.id} className="hover:shadow-md transition-shadow">
-                <CardContent className="p-5 flex flex-col h-full">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="bg-accent/10 p-2.5 rounded-lg text-accent">
-                      <FileText className="w-6 h-6" />
+              <div
+                key={file.id}
+                className="rounded border border-sand dark:border-stone-muted bg-surface dark:bg-stone p-5 shadow-subtle hover:border-brass/50 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div className="w-9 h-9 rounded bg-parchment dark:bg-charcoal border border-sand dark:border-stone-muted flex items-center justify-center text-charcoal dark:text-ivory">
+                      <FileText className="w-4 h-4 stroke-[1.5]" />
                     </div>
-                    <span className="inline-flex items-center rounded-full bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10 capitalize">
-                      {file.status}
-                    </span>
+                    {getStatusBadge(file.status)}
                   </div>
-                  <h3 className="font-medium text-gray-900 mb-1 truncate" title={file.file_name}>
+
+                  <h3
+                    className="font-display text-sm font-bold text-charcoal dark:text-ivory mb-1 truncate"
+                    title={file.file_name}
+                  >
                     {file.file_name}
                   </h3>
-                  <p className="text-xs text-gray-500 mb-6 mt-auto">
-                    {new Date(file.created_at || Date.now()).toLocaleDateString()}
-                  </p>
-                  
-                  <div className="flex items-center justify-between gap-2 mt-auto pt-4 border-t border-gray-100">
-                    <div className="flex items-center gap-2">
-                      <Button variant="outline" size="sm" onClick={() => openPreview(file.id)}>
-                        <ScanEye className="w-4 h-4 mr-2" />
-                        Preview
-                      </Button>
-                      <Link to={`/document/${file.id}`}>
-                        <Button size="sm">
-                          <Eye className="w-4 h-4 mr-2" />
-                          Analyze
-                        </Button>
-                      </Link>
-                    </div>
-                    <Button variant="ghost" size="sm" onClick={() => handleDelete(file.id)} className="text-red-500 hover:text-red-600 hover:bg-red-50">
-                      <Trash2 className="w-4 h-4" />
-                    </Button>
+
+                  <div className="flex items-center gap-2 text-[11px] font-mono text-muted mb-5">
+                    <span>PDF</span>
+                    <span>•</span>
+                    <span>{new Date(file.created_at || Date.now()).toLocaleDateString()}</span>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+
+                <div className="flex items-center justify-between gap-2 pt-3 border-t border-sand/70 dark:border-stone-muted/70 mt-auto">
+                  <div className="flex items-center gap-2">
+                    <Button variant="outline" size="sm" onClick={() => openPreview(file.id)}>
+                      <ScanEye className="w-3.5 h-3.5 mr-1 stroke-[1.5]" />
+                      Preview
+                    </Button>
+                    <Link to={`/document/${file.id}`}>
+                      <Button variant="brass" size="sm">
+                        <Eye className="w-3.5 h-3.5 mr-1 stroke-[1.5]" />
+                        Review Workspace
+                      </Button>
+                    </Link>
+                  </div>
+                  <button
+                    onClick={() => handleDelete(file.id)}
+                    className="p-1.5 text-muted hover:text-crimson hover:bg-crimson-soft rounded transition-colors cursor-pointer"
+                    title="Delete document"
+                  >
+                    <Trash2 className="w-4 h-4 stroke-[1.5]" />
+                  </button>
+                </div>
+              </div>
             ))}
           </div>
         )}
