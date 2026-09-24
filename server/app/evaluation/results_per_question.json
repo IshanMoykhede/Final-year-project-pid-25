@@ -1,0 +1,3110 @@
+[
+  {
+    "question_id": 1,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What is the Effective Date of the Commercial Office Lease Agreement?",
+    "gold_chunks": [
+      2
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      5,
+      2,
+      1,
+      8,
+      26
+    ],
+    "hop_primary": [
+      5,
+      2,
+      1,
+      8,
+      26
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      5,
+      2,
+      1,
+      8,
+      26,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 5.616580247879028,
+    "hop_time": 42.92681574821472,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 2,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What is the address of the premises described in Article 1?",
+    "gold_chunks": [
+      3
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      4,
+      9,
+      21,
+      3,
+      22
+    ],
+    "hop_primary": [
+      4,
+      9,
+      21,
+      3,
+      22
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      4,
+      9,
+      21,
+      3,
+      22
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.839876890182495,
+    "hop_time": 4.874798536300659,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 0.0,
+      "accuracy": 0.5,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 0.0,
+      "accuracy": 0.5,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 3,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What must the tenant obtain before using the premises for any purpose other than the Permitted Use?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      9,
+      4,
+      21,
+      10,
+      23
+    ],
+    "hop_primary": [
+      9,
+      4,
+      21,
+      10,
+      23
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      9,
+      4,
+      21,
+      10,
+      23,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.4503018856048584,
+    "hop_time": 3.1822264194488525,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 4,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What is the maximum aggregate cost of alterations that Tenant can make without Landlord's prior written consent?",
+    "gold_chunks": [
+      12
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      12,
+      14,
+      18,
+      8,
+      6
+    ],
+    "hop_primary": [
+      12,
+      14,
+      18,
+      8,
+      6
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      12,
+      14,
+      18,
+      8,
+      6
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.6592137813568115,
+    "hop_time": 9.201483011245728,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 5,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What is the minimum aggregate limit required for the Tenant's Commercial General Liability insurance?",
+    "gold_chunks": [
+      14
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      14,
+      8,
+      13,
+      12,
+      15
+    ],
+    "hop_primary": [
+      14,
+      8,
+      13,
+      12,
+      15
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      14,
+      8,
+      13,
+      12,
+      15
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 4.007473468780518,
+    "hop_time": 2.403724431991577,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 6,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What is the maximum time allowed for restoration before either party may terminate the lease?",
+    "gold_chunks": [
+      16
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      16,
+      5,
+      24,
+      20,
+      23
+    ],
+    "hop_primary": [
+      16,
+      5,
+      24,
+      20,
+      23
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      16,
+      5,
+      24,
+      20,
+      23,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 1.8886380195617676,
+    "hop_time": 3.1522164344787598,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 7,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "Under what circumstances can either party terminate the lease according to Article 14?",
+    "gold_chunks": [
+      17
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      26,
+      17,
+      18,
+      24,
+      16
+    ],
+    "hop_primary": [
+      26,
+      17,
+      18,
+      24,
+      16
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      26,
+      17,
+      18,
+      24,
+      16
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.0809988975524902,
+    "hop_time": 2.4889602661132812,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 8,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "Can the tenant assign the lease or sublet the premises without the landlord's prior written consent?",
+    "gold_chunks": [
+      18
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      18,
+      4,
+      22,
+      9,
+      24
+    ],
+    "hop_primary": [
+      18,
+      4,
+      22,
+      9,
+      24
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      18,
+      4,
+      22,
+      9,
+      24,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 1.6445724964141846,
+    "hop_time": 2.797466516494751,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 9,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What remedies does Landlord have upon an uncured Event of Default?",
+    "gold_chunks": [
+      20
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      20,
+      16,
+      15,
+      23,
+      7
+    ],
+    "hop_primary": [
+      20,
+      16,
+      15,
+      23,
+      7
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      20,
+      16,
+      15,
+      23,
+      7
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.888166666030884,
+    "hop_time": 2.907564640045166,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 10,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "1-Hop Dependent",
+    "question": "How many renewal options does the Tenant have, what notice must be given, and who is identified as the Tenant in the lease?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      5,
+      25,
+      24,
+      22,
+      14
+    ],
+    "hop_primary": [
+      5,
+      25,
+      24,
+      22,
+      14
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      5,
+      25,
+      24,
+      22,
+      14,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.6649844646453857,
+    "hop_time": 3.739163398742676,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 11,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, what is the Base Rent that Northbridge Analytics, Inc. must pay to Meridian Point Properties, LLC, and how does it change each year?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      2,
+      25,
+      6,
+      8,
+      3
+    ],
+    "hop_primary": [
+      2,
+      25,
+      6,
+      8,
+      3
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      25,
+      6,
+      8,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.2855608463287354,
+    "hop_time": 3.435670852661133,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 12,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "1-Hop Dependent",
+    "question": "How does the lease define the tenant\u2019s additional rent obligations and what base year is used to calculate the increases in operating expenses and real estate taxes?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [
+      8,
+      6,
+      5,
+      14,
+      24
+    ],
+    "hop_primary": [
+      8,
+      6,
+      5,
+      14,
+      24
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      8,
+      6,
+      5,
+      14,
+      24,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.77699613571167,
+    "hop_time": 3.760529041290283,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 13,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What is the first entity to which a disputed leave decision is escalated?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      42,
+      2,
+      5,
+      14,
+      7
+    ],
+    "hop_primary": [
+      42,
+      2,
+      5,
+      14,
+      7
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      42,
+      2,
+      5,
+      14,
+      7
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.485008955001831,
+    "hop_time": 3.333881378173828,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 0.75,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 14,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What is the objective regarding compliance with statutory leave entitlements?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      29,
+      14,
+      7,
+      6,
+      20
+    ],
+    "hop_primary": [
+      29,
+      14,
+      7,
+      6,
+      20
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      29,
+      14,
+      7,
+      6,
+      20
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4556055068969727,
+    "hop_time": 2.870593309402466,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 15,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What approval must employees on projects obtain before scheduling leave?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      9,
+      7,
+      10,
+      29,
+      43
+    ],
+    "hop_primary": [
+      9,
+      7,
+      10,
+      29,
+      43
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      9,
+      7,
+      10,
+      29,
+      43
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.6630473136901855,
+    "hop_time": 2.894871711730957,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 16,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What is earned leave used for?",
+    "gold_chunks": [
+      11
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      11,
+      29,
+      16,
+      27,
+      28
+    ],
+    "hop_primary": [
+      11,
+      29,
+      16,
+      27,
+      28
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      11,
+      29,
+      16,
+      27,
+      28
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.3203935623168945,
+    "hop_time": 2.686203718185425,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 17,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "How many days of earned leave accrue in each of the first three quarters of a calendar year?",
+    "gold_chunks": [
+      13
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      13,
+      16,
+      29,
+      35,
+      21
+    ],
+    "hop_primary": [
+      13,
+      16,
+      29,
+      35,
+      21
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      13,
+      16,
+      29,
+      35,
+      21
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4473676681518555,
+    "hop_time": 3.0531792640686035,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 18,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Under what conditions can employees avail EL during the notice period?",
+    "gold_chunks": [
+      17
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      17,
+      43,
+      12,
+      13,
+      4
+    ],
+    "hop_primary": [
+      17,
+      43,
+      12,
+      13,
+      4
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      17,
+      43,
+      12,
+      13,
+      4
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.494429588317871,
+    "hop_time": 2.8309783935546875,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 19,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Is maternity leave paid?",
+    "gold_chunks": [
+      19
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      19,
+      20,
+      23,
+      21,
+      25
+    ],
+    "hop_primary": [
+      19,
+      20,
+      23,
+      21,
+      25
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      19,
+      20,
+      23,
+      21,
+      25
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4626688957214355,
+    "hop_time": 2.8624372482299805,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 20,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "How many weeks of paid maternity leave are provided for an employee with more than two surviving children?",
+    "gold_chunks": [
+      21
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      21,
+      20,
+      25,
+      19,
+      23
+    ],
+    "hop_primary": [
+      21,
+      20,
+      25,
+      19,
+      23
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      21,
+      20,
+      25,
+      19,
+      23
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.683436155319214,
+    "hop_time": 2.646097183227539,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 21,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Is paternity leave paid?",
+    "gold_chunks": [
+      23
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      23,
+      25,
+      24,
+      26,
+      19
+    ],
+    "hop_primary": [
+      23,
+      25,
+      24,
+      26,
+      19
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      23,
+      25,
+      24,
+      26,
+      19
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.865461587905884,
+    "hop_time": 3.4791533946990967,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 22,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "How many working days of leave are entitled per childbirth event?",
+    "gold_chunks": [
+      25
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      25,
+      21,
+      20,
+      6,
+      33
+    ],
+    "hop_primary": [
+      25,
+      21,
+      20,
+      6,
+      33
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      25,
+      21,
+      20,
+      6,
+      33
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4094324111938477,
+    "hop_time": 4.351702690124512,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 23,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Is personal leave paid or unpaid?",
+    "gold_chunks": [
+      27
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      27,
+      35,
+      29,
+      23,
+      19
+    ],
+    "hop_primary": [
+      27,
+      35,
+      29,
+      23,
+      19
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      27,
+      35,
+      29,
+      23,
+      19
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.46747088432312,
+    "hop_time": 2.987358331680298,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 24,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What is the maximum duration for which personal leave may be authorized?",
+    "gold_chunks": [
+      29
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      29,
+      28,
+      21,
+      20,
+      15
+    ],
+    "hop_primary": [
+      29,
+      28,
+      21,
+      20,
+      15
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      29,
+      28,
+      21,
+      20,
+      15
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.5364301204681396,
+    "hop_time": 3.474713087081909,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 25,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What type of leave is Bereavement Leave?",
+    "gold_chunks": [
+      31
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      31,
+      34,
+      27,
+      21,
+      16
+    ],
+    "hop_primary": [
+      31,
+      34,
+      27,
+      21,
+      16
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      31,
+      34,
+      27,
+      21,
+      16
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4617650508880615,
+    "hop_time": 3.068113327026367,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 26,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What are paid holidays?",
+    "gold_chunks": [
+      35
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      35,
+      36,
+      37,
+      39,
+      10
+    ],
+    "hop_primary": [
+      35,
+      36,
+      37,
+      39,
+      10
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      35,
+      36,
+      37,
+      39,
+      10
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.675812005996704,
+    "hop_time": 2.853289842605591,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 27,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "How many optional festival holidays are designated for each employee per leave year?",
+    "gold_chunks": [
+      39
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      39,
+      35,
+      37,
+      36,
+      40
+    ],
+    "hop_primary": [
+      39,
+      35,
+      37,
+      36,
+      40
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      39,
+      35,
+      37,
+      36,
+      40
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.772616147994995,
+    "hop_time": 2.863646984100342,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 28,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "1-Hop Dependent",
+    "question": "If an employee\u2019s leave request is denied by their supervisor, what steps must they follow to appeal and what protections do they have against retaliation?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 42,
+    "std_retrieved": [
+      42,
+      30,
+      34,
+      17,
+      9
+    ],
+    "hop_primary": [
+      42,
+      30,
+      34,
+      17,
+      9
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      42,
+      30,
+      34,
+      17,
+      9
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4567790031433105,
+    "hop_time": 3.424011468887329,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 29,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "What does Tenant acknowledge regarding the condition of the Premises?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      4,
+      21,
+      9,
+      11,
+      23
+    ],
+    "hop_primary": [
+      4,
+      21,
+      9,
+      11,
+      23
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      4,
+      21,
+      9,
+      11,
+      23,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.6782028675079346,
+    "hop_time": 3.3148224353790283,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 30,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "Within how many days after the expiration or earlier termination of the Lease must the Landlord return the Security Deposit?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      7,
+      24,
+      5,
+      20,
+      16
+    ],
+    "hop_primary": [
+      7,
+      24,
+      5,
+      20,
+      16
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      7,
+      24,
+      5,
+      20,
+      16,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.694709062576294,
+    "hop_time": 3.450673818588257,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 31,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "During what hours is the landlord required to provide utilities and services?",
+    "gold_chunks": [
+      10
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      10,
+      8,
+      11,
+      14,
+      6
+    ],
+    "hop_primary": [
+      10,
+      8,
+      11,
+      14,
+      6
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      10,
+      8,
+      11,
+      14,
+      6
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.3120956420898438,
+    "hop_time": 3.2224392890930176,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 32,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "Under what condition may either party terminate the lease after a casualty?",
+    "gold_chunks": [
+      16
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      16,
+      24,
+      20,
+      23,
+      5
+    ],
+    "hop_primary": [
+      16,
+      24,
+      20,
+      23,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      16,
+      24,
+      20,
+      23,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.367798089981079,
+    "hop_time": 2.645531177520752,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 33,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "Direct",
+    "question": "Within how many days must the Tenant execute and deliver an estoppel certificate after a written request?",
+    "gold_chunks": [
+      22
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      22,
+      5,
+      20,
+      7,
+      8
+    ],
+    "hop_primary": [
+      22,
+      5,
+      20,
+      7,
+      8
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      22,
+      5,
+      20,
+      7,
+      8,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.6976683139801025,
+    "hop_time": 3.382263422012329,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 34,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, who are the landlord and tenant parties named in Article\u202f1, and how do those parties relate to the base rent payment obligations described in Article\u202f4?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      6,
+      2,
+      8,
+      26,
+      18
+    ],
+    "hop_primary": [
+      6,
+      2,
+      8,
+      26,
+      18
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      6,
+      2,
+      8,
+      26,
+      18,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.5671274662017822,
+    "hop_time": 3.8588521480560303,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 35,
+    "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
+    "type": "1-Hop Dependent",
+    "question": "Which parties are identified in the lease, and for what purpose may the tenant use the premises?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      4,
+      9,
+      2,
+      21,
+      10
+    ],
+    "hop_primary": [
+      4,
+      9,
+      2,
+      21,
+      10
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      4,
+      9,
+      2,
+      21,
+      10,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 3.064366579055786,
+    "hop_time": 3.267655849456787,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 36,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "What is the maximum paid maternity leave entitlement for an employee with up to two surviving children?",
+    "gold_chunks": [
+      21
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      21,
+      25,
+      20,
+      33,
+      19
+    ],
+    "hop_primary": [
+      21,
+      25,
+      20,
+      33,
+      19
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      21,
+      25,
+      20,
+      33,
+      19
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4631998538970947,
+    "hop_time": 2.869027853012085,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 37,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Is Bereavement Leave paid?",
+    "gold_chunks": [
+      31
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      31,
+      34,
+      35,
+      16,
+      43
+    ],
+    "hop_primary": [
+      31,
+      34,
+      35,
+      16,
+      43
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      31,
+      34,
+      35,
+      16,
+      43
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.3576161861419678,
+    "hop_time": 2.789599895477295,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 38,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "Direct",
+    "question": "Are contractors eligible for paid holidays under this policy?",
+    "gold_chunks": [
+      36
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      36,
+      35,
+      37,
+      10,
+      39
+    ],
+    "hop_primary": [
+      36,
+      35,
+      37,
+      10,
+      39
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      36,
+      35,
+      37,
+      10,
+      39
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.3779430389404297,
+    "hop_time": 2.81435227394104,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 39,
+    "document_id": "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",
+    "type": "1-Hop Dependent",
+    "question": "If an employee\u2019s leave request is denied by their supervisor, what steps can the employee take to appeal the decision, and what protections do they have against retaliation during this process?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 42,
+    "std_retrieved": [
+      30,
+      42,
+      34,
+      17,
+      9
+    ],
+    "hop_primary": [
+      30,
+      42,
+      34,
+      17,
+      9
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      30,
+      42,
+      34,
+      17,
+      9
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.5656094551086426,
+    "hop_time": 2.755098581314087,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 40,
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "type": "Direct",
+    "question": "What is the URL that new affiliates must use to submit the Affiliate Registration Form?",
+    "gold_chunks": [
+      1
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "hop_primary": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "num_primary_chunks": 4,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 4,
+    "newly_recovered": false,
+    "std_time": 2.6655759811401367,
+    "hop_time": 3.2019689083099365,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 41,
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "type": "Direct",
+    "question": "Who is solely responsible for processing each order placed by a customer from Affiliate\u2019s Links?",
+    "gold_chunks": [
+      2
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "hop_primary": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "num_primary_chunks": 4,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 4,
+    "newly_recovered": false,
+    "std_time": 2.582832098007202,
+    "hop_time": 3.247037649154663,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 42,
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "type": "Direct",
+    "question": "What is the maximum amount of aggregate liability that Chase can be held for under the Limitation of Damages clause?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "hop_primary": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      4,
+      3,
+      2,
+      1
+    ],
+    "num_primary_chunks": 4,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 4,
+    "newly_recovered": false,
+    "std_time": 2.3904547691345215,
+    "hop_time": 3.8317723274230957,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 43,
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "type": "1-Hop Dependent",
+    "question": "What does the Chase Affiliate Agreement, as described in both the source and target clauses, say about an Affiliate's ability to link to Chase.com and the compensation they receive?",
+    "gold_chunks": [
+      1
+    ],
+    "gold_referenced_chunk": 1,
+    "std_retrieved": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "hop_primary": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      1,
+      3,
+      2,
+      4
+    ],
+    "num_primary_chunks": 4,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 4,
+    "newly_recovered": false,
+    "std_time": 2.386798620223999,
+    "hop_time": 3.384921073913574,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 44,
+    "document_id": "efcaa98f-2437-46bc-863a-90809d6d8a44",
+    "type": "1-Hop Dependent",
+    "question": "Under the Chase Affiliate Agreement, what is the extent of Chase's liability for damages arising from a credit card application initiated through an affiliate link, and what obligation does the affiliate have regarding legal consultation?",
+    "gold_chunks": [
+      1
+    ],
+    "gold_referenced_chunk": 4,
+    "std_retrieved": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "hop_primary": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "num_primary_chunks": 4,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 4,
+    "newly_recovered": false,
+    "std_time": 2.6581227779388428,
+    "hop_time": 3.2483582496643066,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 45,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "Direct",
+    "question": "Within how many business days must MA provide sales records to Company?",
+    "gold_chunks": [
+      3
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      3,
+      4,
+      9,
+      10,
+      2
+    ],
+    "hop_primary": [
+      3,
+      4,
+      9,
+      10,
+      2
+    ],
+    "hop_expanded": [
+      11
+    ],
+    "hop_retrieved": [
+      3,
+      4,
+      9,
+      10,
+      2,
+      11
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.7036590576171875,
+    "hop_time": 4.482338905334473,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 46,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "Direct",
+    "question": "Under clause 4.2, what deliverables must the Company provide to MA?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      4,
+      10,
+      5,
+      3,
+      2
+    ],
+    "hop_primary": [
+      4,
+      10,
+      5,
+      3,
+      2
+    ],
+    "hop_expanded": [
+      11
+    ],
+    "hop_retrieved": [
+      4,
+      10,
+      5,
+      3,
+      2,
+      11
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 4.305947303771973,
+    "hop_time": 3.963919162750244,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 0.0
+    }
+  },
+  {
+    "question_id": 47,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "Direct",
+    "question": "Within how many days must MA notify the Company of errors found in the Technology?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      6,
+      3,
+      8,
+      4,
+      9
+    ],
+    "hop_primary": [
+      6,
+      3,
+      8,
+      4,
+      9
+    ],
+    "hop_expanded": [
+      11
+    ],
+    "hop_retrieved": [
+      6,
+      3,
+      8,
+      4,
+      9,
+      11
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.475308895111084,
+    "hop_time": 3.369774103164673,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 48,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "Direct",
+    "question": "Under what conditions may MA modify the source code of the Technology?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      7,
+      6,
+      8,
+      4,
+      2
+    ],
+    "hop_primary": [
+      7,
+      6,
+      8,
+      4,
+      2
+    ],
+    "hop_expanded": [
+      11
+    ],
+    "hop_retrieved": [
+      7,
+      6,
+      8,
+      4,
+      2,
+      11
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.3684651851654053,
+    "hop_time": 3.672046184539795,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.97
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.98,
+      "faithfulness": 0.95
+    }
+  },
+  {
+    "question_id": 49,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "Direct",
+    "question": "Within how many days must a claim for breach of warranty be made in writing according to Section 16.2?",
+    "gold_chunks": [
+      8
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      9,
+      8,
+      10,
+      3,
+      6
+    ],
+    "hop_primary": [
+      9,
+      8,
+      10,
+      3,
+      6
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      9,
+      8,
+      10,
+      3,
+      6
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.83451771736145,
+    "hop_time": 4.739164113998413,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 50,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "1-Hop Dependent",
+    "question": "According to the Marketing Affiliate Agreement, where must notices be sent, and which state's law governs the agreement?",
+    "gold_chunks": [
+      1
+    ],
+    "gold_referenced_chunk": 11,
+    "std_retrieved": [
+      1,
+      11,
+      2,
+      4,
+      7
+    ],
+    "hop_primary": [
+      1,
+      11,
+      2,
+      4,
+      7
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      1,
+      11,
+      2,
+      4,
+      7
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4030351638793945,
+    "hop_time": 3.1367149353027344,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 51,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "1-Hop Dependent",
+    "question": "How does Schedule A influence both the definition of the Territory for MA and the payment terms outlined in the agreement?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 11,
+    "std_retrieved": [
+      5,
+      11,
+      2,
+      4,
+      9
+    ],
+    "hop_primary": [
+      5,
+      11,
+      2,
+      4,
+      9
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      5,
+      11,
+      2,
+      4,
+      9
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.4627773761749268,
+    "hop_time": 3.9623451232910156,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 52,
+    "document_id": "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",
+    "type": "1-Hop Dependent",
+    "question": "If MA discovers an error in the Technology, within how many days must it notify Company, and under which governing law does the notice requirement apply?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 11,
+    "std_retrieved": [
+      6,
+      9,
+      11,
+      8,
+      2
+    ],
+    "hop_primary": [
+      6,
+      9,
+      11,
+      8,
+      2
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      6,
+      9,
+      11,
+      8,
+      2
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.9511728286743164,
+    "hop_time": 3.4181742668151855,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 53,
+    "document_id": "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",
+    "type": "Direct",
+    "question": "What is the phone number of the landlord?",
+    "gold_chunks": [
+      3
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      3,
+      4,
+      2,
+      7,
+      5
+    ],
+    "hop_primary": [
+      3,
+      4,
+      2,
+      7,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      3,
+      4,
+      2,
+      7,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.864830493927002,
+    "hop_time": 3.2729296684265137,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 0.75,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 54,
+    "document_id": "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",
+    "type": "Direct",
+    "question": "What is the phone number of the tenant?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      4,
+      3,
+      7,
+      2,
+      5
+    ],
+    "hop_primary": [
+      4,
+      3,
+      7,
+      2,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      4,
+      3,
+      7,
+      2,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.667057991027832,
+    "hop_time": 3.246199607849121,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 55,
+    "document_id": "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",
+    "type": "Direct",
+    "question": "What is the monthly rent for the property described in the clause?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      2,
+      1,
+      5,
+      6,
+      7
+    ],
+    "hop_primary": [
+      2,
+      1,
+      5,
+      6,
+      7
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      1,
+      5,
+      6,
+      7
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.7266831398010254,
+    "hop_time": 3257.152947664261,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 56,
+    "document_id": "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",
+    "type": "Direct",
+    "question": "What is the minimum written notice period required for terminating the agreement?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      6,
+      7,
+      2,
+      1,
+      5
+    ],
+    "hop_primary": [
+      6,
+      7,
+      2,
+      1,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      6,
+      7,
+      2,
+      1,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.466858386993408,
+    "hop_time": 1.6364541053771973,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": null,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 57,
+    "document_id": "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",
+    "type": "Direct",
+    "question": "Who signed the Rental Agreement on 25 September 2026?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": null,
+    "std_retrieved": [
+      2,
+      1,
+      7,
+      6,
+      5
+    ],
+    "hop_primary": [
+      2,
+      1,
+      7,
+      6,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      1,
+      7,
+      6,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 1.177804708480835,
+    "hop_time": 1.5062713623046875,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 0.0,
+      "accuracy": 1.0,
+      "faithfulness": 1.0
+    }
+  }
+]

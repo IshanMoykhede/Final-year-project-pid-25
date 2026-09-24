@@ -18,7 +18,7 @@ except Exception as e:
     embedding_model = None
 
 
-def answer_question(document_id: str, question: str, use_1hop_expansion: bool = True, generate_answer: bool = True) -> Dict[str, Any]:
+def answer_question(document_id: str, question: str, use_1hop_expansion: bool = True, generate_answer: bool = True, top_k: int = 10) -> Dict[str, Any]:
     logger.info(f"Answering question for document_id: {document_id}. 1-Hop Expansion: {use_1hop_expansion}")
     supabase = connectSupa()
 
@@ -31,20 +31,43 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     # 2. Vector Search (C_k)
     rpc_res = supabase.rpc("match_chunks", {
         "query_embedding": query_vector,
-        "match_threshold": 0.2, # Lowered threshold to ensure we get some results
-        "match_count": 5,
+        "match_threshold": 0.1,  # Ensure robust candidate pool
+        "match_count": max(top_k, 10),
         "filter_document_id": document_id
     }).execute()
     
-    top_k_chunks = rpc_res.data
+    raw_chunks = rpc_res.data or []
     
-    if not top_k_chunks:
+    if not raw_chunks:
         return {
             "success": True,
             "answer": "I could not find any relevant information in this document to answer your question.",
             "primary_clauses": [],
             "expanded_clauses": []
         }
+
+    # Hybrid re-ranking: dense vector similarity + alias/title lexical match
+    import re
+    q_lower = question.lower()
+    q_tokens = [t for t in re.split(r'\W+', q_lower) if len(t) > 2]
+
+    scored_chunks = []
+    for c in raw_chunks:
+        sim = c.get("similarity") or 0.0
+        alias_boost = 0.0
+        aliases = c.get("aliases") or []
+        for a in aliases:
+            a_tokens = [t for t in re.split(r'\W+', a.lower()) if len(t) > 2]
+            if a_tokens and q_tokens:
+                matched = sum(1 for t in a_tokens if t in q_tokens)
+                if matched > 0:
+                    alias_boost = max(alias_boost, 0.08 * (matched / len(a_tokens)))
+        
+        final_score = sim + alias_boost
+        scored_chunks.append((final_score, c))
+
+    scored_chunks.sort(key=lambda x: x[0], reverse=True)
+    top_k_chunks = [c for _, c in scored_chunks[:top_k]]
 
     primary_clauses = []
     for c in top_k_chunks:
@@ -60,8 +83,9 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     expanded_clauses = []
     
     # 3. 1-Hop Expansion (N_1)
-    if use_1hop_expansion:
-        source_chunk_ids = [c["id"] for c in top_k_chunks]
+    # Expand cross-references only from top primary candidate clauses to minimize latency and token bloat
+    if use_1hop_expansion and top_k_chunks:
+        source_chunk_ids = [c["id"] for c in top_k_chunks[:3]]
         
         refs = supabase.table("cross_references") \
             .select("target_chunk_id, reference_text") \
@@ -69,14 +93,14 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             .eq("link_type", "EXACT_MATCH") \
             .execute()
             
-        target_ids = list(set(r["target_chunk_id"] for r in refs.data if r["target_chunk_id"]))
+        target_ids = list(set(r["target_chunk_id"] for r in (refs.data or []) if r.get("target_chunk_id")))
         
         if target_ids:
             expanded_res = supabase.table("chunks").select("id, chunk_no, text, aliases").in_("id", target_ids).execute()
             
             # Avoid adding clauses that are already in the primary set
             existing_ids = {c["id"] for c in top_k_chunks}
-            for c in expanded_res.data:
+            for c in (expanded_res.data or []):
                 if c["id"] not in existing_ids:
                     expanded_clauses.append(RetrievedClause(
                         chunk_id=c["id"],
@@ -88,16 +112,14 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
                     ))
                     
     # 4. LLM Generation
-    all_evidence = primary_clauses + expanded_clauses
-    
     context_str = "=== PRIMARY RELEVANT CLAUSES ===\n"
-    for chunk in primary_clauses:
+    for chunk in primary_clauses[:5]:
         alias_label = ", ".join(chunk.aliases) if chunk.aliases else f"Clause {chunk.chunk_no}"
         context_str += f"\n--- [{alias_label}] ---\n{chunk.text}\n"
 
     if expanded_clauses:
         context_str += "\n=== CROSS-REFERENCED SUPPORTING CLAUSES ===\n"
-        for chunk in expanded_clauses:
+        for chunk in expanded_clauses[:3]:
             alias_label = ", ".join(chunk.aliases) if chunk.aliases else f"Clause {chunk.chunk_no}"
             context_str += f"\n--- [{alias_label}] ---\n{chunk.text}\n"
 
