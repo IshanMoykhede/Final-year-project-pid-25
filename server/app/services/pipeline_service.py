@@ -135,7 +135,7 @@ async def preprocess_document_sse(file_id: str):
                     if isinstance(event, tuple): pass
                     else: yield event
                     
-                supabase.table("files").update({"status": "EMBEDDING_COMPLETED"}).eq("id", file_id).execute()
+                supabase.table("files").update({"status": "COMPLETED"}).eq("id", file_id).execute()
                 yield create_sse_event("EMBEDDING", "completed", "Semantic vectors successfully generated")
             except Exception as e:
                 supabase.table("files").update({"status": "EMBEDDING_FAILED"}).eq("id", file_id).execute()
@@ -143,37 +143,27 @@ async def preprocess_document_sse(file_id: str):
                 return
 
         # ---------------------------------------------------------
-        # 5. Risk Analysis Step (Pre-Caching)
+        # 5. Risk Analysis Step (Pre-Caching) - COMMENTED OUT TO SAVE TOKENS
         # ---------------------------------------------------------
-        current_status = supabase.table("files").select("status").eq("id", file_id).execute().data[0].get("status")
-        
-        if current_status in ["COMPLETED", "EMBEDDING_COMPLETED", "RISK_ANALYSIS_FAILED"]:
-            yield create_sse_event("RISK_ANALYSIS", "processing", "Running deep legal risk analysis (Caching)...")
-            supabase.table("files").update({"status": "RISK_ANALYSIS_IN_PROGRESS"}).eq("id", file_id).execute()
-            
-            try:
-                from app.services.risk_service import analyze_document_risks
-                # Force refresh to ensure we compute it freshly during ingestion
-                # analyze_document_risks is async, but we can await it or run it using run_with_heartbeat if we wrap it.
-                # Actually, run_with_heartbeat expects a sync function. Since analyze_document_risks is async,
-                # we can await it directly, but let's yield a heartbeat manually or just await it.
-                # For simplicity, we just await it (it only takes ~5 seconds for small documents, max 20-30s).
-                
-                # To prevent blocking SSE heartbeats, we can use an asyncio task with manual heartbeats
-                task = asyncio.create_task(analyze_document_risks(file_id, force_refresh=True))
-                while not task.done():
-                    yield create_sse_event("HEARTBEAT", "processing", "Evaluating risks...")
-                    await asyncio.sleep(5)
-                
-                # task.result() will raise if it failed
-                result = task.result()
-                
-                supabase.table("files").update({"status": "COMPLETED"}).eq("id", file_id).execute()
-                yield create_sse_event("RISK_ANALYSIS", "completed", f"Risk Analysis successfully cached ({result.total_risks} risks found)")
-            except Exception as e:
-                supabase.table("files").update({"status": "RISK_ANALYSIS_FAILED"}).eq("id", file_id).execute()
-                yield create_sse_event("RISK_ANALYSIS", "error", str(e))
-                return
+        # current_status = supabase.table("files").select("status").eq("id", file_id).execute().data[0].get("status")
+        # 
+        # if current_status in ["COMPLETED", "EMBEDDING_COMPLETED", "RISK_ANALYSIS_FAILED"]:
+        #     yield create_sse_event("RISK_ANALYSIS", "processing", "Running deep legal risk analysis (Caching)...")
+        #     supabase.table("files").update({"status": "RISK_ANALYSIS_IN_PROGRESS"}).eq("id", file_id).execute()
+        #     
+        #     try:
+        #         from app.services.risk_service import analyze_document_risks
+        #         task = asyncio.create_task(analyze_document_risks(file_id, force_refresh=True))
+        #         while not task.done():
+        #             yield create_sse_event("HEARTBEAT", "processing", "Evaluating risks...")
+        #             await asyncio.sleep(5)
+        #         result = task.result()
+        #         supabase.table("files").update({"status": "COMPLETED"}).eq("id", file_id).execute()
+        #         yield create_sse_event("RISK_ANALYSIS", "completed", f"Risk Analysis successfully cached ({result.total_risks} risks found)")
+        #     except Exception as e:
+        #         supabase.table("files").update({"status": "RISK_ANALYSIS_FAILED"}).eq("id", file_id).execute()
+        #         yield create_sse_event("RISK_ANALYSIS", "error", str(e))
+        #         return
 
         # If it reached here, everything is done!
         current_status = supabase.table("files").select("status").eq("id", file_id).execute().data[0].get("status")

@@ -212,11 +212,13 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
           </div>
 
           <div className="min-w-0 space-y-4">
-            <div className="flex rounded-xl border border-gray-200 bg-gray-50 p-1" role="tablist" aria-label="Document tools">
+            {/* Risk analysis tab commented out temporarily */}
+            {/* <div className="flex rounded-xl border border-gray-200 bg-gray-50 p-1" role="tablist" aria-label="Document tools">
               <button type="button" role="tab" aria-selected={activeFeature === 'chat'} onClick={() => setActiveFeature('chat')} className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${activeFeature === 'chat' ? 'bg-white text-accent shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}><MessageSquare className="h-4 w-4" />Chat</button>
               <button type="button" role="tab" aria-selected={activeFeature === 'risk'} onClick={() => setActiveFeature('risk')} className={`flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition ${activeFeature === 'risk' ? 'bg-white text-amber-700 shadow-sm' : 'text-gray-500 hover:text-gray-900'}`}><AlertTriangle className="h-4 w-4" />Risk analysis</button>
-            </div>
-            {activeFeature === 'chat' ? <DocumentChat documentId={file.id} onCitation={setSelectedCitation} /> : <RiskAnalysis documentId={file.id} />}
+            </div> */}
+            {/* {activeFeature === 'chat' ? <DocumentChat documentId={file.id} onCitation={setSelectedCitation} /> : <RiskAnalysis documentId={file.id} />} */}
+            <DocumentChat documentId={file.id} onCitation={setSelectedCitation} />
           </div>
         </div>}
       </div>

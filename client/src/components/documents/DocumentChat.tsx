@@ -161,7 +161,7 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitati
                 <div className="space-y-3 rounded-lg border border-accent/20 bg-accent/5 p-3 text-sm text-gray-700">
                   <div className="flex gap-2">
                     <Bot className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    <div className="prose prose-sm max-w-none">
+                    <div className="prose prose-sm max-w-none prose-headings:font-semibold prose-headings:text-gray-900 prose-headings:my-2 prose-p:my-1.5 prose-ul:my-1.5 prose-li:my-0.5 text-gray-800 leading-relaxed overflow-x-auto">
                       <ReactMarkdown>{message.answer || 'No answer was generated.'}</ReactMarkdown>
                     </div>
                   </div>
