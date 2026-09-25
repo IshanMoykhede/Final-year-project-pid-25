@@ -37,35 +37,52 @@ def get_reranker_model():
     return reranker_model if reranker_model is not False else None
 
 
-def answer_question(document_id: str, question: str, use_1hop_expansion: bool = True, generate_answer: bool = True) -> Dict[str, Any]:
-    logger.info(f"Answering question for document_id: {document_id}. 1-Hop Expansion: {use_1hop_expansion}")
+def answer_question(
+    document_id: str,
+    question: str,
+    use_1hop_expansion: bool = True,
+    generate_answer: bool = True,
+    use_reranking: bool = True,
+    top_k: int = None
+) -> Dict[str, Any]:
+    logger.info(
+        f"Answering question for document_id: {document_id}. "
+        f"1-Hop: {use_1hop_expansion}, Reranking: {use_reranking}, top_k: {top_k}"
+    )
     supabase = connectSupa()
 
     emb_model = get_embedding_model()
-    rerank_model = get_reranker_model()
+    rerank_model = get_reranker_model() if use_reranking else None
 
     # 1. Embed Query
     query_vector = emb_model.encode(question).tolist()
 
-    # Detect summary / global overview intent
-    summary_keywords = [
-        "summarize", "summary", "overview", "all policies", "key provisions",
-        "what is this document about", "all rules", "main points", "all leaves",
-        "leave policy", "leave policies", "entire policy", "full policy"
-    ]
-    is_summary_query = any(kw in question.lower() for kw in summary_keywords)
-
-    if is_summary_query:
-        # Fetch broader candidate pool for summary
-        candidate_count = 25
-        final_top_k = 15
-        match_threshold = 0.10
-        logger.info(f"[CHAT_SERVICE] Summary intent detected. Candidate count={candidate_count}, final_top_k={final_top_k}")
+    # Controlled evaluation mode vs. heuristic assistant mode:
+    # If top_k is explicitly specified or use_reranking is False, we bypass dynamic summary expansion.
+    if top_k is not None:
+        final_top_k = top_k
+        candidate_count = top_k if not use_reranking else max(20, top_k)
+        match_threshold = 0.0
     else:
-        # Standard Q&A: Fetch top 20 candidates for Stage 2 Cross-Encoder reranking
-        candidate_count = 20
-        final_top_k = 5
-        match_threshold = 0.15
+        # Detect summary / global overview intent
+        summary_keywords = [
+            "summarize", "summary", "overview", "all policies", "key provisions",
+            "what is this document about", "all rules", "main points", "all leaves",
+            "leave policy", "leave policies", "entire policy", "full policy"
+        ]
+        is_summary_query = any(kw in question.lower() for kw in summary_keywords)
+
+        if is_summary_query and use_reranking:
+            # Fetch broader candidate pool for summary in production app
+            candidate_count = 25
+            final_top_k = 15
+            match_threshold = 0.10
+            logger.info(f"[CHAT_SERVICE] Summary intent detected. Candidate count={candidate_count}, final_top_k={final_top_k}")
+        else:
+            # Standard Q&A: candidate pool
+            final_top_k = 5
+            candidate_count = 20 if use_reranking else 5
+            match_threshold = 0.15 if use_reranking else 0.0
 
     # 2. Stage 1: Vector Search Candidates (Bi-Encoder Retrieval)
     rpc_res = supabase.rpc("match_chunks", {
@@ -85,8 +102,8 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             "expanded_clauses": []
         }
 
-    # 3. Stage 2: Cross-Encoder Reranking (High precision semantic ranking)
-    if rerank_model is not None and len(candidates) > 1:
+    # 3. Stage 2: Cross-Encoder Reranking (Only if enabled and multiple candidates exist)
+    if use_reranking and rerank_model is not None and len(candidates) > 1:
         try:
             pairs = [[question, c["text"]] for c in candidates]
             scores = rerank_model.predict(pairs)
@@ -107,7 +124,8 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
             text=c["text"],
             aliases=c.get("aliases") or [],
             similarity=c.get("rerank_score") if "rerank_score" in c else c.get("similarity"),
-            is_expanded=False
+            is_expanded=False,
+            bbox=c.get("bbox") or []
         ))
 
     expanded_clauses = []
@@ -125,7 +143,7 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
         target_ids = list(set(r["target_chunk_id"] for r in refs.data if r["target_chunk_id"]))
         
         if target_ids:
-            expanded_res = supabase.table("chunks").select("id, chunk_no, text, aliases").in_("id", target_ids).execute()
+            expanded_res = supabase.table("chunks").select("id, chunk_no, text, aliases, bbox").in_("id", target_ids).execute()
             
             # Avoid adding clauses that are already in the primary set
             existing_ids = {c["id"] for c in top_k_chunks}
@@ -137,7 +155,8 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
                         text=c["text"],
                         aliases=c.get("aliases") or [],
                         similarity=None,
-                        is_expanded=True
+                        is_expanded=True,
+                        bbox=c.get("bbox") or []
                     ))
                     
     # 4. LLM Generation
