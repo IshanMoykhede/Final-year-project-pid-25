@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center space-x-2 text-primary">
             <Scale className="h-6 w-6 text-accent" />
-            <span className="font-bold text-xl tracking-tight">Legal<span className="text-accent">ze</span></span>
+            <span className="font-bold text-xl tracking-tight">Lega<span className="text-accent">lyze</span></span>
           </Link>
           <div className="flex items-center space-x-4">
             {!isAuthenticated && <div className="hidden items-center gap-5 md:flex">

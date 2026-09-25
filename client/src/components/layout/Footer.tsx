@@ -8,7 +8,7 @@ export const Footer: React.FC = () => (
       <div>
         <Link to="/" className="flex items-center gap-2 text-lg font-semibold text-white">
           <Scale className="h-5 w-5 text-sky-400" />
-          Legal<span className="text-sky-400">ze</span>
+          L<span className="text-sky-400">egalyze</span>
         </Link>
         <p className="mt-3 max-w-sm text-sm leading-6 text-gray-400">
           A focused workspace for understanding contracts, finding important clauses, and asking better questions.
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => (
     </div>
     <div className="border-t border-white/10">
       <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-5 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-        <span>© {new Date().getFullYear()} Legalze</span>
+        <span>© {new Date().getFullYear()} Legalyze</span>
         <span>Built for clearer document decisions.</span>
       </div>
     </div>

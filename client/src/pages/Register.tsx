@@ -36,7 +36,7 @@ export const Register: React.FC = () => {
             <Scale className="h-8 w-8 text-accent" />
           </div>
           <CardTitle className="text-2xl">Create an account</CardTitle>
-          <CardDescription>Get started with Legalze</CardDescription>
+          <CardDescription>Get started with Legalyze</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">

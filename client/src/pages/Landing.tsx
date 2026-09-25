@@ -63,7 +63,7 @@ export const Landing: React.FC = () => {
 
       <section id="about" className="scroll-mt-20 bg-white px-4 py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <div><p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">About Legalze</p><h2 className="text-3xl font-bold text-gray-950 sm:text-4xl">Built to make the first read less intimidating.</h2></div>
+          <div><p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">About Legalyze</p><h2 className="text-3xl font-bold text-gray-950 sm:text-4xl">Built to make the first read less intimidating.</h2></div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="border-l-2 border-sky-400 pl-5"><MessageSquare className="mb-3 h-6 w-6 text-accent" /><h3 className="font-semibold text-gray-900">Ask in plain language</h3><p className="mt-2 text-sm leading-6 text-gray-600">Use document chat to explore specific clauses without losing the surrounding context.</p></div>
             <div className="border-l-2 border-amber-400 pl-5"><ScanSearch className="mb-3 h-6 w-6 text-amber-500" /><h3 className="font-semibold text-gray-900">Review with focus</h3><p className="mt-2 text-sm leading-6 text-gray-600">See document structure, clause priorities, and risk signals in one organized workspace.</p></div>
