@@ -120,17 +120,20 @@ const pipeline = [
   ['Mapping relationships...', 'Done · 28 links'],
 ];
 
-const riskBadge = (cls: string, text: string) => (
-  <span key={text} className={`rounded-full border px-2.5 py-0.5 font-mono text-[10px] font-medium ${cls}`}>{text}</span>
-);
 
 // span = column span on lg (grid is 3 cols) → 2/1, 1/2, 2/1 bento rhythm
 const features = [
-  { icon: CheckCircle2, span: 'lg:col-span-2', title: 'Answers you can verify.', body: 'Every response cites the exact clauses it draws from. Click a citation and the original page opens with the text highlighted in real time.', foot: <span className="font-mono text-[11px] font-semibold text-brass-deep">Citation link: Clause 8.3</span> },
+  { icon: CheckCircle2, span: 'lg:col-span-2', title: 'Answers you can verify.', body: 'Every response cites the exact clauses it draws from. Click a citation and the original document opens with the text highlighted directly on the page.', foot: <span className="font-mono text-[11px] font-semibold text-brass-deep">Citation link: Clause 8.3</span> },
   { icon: Layers, span: '', title: 'Nothing slips through.', body: 'When one clause depends on another, Legalyze brings both into the answer, so you see the full picture, not half of it.', foot: <span className="font-mono text-[11px] text-muted">Dependency graph activated</span> },
   { icon: Scale, span: '', title: 'Reads like a lawyer.', body: 'Documents are split along real clause boundaries, never cut mid-sentence, so structural and statutory meaning stays intact.', foot: <span className="font-mono text-[11px] text-muted">Clause-boundary parser</span> },
   { icon: Table, span: 'lg:col-span-2', title: 'Instant overview.', body: 'See the parties, governing law, effective dates, key terms, and a navigable structured map of the document before you read a single page.', foot: <span className="font-mono text-[11px] text-muted">Entity &amp; jurisdiction extractor</span> },
-  { icon: Shield, span: '', title: 'Risk at a glance.', body: 'Flags one-sided rights, uncapped liability, and unbalanced indemnity with a clear score and suggested counter-proposals.', foot: <div className="flex gap-2">{[riskBadge('bg-olive-soft text-olive border-olive/30', 'Low'), riskBadge('bg-amber-soft text-amber-deep border-amber/30', 'Medium'), riskBadge('bg-crimson-soft text-crimson border-crimson/30', 'High')]}</div> },
+  { icon: Shield, span: '', title: 'Risk at a glance.', body: 'Flags one-sided rights, uncapped liability, and unbalanced indemnity with a clear score and suggested counter-proposals.', foot: (
+    <div className="flex gap-2">
+      <span className="rounded-full border border-olive/30 bg-olive-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-olive">Low</span>
+      <span className="rounded-full border border-amber/30 bg-amber-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-amber-deep">Medium</span>
+      <span className="rounded-full border border-crimson/30 bg-crimson-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-crimson">High</span>
+    </div>
+  ) },
   { icon: Tag, span: 'lg:col-span-2', title: 'Organized automatically.', body: 'Clauses are labeled by type (financial, termination, indemnity, and more) so you can jump straight to what matters without keyword hunting.', foot: <span className="font-mono text-[11px] text-muted">34 standard legal taxonomies</span> },
 ];
 
@@ -404,7 +407,7 @@ export const Landing: React.FC = () => {
             <div className="mb-6 flex items-center justify-between border-b border-sand pb-4">
               <div className="flex items-center gap-2">
                 <span className="h-2.5 w-2.5 rounded-full bg-charcoal" />
-                <span className="font-sans text-sm font-bold">Realtime parsing pipeline</span>
+                <span className="font-sans text-sm font-bold">Automated parsing pipeline</span>
               </div>
               <span className="rounded-full border border-sand bg-parchment px-2.5 py-0.5 font-mono text-[10px] text-muted">SSE stream</span>
             </div>

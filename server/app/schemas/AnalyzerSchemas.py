@@ -32,9 +32,10 @@ class OverviewResponse(BaseModel):
 
 # Phase 2: Risk Analysis Schemas
 class RawRiskItem(BaseModel):
-    chunk_id: str = Field(min_length=1, description="The UUID of the clause chunk.")
+    clause_index: int = Field(ge=1, description="The integer index of the clause from the input.")
     clause_title: str = Field(min_length=1, description="A concise title/label for the clause or issue.")
     risk_level: Literal["HIGH", "MEDIUM", "LOW"] = Field(description="The severity of the risk posed by the clause.")
+    risk_score: int = Field(default=50, ge=1, le=100, description="Quantitative risk score from 1-100 based on legal and financial exposure.")
     explanation: str = Field(min_length=1, description="1-2 sentence explanation of the exact exposure.")
     compliance_check: str = Field(default="", description="Relevant statutory context, legal enforceability, or market standard.")
     recommendation: str = Field(default="", description="Actionable modification or negotiation tip for the weaker/reviewing party.")
@@ -46,6 +47,7 @@ class RiskItem(BaseModel):
     chunk_id: str = Field(description="The UUID of the clause chunk.")
     chunk_text: str = Field(description="The exact text of the clause.")
     risk_level: Literal["HIGH", "MEDIUM", "LOW"] = Field(description="The severity of the risk posed by the clause.")
+    risk_score: int = Field(default=50, ge=1, le=100, description="Quantitative risk score from 1-100.")
     clause_title: str = Field(description="A concise title/label for the clause or issue (e.g. 'Uncapped Indemnity', 'Immediate Termination').", default="Identified Risk")
     explanation: str = Field(description="The objective truth and practical implications of the clause, explaining why it poses this risk.")
     compliance_check: str = Field(default="", description="Relevant statutory context, legal enforceability, or market standard.")

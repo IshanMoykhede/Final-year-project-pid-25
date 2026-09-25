@@ -41,17 +41,22 @@ async def get_document_risks(
 ):
     """
     Phase 2: Deep Document Risk Analysis.
-    Evaluates contract clauses for genuine legal/financial risks and separates them into HIGH, MID, and LOW severity.
-    Enforces user ownership via verify_file_ownership.
+    (Temporarily disabled to conserve LLM tokens)
     """
-    try:
-        result = await analyze_document_risks(file["id"], force_refresh)
-        return result
-    except ValueError as ve:
-        raise HTTPException(status_code=404, detail=str(ve))
-    except Exception as e:
-        logger.exception("Failed to analyze document risks")
-        raise HTTPException(status_code=500, detail=str(e))
+    return DocumentRiskResponse(
+        high_risks=[],
+        medium_risks=[],
+        low_risks=[],
+        total_risks=0
+    )
+    # try:
+    #     result = await analyze_document_risks(file["id"], force_refresh)
+    #     return result
+    # except ValueError as ve:
+    #     raise HTTPException(status_code=404, detail=str(ve))
+    # except Exception as e:
+    #     logger.exception("Failed to analyze document risks")
+    #     raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/test-classification/{file_id}")
 async def test_dynamic_classification(
