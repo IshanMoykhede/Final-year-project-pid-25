@@ -38,6 +38,20 @@ def calculate_crr(retrieved_chunk_nos: List[int], gold_referenced_chunk_no: Opti
     return 1.0 if gold_referenced_chunk_no in retrieved_chunk_nos else 0.0
 
 
+def calculate_joint_recall(retrieved_chunk_nos: List[int], gold_primary_nos: List[int], gold_referenced_no: Optional[int]) -> float:
+    """
+    Calculates Joint Multi-Clause Recall.
+    Evaluates whether ALL required context clauses (primary + cross-referenced)
+    necessary to answer multi-hop legal questions were successfully retrieved.
+    """
+    gold_all = list(set((gold_primary_nos or []) + ([gold_referenced_no] if gold_referenced_no is not None else [])))
+    if not gold_all:
+        return 0.0
+    hits = sum(1 for g in gold_all if g in retrieved_chunk_nos)
+    return hits / len(gold_all)
+
+
+
 def calculate_rouge_l(candidate: str, reference: str) -> float:
     """Calculates standard ROUGE-L F1 score between candidate answer and reference."""
     if not candidate or not reference:

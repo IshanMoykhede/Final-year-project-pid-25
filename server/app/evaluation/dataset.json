@@ -332,7 +332,7 @@
   {
     "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
     "query_type": "1-Hop Dependent",
-    "question": "According to the lease, who are the landlord and tenant parties named in Article 1, and how do those parties relate to the base rent payment obligations described in Article 4?",
+    "question": "According to the lease, who are the landlord and tenant parties named in Article 1, and how do those parties relate to the base rent payment obligations described in Article 4?",
     "gold_chunk_nos": [
       6
     ],
@@ -568,5 +568,285 @@
     ],
     "gold_referenced_chunk_no": null,
     "reference_answer": "The Landlord signed as Rajesh Sharma and the Tenant signed as Amit Verma, both dated 25 September 2026."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What actions can the Landlord take upon an uncured Event of Default?",
+    "gold_chunk_nos": [
+      20
+    ],
+    "gold_referenced_chunk_no": 19,
+    "reference_answer": "Upon an uncured Event of Default, the Landlord may terminate the lease, re-enter the premises, recover unpaid rent, and pursue any other remedies available under the lease and applicable law."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What are the payment timing requirements for Base Rent and what penalties apply if rent is not paid on time?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": 6,
+    "reference_answer": "Base Rent is payable in advance on the first day of each calendar month during the term. If any rent installment is not received within five business days after its due date, a late charge equal to five percent of the overdue amount accrues."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific Premises are being leased to the Tenant as referenced in Article 2?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 2 demises the Premises described in Article 1. Article 1 defines the Premises as Suite 400, comprising the space identified in the lease. Thus, the Tenant is leasing Suite 400 as the Premises."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "Who are the landlord and tenant under this lease, and what premises are being leased?",
+    "gold_chunk_nos": [
+      5
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The lease names Meridian Point Properties, LLC as the Landlord and Northbridge Analytics, Inc. as the Tenant. The Premises subject to the lease is Suite 400, as specified in the basic lease terms table."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount that the Tenant must pay under Article 4.1, and where in the lease is that amount specified?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The Base Rent amount is set forth in Article 1, which contains the lease‑terms table defining the basic lease terms. Article 1 lists the specific Base Rent figure that the Tenant is obligated to pay each month as required by Article 4.1."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific costs are included and excluded in the Tenant's Proportionate Share of Operating Expenses and Real Estate Taxes that constitute Additional Rent under Article 4?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "Additional Rent consists of the Tenant's Proportionate Share of Operating Expenses and Real Estate Taxes that exceed the Base Year amounts. Operating Expenses are defined as all reasonable costs of operating, managing, maintaining, and repairing the building and common areas, including utilities, insurance, janitorial services, landscaping, management fees, and repairs, but they exclude capital improvements, depreciation, debt service, and any costs reimbursed by insurance or third parties. The Tenant is responsible for paying its share of any increase over the Base Year amounts."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the amount of the security deposit that the tenant must provide, as set forth in Article 1?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 specifies the exact monetary amount of the security deposit that the tenant is required to deposit upon execution of the lease. Article 5 then requires the tenant to deposit that amount with the landlord, to be held as security and returned (minus any lawful deductions) after lease termination."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific permitted use of the Premises is defined in Article 1 of the lease?",
+    "gold_chunk_nos": [
+      9
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 sets out the basic lease terms, including the definition of the permitted use for the Premises; it specifies that the Premises may be used only for the purpose described in the lease’s basic terms, and the tenant must restrict its activities to that use."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the defined \"Base Year\" for operating expenses and taxes, and when does the Tenant begin paying its proportionate share of any increases over that Base Year amount?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "The Base Year is defined as calendar year 2026. Beginning with the first full calendar year after the Base Year, the Tenant must pay its proportionate share of any increases in Operating Expenses and Real Estate Taxes over the Base Year amounts."
+  },
+  {
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "query_type": "1-Hop Dependent",
+    "question": "According to the lease, where are the rent payment schedule, escalation rate, and late charge provisions described, and what do they entail?",
+    "gold_chunk_nos": [
+      3
+    ],
+    "gold_referenced_chunk_no": 6,
+    "reference_answer": "Article 4 specifies that rent is due in advance on the first day of each month. The base rent increases by three percent each anniversary of the commencement date, and any payment not received within five business days of its due date incurs a late charge of five percent of the overdue amount."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "According to the lease, who are the parties identified as Landlord and Tenant, and how is the Premises described?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 defines the Landlord as Meridian Point Properties, LLC, a Delaware limited liability company, and the Tenant as Northbridge Analytics, Inc., a Delaware corporation. It further describes the Premises as Suite 400, comprising the specific space outlined in Article 1."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the Expiration Date referenced in Article 3.1, and where in the lease is that date defined?",
+    "gold_chunk_nos": [
+      5
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The Expiration Date is the specific calendar date on which the initial lease term ends, as set forth in Article 1 of the agreement. Article 1 contains the basic lease terms, including the definition of the Expiration Date, which determines when the lease term expires unless renewed."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount specified in Article 1 that the Tenant must pay under Article 4.1?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 sets forth the Base Rent amount that the Tenant is obligated to pay each month. That amount, as defined in Article 1, is the figure the Tenant must remit in advance on the first day of each calendar month pursuant to Article 4.1."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "What expenses are included in the definition of Operating Expenses, which costs are excluded, and how is the Tenant’s proportionate share of increases over the Base Year calculated for additional rent?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "Operating Expenses are defined as all reasonable costs of operating, managing, maintaining, and repairing the building and common areas, including utilities, insurance, janitorial services, landscaping, management fees, and repairs, but they exclude capital improvements (except as amortized), depreciation, debt service, and any costs reimbursed by insurance or third parties. The Tenant must pay its proportionate share of any increase in Operating Expenses and Real Estate Taxes above the Base Year amounts, beginning in the first full calendar year after the Base Year."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "According to the lease, which parties are identified as the Landlord and Tenant, and how is the Premises described?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 defines the Landlord as Meridian Point Properties, LLC, a Delaware limited liability company, and the Tenant as Northbridge Analytics, Inc., a Delaware corporation. The Premises are described as Suite 400, the specific space being leased."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "What are the defined parties to the lease and the description of the premises as set forth in the referenced article?",
+    "gold_chunk_nos": [
+      8
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 defines the Landlord as Meridian Point Properties, LLC, a Delaware limited‑liability company, and the Tenant as Northbridge Analytics, Inc., a Delaware corporation. The Premises are described as Suite 400 of the building."
+  },
+  {
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific use of the premises is authorized under the \"Permitted Use\" defined in Article 1?",
+    "gold_chunk_nos": [
+      9
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 sets forth the definition of the \"Permitted Use,\" which specifies the particular business activities the tenant may conduct in the leased premises. Accordingly, under Article 7 the tenant may occupy the premises only for that defined use and must obtain the landlord’s written consent for any other purpose."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the permitted use of the Premises as defined in Article 1 of the lease?",
+    "gold_chunk_nos": [
+      9
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 7 requires the Tenant to occupy the Premises only for the Permitted Use set out in Article 1. Article 1 defines that Permitted Use as the specific purpose for which the lease was granted, and any other use would need the Landlord’s prior written consent."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "Who are the landlord and tenant parties defined in the lease as referenced by Article 1?",
+    "gold_chunk_nos": [
+      4
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The landlord is Meridian Point Properties, LLC, a Delaware limited liability company, and the tenant is Northbridge Analytics, Inc., a Delaware corporation. These parties are identified in Article 1, which sets forth the basic lease terms."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "According to the lease, which parties are identified as the Landlord and Tenant, and what is the required notice period for the Tenant to exercise the renewal option?",
+    "gold_chunk_nos": [
+      5
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The Landlord is Meridian Point Properties, LLC, a Delaware limited liability company, and the Tenant is Northbridge Analytics, Inc., a Delaware corporation. To exercise the renewal option, the Tenant must deliver written notice to the Landlord at least one hundred eighty (180) days before the Expiration Date."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount specified in Article 1 of the lease?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "Article 1 sets the Base Rent at the amount identified in the Basic Lease Terms (e.g., $____ per month). Accordingly, Article 4.1 requires the Tenant to pay this Base Rent in advance on the first day of each calendar month throughout the Term."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What is the definition of Operating Expenses and how is the Base Year determined for calculating Tenant’s proportionate share of additional rent?",
+    "gold_chunk_nos": [
+      6
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "Operating Expenses are defined as all reasonable costs of operating, managing, maintaining, and repairing the building and common areas, including utilities, insurance, janitorial services, landscaping, management fees, and repairs, but excluding capital improvements, depreciation, debt service, and reimbursed costs. The Base Year is calendar year 2026, and Tenant is responsible for its proportionate share of any increases in Operating Expenses and Real Estate Taxes over the Base Year amounts, beginning with the first full calendar year after the Base Year."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What amount is the security deposit that the tenant must provide, as specified in Article 1 of the lease?",
+    "gold_chunk_nos": [
+      7
+    ],
+    "gold_referenced_chunk_no": 3,
+    "reference_answer": "The security deposit amount is the figure set forth in Article 1 of the lease. Article 1 also identifies the parties to the lease, naming Meridian Point Properties, LLC as the landlord and Northbridge Analytics, Inc. as the tenant, and requires the deposit to be paid upon execution of the lease."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What types of costs are classified as Operating Expenses under Article 6, and does the Landlord’s insurance premium become part of the Tenant’s proportionate share of those expenses?",
+    "gold_chunk_nos": [
+      14
+    ],
+    "gold_referenced_chunk_no": 8,
+    "reference_answer": "Article 6 defines Operating Expenses as all reasonable costs of operating, managing, maintaining, and repairing the Building and Common Areas—including utilities, insurance, janitorial services, landscaping, management fees, and repairs—while excluding capital improvements, depreciation, debt service, and reimbursable insurance proceeds. Accordingly, the Landlord’s property and liability insurance premium is included in Operating Expenses, and the Tenant must pay its proportionate share of that cost."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific remedies does the Landlord have under Article 16 when an Event of Default by the Tenant remains uncured?",
+    "gold_chunk_nos": [
+      20
+    ],
+    "gold_referenced_chunk_no": 19,
+    "reference_answer": "Article 16 sets out that, upon an uncured Event of Default, the Landlord may exercise a range of remedies, including terminating the lease, re‑entering and taking possession of the premises, pursuing the Tenant for unpaid rent and other damages, and initiating legal action to enforce the lease terms."
+  },
+  {
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "query_type": "1-Hop Dependent",
+    "question": "What specific remedies does Article 16 provide to the Landlord when an Event of Default by the Tenant remains uncured?",
+    "gold_chunk_nos": [
+      20
+    ],
+    "gold_referenced_chunk_no": 19,
+    "reference_answer": "Article 16 enumerates the Landlord’s remedies upon an uncured Event of Default, including the right to terminate the lease, re‑enter and take possession of the premises, pursue collection of any unpaid rent and other sums due, and seek damages or other equitable relief as permitted by law. The clause also sets out any notice or procedural requirements the Landlord must follow before exercising these remedies."
+  },
+  {
+    "document_id": "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",
+    "query_type": "1-Hop Dependent",
+    "question": "If my request for compensatory off or overtime pay is denied, what steps must I follow to appeal the decision and what timeline can I expect for a final resolution?",
+    "gold_chunk_nos": [
+      43
+    ],
+    "gold_referenced_chunk_no": 42,
+    "reference_answer": "The employee should first discuss the denial with their Supervisor or Project Manager to seek resolution. If unresolved, they must submit a written escalation to HR within five business days, and if still unresolved, escalate to the Head of HR, with a final decision typically communicated within ten business days, and no adverse action will be taken for a good‑faith appeal."
+  },
+  {
+    "document_id": "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",
+    "query_type": "1-Hop Dependent",
+    "question": "If a leave request is declined and the employee wishes to appeal, what steps and timelines must be followed according to the Escalation and Appeals clause?",
+    "gold_chunk_nos": [
+      5
+    ],
+    "gold_referenced_chunk_no": 42,
+    "reference_answer": "The employee must first discuss the issue with their Supervisor/Project Manager. If unresolved, they must submit a written escalation to HR within five business days. Should the matter remain unresolved, it is escalated to the Head‑HR, who normally provides a final decision within ten business days, unless additional time is needed, and no adverse action may be taken against the employee for a good‑faith appeal."
   }
 ]

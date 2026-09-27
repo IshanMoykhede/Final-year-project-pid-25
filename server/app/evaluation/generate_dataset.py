@@ -25,11 +25,10 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY", ""))
 
 # Documents to use for generation — only fully processed ones
 TARGET_DOCUMENT_IDS = [
-    "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",  # Commercial Office Lease (28 chunks, 6 links)
-    "d28c03f5-4d60-4bc9-b173-65af2ab9e8e7",  # Employee Leave Policy (43 chunks, 1 link)
-    "efcaa98f-2437-46bc-863a-90809d6d8a44",  # CUAD Contract 2 (4 chunks, 2 links)
-    "e6eb83ac-b3e5-4e22-b19a-089229bbcbb4",  # CUAD Contract 3 (11 chunks, 6 links)
-    "6f4b2b06-c90b-4a81-a0c5-d273d24a34bf",  # Rental Agreement (7 chunks, 0 links)
+    "242b451f-c178-4b64-827b-ed35ea096765",  # Commercial Office Lease (26 chunks, 7 links)
+    "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",  # Commercial Lease (28 chunks, 7 links)
+    "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",  # Commercial Lease (28 chunks, 8 links)
+    "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",  # Leave Policy (43 chunks, 2 links)
 ]
 
 # How many Direct questions to generate per chunk
@@ -91,9 +90,9 @@ Target clause ({tgt_alias}):
 {tgt_text[:800]}
 ---
 
-Generate ONE question that requires understanding BOTH clauses to answer fully.
-The question should naturally lead a reader from the source clause to the referenced target clause.
-Also provide the reference answer (2-3 sentences) that synthesises both clauses.
+Generate ONE question that a legal professional would ask when reading the source clause, which requires checking the cross-referenced target clause to answer completely.
+IMPORTANT: Do NOT leak unique names, figures, or answers that appear ONLY in the target clause into the question itself. The question should inquire about the terms, procedures, or conditions referenced by the source clause.
+Also provide the reference answer (2-3 sentences) that accurately synthesises both clauses.
 
 Respond ONLY with this exact JSON:
 {{"question": "...", "reference_answer": "..."}}
@@ -102,13 +101,14 @@ Respond ONLY with this exact JSON:
     for attempt in range(1, max_retries + 1):
         try:
             response = groq_client.chat.completions.create(
-                model="openai/gpt-oss-20b",
+                model="openai/gpt-oss-120b",
                 messages=[{"role": "user", "content": prompt}],
                 response_format={"type": "json_object"},
-                temperature=0.3,
-                max_tokens=400
+                temperature=0.2,
+                max_tokens=1000
             )
-            data = json.loads(response.choices[0].message.content)
+            raw = response.choices[0].message.content
+            data = json.loads(raw)
             if data.get("question") and data.get("reference_answer"):
                 return data
         except Exception as e:
@@ -168,37 +168,9 @@ def main():
         resolved_refs = [r for r in refs_res.data if r.get("target_chunk_id") and r["target_chunk_id"] in id_to_chunk]
         logger.info(f"Found {len(resolved_refs)} resolved cross-references.")
 
-        # --- Generate Direct questions ---
-        # Sample evenly across the document
-        sampled_chunks = chunks[:MAX_CHUNKS_PER_DOC]
-        if len(chunks) > MAX_CHUNKS_PER_DOC:
-            step = len(chunks) // MAX_CHUNKS_PER_DOC
-            sampled_chunks = [chunks[i] for i in range(0, len(chunks), step)][:MAX_CHUNKS_PER_DOC]
-
-        for i, chunk in enumerate(sampled_chunks):
-            if len(chunk.get("text", "")) < 100:
-                continue  # skip very short chunks
-
-            logger.info(f"  Generating Direct question for chunk {chunk['chunk_no']} ({chunk.get('aliases', [])})...")
-            result = generate_direct_question(chunk["text"], chunk.get("aliases") or [])
-
-            if result:
-                key = (doc_id, result["question"])
-                if key not in existing_questions:
-                    dataset.append({
-                        "document_id": doc_id,
-                        "query_type": "Direct",
-                        "question": result["question"],
-                        "gold_chunk_nos": [chunk["chunk_no"]],
-                        "gold_referenced_chunk_no": None,
-                        "reference_answer": result["reference_answer"]
-                    })
-                    existing_questions.add(key)
-                    total_direct += 1
-                    logger.info(f"    Q: {result['question'][:70]}...")
-
-            # Rate limit safety
-            time.sleep(2)
+        # Focus generation on new 1-Hop Dependent cross-reference pairs
+        # (Direct questions already have 45 questions in dataset.json)
+        logger.info(f"Targeting {len(resolved_refs)} cross-references for 1-Hop Dependent questions...")
 
         # --- Generate 1-Hop Dependent questions ---
         for ref in resolved_refs:
@@ -237,7 +209,7 @@ def main():
                     total_hop += 1
                     logger.info(f"    Q: {result['question'][:70]}...")
 
-            time.sleep(8)
+            time.sleep(4)
 
         logger.info(f"  1-Hop questions generated: {total_hop}")
 

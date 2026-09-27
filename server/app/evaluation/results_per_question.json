@@ -37,13 +37,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 5.616580247879028,
-    "hop_time": 42.92681574821472,
+    "std_time": 3.344489336013794,
+    "hop_time": 3.8730857372283936,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -52,6 +53,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -91,13 +93,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.839876890182495,
-    "hop_time": 4.874798536300659,
+    "std_time": 2.965394973754883,
+    "hop_time": 3.7964413166046143,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.25,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.5,
       "faithfulness": 1.0
     },
@@ -106,6 +109,7 @@
       "recall_10": 1.0,
       "mrr": 0.25,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.5,
       "faithfulness": 1.0
     }
@@ -148,13 +152,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.4503018856048584,
-    "hop_time": 3.1822264194488525,
+    "std_time": 2.8631813526153564,
+    "hop_time": 2.9611411094665527,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -163,6 +168,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -190,25 +196,29 @@
       8,
       6
     ],
-    "hop_expanded": [],
+    "hop_expanded": [
+      3
+    ],
     "hop_retrieved": [
       12,
       14,
       18,
       8,
-      6
+      6,
+      3
     ],
     "num_primary_chunks": 5,
-    "num_expanded_chunks": 0,
-    "num_final_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.6592137813568115,
-    "hop_time": 9.201483011245728,
+    "std_time": 2.836934804916382,
+    "hop_time": 3.4558780193328857,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -217,6 +227,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     }
@@ -256,13 +267,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 4.007473468780518,
-    "hop_time": 2.403724431991577,
+    "std_time": 2.6208784580230713,
+    "hop_time": 2.3370962142944336,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -271,6 +283,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -313,13 +326,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 1.8886380195617676,
-    "hop_time": 3.1522164344787598,
+    "std_time": 2.166396379470825,
+    "hop_time": 3.484272003173828,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -328,6 +342,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -367,13 +382,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.0809988975524902,
-    "hop_time": 2.4889602661132812,
+    "std_time": 2.664285182952881,
+    "hop_time": 2.8637166023254395,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     },
@@ -382,6 +398,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     }
@@ -424,13 +441,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 1.6445724964141846,
-    "hop_time": 2.797466516494751,
+    "std_time": 2.1497321128845215,
+    "hop_time": 2.56210994720459,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -439,6 +457,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     }
@@ -466,25 +485,29 @@
       23,
       7
     ],
-    "hop_expanded": [],
+    "hop_expanded": [
+      3
+    ],
     "hop_retrieved": [
       20,
       16,
       15,
       23,
-      7
+      7,
+      3
     ],
     "num_primary_chunks": 5,
-    "num_expanded_chunks": 0,
-    "num_final_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.888166666030884,
-    "hop_time": 2.907564640045166,
+    "std_time": 2.2578823566436768,
+    "hop_time": 2.658315658569336,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -493,6 +516,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -535,13 +559,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.6649844646453857,
-    "hop_time": 3.739163398742676,
+    "std_time": 2.3379547595977783,
+    "hop_time": 2.7753353118896484,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 0.5,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -550,6 +575,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -589,13 +615,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2855608463287354,
-    "hop_time": 3.435670852661133,
+    "std_time": 2.671792984008789,
+    "hop_time": 2.655975580215454,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     },
@@ -604,6 +631,7 @@
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     }
@@ -646,13 +674,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.77699613571167,
-    "hop_time": 3.760529041290283,
+    "std_time": 2.3788440227508545,
+    "hop_time": 3.1517977714538574,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -661,6 +690,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -700,13 +730,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.485008955001831,
-    "hop_time": 3.333881378173828,
+    "std_time": 2.102515935897827,
+    "hop_time": 3.017759084701538,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.75,
       "faithfulness": 1.0
     },
@@ -715,6 +746,7 @@
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -754,13 +786,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4556055068969727,
-    "hop_time": 2.870593309402466,
+    "std_time": 2.1476902961730957,
+    "hop_time": 2.7679853439331055,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -769,6 +802,7 @@
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -808,13 +842,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.6630473136901855,
-    "hop_time": 2.894871711730957,
+    "std_time": 2.253654956817627,
+    "hop_time": 2.4510509967803955,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -823,6 +858,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -862,13 +898,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.3203935623168945,
-    "hop_time": 2.686203718185425,
+    "std_time": 2.1135363578796387,
+    "hop_time": 2.495246410369873,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -877,6 +914,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -916,13 +954,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4473676681518555,
-    "hop_time": 3.0531792640686035,
+    "std_time": 2.1215293407440186,
+    "hop_time": 2.552123546600342,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -931,6 +970,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     }
@@ -970,13 +1010,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.494429588317871,
-    "hop_time": 2.8309783935546875,
+    "std_time": 2.189011573791504,
+    "hop_time": 2.3638644218444824,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     },
@@ -985,6 +1026,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     }
@@ -1024,13 +1066,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4626688957214355,
-    "hop_time": 2.8624372482299805,
+    "std_time": 2.1972439289093018,
+    "hop_time": 2.314915895462036,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1039,6 +1082,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     }
@@ -1078,13 +1122,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.683436155319214,
-    "hop_time": 2.646097183227539,
+    "std_time": 2.5499110221862793,
+    "hop_time": 2.450288772583008,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1093,6 +1138,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1132,13 +1178,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.865461587905884,
-    "hop_time": 3.4791533946990967,
+    "std_time": 2.0928375720977783,
+    "hop_time": 2.623903512954712,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1147,6 +1194,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1186,13 +1234,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4094324111938477,
-    "hop_time": 4.351702690124512,
+    "std_time": 2.1468489170074463,
+    "hop_time": 2.5671467781066895,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1201,6 +1250,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1240,13 +1290,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.46747088432312,
-    "hop_time": 2.987358331680298,
+    "std_time": 2.1248292922973633,
+    "hop_time": 2.3695075511932373,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1255,6 +1306,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1294,13 +1346,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.5364301204681396,
-    "hop_time": 3.474713087081909,
+    "std_time": 2.165829658508301,
+    "hop_time": 2.75457763671875,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1309,6 +1362,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1348,13 +1402,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4617650508880615,
-    "hop_time": 3.068113327026367,
+    "std_time": 2.1478848457336426,
+    "hop_time": 2.363528251647949,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1363,6 +1418,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1402,13 +1458,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.675812005996704,
-    "hop_time": 2.853289842605591,
+    "std_time": 2.2498972415924072,
+    "hop_time": 2.4508190155029297,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -1417,6 +1474,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1456,13 +1514,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.772616147994995,
-    "hop_time": 2.863646984100342,
+    "std_time": 2.6801607608795166,
+    "hop_time": 2.337841510772705,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1471,6 +1530,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1510,13 +1570,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4567790031433105,
-    "hop_time": 3.424011468887329,
+    "std_time": 2.15129017829895,
+    "hop_time": 2.3665502071380615,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
       "mrr": 0.0,
       "crr": 1.0,
+      "joint_recall": 0.5,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -1525,6 +1586,7 @@
       "recall_10": 0.0,
       "mrr": 0.0,
       "crr": 1.0,
+      "joint_recall": 0.5,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -1567,13 +1629,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.6782028675079346,
-    "hop_time": 3.3148224353790283,
+    "std_time": 2.3475286960601807,
+    "hop_time": 2.5552024841308594,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -1582,6 +1645,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1624,13 +1688,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.694709062576294,
-    "hop_time": 3.450673818588257,
+    "std_time": 2.163815498352051,
+    "hop_time": 2.8566105365753174,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1639,6 +1704,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1666,25 +1732,29 @@
       14,
       6
     ],
-    "hop_expanded": [],
+    "hop_expanded": [
+      3
+    ],
     "hop_retrieved": [
       10,
       8,
       11,
       14,
-      6
+      6,
+      3
     ],
     "num_primary_chunks": 5,
-    "num_expanded_chunks": 0,
-    "num_final_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.3120956420898438,
-    "hop_time": 3.2224392890930176,
+    "std_time": 2.1475963592529297,
+    "hop_time": 2.6938259601593018,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -1693,6 +1763,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -1720,25 +1791,29 @@
       23,
       5
     ],
-    "hop_expanded": [],
+    "hop_expanded": [
+      3
+    ],
     "hop_retrieved": [
       16,
       24,
       20,
       23,
-      5
+      5,
+      3
     ],
     "num_primary_chunks": 5,
-    "num_expanded_chunks": 0,
-    "num_final_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.367798089981079,
-    "hop_time": 2.645531177520752,
+    "std_time": 2.3284518718719482,
+    "hop_time": 3.065294027328491,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1747,6 +1822,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1789,13 +1865,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.6976683139801025,
-    "hop_time": 3.382263422012329,
+    "std_time": 2.153195858001709,
+    "hop_time": 2.6610522270202637,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -1804,6 +1881,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -1812,7 +1890,7 @@
     "question_id": 34,
     "document_id": "1af9efc4-e5e6-4ca3-a2dc-d1bfaaf5c744",
     "type": "1-Hop Dependent",
-    "question": "According to the lease, who are the landlord and tenant parties named in Article\u202f1, and how do those parties relate to the base rent payment obligations described in Article\u202f4?",
+    "question": "According to the lease, who are the landlord and tenant parties named in Article 1, and how do those parties relate to the base rent payment obligations described in Article 4?",
     "gold_chunks": [
       6
     ],
@@ -1846,23 +1924,25 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.5671274662017822,
-    "hop_time": 3.8588521480560303,
+    "std_time": 2.3603551387786865,
+    "hop_time": 2.6658742427825928,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
-      "accuracy": 0.98,
-      "faithfulness": 0.97
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
     },
     "hop": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
-      "accuracy": 0.98,
-      "faithfulness": 0.95
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
     }
   },
   {
@@ -1903,13 +1983,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 3.064366579055786,
-    "hop_time": 3.267655849456787,
+    "std_time": 2.1475179195404053,
+    "hop_time": 2.8737571239471436,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 0.5,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -1918,6 +1999,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     }
@@ -1957,13 +2039,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4631998538970947,
-    "hop_time": 2.869027853012085,
+    "std_time": 2.559133529663086,
+    "hop_time": 2.4821510314941406,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -1972,6 +2055,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2011,13 +2095,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.3576161861419678,
-    "hop_time": 2.789599895477295,
+    "std_time": 2.069458484649658,
+    "hop_time": 2.611922025680542,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2026,6 +2111,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2065,13 +2151,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.3779430389404297,
-    "hop_time": 2.81435227394104,
+    "std_time": 2.2502098083496094,
+    "hop_time": 2.6599669456481934,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2080,6 +2167,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2119,13 +2207,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.5656094551086426,
-    "hop_time": 2.755098581314087,
+    "std_time": 2.1489429473876953,
+    "hop_time": 2.3547372817993164,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
       "mrr": 0.0,
       "crr": 1.0,
+      "joint_recall": 0.5,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -2134,6 +2223,7 @@
       "recall_10": 0.0,
       "mrr": 0.0,
       "crr": 1.0,
+      "joint_recall": 0.5,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -2170,13 +2260,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.6655759811401367,
-    "hop_time": 3.2019689083099365,
+    "std_time": 2.1530280113220215,
+    "hop_time": 2.9718356132507324,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2185,6 +2276,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2221,13 +2313,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.582832098007202,
-    "hop_time": 3.247037649154663,
+    "std_time": 2.1581480503082275,
+    "hop_time": 2.9060122966766357,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -2236,6 +2329,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -2272,13 +2366,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.3904547691345215,
-    "hop_time": 3.8317723274230957,
+    "std_time": 2.3077971935272217,
+    "hop_time": 2.868809223175049,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": null
     },
@@ -2287,6 +2382,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -2323,13 +2419,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.386798620223999,
-    "hop_time": 3.384921073913574,
+    "std_time": 2.3711166381835938,
+    "hop_time": 2.672177791595459,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2338,6 +2435,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -2374,13 +2472,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.6581227779388428,
-    "hop_time": 3.2483582496643066,
+    "std_time": 2.3435111045837402,
+    "hop_time": 2.8529655933380127,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2389,6 +2488,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2431,13 +2531,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.7036590576171875,
-    "hop_time": 4.482338905334473,
+    "std_time": 2.460806369781494,
+    "hop_time": 2.6704986095428467,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2446,6 +2547,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2488,13 +2590,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 4.305947303771973,
-    "hop_time": 3.963919162750244,
+    "std_time": 2.139281988143921,
+    "hop_time": 2.9705121517181396,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2503,6 +2606,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 0.0
     }
@@ -2545,13 +2649,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.475308895111084,
-    "hop_time": 3.369774103164673,
+    "std_time": 2.2070114612579346,
+    "hop_time": 2.890070676803589,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -2560,6 +2665,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -2602,13 +2708,14 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.3684651851654053,
-    "hop_time": 3.672046184539795,
+    "std_time": 2.097487449645996,
+    "hop_time": 2.8391714096069336,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.97
     },
@@ -2617,6 +2724,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.98,
       "faithfulness": 0.95
     }
@@ -2644,25 +2752,29 @@
       3,
       6
     ],
-    "hop_expanded": [],
+    "hop_expanded": [
+      11
+    ],
     "hop_retrieved": [
       9,
       8,
       10,
       3,
-      6
+      6,
+      11
     ],
     "num_primary_chunks": 5,
-    "num_expanded_chunks": 0,
-    "num_final_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.83451771736145,
-    "hop_time": 4.739164113998413,
+    "std_time": 2.120929718017578,
+    "hop_time": 2.991619110107422,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2671,6 +2783,7 @@
       "recall_10": 1.0,
       "mrr": 0.5,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -2710,13 +2823,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4030351638793945,
-    "hop_time": 3.1367149353027344,
+    "std_time": 2.158357858657837,
+    "hop_time": 2.7964375019073486,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2725,6 +2839,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -2764,13 +2879,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.4627773761749268,
-    "hop_time": 3.9623451232910156,
+    "std_time": 2.2209692001342773,
+    "hop_time": 2.865565776824951,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     },
@@ -2779,6 +2895,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": null
     }
@@ -2818,13 +2935,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.9511728286743164,
-    "hop_time": 3.4181742668151855,
+    "std_time": 2.1597771644592285,
+    "hop_time": 2.4675545692443848,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2833,6 +2951,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 1.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2872,13 +2991,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.864830493927002,
-    "hop_time": 3.2729296684265137,
+    "std_time": 2.2294697761535645,
+    "hop_time": 2.522536516189575,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -2887,6 +3007,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 0.75,
       "faithfulness": 1.0
     }
@@ -2926,13 +3047,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.667057991027832,
-    "hop_time": 3.246199607849121,
+    "std_time": 2.144380569458008,
+    "hop_time": 2.498843193054199,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2941,6 +3063,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -2980,13 +3103,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.7266831398010254,
-    "hop_time": 3257.152947664261,
+    "std_time": 2.3858816623687744,
+    "hop_time": 2.324680805206299,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -2995,6 +3119,7 @@
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -3034,13 +3159,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.466858386993408,
-    "hop_time": 1.6364541053771973,
+    "std_time": 2.152360200881958,
+    "hop_time": 2.559274911880493,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": null,
       "faithfulness": 1.0
     },
@@ -3049,6 +3175,7 @@
       "recall_10": 1.0,
       "mrr": 1.0,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     }
@@ -3088,13 +3215,14 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 1.177804708480835,
-    "hop_time": 1.5062713623046875,
+    "std_time": 2.1558196544647217,
+    "hop_time": 2.4607391357421875,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
     },
@@ -3103,8 +3231,1509 @@
       "recall_10": 1.0,
       "mrr": 0.3333333333333333,
       "crr": 0.0,
+      "joint_recall": 1.0,
       "accuracy": 1.0,
       "faithfulness": 1.0
+    }
+  },
+  {
+    "question_id": 58,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What actions can the Landlord take upon an uncured Event of Default?",
+    "gold_chunks": [
+      20
+    ],
+    "gold_referenced_chunk": 19,
+    "std_retrieved": [
+      20,
+      15,
+      10,
+      18,
+      7
+    ],
+    "hop_primary": [
+      20,
+      15,
+      10,
+      18,
+      7
+    ],
+    "hop_expanded": [
+      19,
+      3
+    ],
+    "hop_retrieved": [
+      20,
+      15,
+      10,
+      18,
+      7,
+      19,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": true,
+    "std_time": 2.1673851013183594,
+    "hop_time": 3.1551713943481445,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 59,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What are the payment timing requirements for Base Rent and what penalties apply if rent is not paid on time?",
+    "gold_chunks": [
+      3
+    ],
+    "gold_referenced_chunk": 6,
+    "std_retrieved": [
+      6,
+      8,
+      20,
+      5,
+      24
+    ],
+    "hop_primary": [
+      6,
+      8,
+      20,
+      5,
+      24
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      6,
+      8,
+      20,
+      5,
+      24,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.145895481109619,
+    "hop_time": 2.763228178024292,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 1.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 60,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What specific Premises are being leased to the Tenant as referenced in Article 2?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      4,
+      9,
+      18,
+      26,
+      24
+    ],
+    "hop_primary": [
+      4,
+      9,
+      18,
+      26,
+      24
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      4,
+      9,
+      18,
+      26,
+      24,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.1508493423461914,
+    "hop_time": 2.97298264503479,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 61,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "Who are the landlord and tenant under this lease, and what premises are being leased?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      4,
+      2,
+      9,
+      18,
+      21
+    ],
+    "hop_primary": [
+      4,
+      2,
+      9,
+      18,
+      21
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      4,
+      2,
+      9,
+      18,
+      21,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.2578787803649902,
+    "hop_time": 2.8713889122009277,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 62,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount that the Tenant must pay under Article 4.1, and where in the lease is that amount specified?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      6,
+      8,
+      5,
+      18,
+      12
+    ],
+    "hop_primary": [
+      6,
+      8,
+      5,
+      18,
+      12
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      6,
+      8,
+      5,
+      18,
+      12,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.149056911468506,
+    "hop_time": 2.955854892730713,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 63,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What specific costs are included and excluded in the Tenant's Proportionate Share of Operating Expenses and Real Estate Taxes that constitute Additional Rent under Article 4?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [
+      8,
+      6,
+      14,
+      12,
+      18
+    ],
+    "hop_primary": [
+      8,
+      6,
+      14,
+      12,
+      18
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      8,
+      6,
+      14,
+      12,
+      18,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.2608494758605957,
+    "hop_time": 2.8656818866729736,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 64,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What is the amount of the security deposit that the tenant must provide, as set forth in Article 1?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      7,
+      6,
+      8,
+      14,
+      12
+    ],
+    "hop_primary": [
+      7,
+      6,
+      8,
+      14,
+      12
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      7,
+      6,
+      8,
+      14,
+      12,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.258047580718994,
+    "hop_time": 3.0665674209594727,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 65,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What specific permitted use of the Premises is defined in Article 1 of the lease?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      9,
+      4,
+      26,
+      18,
+      17
+    ],
+    "hop_primary": [
+      9,
+      4,
+      26,
+      18,
+      17
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      9,
+      4,
+      26,
+      18,
+      17,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.2499120235443115,
+    "hop_time": 2.8658950328826904,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 66,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "What is the defined \"Base Year\" for operating expenses and taxes, and when does the Tenant begin paying its proportionate share of any increases over that Base Year amount?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [
+      8,
+      6,
+      14,
+      24,
+      5
+    ],
+    "hop_primary": [
+      8,
+      6,
+      14,
+      24,
+      5
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      8,
+      6,
+      14,
+      24,
+      5,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.148103713989258,
+    "hop_time": 2.7575106620788574,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 67,
+    "document_id": "242b451f-c178-4b64-827b-ed35ea096765",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, where are the rent payment schedule, escalation rate, and late charge provisions described, and what do they entail?",
+    "gold_chunks": [
+      3
+    ],
+    "gold_referenced_chunk": 6,
+    "std_retrieved": [
+      6,
+      8,
+      26,
+      2,
+      5
+    ],
+    "hop_primary": [
+      6,
+      8,
+      26,
+      2,
+      5
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      6,
+      8,
+      26,
+      2,
+      5,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.1607677936553955,
+    "hop_time": 2.9774515628814697,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 1.0,
+      "mrr": 0.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 68,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, who are the parties identified as Landlord and Tenant, and how is the Premises described?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.1735939979553223,
+    "hop_time": 2.1385388374328613,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 69,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "What is the Expiration Date referenced in Article 3.1, and where in the lease is that date defined?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.4408907890319824,
+    "hop_time": 2.2508533000946045,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 70,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount specified in Article 1 that the Tenant must pay under Article 4.1?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.0435574054718018,
+    "hop_time": 2.3543953895568848,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 71,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "What expenses are included in the definition of Operating Expenses, which costs are excluded, and how is the Tenant\u2019s proportionate share of increases over the Base Year calculated for additional rent?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.3632194995880127,
+    "hop_time": 2.245523691177368,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 72,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, which parties are identified as the Landlord and Tenant, and how is the Premises described?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.0701065063476562,
+    "hop_time": 2.231180429458618,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 73,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "What are the defined parties to the lease and the description of the premises as set forth in the referenced article?",
+    "gold_chunks": [
+      8
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.0955898761749268,
+    "hop_time": 2.2955398559570312,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 74,
+    "document_id": "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",
+    "type": "1-Hop Dependent",
+    "question": "What specific use of the premises is authorized under the \"Permitted Use\" defined in Article 1?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [],
+    "hop_primary": [],
+    "hop_expanded": [],
+    "hop_retrieved": [],
+    "num_primary_chunks": 0,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 0,
+    "newly_recovered": false,
+    "std_time": 2.578071117401123,
+    "hop_time": 2.094632625579834,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 75,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What is the permitted use of the Premises as defined in Article 1 of the lease?",
+    "gold_chunks": [
+      9
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      9,
+      4,
+      3,
+      18,
+      17
+    ],
+    "hop_primary": [
+      9,
+      4,
+      3,
+      18,
+      17
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      9,
+      4,
+      3,
+      18,
+      17
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.3497533798217773,
+    "hop_time": 2.927471160888672,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 76,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "Who are the landlord and tenant parties defined in the lease as referenced by Article 1?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      18,
+      4,
+      26,
+      2,
+      3
+    ],
+    "hop_primary": [
+      18,
+      4,
+      26,
+      2,
+      3
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      18,
+      4,
+      26,
+      2,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.2498939037323,
+    "hop_time": 2.561943292617798,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 77,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "According to the lease, which parties are identified as the Landlord and Tenant, and what is the required notice period for the Tenant to exercise the renewal option?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      5,
+      20,
+      24,
+      2,
+      6
+    ],
+    "hop_primary": [
+      5,
+      20,
+      24,
+      2,
+      6
+    ],
+    "hop_expanded": [
+      19,
+      8,
+      3
+    ],
+    "hop_retrieved": [
+      5,
+      20,
+      24,
+      2,
+      6,
+      19,
+      8,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 3,
+    "num_final_chunks": 8,
+    "newly_recovered": true,
+    "std_time": 2.159595489501953,
+    "hop_time": 2.6597070693969727,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 78,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What is the Base Rent amount specified in Article 1 of the lease?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      6,
+      8,
+      5,
+      3,
+      1
+    ],
+    "hop_primary": [
+      6,
+      8,
+      5,
+      3,
+      1
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      6,
+      8,
+      5,
+      3,
+      1
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.142298698425293,
+    "hop_time": 3.1733083724975586,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 79,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What is the definition of Operating Expenses and how is the Base Year determined for calculating Tenant\u2019s proportionate share of additional rent?",
+    "gold_chunks": [
+      6
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [
+      8,
+      6,
+      14,
+      10,
+      11
+    ],
+    "hop_primary": [
+      8,
+      6,
+      14,
+      10,
+      11
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      8,
+      6,
+      14,
+      10,
+      11,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.1517066955566406,
+    "hop_time": 2.565739393234253,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 80,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What amount is the security deposit that the tenant must provide, as specified in Article 1 of the lease?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      7,
+      6,
+      8,
+      18,
+      24
+    ],
+    "hop_primary": [
+      7,
+      6,
+      8,
+      18,
+      24
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      7,
+      6,
+      8,
+      18,
+      24,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.1599056720733643,
+    "hop_time": 2.7478525638580322,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 81,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What types of costs are classified as Operating Expenses under Article 6, and does the Landlord\u2019s insurance premium become part of the Tenant\u2019s proportionate share of those expenses?",
+    "gold_chunks": [
+      14
+    ],
+    "gold_referenced_chunk": 8,
+    "std_retrieved": [
+      8,
+      14,
+      15,
+      13,
+      6
+    ],
+    "hop_primary": [
+      8,
+      14,
+      15,
+      13,
+      6
+    ],
+    "hop_expanded": [
+      3
+    ],
+    "hop_retrieved": [
+      8,
+      14,
+      15,
+      13,
+      6,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.2544147968292236,
+    "hop_time": 2.865614891052246,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 82,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What specific remedies does the Landlord have under Article 16 when an Event of Default by the Tenant remains uncured?",
+    "gold_chunks": [
+      20
+    ],
+    "gold_referenced_chunk": 19,
+    "std_retrieved": [
+      20,
+      15,
+      24,
+      7,
+      18
+    ],
+    "hop_primary": [
+      20,
+      15,
+      24,
+      7,
+      18
+    ],
+    "hop_expanded": [
+      19,
+      3
+    ],
+    "hop_retrieved": [
+      20,
+      15,
+      24,
+      7,
+      18,
+      19,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": true,
+    "std_time": 2.1529483795166016,
+    "hop_time": 2.9816579818725586,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 83,
+    "document_id": "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",
+    "type": "1-Hop Dependent",
+    "question": "What specific remedies does Article 16 provide to the Landlord when an Event of Default by the Tenant remains uncured?",
+    "gold_chunks": [
+      20
+    ],
+    "gold_referenced_chunk": 19,
+    "std_retrieved": [
+      20,
+      15,
+      7,
+      24,
+      18
+    ],
+    "hop_primary": [
+      20,
+      15,
+      7,
+      24,
+      18
+    ],
+    "hop_expanded": [
+      19,
+      3
+    ],
+    "hop_retrieved": [
+      20,
+      15,
+      7,
+      24,
+      18,
+      19,
+      3
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": true,
+    "std_time": 2.2398250102996826,
+    "hop_time": 2.865402936935425,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 84,
+    "document_id": "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",
+    "type": "1-Hop Dependent",
+    "question": "If my request for compensatory off or overtime pay is denied, what steps must I follow to appeal the decision and what timeline can I expect for a final resolution?",
+    "gold_chunks": [
+      43
+    ],
+    "gold_referenced_chunk": 42,
+    "std_retrieved": [
+      10,
+      42,
+      43,
+      33,
+      16
+    ],
+    "hop_primary": [
+      10,
+      42,
+      43,
+      33,
+      16
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      10,
+      42,
+      43,
+      33,
+      16
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.2565951347351074,
+    "hop_time": 2.912445545196533,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 85,
+    "document_id": "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",
+    "type": "1-Hop Dependent",
+    "question": "If a leave request is declined and the employee wishes to appeal, what steps and timelines must be followed according to the Escalation and Appeals clause?",
+    "gold_chunks": [
+      5
+    ],
+    "gold_referenced_chunk": 42,
+    "std_retrieved": [
+      42,
+      17,
+      30,
+      29,
+      5
+    ],
+    "hop_primary": [
+      42,
+      17,
+      30,
+      29,
+      5
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      42,
+      17,
+      30,
+      29,
+      5
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.2048470973968506,
+    "hop_time": 2.738722324371338,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.2,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.2,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
     }
   }
 ]

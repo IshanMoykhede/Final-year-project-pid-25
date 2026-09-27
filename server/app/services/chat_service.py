@@ -83,9 +83,9 @@ def answer_question(document_id: str, question: str, use_1hop_expansion: bool = 
     expanded_clauses = []
     
     # 3. 1-Hop Expansion (N_1)
-    # Expand cross-references only from top primary candidate clauses to minimize latency and token bloat
+    # Expand cross-references from the retrieved primary candidate clauses
     if use_1hop_expansion and top_k_chunks:
-        source_chunk_ids = [c["id"] for c in top_k_chunks[:3]]
+        source_chunk_ids = [c["id"] for c in top_k_chunks]
         
         refs = supabase.table("cross_references") \
             .select("target_chunk_id, reference_text") \
