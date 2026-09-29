@@ -29,3 +29,13 @@ class OverviewResponse(BaseModel):
     recommended_roadmap: List[str]
     recommended_starting_point: str
     reasoning: str = Field(default="")
+
+# Phase 3: Clause Analysis Schema
+class ClauseAnalysisRequest(BaseModel):
+    document_id: str
+    clause_type: str
+    original_text: str
+    document_overview: str
+    direct_references: List[str] = Field(default_factory=list)
+    rag_results: List[str] = Field(default_factory=list)
+    web_results: List[str] = Field(default_factory=list)

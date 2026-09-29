@@ -1,8 +1,10 @@
 from fastapi import APIRouter, HTTPException
 import logging
 from app.services.overview_service import generate_document_overview
-from app.schemas.AnalyzerSchemas import OverviewResponse
+from app.schemas.AnalyzerSchemas import OverviewResponse, ClauseAnalysisRequest
+from app.Agents.Clause_Analyisis_Agent.graph import build_clause_agent_graph
 from app.services.classification_service import process_document_classification
+from app.Agents.Clause_Analyisis_Agent.tools import search_document, search_market_standards
 
 logger = logging.getLogger(__name__)
 
@@ -26,6 +28,45 @@ async def get_document_overview(file_id: str, force_refresh: bool = False):
         logger.exception("Failed to generate overview")
         raise HTTPException(status_code=500, detail=str(e))
 
+@router.post("/clause/{chunk_id}")
+async def analyze_clause(chunk_id: str, request: ClauseAnalysisRequest):
+    """
+    Phase 3: Deep Legal Analysis of a single clause.
+    The frontend passes the state directly to the Agent Graph to execute the 120b model.
+    """
+    try:
+        # We run the graph in a thread to prevent blocking FastAPI's async event loop
+        import asyncio
+        
+        # Build the LangGraph application
+        app_graph = build_clause_agent_graph()
+        
+        # Prepare the state dictionary from the frontend's request
+        initial_state = {
+            "chunk_id": chunk_id,
+            "document_id": request.document_id,
+            "clause_type": request.clause_type,
+            "original_text": request.original_text,
+            "document_overview": request.document_overview,
+            "direct_references": request.direct_references,
+            "rag_results": request.rag_results,
+            "web_results": request.web_results,
+            "messages": [], # Reset messages for a fresh run
+            "tool_call_count": 0,
+            "verification_retry_count": 0,
+            "errors": []
+        }
+        
+        # Invoke the graph
+        final_state = await asyncio.to_thread(app_graph.invoke, initial_state)
+        
+        # Return the final JSON analysis directly to the frontend
+        return final_state.get("final_analysis", {})
+        
+    except Exception as e:
+        logger.exception("Failed to analyze clause via Agent Graph")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @router.post("/test-classification/{file_id}")
 async def test_dynamic_classification(file_id: str):
     """
@@ -39,4 +80,30 @@ async def test_dynamic_classification(file_id: str):
         return result
     except Exception as e:
         logger.exception("Failed to run classification test")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/test-rag/{file_id}")
+async def test_rag_retrieval(file_id: str, query: str):
+    """
+    Testing endpoint: Tests the RAG (Semantic Search) tool directly.
+    Make sure you have run the 'match_chunks' SQL in Supabase first!
+    """
+    try:
+        # The tool expects (query, document_id)
+        result = search_document.invoke({"query": query, "document_id": file_id})
+        return {"query": query, "result": result}
+    except Exception as e:
+        logger.exception("Failed to test RAG")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/test-web-search")
+async def test_web_search(query: str):
+    """
+    Testing endpoint: Tests the Tavily Web Search tool directly.
+    """
+    try:
+        result = search_market_standards.invoke({"query": query})
+        return {"query": query, "result": result}
+    except Exception as e:
+        logger.exception("Failed to test Web Search")
         raise HTTPException(status_code=500, detail=str(e))

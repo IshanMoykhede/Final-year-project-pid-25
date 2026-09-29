@@ -834,3 +834,95 @@ groq.NotFoundError: Error code: 404 - {'error': {'message': 'The model `llama-3.
 2026-09-11 15:21:40,573 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.fd53b349-44cb-418f-84b8-d9c8ee1e9459 "HTTP/2 200 OK"
 2026-09-11 15:21:40,767 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?id=eq.739d859c-ea61-4e35-92e6-95b3dbd4e262 "HTTP/2 200 OK"
 2026-09-11 15:21:40,768 | app.services.linking_service | INFO | Resolution complete: 2 EXACT_MATCH, 6 UNRESOLVED.
+2026-09-17 12:55:55,824 | root | INFO | Centralized logging system initialized!
+2026-09-17 12:56:35,509 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-17 12:56:57,736 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document d28c03f5-4d60-4bc9-b173-65af2ab9e8e7 for: "What is the policy on carrying forward unused sick leave or privilege leave to the next year?"
+2026-09-17 12:57:02,684 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-09-17 12:59:22,084 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:01:05,619 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:06:28,895 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:06:54,819 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching Web for: "What is the standard market practice for carrying forward unused sick leave in India?"
+2026-09-17 13:22:11,630 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:23:03,154 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:23:32,896 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:33:18,691 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:34:24,115 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:37:32,272 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:38:03,596 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:38:32,831 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:39:24,160 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:39:54,097 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:45:18,119 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:45:40,213 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:46:04,518 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:50:24,267 | root | INFO | Centralized logging system initialized!
+2026-09-17 13:50:45,571 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:01:27,941 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:01:49,543 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:02:12,100 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:02:33,862 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:07:14,074 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:07:34,552 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:07:55,141 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:19:47,944 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:20:08,883 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:21:08,401 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:21:30,322 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:21:51,218 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:25:15,494 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:25:39,920 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:26:03,631 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:26:26,832 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:26:51,280 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:27:15,265 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:27:57,672 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:28:19,882 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:40:20,481 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:40:43,629 | root | INFO | Centralized logging system initialized!
+2026-09-17 14:41:07,957 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:04:07,906 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:04:37,970 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:05:06,888 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:07:12,689 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:10:49,419 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:11:18,178 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:12:27,901 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:13:30,229 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:13:31,512 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-18 11:19:52,275 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:21:03,156 | root | INFO | Centralized logging system initialized!
+2026-09-18 11:21:42,330 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-09-18 11:23:19,091 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:23:24,621 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:23:24,674 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM requested search. Routing to Tools Node.
+2026-09-18 11:23:24,678 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | [NODE: Tools] Executing requested tools for Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:23:24,678 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | Executing tool: search_document with args: {'document_id': 'unknown', 'query': 'leave entitlements'}
+2026-09-18 11:23:24,679 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document unknown for: leave entitlements
+2026-09-18 11:23:29,171 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 400 Bad Request"
+2026-09-18 11:23:29,175 | app.Agents.Clause_Analyisis_Agent.tools | ERROR | [TOOL ERROR] search_document failed: {'message': 'invalid input syntax for type uuid: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2026-09-18 11:23:29,177 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:23:33,978 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:23:33,989 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-09-18 11:23:33,992 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:23:40,326 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:26:13,031 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:17,941 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:26:17,952 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM requested search. Routing to Tools Node.
+2026-09-18 11:26:17,954 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | [NODE: Tools] Executing requested tools for Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:17,955 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | Executing tool: search_document with args: {'document_id': 'unknown', 'query': 'Leave in Excess of Entitlements'}
+2026-09-18 11:26:17,957 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document unknown for: Leave in Excess of Entitlements
+2026-09-18 11:26:22,558 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 400 Bad Request"
+2026-09-18 11:26:22,560 | app.Agents.Clause_Analyisis_Agent.tools | ERROR | [TOOL ERROR] search_document failed: {'message': 'invalid input syntax for type uuid: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2026-09-18 11:26:22,562 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:27,239 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:26:27,270 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM requested search. Routing to Tools Node.
+2026-09-18 11:26:27,273 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | [NODE: Tools] Executing requested tools for Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:27,273 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | Executing tool: search_document with args: {'document_id': 'unknown', 'query': 'Leave Entitlements'}
+2026-09-18 11:26:27,275 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document unknown for: Leave Entitlements
+2026-09-18 11:26:31,603 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 400 Bad Request"
+2026-09-18 11:26:31,605 | app.Agents.Clause_Analyisis_Agent.tools | ERROR | [TOOL ERROR] search_document failed: {'message': 'invalid input syntax for type uuid: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2026-09-18 11:26:31,607 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:36,454 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-09-18 11:26:36,467 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-09-18 11:26:36,469 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 0091d93d-52fd-4a18-a4e9-2da97587f9f5
+2026-09-18 11:26:44,043 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
