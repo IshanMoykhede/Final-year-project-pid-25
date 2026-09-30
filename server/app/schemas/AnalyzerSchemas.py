@@ -61,3 +61,13 @@ class DocumentRiskResponse(BaseModel):
     medium_risks: List[RiskItem] = Field(default_factory=list)
     low_risks: List[RiskItem] = Field(default_factory=list)
     total_risks: int = 0
+
+# Phase 3: Clause Analysis Schema
+class ClauseAnalysisRequest(BaseModel):
+    document_id: str
+    clause_type: str
+    original_text: str
+    document_overview: str
+    direct_references: List[str] = Field(default_factory=list)
+    rag_results: List[str] = Field(default_factory=list)
+    web_results: List[str] = Field(default_factory=list)
