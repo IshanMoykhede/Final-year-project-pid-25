@@ -104,10 +104,10 @@ export const DocumentPdfViewer: React.FC<DocumentPdfViewerProps> = ({ url, selec
   }, [selectedClause]);
 
   if (error) return <div className="flex min-h-[320px] items-center justify-center rounded-lg bg-red-50 p-6 text-center text-sm text-red-700">{error}</div>;
-  if (!pages.length) return <div className="flex min-h-[520px] items-center justify-center text-sm text-gray-500">Rendering document...</div>;
+  if (!pages.length) return <div className="flex h-full min-h-[160px] items-center justify-center text-sm text-gray-500">Rendering document...</div>;
 
   return (
-    <div ref={containerRef} className="max-h-[700px] space-y-4 overflow-auto rounded-lg bg-slate-200 p-3">
+    <div ref={containerRef} className="h-full min-h-0 space-y-4 overflow-auto rounded-lg bg-slate-200 p-3">
       {pages.map((page) => {
         const boxes = selectedClause?.bbox.filter((box) => numberValue(box, ['page_number', 'page']) === page.pageNumber) ?? [];
         return (

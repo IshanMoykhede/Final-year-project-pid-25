@@ -3262,3 +3262,344 @@ postgrest.exceptions.APIError: {'message': "Could not find the table 'public.cla
 2026-09-24 19:26:33,928 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.6cbfcef2-a40b-47f8-b5cb-7f416dc6fe82 "HTTP/2 200 OK"
 2026-09-24 19:26:35,459 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.e1deec3c-ba44-409a-b9eb-85994b85935a "HTTP/2 200 OK"
 2026-09-24 19:26:36,012 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/6cbfcef2-a40b-47f8-b5cb-7f416dc6fe82/e1deec3c-ba44-409a-b9eb-85994b85935a.pdf "HTTP/2 200 OK"
+2026-10-02 14:52:34,528 | root | INFO | Centralized logging system initialized!
+2026-10-02 14:52:49,348 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-10-02 14:52:50,517 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:52:52,093 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:52:53,321 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:52:54,550 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:52:55,068 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:52:55,229 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:13,184 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:53:13,665 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:14,215 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:14,741 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:53:15,302 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:15,776 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:16,329 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:53:16,947 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:18,360 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:53:19,592 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 14:53:21,571 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:53:22,175 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:53:23,004 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:53:24,708 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:53:24,708 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 14:54:19,879 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:20,762 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:21,027 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:21,624 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:22,205 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:22,729 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:25,441 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:25,937 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:26,118 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:26,663 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:27,207 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:27,397 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:27,961 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:28,565 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:29,377 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:54:29,634 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 14:54:30,937 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:54:31,461 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:54:32,329 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:54:33,396 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:54:33,397 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 14:58:43,706 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:58:44,569 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:58:45,053 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:58:45,699 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:58:46,317 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:58:46,865 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:58:47,108 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 14:58:49,223 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 14:58:49,610 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 14:58:50,176 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:58:50,926 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 14:58:50,926 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:01:17,925 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:01:18,699 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:19,167 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:20,251 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:01:20,876 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:21,057 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:21,451 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:01:22,104 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:22,710 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:01:23,227 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 15:01:24,887 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:01:25,344 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:01:25,914 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:01:26,663 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:01:26,663 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:02:02,859 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-02 15:02:04,107 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 15:02:04,135 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-02 15:02:04,135 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-02 15:02:06,842 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 15:03:30,734 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:03:31,991 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:03:32,205 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:03:32,865 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:03:33,511 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:03:34,080 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:03:34,358 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 15:03:36,555 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:03:36,963 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:03:37,574 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:03:38,363 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:03:38,363 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:07:45,673 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 503f0729-dcaf-4997-a02f-5a2621039ef7
+2026-10-02 15:07:46,857 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 15:07:46,860 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-02 15:07:46,860 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 503f0729-dcaf-4997-a02f-5a2621039ef7
+2026-10-02 15:07:50,409 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 15:20:13,095 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:20:14,324 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:20:14,567 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:20:15,525 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:20:16,462 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:20:17,561 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:20:19,232 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 15:20:20,864 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:20:21,545 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:20:22,141 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:20:22,891 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:20:22,891 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:23:05,962 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:23:06,615 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:23:07,392 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:23:08,371 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:23:09,329 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:23:09,905 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:23:10,419 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 15:23:12,095 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:23:12,502 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:23:13,189 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:23:13,980 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:23:13,980 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:29:48,733 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:29:50,046 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:29:50,518 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:29:51,101 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:29:52,163 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:29:52,997 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:29:53,287 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-02 15:29:54,204 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-02 15:29:54,648 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-02 15:29:55,266 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:29:56,093 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-02 15:29:56,093 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-02 15:32:05,056 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 503f0729-dcaf-4997-a02f-5a2621039ef7
+2026-10-02 15:32:06,348 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 15:32:06,348 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-02 15:32:06,348 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 503f0729-dcaf-4997-a02f-5a2621039ef7
+2026-10-02 15:32:09,844 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:33:01,797 | root | INFO | Centralized logging system initialized!
+2026-10-04 17:47:09,541 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-10-04 17:47:10,735 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:12,123 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:12,756 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:13,367 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:14,183 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:14,685 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:16,074 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:16,602 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:17,040 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:18,060 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:18,977 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:19,156 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:19,982 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:20,802 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:21,613 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:22,338 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 17:47:23,739 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 17:47:24,586 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 17:47:25,697 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:27,334 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:27,335 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 17:47:27,612 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 17:47:28,592 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 17:47:29,106 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 17:47:29,607 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:39,438 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:40,371 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-10-04 17:47:40,837 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-10-04 17:47:41,046 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis "HTTP/2 201 Created"
+2026-10-04 17:47:41,221 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.e00e64d5-9e10-4bd5-bef1-47eba5e0f8f5 "HTTP/2 200 OK"
+2026-10-04 17:47:42,740 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:42,740 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 17:47:43,198 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-10-04 17:47:43,198 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e...
+2026-10-04 17:47:43,226 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:43,636 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: c7e84125-b631-404b-9080-5cdd1474944b
+2026-10-04 17:47:44,281 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-10-04 17:47:44,453 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-10-04 17:47:44,894 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis "HTTP/2 201 Created"
+2026-10-04 17:47:44,954 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:44,982 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM requested search. Routing to Tools Node.
+2026-10-04 17:47:44,982 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | [NODE: Tools] Executing requested tools for Chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:44,982 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | Executing tool: search_document with args: {'document_id': 'RENT-2026-001', 'query': '# RENTAL AGREEMENT'}
+2026-10-04 17:47:44,982 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document RENT-2026-001 for: # RENTAL AGREEMENT
+2026-10-04 17:47:45,065 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.98dd7a6d-b65c-4c03-bae3-db1d745c270a "HTTP/2 200 OK"
+2026-10-04 17:47:46,814 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 400 Bad Request"
+2026-10-04 17:47:46,814 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:46,814 | app.Agents.Clause_Analyisis_Agent.tools | ERROR | [TOOL ERROR] search_document failed: {'message': 'invalid input syntax for type uuid: "RENT-2026-001"', 'code': '22P02', 'hint': None, 'details': None}
+2026-10-04 17:47:46,814 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:46,814 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 17:47:47,286 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-10-04 17:47:47,286 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk c7e84125-b631-404b-9080-5cdd1474944b...
+2026-10-04 17:47:47,293 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk c7e84125-b631-404b-9080-5cdd1474944b
+2026-10-04 17:47:47,786 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 17:47:48,282 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:48,284 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-04 17:47:48,285 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:48,439 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 17:47:48,613 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 17:47:48,696 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:48,696 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-04 17:47:48,696 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk c7e84125-b631-404b-9080-5cdd1474944b
+2026-10-04 17:47:48,780 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis "HTTP/2 201 Created"
+2026-10-04 17:47:49,276 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.cb127a39-bc2f-460f-bf79-742aecef721b "HTTP/2 200 OK"
+2026-10-04 17:47:50,678 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:50,679 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 17:47:50,856 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 17:47:50,856 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk 92ab3f50-1784-436a-84a3-b73525bd62c6...
+2026-10-04 17:47:50,870 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 17:47:50,990 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:51,230 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.17805e28-c8f1-4166-a0f3-ccb7a8350a6e "HTTP/2 200 OK"
+2026-10-04 17:47:51,424 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:51,425 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk 17805e28-c8f1-4166-a0f3-ccb7a8350a6e
+2026-10-04 17:47:51,744 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:51,925 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.c7e84125-b631-404b-9080-5cdd1474944b "HTTP/2 200 OK"
+2026-10-04 17:47:52,106 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:52,106 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk c7e84125-b631-404b-9080-5cdd1474944b
+2026-10-04 17:47:52,233 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:52,235 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-04 17:47:52,235 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 17:47:54,884 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 17:47:55,090 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 17:47:55,285 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 17:47:55,285 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 18:03:34,154 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:03:35,563 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:03:36,316 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:03:37,271 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:03:38,180 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:03:39,152 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:03:39,551 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 18:03:41,040 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:03:41,470 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:03:42,436 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:03:43,346 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:03:43,352 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:03:43,575 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:03:44,352 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 18:03:44,532 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 18:03:44,983 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:06:21,077 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:06:21,923 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:22,149 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:23,232 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:06:24,013 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:24,464 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:25,598 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:06:26,798 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:27,607 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:06:27,873 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 18:06:29,301 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:06:29,714 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:06:30,292 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:06:31,291 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:06:31,291 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:06:31,475 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:06:32,249 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 18:06:32,441 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 18:06:32,626 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:08:25,061 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:08:25,956 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:08:26,775 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:08:27,435 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:08:28,353 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:08:28,934 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:08:29,234 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 18:08:31,087 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:08:31,496 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:08:32,413 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:08:33,225 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:08:33,225 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:08:33,503 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:08:33,954 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 18:08:34,433 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 18:08:34,607 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:11:06,173 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:11:06,832 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:07,561 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:08,652 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:11:09,706 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:10,123 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:11,051 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:11:11,551 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:12,922 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:11:13,381 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 18:11:14,901 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 18:11:15,537 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 18:11:16,343 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:11:17,356 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:11:17,357 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:11:17,525 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:11:17,912 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 18:11:18,073 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 18:11:18,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:17:36,673 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 18:17:37,870 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 18:17:38,102 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 18:17:38,318 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis "HTTP/2 201 Created"
+2026-10-04 18:17:38,495 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.98dd7a6d-b65c-4c03-bae3-db1d745c270a "HTTP/2 200 OK"
+2026-10-04 18:17:39,884 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:17:39,884 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 18:17:40,064 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 18:17:40,064 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1...
+2026-10-04 18:17:40,082 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 18:17:41,355 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 18:17:41,355 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-04 18:17:41,355 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 18:17:43,829 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 18:17:44,022 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 18:17:44,210 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 18:17:44,211 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 18:46:59,512 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=refresh_token "HTTP/2 200 OK"
+2026-10-04 18:46:59,727 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=refresh_token "HTTP/2 200 OK"
+2026-10-04 19:02:37,560 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Initializing analysis session for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:02:39,012 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:02:39,276 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?on_conflict=document_id "HTTP/2 201 Created"
+2026-10-04 19:02:39,457 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=chunk_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:02:39,459 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Seeding 3 pending clause_analysis rows...
+2026-10-04 19:02:39,637 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?columns=%22document_id%22%2C%22session_id%22%2C%22status%22%2C%22chunk_id%22 "HTTP/2 201 Created"
+2026-10-04 19:02:39,927 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:02:40,910 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:02:41,075 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:02:41,503 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:02:47,302 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:02:48,391 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:02:48,883 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:02:49,362 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:02:49,824 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.cbde5ce5-4cfa-4aa9-bb9b-cc1b8f1df1c5 "HTTP/2 200 OK"
+2026-10-04 19:02:51,091 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:02:51,091 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:02:51,280 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:02:51,280 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4...
+2026-10-04 19:02:51,299 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:02:51,660 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:02:52,746 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 19:02:52,746 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM has enough context. Routing to Analysis Node.
+2026-10-04 19:02:52,750 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:02:52,819 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:02:52,993 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:02:52,993 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:02:56,072 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 19:02:56,263 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:02:56,723 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:02:56,887 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?id=eq.4162614e-78a3-49c2-ace0-ad5655703bd5 "HTTP/2 200 OK"
+2026-10-04 19:02:56,887 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4

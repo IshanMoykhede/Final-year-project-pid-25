@@ -19,6 +19,8 @@ interface ChatMessage {
 interface DocumentChatProps {
   documentId: string;
   onCitation?: (clause: RetrievedClause) => void;
+  onAnalyzeClause?: (clause: RetrievedClause) => void;
+  isAnalyzingClause?: boolean;
 }
 
 const getErrorMessage = (error: unknown): string => {
@@ -38,10 +40,18 @@ const ClauseList: React.FC<{
   clauses: RetrievedClause[];
   title: string;
   onCitation?: (clause: RetrievedClause) => void;
-}> = ({ clauses, title, onCitation }) => {
+  onAnalyzeClause?: (clause: RetrievedClause) => void;
+  isAnalyzingClause: boolean;
+}> = ({ clauses, title, onCitation, onAnalyzeClause, isAnalyzingClause }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   if (!clauses.length) return null;
+
+  const handleAnalyze = () => {
+    if (!onAnalyzeClause) return;
+    const clause = clauses[0];
+    if (clause) onAnalyzeClause(clause);
+  };
 
   return (
     <div className="overflow-hidden rounded-xl border border-sand bg-[#FAF7F0]/60 shadow-xs transition-colors">
@@ -68,23 +78,35 @@ const ClauseList: React.FC<{
               key={clause.chunk_id}
               className="rounded-lg border border-sand/80 bg-[#FAF7F0]/30 p-3.5 text-xs text-charcoal shadow-2xs hover:border-brass/40 transition-colors"
             >
-              <div className="mb-2 flex items-center justify-between gap-2 border-b border-sand/50 pb-2">
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-2 border-b border-sand/50 pb-2">
                 <span className="font-serif font-semibold tracking-tight text-charcoal">
                   {clause.aliases.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
                 </span>
 
-                {onCitation && (
-                  <button
-                    type="button"
-                    onClick={() => onCitation(clause)}
-                    disabled={!clause.bbox.length}
-                    title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
-                    className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
-                  >
-                    <LocateFixed className="h-3 w-3 text-brass" />
-                    Cite
-                  </button>
-                )}
+                <div className="flex items-center gap-2">
+                  {onAnalyzeClause && (
+                    <button
+                      type="button"
+                      onClick={handleAnalyze}
+                      disabled={isAnalyzingClause}
+                      className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      {isAnalyzingClause ? 'Analyzing…' : 'Analyze'}
+                    </button>
+                  )}
+                  {onCitation && (
+                    <button
+                      type="button"
+                      onClick={() => onCitation(clause)}
+                      disabled={!clause.bbox.length}
+                      title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
+                      className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      <LocateFixed className="h-3 w-3 text-brass" />
+                      Cite
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Rendered content with full Markdown table and typography support */}
@@ -101,7 +123,12 @@ const ClauseList: React.FC<{
   );
 };
 
-export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitation }) => {
+export const DocumentChat: React.FC<DocumentChatProps> = ({
+  documentId,
+  onCitation,
+  onAnalyzeClause,
+  isAnalyzingClause = false,
+}) => {
   const [question, setQuestion] = useState('');
   const [useExpansion, setUseExpansion] = useState(true);
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
@@ -159,19 +186,18 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitati
   };
 
   return (
-    <Card>
-      <CardHeader>
+    <Card className="flex h-full flex-col overflow-hidden">
+      <CardHeader className="shrink-0">
         <CardTitle className="flex items-center gap-2">
           <MessageSquare className="h-5 w-5 text-accent" />
           Ask about this document
         </CardTitle>
-        <p className="text-sm text-gray-500">
-          Ask a question and get an answer grounded in the clauses from this document.
-        </p>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
         {messages.length > 0 && (
-          <div className="space-y-4">
+          <div
+            className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain pr-2"
+          >
             {messages.map((message) => (
               <div key={message.id} className="space-y-3">
                 <div className="flex gap-2 rounded-lg bg-gray-100 p-3 text-sm text-gray-800">
@@ -187,17 +213,17 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({ documentId, onCitati
                       </ReactMarkdown>
                     </div>
                   </div>
-                  <ClauseList clauses={message.primaryClauses} title="Primary clauses" onCitation={onCitation} />
-                  <ClauseList clauses={message.expandedClauses} title="Related clauses" onCitation={onCitation} />
+                  <ClauseList clauses={message.primaryClauses} title="Primary clauses" onCitation={onCitation} onAnalyzeClause={onAnalyzeClause} isAnalyzingClause={isAnalyzingClause} />
+                  <ClauseList clauses={message.expandedClauses} title="Related clauses" onCitation={onCitation} onAnalyzeClause={onAnalyzeClause} isAnalyzingClause={isAnalyzingClause} />
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</p>}
+        {error && <p className="shrink-0 rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form onSubmit={handleSubmit} className="shrink-0 space-y-3">
           <textarea
             value={question}
             onChange={(event) => setQuestion(event.target.value)}
