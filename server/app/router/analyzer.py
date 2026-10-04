@@ -6,6 +6,12 @@ from app.Agents.Clause_Analyisis_Agent.graph import build_clause_agent_graph
 from app.services.classification_service import process_document_classification
 from app.Agents.Clause_Analyisis_Agent.tools import search_document, search_market_standards
 
+from app.services.clause_analysis_service import (
+    initialize_analysis_session,
+    get_ordered_clauses_status,
+    analyze_clause_step
+)
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(
@@ -26,6 +32,50 @@ async def get_document_overview(file_id: str, force_refresh: bool = False):
         raise HTTPException(status_code=404, detail=str(ve))
     except Exception as e:
         logger.exception("Failed to generate overview")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/session/initialize/{file_id}")
+async def initialize_session(file_id: str):
+    """
+    Initializes an Exam Portal analysis session and seeds clause placeholders.
+    """
+    try:
+        result = await initialize_analysis_session(file_id)
+        return result
+    except ValueError as ve:
+        raise HTTPException(status_code=404, detail=str(ve))
+    except Exception as e:
+        logger.exception("Failed to initialize analysis session")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/clause/ordered-list/{file_id}")
+async def get_ordered_clauses(file_id: str):
+    """
+    Returns all document clauses in serial chunk_no order with their status
+    to render the Exam Portal Grid Window.
+    """
+    try:
+        result = await get_ordered_clauses_status(file_id)
+        return result
+    except ValueError as ve:
+        raise HTTPException(status_code=404, detail=str(ve))
+    except Exception as e:
+        logger.exception("Failed to fetch ordered clauses")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/clause/step/{chunk_id}")
+async def execute_clause_step(chunk_id: str, force_refresh: bool = False):
+    """
+    Analyzes a single clause in serial order. Checks DB cache first;
+    returns cached result instantly if available, or invokes the Agent.
+    """
+    try:
+        result = await analyze_clause_step(chunk_id, force_refresh)
+        return result
+    except ValueError as ve:
+        raise HTTPException(status_code=404, detail=str(ve))
+    except Exception as e:
+        logger.exception(f"Failed to analyze clause step for chunk {chunk_id}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/clause/{chunk_id}")

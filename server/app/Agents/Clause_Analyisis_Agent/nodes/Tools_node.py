@@ -13,8 +13,8 @@ def execute_tools_node(state: AgentState):
     last_message = state["messages"][-1]
     
     new_messages = []
-    new_rag_results = list(state.get("rag_results", []))
-    new_web_results = list(state.get("web_results", []))
+    new_rag_results = []
+    new_web_results = []
     
     # Process every tool call the LLM requested
     for tool_call in last_message.tool_calls:

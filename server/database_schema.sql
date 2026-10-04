@@ -45,15 +45,69 @@ CREATE TABLE cross_references (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
 );
 
--- 5. Upcoming: clause_analysis Table (Phase 2 DeepClause)
--- Will cache the ReAct Agent's deep research and analysis to prevent redundant LLM calls.
+-- 5. Analysis Sessions Table (Progress Tracker)
+-- One row per document analysis run. The frontend polls this single row
+-- to show a progress bar instead of counting clause_analysis rows every time.
+CREATE TABLE analysis_sessions (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    document_id UUID NOT NULL REFERENCES files(id) ON DELETE CASCADE,
+
+    -- Counters (updated atomically as each clause finishes)
+    total_clauses INT NOT NULL DEFAULT 0,
+    completed INT NOT NULL DEFAULT 0,
+    failed INT NOT NULL DEFAULT 0,
+    in_progress INT NOT NULL DEFAULT 0,
+
+    -- Overall session state machine
+    status TEXT NOT NULL DEFAULT 'INITIALIZED',
+    -- Values: 'INITIALIZED' | 'RUNNING' | 'COMPLETED' | 'PAUSED' | 'FAILED'
+
+    started_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()),
+    completed_at TIMESTAMP WITH TIME ZONE,
+
+    -- Unique constraint: one active session per document
+    CONSTRAINT uq_session_per_document UNIQUE (document_id)
+);
+
+-- 6. Clause Analysis Table (Per-Clause Results + Status)
+-- One row per chunk. Stores the full agent output and tracks per-clause status.
+-- Maps 1:1 to ClauseAnalysisOutput from the LangGraph Agent.
 CREATE TABLE clause_analysis (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     chunk_id UUID NOT NULL REFERENCES chunks(id) ON DELETE CASCADE,
-    explanation_easy TEXT NOT NULL,
-    faqs JSONB,
-    risk_level TEXT NOT NULL, -- 'LOW', 'MEDIUM', 'HIGH'
-    counter_offer TEXT,
-    market_standard TEXT,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
+    document_id UUID NOT NULL REFERENCES files(id) ON DELETE CASCADE,
+    session_id UUID REFERENCES analysis_sessions(id) ON DELETE SET NULL,
+
+    -- Per-clause status tracking
+    status TEXT NOT NULL DEFAULT 'PENDING',
+    -- Values: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'FAILED'
+
+    -- ===== Agent Output Fields (match ClauseAnalysisOutput exactly) =====
+    explanation TEXT,                     -- Plain English explanation for non-lawyers
+    entities_involved JSONB,              -- ["Landlord", "Tenant"]
+    real_world_examples JSONB,            -- ["Hypothetical example: ..."]
+    risk_level TEXT,                      -- 'LOW' | 'MEDIUM' | 'HIGH' (denormalized for fast filtering)
+    risk_analysis TEXT,                   -- Why this risk level was assigned
+    negotiation_advice TEXT,              -- Counter-offers / negotiation tips
+    faqs JSONB,                           -- [{"question": "...", "answer": "..."}]
+    document_citations JSONB,             -- ["chunk-uuid-1", "chunk-uuid-2"]
+    web_citations JSONB,                  -- ["https://example.com/..."]
+
+    -- ===== Error Tracking =====
+    error_message TEXT,                   -- If status = 'FAILED', stores the error reason
+    retry_count INT NOT NULL DEFAULT 0,   -- How many times we retried this clause
+
+    -- ===== Timestamps =====
+    started_at TIMESTAMP WITH TIME ZONE,
+    completed_at TIMESTAMP WITH TIME ZONE,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()),
+
+    -- One analysis per chunk (prevents duplicates, enables upsert)
+    CONSTRAINT uq_analysis_per_chunk UNIQUE (chunk_id)
 );
+
+-- Fast index for progress queries: "give me all clause statuses for this document"
+CREATE INDEX idx_clause_analysis_doc_status ON clause_analysis(document_id, status);
+
+-- Fast index for risk filtering: "show me all HIGH risk clauses in this document"
+CREATE INDEX idx_clause_analysis_doc_risk ON clause_analysis(document_id, risk_level);
