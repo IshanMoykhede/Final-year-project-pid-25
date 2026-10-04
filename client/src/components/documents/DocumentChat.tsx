@@ -48,11 +48,11 @@ const ClauseList: React.FC<{
       <button
         type="button"
         onClick={() => setIsOpen((open) => !open)}
-        className="flex w-full items-center justify-between px-3.5 py-2.5 text-left text-xs font-medium text-[#57534E] hover:bg-[#F4EDE6]/60 transition-colors"
+        className="flex w-full items-center justify-between px-3.5 py-2.5 text-left text-xs font-medium text-[#57534E] hover:bg-parchment/60 transition-colors"
         aria-expanded={isOpen}
       >
         <span className="flex items-center gap-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-[#B08D57]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-brass" />
           <span>{title}</span>
           <span className="rounded-full bg-sand/60 px-1.5 py-0.2 font-mono text-[10px] text-muted">
             {clauses.length}
@@ -66,7 +66,7 @@ const ClauseList: React.FC<{
           {clauses.map((clause) => (
             <div
               key={clause.chunk_id}
-              className="rounded-lg border border-sand/80 bg-[#FAF7F0]/30 p-3.5 text-xs text-charcoal shadow-2xs hover:border-[#B08D57]/40 transition-colors"
+              className="rounded-lg border border-sand/80 bg-[#FAF7F0]/30 p-3.5 text-xs text-charcoal shadow-2xs hover:border-brass/40 transition-colors"
             >
               <div className="mb-2 flex items-center justify-between gap-2 border-b border-sand/50 pb-2">
                 <span className="font-serif font-semibold tracking-tight text-charcoal">
@@ -79,7 +79,7 @@ const ClauseList: React.FC<{
                     onClick={() => onCitation(clause)}
                     disabled={!clause.bbox.length}
                     title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
-                    className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                    className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
                   >
                     <LocateFixed className="h-3 w-3 text-brass" />
                     Cite

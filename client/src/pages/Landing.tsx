@@ -26,7 +26,7 @@ const Eyebrow: React.FC<{ light?: boolean; children: React.ReactNode }> = ({ lig
 const Container: React.FC<{ id?: string; className?: string; children: React.ReactNode }> = ({
   id, className = '', children,
 }) => (
-  <section id={id} className={`mx-auto w-full max-w-[1120px] px-4 py-20 sm:px-6 md:py-28 lg:px-8 ${className}`}>
+  <section id={id} className={`mx-auto w-full max-w-280 px-4 py-20 sm:px-6 md:py-28 lg:px-8 ${className}`}>
     {children}
   </section>
 );
@@ -45,9 +45,9 @@ const Band: React.FC<{
   };
   return (
     <section id={id} className="px-3 py-3 sm:px-4">
-      <div className={`mx-auto max-w-[1200px] rounded-[32px] sm:rounded-[48px] ${tones[tone]}`}>
+      <div className={`mx-auto max-w-300 rounded-4xl sm:rounded-[48px] ${tones[tone]}`}>
         <div
-          className={`mx-auto max-w-[1120px] px-6 sm:px-10 lg:px-12 ${compact ? 'py-8' : 'py-16 md:py-24'
+          className={`mx-auto max-w-280 px-6 sm:px-10 lg:px-12 ${compact ? 'py-8' : 'py-16 md:py-24'
             }`}
         >
           {children}
@@ -192,17 +192,17 @@ export const Landing: React.FC = () => {
             aria-hidden="true"
             className="h-full w-full object-cover object-center opacity-30 mix-blend-multiply"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FFF8F2]/60 via-[#FFF8F2]/75 to-[#FFF8F2]" />
+          <div className="absolute inset-0 bg-linear-to-b from-ivory/60 via-ivory/75 to-ivory" />
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[1120px] px-4 pb-20 pt-16 sm:px-6 md:pb-28 md:pt-24 lg:px-8">
+        <div className="relative z-10 mx-auto w-full max-w-280 px-4 pb-20 pt-16 sm:px-6 md:pb-28 md:pt-24 lg:px-8">
           <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
             <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-sand bg-surface/80 px-4 py-1.5 backdrop-blur-sm">
               <span className="h-1.5 w-1.5 rounded-full bg-brass" />
               <span className="font-sans text-[13px] font-medium text-brass-deep">Document intelligence for legal teams</span>
             </div>
 
-            <h1 className="mb-6 font-display text-4xl font-normal tracking-tight text-charcoal sm:text-5xl md:text-[60px] md:leading-[68px]">
+            <h1 className="mb-6 font-display text-4xl font-normal tracking-tight text-charcoal sm:text-5xl md:text-[60px] md:leading-17">
               Ask your contract anything.<br className="hidden sm:inline" />
               Get the answer, and the clause behind it.
             </h1>
@@ -243,7 +243,7 @@ export const Landing: React.FC = () => {
               </div>
             </div>
 
-            <div className="grid min-h-[460px] grid-cols-1 lg:grid-cols-12">
+            <div className="grid min-h-115 grid-cols-1 lg:grid-cols-12">
               {/* Left: source */}
               <div className="border-b border-sand bg-parchment/35 p-6 md:p-8 lg:col-span-7 lg:border-b-0 lg:border-r">
                 <div className="mb-4 flex items-center justify-between">
@@ -621,7 +621,7 @@ export const Landing: React.FC = () => {
       </Band>
 
       {/* ========================== 10. FAQ ========================== */}
-      <section id="faq" className="mx-auto w-full max-w-[800px] px-4 py-20 sm:px-6 md:py-28 lg:px-8">
+      <section id="faq" className="mx-auto w-full max-w-200 px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <div className="mb-12 text-center">
           <Eyebrow>Clarity &amp; architecture</Eyebrow>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Frequently asked questions</h2>
@@ -655,13 +655,13 @@ export const Landing: React.FC = () => {
 
       {/* ========================== 11. FINAL CTA ========================== */}
       <section className="px-3 pb-3 sm:px-4">
-        <div className="relative mx-auto max-w-[1200px] overflow-hidden rounded-[32px] bg-charcoal px-6 py-20 text-center text-ivory sm:rounded-[48px] md:py-28">
+        <div className="relative mx-auto max-w-300 overflow-hidden rounded-4xl bg-charcoal px-6 py-20 text-center text-ivory sm:rounded-[48px] md:py-28">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,164,108,0.22),_transparent_65%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(201,164,108,0.22),transparent_65%)]"
           />
           <div className="relative mx-auto flex max-w-2xl flex-col items-center">
-            <h2 className="mb-4 font-display text-4xl font-normal sm:text-5xl md:text-[60px] md:leading-[68px]">Read less. Know more.</h2>
+            <h2 className="mb-4 font-display text-4xl font-normal sm:text-5xl md:text-[60px] md:leading-17">Read less. Know more.</h2>
             <p className="mb-9 max-w-lg text-base text-sand/80 sm:text-lg">
               Upload your first document and ask it anything. Get full clause grounding in seconds.
             </p>
