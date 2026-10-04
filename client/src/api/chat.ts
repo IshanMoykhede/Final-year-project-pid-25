@@ -27,3 +27,19 @@ export const askDocumentQuestion = async (request: ChatRequest): Promise<ChatRes
   const response = await apiClient.post<ChatResponse>('/chat/ask', request);
   return response.data;
 };
+
+export interface ChatMessageData {
+  id: string;
+  document_id: string;
+  user_id: string;
+  role: 'user' | 'assistant';
+  content: string;
+  retrieved_chunk_ids: string[];
+  is_expanded: boolean;
+  created_at: string;
+}
+
+export const getChatHistory = async (documentId: string): Promise<ChatMessageData[]> => {
+  const response = await apiClient.get<{ messages: ChatMessageData[] }>(`/chat/${documentId}/history`);
+  return response.data.messages;
+};
