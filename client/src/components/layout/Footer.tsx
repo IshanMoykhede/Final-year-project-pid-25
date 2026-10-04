@@ -18,13 +18,13 @@ export const Footer: React.FC = () => (
   <footer className="bg-[#FAF7F0] px-3 pb-3 pt-6 sm:px-4 sm:pb-4">
     <div
       className="
-        mx-auto max-w-[1200px]
-        rounded-[32px] sm:rounded-[48px]
+        mx-auto max-w-300
+        rounded-4xl sm:rounded-[48px]
         bg-[#1C1917] text-[#FAF7F0]
         shadow-[0_20px_40px_-20px_rgba(28,25,23,0.45)]
       "
     >
-      <div className="mx-auto max-w-[1120px] px-6 py-12 sm:px-10 lg:px-12">
+      <div className="mx-auto max-w-280 px-6 py-12 sm:px-10 lg:px-12">
         <div className="grid gap-10 md:grid-cols-4">
           {/* ===================== BRAND ===================== */}
           <div className="md:col-span-1">

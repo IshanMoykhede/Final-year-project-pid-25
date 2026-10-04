@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
           bg-[#FAF7F0]
           transition-all duration-300 ease-out
           ${scrolled
-            ? 'mt-3 h-14 max-w-[960px] rounded-full border-[#E8E2D5] bg-[#FAF7F0]/85 shadow-[0_8px_24px_-8px_rgba(28,25,23,0.18)] backdrop-blur-md'
+            ? 'mt-3 h-14 max-w-240 rounded-full border-[#E8E2D5] bg-[#FAF7F0]/85 shadow-[0_8px_24px_-8px_rgba(28,25,23,0.18)] backdrop-blur-md'
             : 'mt-0 h-16 max-w-full rounded-none border-transparent border-b-[#E8E2D5]'
           }
         `}
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
         <div
           className={`
             mx-auto h-full w-full transition-all duration-300
-            ${scrolled ? 'px-5 sm:px-6' : 'max-w-[1120px] px-4 sm:px-6 lg:px-8'}
+            ${scrolled ? 'px-5 sm:px-6' : 'max-w-280 px-4 sm:px-6 lg:px-8'}
           `}
         >
           <div className="flex h-full items-center justify-between">
@@ -74,7 +74,7 @@ export const Navbar: React.FC = () => {
 
               <span
                 className="
-                  hidden border-l border-[#D0C4BE] pl-2
+                  hidden border-l border-border-hairline pl-2
                   font-[JetBrains_Mono] text-[10px] font-medium uppercase
                   tracking-[0.04em] text-[#8A857C] sm:inline
                 "
@@ -110,7 +110,7 @@ export const Navbar: React.FC = () => {
                       to="/dashboard"
                       className="
                         font-[Inter] text-[13px] font-medium leading-5
-                        text-[#1C1917] transition-colors hover:text-[#B08D57]
+                        text-[#1C1917] transition-colors hover:text-brass
                       "
                     >
                       Workspace
@@ -137,7 +137,7 @@ export const Navbar: React.FC = () => {
                       className="
                         rounded-full px-2 py-2
                         font-[Inter] text-[13px] font-medium leading-5
-                        text-[#1C1917] transition-colors hover:text-[#B08D57]
+                        text-[#1C1917] transition-colors hover:text-brass
                       "
                     >
                       Sign in
@@ -148,7 +148,7 @@ export const Navbar: React.FC = () => {
                         variant="brass"
                         size="sm"
                         className="
-                          h-9 rounded-full bg-[#B08D57] px-4
+                          h-9 rounded-full bg-brass px-4
                           font-[Inter] text-[13px] font-medium text-white
                           hover:bg-[#9C7C4B]
                         "

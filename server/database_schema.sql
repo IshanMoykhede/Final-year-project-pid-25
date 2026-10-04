@@ -113,3 +113,34 @@ CREATE INDEX idx_clause_analysis_doc_status ON clause_analysis(document_id, stat
 
 -- Fast index for risk filtering: "show me all HIGH risk clauses in this document"
 CREATE INDEX idx_clause_analysis_doc_risk ON clause_analysis(document_id, risk_level);
+
+-- 7. Chat Messages Table
+CREATE TABLE IF NOT EXISTS chat_messages (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    document_id UUID NOT NULL REFERENCES files(id) ON DELETE CASCADE,
+    user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE,
+    role VARCHAR(20) NOT NULL CHECK (role IN ('user', 'assistant')),
+    content TEXT NOT NULL,
+    retrieved_chunk_ids UUID[] DEFAULT '{}',
+    is_expanded BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Index for fast retrieval of document conversation threads
+CREATE INDEX IF NOT EXISTS idx_chat_messages_doc_created ON chat_messages(document_id, created_at);
+
+-- Add risk_cache column to files if not exists
+ALTER TABLE files ADD COLUMN IF NOT EXISTS risk_cache JSONB;
+
+-- Storage policies for Files bucket
+CREATE POLICY "Allow public uploads to Files bucket"
+ON storage.objects
+FOR INSERT
+TO public
+WITH CHECK (bucket_id = 'Files');
+
+CREATE POLICY "Allow public reads from Files bucket"
+ON storage.objects
+FOR SELECT
+TO public
+USING (bucket_id = 'Files');

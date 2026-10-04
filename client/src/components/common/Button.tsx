@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'brass' | 'stone';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'brass' | 'stone' | 'charcoal' | 'pill-outline';
   size?: 'sm' | 'md' | 'lg';
   isLoading?: boolean;
 }
@@ -16,19 +16,21 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'primary', size = 'md', isLoading, children, disabled, ...props }, ref) => {
     const variants = {
-      primary: 'bg-charcoal text-ivory hover:bg-charcoal-deep border border-charcoal dark:bg-sand dark:text-charcoal dark:hover:bg-ivory dark:border-sand shadow-subtle',
-      secondary: 'bg-parchment text-charcoal hover:bg-sand border border-sand dark:bg-stone dark:text-ivory dark:border-stone-muted',
-      outline: 'border border-border bg-transparent hover:bg-parchment text-charcoal dark:text-ivory dark:hover:bg-stone',
-      ghost: 'bg-transparent hover:bg-parchment text-charcoal dark:text-ivory dark:hover:bg-stone',
+      primary: 'bg-charcoal text-ivory hover:bg-charcoal-deep border border-charcoal shadow-subtle',
+      secondary: 'bg-parchment text-charcoal hover:bg-sand border border-sand shadow-sm',
+      outline: 'border border-sand bg-transparent hover:bg-parchment text-charcoal',
+      ghost: 'bg-transparent hover:bg-parchment text-charcoal',
       danger: 'bg-crimson text-white hover:bg-crimson-deep border border-crimson',
       brass: 'bg-brass text-white hover:bg-brass-deep border border-brass shadow-subtle',
       stone: 'bg-stone text-ivory hover:bg-stone-muted border border-stone',
+      charcoal: 'bg-charcoal text-ivory rounded-full hover:bg-charcoal-deep shadow-subtle',
+      'pill-outline': 'border border-sand rounded-full hover:border-brass/40 hover:bg-parchment',
     };
 
     const sizes = {
-      sm: 'h-8 px-3 text-xs tracking-tight rounded',
-      md: 'h-9 px-4 py-1.5 text-sm font-medium rounded',
-      lg: 'h-11 px-5 text-base font-medium rounded',
+      sm: 'h-8 px-3 text-xs tracking-tight rounded-full',
+      md: 'h-9 px-4 py-1.5 text-sm font-medium rounded-full',
+      lg: 'h-11 px-5 text-base font-medium rounded-full',
     };
 
     return (
