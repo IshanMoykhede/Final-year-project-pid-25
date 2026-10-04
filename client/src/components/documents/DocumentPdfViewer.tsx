@@ -103,8 +103,8 @@ export const DocumentPdfViewer: React.FC<DocumentPdfViewerProps> = ({ url, selec
     target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }, [selectedClause]);
 
-  if (error) return <div className="flex min-h-[320px] items-center justify-center rounded-lg bg-red-50 p-6 text-center text-sm text-red-700">{error}</div>;
-  if (!pages.length) return <div className="flex h-full min-h-[160px] items-center justify-center text-sm text-gray-500">Rendering document...</div>;
+  if (error) return <div className="flex min-h-80 items-center justify-center rounded-lg bg-red-50 p-6 text-center text-sm text-red-700">{error}</div>;
+  if (!pages.length) return <div className="flex h-full min-h-40 items-center justify-center text-sm text-gray-500">Rendering document...</div>;
 
   return (
     <div ref={containerRef} className="h-full min-h-0 space-y-4 overflow-auto rounded-lg bg-slate-200 p-3">

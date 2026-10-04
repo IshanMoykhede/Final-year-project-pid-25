@@ -5,13 +5,12 @@ import type { FileData } from '../api/files';
 import { FileUpload } from '../components/documents/FileUpload';
 import { Button } from '../components/common/Button';
 import { Eyebrow } from '../components/common/Eyebrow';
-import { FileText, Trash2, Eye, File, ScanEye, CheckCircle2 } from 'lucide-react';
+import { FileText, Trash2, Eye, File, ScanEye } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
 export const Dashboard: React.FC = () => {
   const [files, setFiles] = useState<FileData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-  const { user } = useAuth();
 
   const fetchFiles = async () => {
     setIsLoading(true);
@@ -78,7 +77,7 @@ export const Dashboard: React.FC = () => {
         <div>
           <Eyebrow>Statutory Repository & Benchmarking</Eyebrow>
           <h1 className="font-display text-2xl sm:text-3xl font-normal text-charcoal">
-            Good {new Date().getHours() < 12 ? 'morning' : 'afternoon'}{user ? `, ${user.username}` : ''}.
+            Good {new Date().getHours() < 12 ? 'morning' : 'afternoon'}.
           </h1>
           <p className="mt-2 text-sm text-stone-muted font-sans max-w-lg">
             Contracts ingested into isolated graph stores with clause-level coordinate indexing.

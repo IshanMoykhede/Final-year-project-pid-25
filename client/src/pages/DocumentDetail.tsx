@@ -88,9 +88,10 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
       document_id: file.id,
       question: `Find the exact source text for ${clauseLabel}: ${clauseText}`,
       use_1hop_expansion: false,
+      save_history: false,
     }).then((result) => {
       const citation = [...result.primary_clauses, ...result.expanded_clauses].find(
-        (item) => item.chunk_id === clause.chunk_id
+        (item) => item.bbox && item.bbox.length > 0
       );
       if (!citation?.bbox.length) {
         throw new Error('Location coordinates are not available for this clause.');
@@ -358,7 +359,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
           </CardHeader>
           <CardContent className="space-y-4">
             {isPreviewLoading ? (
-              <div className="flex min-h-[320px] items-center justify-center gap-3 rounded-lg border border-dashed border-gray-200 bg-gray-50 text-sm text-gray-500">
+              <div className="flex min-h-80 items-center justify-center gap-3 rounded-lg border border-dashed border-gray-200 bg-gray-50 text-sm text-gray-500">
                 <Loader2 className="h-5 w-5 animate-spin text-accent" />
                 Loading preview...
               </div>
@@ -367,15 +368,15 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                 <iframe
                   title={file.file_name}
                   src={previewUrl}
-                  className="h-[calc(100vh-220px)] min-h-[520px] w-full max-w-4xl rounded-lg border border-gray-200 bg-white"
+                  className="h-[calc(100vh-220px)] min-h-130 w-full max-w-4xl rounded-lg border border-gray-200 bg-white"
                 />
               </div>
             ) : previewError ? (
-              <div className="flex min-h-[320px] items-center justify-center rounded-lg border border-dashed border-gray-200 bg-gray-50 p-6 text-center text-sm text-gray-600">
+              <div className="flex min-h-80 items-center justify-center rounded-lg border border-dashed border-gray-200 bg-gray-50 p-6 text-center text-sm text-gray-600">
                 {previewError}
               </div>
             ) : (
-              <div className="flex min-h-[320px] items-center justify-center rounded-lg border border-dashed border-gray-200 bg-gray-50 text-sm text-gray-500">
+              <div className="flex min-h-80 items-center justify-center rounded-lg border border-dashed border-gray-200 bg-gray-50 text-sm text-gray-500">
                 No preview url is available for this document.
               </div>
             )}
@@ -384,16 +385,16 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
 
         {!previewOnly && <div className="grid min-h-0 grid-cols-1 gap-4 xl:h-[min(78vh,760px)] xl:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)]">
           <div className="min-h-0 min-w-0">
-          <Card className="flex h-[min(70vh,680px)] min-h-[360px] flex-col overflow-hidden xl:h-full xl:min-h-0">
+          <Card className="flex h-[min(70vh,680px)] min-h-90 flex-col overflow-hidden xl:h-full xl:min-h-0">
             <CardHeader className="shrink-0"><CardTitle className="flex items-center gap-2"><FileText className="h-5 w-5 text-accent" />Document preview</CardTitle></CardHeader>
             <CardContent className="flex min-h-0 flex-1 flex-col overflow-hidden">
-              {isPreviewLoading ? <div className="flex h-full min-h-[160px] items-center justify-center text-sm text-gray-500"><Loader2 className="mr-2 h-5 w-5 animate-spin text-accent" />Loading preview...</div> : previewUrl ? <DocumentPdfViewer url={previewUrl} selectedClause={selectedCitation} /> : <div className="flex h-full min-h-[160px] items-center justify-center rounded-lg bg-gray-50 p-6 text-center text-sm text-gray-600">{previewError || 'No preview is available.'}</div>}
+              {isPreviewLoading ? <div className="flex h-full min-h-40 items-center justify-center text-sm text-gray-500"><Loader2 className="mr-2 h-5 w-5 animate-spin text-accent" />Loading preview...</div> : previewUrl ? <DocumentPdfViewer url={previewUrl} selectedClause={selectedCitation} /> : <div className="flex h-full min-h-40 items-center justify-center rounded-lg bg-gray-50 p-6 text-center text-sm text-gray-600">{previewError || 'No preview is available.'}</div>}
             </CardContent>
           </Card>
 
           </div>
 
-          <div className="flex h-[min(70vh,680px)] min-h-[360px] min-w-0 flex-col gap-3 xl:h-full xl:min-h-0">
+          <div className="flex h-[min(70vh,680px)] min-h-90 min-w-0 flex-col gap-3 xl:h-full xl:min-h-0">
             <div className="grid shrink-0 grid-cols-3 rounded-xl border border-gray-200 bg-gray-50 p-1" role="tablist" aria-label="Document tools">
               <button
                 type="button"

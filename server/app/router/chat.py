@@ -6,14 +6,14 @@ from app.dependencies.auth import get_current_user
 from app.services.chat_service import answer_question
 from app.core.supabase import connectSupa
 
+import asyncio
+
 logger = logging.getLogger(__name__)
 
 router = APIRouter(
     prefix="/chat",
     tags=["Chat"]
 )
-
-import asyncio
 
 @router.post("/ask", response_model=ChatResponse)
 async def ask_document_question(
@@ -38,29 +38,30 @@ async def ask_document_question(
             answer_question, data.document_id, data.question, data.use_1hop_expansion
         )
         
-        # Save chat to Supabase
-        user_msg = {
-            "document_id": data.document_id,
-            "user_id": str(current_user["id"]),
-            "role": "user",
-            "content": data.question,
-            "retrieved_chunk_ids": [],
-            "is_expanded": False
-        }
-        
-        # Extract chunk IDs from response
-        chunk_ids = [c["chunk_id"] for c in response.get("primary_clauses", [])] + [c["chunk_id"] for c in response.get("expanded_clauses", [])]
-        
-        assistant_msg = {
-            "document_id": data.document_id,
-            "user_id": str(current_user["id"]),
-            "role": "assistant",
-            "content": response.get("answer", ""),
-            "retrieved_chunk_ids": chunk_ids,
-            "is_expanded": data.use_1hop_expansion
-        }
-        
-        supabase.table("chat_messages").insert([user_msg, assistant_msg]).execute()
+        # Save chat to Supabase if requested
+        if data.save_history:
+            user_msg = {
+                "document_id": data.document_id,
+                "user_id": str(current_user["id"]),
+                "role": "user",
+                "content": data.question,
+                "retrieved_chunk_ids": [],
+                "is_expanded": False
+            }
+            
+            # Extract chunk IDs from response
+            chunk_ids = [c["chunk_id"] for c in response.get("primary_clauses", [])] + [c["chunk_id"] for c in response.get("expanded_clauses", [])]
+            
+            assistant_msg = {
+                "document_id": data.document_id,
+                "user_id": str(current_user["id"]),
+                "role": "assistant",
+                "content": response.get("answer", ""),
+                "retrieved_chunk_ids": chunk_ids,
+                "is_expanded": data.use_1hop_expansion
+            }
+            
+            supabase.table("chat_messages").insert([user_msg, assistant_msg]).execute()
         
         return response
     except Exception as e:
@@ -85,7 +86,7 @@ async def get_chat_history(
         raise HTTPException(status_code=403, detail="You do not have access to this document")
         
     try:
-        history = supabase.table("chat_messages").select("*").eq("document_id", document_id).order("created_at", desc=False).execute()
+        history = supabase.table("chat_messages").select("*").eq("document_id", document_id).eq("user_id", str(current_user["id"])).order("created_at", desc=False).order("id", desc=False).execute()
         messages = history.data or []
 
         # Collect all chunk IDs referenced across assistant messages

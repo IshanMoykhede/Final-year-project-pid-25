@@ -102,6 +102,14 @@ def answer_question(
             "expanded_clauses": []
         }
 
+    # Fetch bbox for candidates
+    chunk_ids = [c["id"] for c in candidates]
+    if chunk_ids:
+        chunks_res = supabase.table("chunks").select("id, bbox").in_("id", chunk_ids).execute()
+        bbox_map = {c["id"]: c.get("bbox") or [] for c in (chunks_res.data or [])}
+        for c in candidates:
+            c["bbox"] = bbox_map.get(c["id"], [])
+
     # 3. Stage 2: Cross-Encoder Reranking (Only if enabled and multiple candidates exist)
     if use_reranking and rerank_model is not None and len(candidates) > 1:
         try:

@@ -5,6 +5,7 @@ class ChatRequest(BaseModel):
     document_id: str
     question: str
     use_1hop_expansion: bool = True
+    save_history: bool = True
 
 class RetrievedClause(BaseModel):
     chunk_id: str

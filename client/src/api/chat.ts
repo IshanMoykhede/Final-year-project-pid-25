@@ -15,6 +15,7 @@ export interface ChatRequest {
   document_id: string;
   question: string;
   use_1hop_expansion: boolean;
+  save_history?: boolean;
 }
 
 export interface ChatResponse {

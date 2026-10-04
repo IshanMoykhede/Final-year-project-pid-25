@@ -3,13 +3,13 @@ import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Bot, ChevronDown, ChevronUp, LocateFixed, MessageSquare, Send, User } from 'lucide-react';
-import { askDocumentQuestion } from '../../api/chat';
-import type { RetrievedClause } from '../../api/chat';
+import { askDocumentQuestion, getChatHistory } from '../../api/chat';
+import type { RetrievedClause, ChatMessageData } from '../../api/chat';
 import { Button } from '../common/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../common/Card';
 
 interface ChatMessage {
-  id: number;
+  id: number | string;
   question: string;
   answer: string;
   primaryClauses: RetrievedClause[];
@@ -52,35 +52,15 @@ const normalizeClause = (value: unknown): RetrievedClause | null => {
     aliases: Array.isArray(value.aliases)
       ? value.aliases.filter((alias): alias is string => typeof alias === 'string')
       : [],
-    similarity: typeof value.similarity === 'number' || value.similarity === null
-      ? value.similarity
+    similarity: typeof value.similarity === 'number'
+      ? (value.similarity as number)
       : undefined,
     is_expanded: value.is_expanded === true,
     bbox: Array.isArray(value.bbox) ? value.bbox.filter(isRecord) : [],
   };
 };
 
-const normalizeMessages = (value: unknown): ChatMessage[] => {
-  if (!Array.isArray(value)) return [];
 
-  return value.flatMap((item, index) => {
-    if (!isRecord(item)) return [];
-    const primaryClauses = Array.isArray(item.primaryClauses)
-      ? item.primaryClauses.map(normalizeClause).filter((clause): clause is RetrievedClause => clause !== null)
-      : [];
-    const expandedClauses = Array.isArray(item.expandedClauses)
-      ? item.expandedClauses.map(normalizeClause).filter((clause): clause is RetrievedClause => clause !== null)
-      : [];
-
-    return [{
-      id: typeof item.id === 'number' ? item.id : Date.now() + index,
-      question: typeof item.question === 'string' ? item.question : '',
-      answer: typeof item.answer === 'string' ? item.answer : '',
-      primaryClauses,
-      expandedClauses,
-    }];
-  });
-};
 
 const ClauseList: React.FC<{
   clauses: RetrievedClause[];
@@ -135,8 +115,7 @@ const ClauseList: React.FC<{
                       type="button"
                       onClick={handleAnalyze}
                       disabled={isAnalyzingClause}
-                      className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
-                    >
+                      className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"                    >
                       {isAnalyzingClause ? 'Analyzing…' : 'Analyze'}
                     </button>
                   )}
@@ -146,7 +125,7 @@ const ClauseList: React.FC<{
                       onClick={() => onCitation(clause)}
                       disabled={!clause.bbox.length}
                       title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
-                      className="inline-flex items-center gap-1 rounded-md border border-[#B08D57]/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                      className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       <LocateFixed className="h-3 w-3 text-brass" />
                       Cite
@@ -178,32 +157,62 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({
 }) => {
   const [question, setQuestion] = useState('');
   const [useExpansion, setUseExpansion] = useState(true);
-  const [messages, setMessages] = useState<ChatMessage[]>(() => {
-    if (typeof window === 'undefined') return [];
-
-    try {
-      const savedMessages = window.localStorage.getItem(`document-chat:${documentId}`);
-      const parsedMessages: unknown = savedMessages ? JSON.parse(savedMessages) : [];
-      return normalizeMessages(parsedMessages);
-    } catch {
-      return [];
-    }
-  });
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [isInitializing, setIsInitializing] = useState(true);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    let mounted = true;
+    const fetchHistory = async () => {
+      try {
+        const history = await getChatHistory(documentId);
+        if (!mounted) return;
+        
+        const pairedMessages: ChatMessage[] = [];
+        let i = 0;
+        while (i < history.length) {
+          const msg = history[i];
+          if (msg.role === 'user') {
+            // Find the next assistant message
+            let nextMsgIndex = i + 1;
+            while (nextMsgIndex < history.length && history[nextMsgIndex].role !== 'assistant') {
+                nextMsgIndex++;
+            }
+            
+            if (nextMsgIndex < history.length) {
+              const nextMsg = history[nextMsgIndex];
+              pairedMessages.push({
+                id: msg.id,
+                question: msg.content,
+                answer: nextMsg.content,
+                primaryClauses: nextMsg.clauses || [],
+                expandedClauses: []
+              });
+              i = nextMsgIndex + 1;
+            } else {
+              i++;
+            }
+          } else {
+            i++;
+          }
+        }
+        setMessages(pairedMessages);
+      } catch (err) {
+        console.error("Failed to load history", err);
+      } finally {
+        if (mounted) setIsInitializing(false);
+      }
+    };
+    fetchHistory();
+    return () => { mounted = false; };
+  }, [documentId]);
 
   useEffect(() => {
     onClausesAvailable?.(
       messages.flatMap((message) => [...message.primaryClauses, ...message.expandedClauses])
     );
   }, [messages, onClausesAvailable]);
-
-  useEffect(() => {
-    try {
-      window.localStorage.setItem(`document-chat:${documentId}`, JSON.stringify(messages));
-    } catch {
-    }
-  }, [documentId, messages]);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -247,7 +256,11 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({
         </CardTitle>
       </CardHeader>
       <CardContent className="flex min-h-0 flex-1 flex-col gap-4 overflow-hidden">
-        {messages.length > 0 && (
+        {isInitializing ? (
+          <div className="flex flex-1 items-center justify-center text-sm text-gray-500">
+            Loading chat history...
+          </div>
+        ) : messages.length > 0 && (
           <div
             className="min-h-0 flex-1 space-y-4 overflow-y-auto overscroll-contain pr-2"
           >
