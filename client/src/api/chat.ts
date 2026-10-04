@@ -6,8 +6,9 @@ export interface RetrievedClause {
   text: string;
   aliases: string[];
   similarity?: number | null;
-  is_expanded: boolean;
+  is_expanded?: boolean;
   bbox: Array<Record<string, unknown>>;
+  page_no?: number | null;
 }
 
 export interface ChatRequest {
@@ -37,6 +38,7 @@ export interface ChatMessageData {
   retrieved_chunk_ids: string[];
   is_expanded: boolean;
   created_at: string;
+  clauses?: RetrievedClause[];
 }
 
 export const getChatHistory = async (documentId: string): Promise<ChatMessageData[]> => {

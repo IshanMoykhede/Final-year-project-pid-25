@@ -86,7 +86,35 @@ async def get_chat_history(
         
     try:
         history = supabase.table("chat_messages").select("*").eq("document_id", document_id).order("created_at", desc=False).execute()
-        return {"messages": history.data}
+        messages = history.data or []
+
+        # Collect all chunk IDs referenced across assistant messages
+        all_chunk_ids = set()
+        for msg in messages:
+            chunk_ids = msg.get("retrieved_chunk_ids") or []
+            for cid in chunk_ids:
+                if cid:
+                    all_chunk_ids.add(cid)
+
+        # Batch fetch chunk details
+        chunks_map = {}
+        if all_chunk_ids:
+            chunk_res = supabase.table("chunks").select("id, chunk_no, text, aliases, bbox").in_("id", list(all_chunk_ids)).execute()
+            for c in (chunk_res.data or []):
+                chunks_map[c["id"]] = {
+                    "chunk_id": c["id"],
+                    "chunk_no": c.get("chunk_no"),
+                    "text": c.get("text", ""),
+                    "aliases": c.get("aliases") or [],
+                    "bbox": c.get("bbox") or [],
+                }
+
+        # Attach resolved clauses to messages
+        for msg in messages:
+            msg_chunk_ids = msg.get("retrieved_chunk_ids") or []
+            msg["clauses"] = [chunks_map[cid] for cid in msg_chunk_ids if cid in chunks_map]
+
+        return {"messages": messages}
     except Exception as e:
         logger.exception(f"Failed to fetch chat history for document {document_id}")
         raise HTTPException(status_code=500, detail=str(e))
