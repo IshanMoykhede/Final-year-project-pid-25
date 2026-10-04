@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { getMyFiles, preprocessDocument, viewFile } from '../api/files';
@@ -15,12 +15,13 @@ import type {
   OrderedClauseItem,
   OrderedClauseListResponse,
 } from '../api/analyzer';
+import { askDocumentQuestion } from '../api/chat';
 import type { RetrievedClause } from '../api/chat';
 import { Button } from '../components/common/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/common/Card';
 import { DocumentChat } from '../components/documents/DocumentChat';
 import { DocumentPdfViewer } from '../components/documents/DocumentPdfViewer';
-import { AlertTriangle, ArrowLeft, FileText, Loader2, MessageSquare, Sparkles } from 'lucide-react';
+import { AlertTriangle, ArrowLeft, FileText, Loader2, LocateFixed, MessageSquare, Sparkles } from 'lucide-react';
 
 interface DocumentDetailProps {
   previewOnly?: boolean;
@@ -54,10 +55,63 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
   const [clauseAnalysis, setClauseAnalysis] = useState<ClauseAnalysis | null>(null);
   const [isAnalyzingClause, setIsAnalyzingClause] = useState(false);
   const [clauseAnalysisError, setClauseAnalysisError] = useState('');
+  const [citationError, setCitationError] = useState('');
+  const [isLocatingCitation, setIsLocatingCitation] = useState(false);
   const [isInitializingSession, setIsInitializingSession] = useState(false);
   const [sessionSummary, setSessionSummary] = useState<OrderedClauseListResponse | null>(null);
   const [activeDocumentTab, setActiveDocumentTab] = useState<'chat' | 'analysis' | 'overview'>('overview');
   const analysisContentRef = useRef<HTMLDivElement>(null);
+  const activeAnalysisChunkIdRef = useRef<string | null>(null);
+  const citationCacheRef = useRef(new Map<string, RetrievedClause>());
+  const citationRequestsRef = useRef(new Map<string, Promise<RetrievedClause>>());
+
+  const rememberChatClauses = useCallback((clauses: RetrievedClause[]) => {
+    clauses.forEach((clause) => {
+      if (clause.bbox.length) citationCacheRef.current.set(clause.chunk_id, clause);
+    });
+  }, []);
+
+  const resolveClauseCitation = (clause: OrderedClauseItem | RetrievedClause): Promise<RetrievedClause> => {
+    const cachedCitation = citationCacheRef.current.get(clause.chunk_id);
+    if (cachedCitation) return Promise.resolve(cachedCitation);
+    if (!file) return Promise.reject(new Error('Document is not ready for citation lookup.'));
+
+    const requestInFlight = citationRequestsRef.current.get(clause.chunk_id);
+    if (requestInFlight) return requestInFlight;
+
+    const clauseText = 'preview_text' in clause ? clause.preview_text : clause.text;
+    const clauseLabel =
+      'aliases' in clause && clause.aliases?.length
+        ? clause.aliases.join(', ')
+        : `Clause ${clause.chunk_no}`;
+    const request = askDocumentQuestion({
+      document_id: file.id,
+      question: `Find the exact source text for ${clauseLabel}: ${clauseText}`,
+      use_1hop_expansion: false,
+    }).then((result) => {
+      const citation = [...result.primary_clauses, ...result.expanded_clauses].find(
+        (item) => item.chunk_id === clause.chunk_id
+      );
+      if (!citation?.bbox.length) {
+        throw new Error('Location coordinates are not available for this clause.');
+      }
+      citationCacheRef.current.set(clause.chunk_id, citation);
+      return citation;
+    }).finally(() => {
+      citationRequestsRef.current.delete(clause.chunk_id);
+    });
+
+    citationRequestsRef.current.set(clause.chunk_id, request);
+    return request;
+  };
+
+  const prefetchClauseCitation = (clause: OrderedClauseItem) => {
+    void resolveClauseCitation(clause).catch((citationRequestError: unknown) => {
+      if (activeAnalysisChunkIdRef.current === clause.chunk_id) {
+        setCitationError(`Citation is not ready yet: ${getClauseAnalysisErrorMessage(citationRequestError)}`);
+      }
+    });
+  };
 
   useEffect(() => {
     if (activeDocumentTab === 'analysis' && analysisContentRef.current) {
@@ -79,7 +133,10 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
     } as OrderedClauseItem;
 
     setActiveDocumentTab('analysis');
-    setSelectedCitation(clause);
+    if (clause.bbox.length) citationCacheRef.current.set(clause.chunk_id, clause);
+    activeAnalysisChunkIdRef.current = clause.chunk_id;
+    setSelectedCitation(clause.bbox.length ? clause : citationCacheRef.current.get(clause.chunk_id) ?? null);
+    setCitationError('');
     setAnalysisClause(clauseTarget);
     setClauseAnalysis(null);
     setClauseAnalysisError('');
@@ -99,6 +156,22 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
       setClauseAnalysisError(getClauseAnalysisErrorMessage(analysisError));
     } finally {
       setIsAnalyzingClause(false);
+    }
+  };
+
+  const handleCiteAnalysisClause = async () => {
+    if (!analysisClause || !file || isLocatingCitation) return;
+
+    setCitationError('');
+    activeAnalysisChunkIdRef.current = analysisClause.chunk_id;
+    setIsLocatingCitation(true);
+    try {
+      const citation = await resolveClauseCitation(analysisClause);
+      setSelectedCitation(citation);
+    } catch (citationRequestError) {
+      setCitationError(getClauseAnalysisErrorMessage(citationRequestError));
+    } finally {
+      setIsLocatingCitation(false);
     }
   };
 
@@ -380,15 +453,30 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                         <Sparkles className="h-5 w-5 text-accent" />
                         Clause analysis
                       </CardTitle>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        disabled={isInitializingSession}
-                        onClick={handleInitializeClauseSession}
-                      >
-                        {isInitializingSession ? 'Initializing...' : 'Start analysis'}
-                      </Button>
+                      <div className="flex shrink-0 items-center gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={isInitializingSession}
+                          onClick={handleInitializeClauseSession}
+                        >
+                          {isInitializingSession ? 'Initializing...' : 'Start analysis'}
+                        </Button>
+                        {analysisClause && (
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            disabled={isLocatingCitation}
+                            isLoading={isLocatingCitation}
+                            onClick={handleCiteAnalysisClause}
+                          >
+                            <LocateFixed className="mr-1.5 h-4 w-4" />
+                            Cite
+                          </Button>
+                        )}
+                      </div>
                     </div>
+                    {citationError && <p className="text-xs text-red-600" role="alert">{citationError}</p>}
                     {sessionSummary && (
                       <div className="flex flex-wrap gap-2 text-xs text-gray-600">
                         <span className="rounded-full bg-gray-100 px-2 py-1">{sessionSummary.total_clauses} clauses</span>
@@ -428,10 +516,13 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                                   if (analysisContentRef.current) {
                                     analysisContentRef.current.scrollTop = 0;
                                   }
+                                  activeAnalysisChunkIdRef.current = clause.chunk_id;
                                   setAnalysisClause(clause);
                                   setClauseAnalysis(null);
                                   setClauseAnalysisError('');
-                                  setSelectedCitation(null);
+                                  setCitationError('');
+                                  setSelectedCitation(citationCacheRef.current.get(clause.chunk_id) ?? null);
+                                  prefetchClauseCitation(clause);
                                   setIsAnalyzingClause(true);
                                   try {
                                     const response = await analyzeClauseStep(clause.chunk_id, false);
@@ -541,6 +632,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                 <DocumentChat
                   documentId={file.id}
                   onCitation={setSelectedCitation}
+                  onClausesAvailable={rememberChatClauses}
                   onAnalyzeClause={handleAnalyzeClause}
                   isAnalyzingClause={isAnalyzingClause}
                 />

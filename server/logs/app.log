@@ -3603,3 +3603,412 @@ postgrest.exceptions.APIError: {'message': "Could not find the table 'public.cla
 2026-10-04 19:02:56,723 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
 2026-10-04 19:02:56,887 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?id=eq.4162614e-78a3-49c2-ace0-ad5655703bd5 "HTTP/2 200 OK"
 2026-10-04 19:02:56,887 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:13:05,519 | root | INFO | Centralized logging system initialized!
+2026-10-04 19:13:14,317 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 403 Forbidden"
+2026-10-04 19:13:15,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 403 Forbidden"
+2026-10-04 19:13:16,934 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/auth/v1/token?grant_type=password "HTTP/2 200 OK"
+2026-10-04 19:13:17,892 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:19,330 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:20,427 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:21,502 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:22,030 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:22,481 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:23,384 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:24,231 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:24,689 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:25,245 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:25,696 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:25,869 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:26,633 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:27,390 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:28,472 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:29,168 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:13:31,010 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:13:31,555 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:13:32,702 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:33,936 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:33,936 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:13:34,262 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:13:35,085 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:13:35,270 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:13:35,457 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:43,787 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:13:44,335 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:13:44,760 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:13:44,969 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:13:45,406 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=name&id=eq.e00e64d5-9e10-4bd5-bef1-47eba5e0f8f5 "HTTP/2 200 OK"
+2026-10-04 19:13:46,732 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:46,732 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:13:46,905 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/cross_references?select=%2A&source_chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:13:46,905 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Invoking LangGraph Agent for chunk d6068db0-275a-44f1-8024-729e23c669fb...
+2026-10-04 19:13:46,930 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:13:48,252 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 19:13:48,268 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] LLM requested search. Routing to Tools Node.
+2026-10-04 19:13:48,270 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | [NODE: Tools] Executing requested tools for Chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:13:48,270 | app.Agents.Clause_Analyisis_Agent.nodes.Tools_node | INFO | Executing tool: search_document with args: {'document_id': '<document_id_placeholder>', 'query': 'OFFICIAL RENTAL AGREEMENT'}
+2026-10-04 19:13:48,270 | app.Agents.Clause_Analyisis_Agent.tools | INFO | [TOOL] Searching document <document_id_placeholder> for: OFFICIAL RENTAL AGREEMENT
+2026-10-04 19:13:49,497 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 400 Bad Request"
+2026-10-04 19:13:49,500 | app.Agents.Clause_Analyisis_Agent.tools | ERROR | [TOOL ERROR] search_document failed: {'message': 'invalid input syntax for type uuid: "<document_id_placeholder>"', 'code': '22P02', 'hint': None, 'details': None}
+2026-10-04 19:13:49,500 | app.Agents.Clause_Analyisis_Agent.nodes.Router_node | INFO | [NODE: Router] Analyzing Chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:13:51,123 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 19:13:51,124 | app.Agents.Clause_Analyisis_Agent.graph | INFO | [ROUTER] No tool calls found. Forcing route to Analysis Node.
+2026-10-04 19:13:51,125 | app.Agents.Clause_Analyisis_Agent.nodes.Analysis_node | INFO | [NODE: Analysis] Generating final analysis for Chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:13:53,476 | httpx | INFO | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-04 19:13:53,841 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:13:54,010 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?select=id%2Ccompleted&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:13:54,513 | httpx | INFO | HTTP Request: PATCH https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?id=eq.4162614e-78a3-49c2-ace0-ad5655703bd5 "HTTP/2 200 OK"
+2026-10-04 19:13:54,513 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Successfully analyzed and saved chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:15:05,020 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Initializing analysis session for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:15:05,709 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:15:06,178 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/analysis_sessions?on_conflict=document_id "HTTP/2 200 OK"
+2026-10-04 19:15:06,357 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=chunk_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:15:06,630 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:15:07,136 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:15:07,568 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:15:07,738 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:16:47,358 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:16:48,615 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:16:50,323 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:16:50,323 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:02,480 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 19:17:03,645 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 19:17:03,833 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 19:17:03,833 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 19:17:04,145 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:05,058 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:05,560 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:05,560 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:07,282 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:07,874 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:08,054 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:08,054 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:11,164 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 19:17:11,945 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 19:17:12,123 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.92ab3f50-1784-436a-84a3-b73525bd62c6 "HTTP/2 200 OK"
+2026-10-04 19:17:12,123 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 92ab3f50-1784-436a-84a3-b73525bd62c6
+2026-10-04 19:17:12,635 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:13,472 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:13,656 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:13,656 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:18,321 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:17:18,946 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:17:19,120 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:17:19,120 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:17:20,473 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:20,987 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:21,163 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:21,164 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:26,742 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:17:27,381 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:27,860 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:28,787 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:17:29,325 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:29,498 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:30,394 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:17:31,254 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:32,192 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:17:32,477 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:17:34,098 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:17:34,921 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:17:35,761 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:17:36,968 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:17:36,968 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:17:37,268 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:17:37,858 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:17:38,038 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:17:38,221 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:17:41,527 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:42,290 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:42,455 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:17:42,455 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:17:55,852 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:17:56,547 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:17:56,712 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:17:56,712 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:21:25,728 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:21:26,963 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:21:27,442 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:21:28,117 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:21:28,519 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:21:29,803 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:21:30,060 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:21:31,837 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:21:32,239 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:21:32,897 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:21:33,715 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:21:33,715 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:21:33,906 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:21:34,343 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:21:34,530 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:21:34,711 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:22:13,331 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:22:14,179 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:22:14,381 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:22:14,381 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:22:16,344 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:22:17,118 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:22:17,968 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:22:17,968 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop: False, Reranking: True, top_k: None
+2026-10-04 19:22:18,299 | app.services.chat_service | INFO | [CHAT_SERVICE] Loading all-MiniLM-L6-v2 HuggingFace embedding model...
+2026-10-04 19:22:18,305 | sentence_transformers.SentenceTransformer | INFO | Use pytorch device_name: cpu
+2026-10-04 19:22:18,305 | sentence_transformers.SentenceTransformer | INFO | Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-10-04 19:22:21,540 | app.services.chat_service | INFO | [CHAT_SERVICE] Loading cross-encoder/ms-marco-MiniLM-L-6-v2 reranker model...
+2026-10-04 19:22:47,662 | sentence_transformers.cross_encoder.CrossEncoder | INFO | Use pytorch device: cpu
+2026-10-04 19:22:48,328 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-10-04 19:22:48,689 | app.services.chat_service | INFO | [CHAT_SERVICE] CrossEncoder successfully reranked 7 candidates. Top score: 0.0360
+2026-10-04 19:22:48,689 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 2.0s (attempt 1/5)... Exception: No module named 'openai'
+2026-10-04 19:22:50,692 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 3.0s (attempt 2/5)... Exception: No module named 'openai'
+2026-10-04 19:22:53,693 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 6.0s (attempt 3/5)... Exception: No module named 'openai'
+2026-10-04 19:22:59,694 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 12.0s (attempt 4/5)... Exception: No module named 'openai'
+2026-10-04 19:23:11,699 | app.router.chat | ERROR | Chat failed for document 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 71, in generate_chat_completion
+    client, provider = get_llm_client()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 38, in get_llm_client
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\chat.py", line 37, in ask_document_question
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\chat_service.py", line 180, in answer_question
+    answer = generate_chat_completion(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x295a6e2e790 state=finished raised ModuleNotFoundError>]
+2026-10-04 19:23:19,780 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:23:20,458 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:23:20,950 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.d6068db0-275a-44f1-8024-729e23c669fb "HTTP/2 200 OK"
+2026-10-04 19:23:20,950 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk d6068db0-275a-44f1-8024-729e23c669fb
+2026-10-04 19:23:22,325 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:23:22,853 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:23:23,680 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:23:23,680 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop: False, Reranking: True, top_k: None
+2026-10-04 19:23:24,494 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-10-04 19:23:24,806 | app.services.chat_service | INFO | [CHAT_SERVICE] CrossEncoder successfully reranked 7 candidates. Top score: 0.0360
+2026-10-04 19:23:24,806 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 2.0s (attempt 1/5)... Exception: No module named 'openai'
+2026-10-04 19:23:26,810 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 3.0s (attempt 2/5)... Exception: No module named 'openai'
+2026-10-04 19:23:29,812 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 6.0s (attempt 3/5)... Exception: No module named 'openai'
+2026-10-04 19:23:31,344 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:23:31,934 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:23:32,107 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.2963460f-bb8f-4846-8c5a-550fb1269bb1 "HTTP/2 200 OK"
+2026-10-04 19:23:32,107 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 2963460f-bb8f-4846-8c5a-550fb1269bb1
+2026-10-04 19:23:35,814 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 12.0s (attempt 4/5)... Exception: No module named 'openai'
+2026-10-04 19:23:47,817 | app.router.chat | ERROR | Chat failed for document 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 71, in generate_chat_completion
+    client, provider = get_llm_client()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 38, in get_llm_client
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\chat.py", line 37, in ask_document_question
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\chat_service.py", line 180, in answer_question
+    answer = generate_chat_completion(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x295a6cef390 state=finished raised ModuleNotFoundError>]
+2026-10-04 19:24:14,483 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:24:15,299 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:24:16,212 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:24:16,212 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop: False, Reranking: True, top_k: None
+2026-10-04 19:24:17,212 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-10-04 19:24:17,593 | app.services.chat_service | INFO | [CHAT_SERVICE] CrossEncoder successfully reranked 7 candidates. Top score: 3.7114
+2026-10-04 19:24:17,593 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 2.0s (attempt 1/5)... Exception: No module named 'openai'
+2026-10-04 19:24:19,597 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 3.0s (attempt 2/5)... Exception: No module named 'openai'
+2026-10-04 19:24:22,598 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 6.0s (attempt 3/5)... Exception: No module named 'openai'
+2026-10-04 19:24:28,600 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 12.0s (attempt 4/5)... Exception: No module named 'openai'
+2026-10-04 19:24:40,602 | app.router.chat | ERROR | Chat failed for document 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 71, in generate_chat_completion
+    client, provider = get_llm_client()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 38, in get_llm_client
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\chat.py", line 37, in ask_document_question
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\chat_service.py", line 180, in answer_question
+    answer = generate_chat_completion(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x295a6b8d210 state=finished raised ModuleNotFoundError>]
+2026-10-04 19:26:00,820 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:26:01,737 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:26:02,210 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:26:02,855 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:26:03,250 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:26:03,840 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:26:04,160 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:26:05,229 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:26:05,638 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:26:06,458 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:26:07,249 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:26:07,264 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:26:07,444 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:26:07,847 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:26:08,026 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:26:08,223 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:26:41,266 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Executing clause step for chunk_id: 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:26:41,544 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:26:41,828 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=%2A&id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:26:42,027 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&chunk_id=eq.50b91341-eb57-48b1-9579-fa9c1421a6b4 "HTTP/2 200 OK"
+2026-10-04 19:26:42,028 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Cache Hit! Returning stored analysis for chunk 50b91341-eb57-48b1-9579-fa9c1421a6b4
+2026-10-04 19:26:42,141 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:26:42,974 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=user_id&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:26:42,974 | app.services.chat_service | INFO | Answering question for document_id: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf. 1-Hop: False, Reranking: True, top_k: None
+2026-10-04 19:26:43,946 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/rest/v1/rpc/match_chunks "HTTP/2 200 OK"
+2026-10-04 19:26:44,315 | app.services.chat_service | INFO | [CHAT_SERVICE] CrossEncoder successfully reranked 7 candidates. Top score: 3.9535
+2026-10-04 19:26:44,316 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 2.0s (attempt 1/5)... Exception: No module named 'openai'
+2026-10-04 19:26:46,318 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 3.0s (attempt 2/5)... Exception: No module named 'openai'
+2026-10-04 19:26:49,320 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 6.0s (attempt 3/5)... Exception: No module named 'openai'
+2026-10-04 19:26:55,322 | app.core.llm | WARNING | [LLM] Error calling provider. Retrying in 12.0s (attempt 4/5)... Exception: No module named 'openai'
+2026-10-04 19:27:01,691 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:02,302 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:02,534 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:03,350 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:03,926 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:04,107 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:04,967 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:05,780 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:06,656 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:06,898 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:27:07,324 | app.router.chat | ERROR | Chat failed for document 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 71, in generate_chat_completion
+    client, provider = get_llm_client()
+                       ^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\core\llm.py", line 38, in get_llm_client
+    from openai import OpenAI
+ModuleNotFoundError: No module named 'openai'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Codes\Final-year-project-pid-25\server\app\router\chat.py", line 37, in ask_document_question
+    response = await asyncio.to_thread(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\asyncio\threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Codes\Final-year-project-pid-25\server\app\services\chat_service.py", line 180, in answer_question
+    answer = generate_chat_completion(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Lib\site-packages\tenacity\__init__.py", line 414, in exc_check
+    raise retry_exc from fut.exception()
+tenacity.RetryError: RetryError[<Future at 0x295a6cd0a50 state=finished raised ModuleNotFoundError>]
+2026-10-04 19:27:08,669 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:09,466 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:10,371 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:11,536 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:11,536 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:27:11,883 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:27:12,438 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:27:12,605 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:27:12,774 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:47,917 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:48,556 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:49,108 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:49,758 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:50,363 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:50,537 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&user_id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:51,151 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:51,718 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:52,697 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:52,948 | httpx | INFO | HTTP Request: POST https://mydpiogiqxzskauankxv.supabase.co/storage/v1/object/sign/Files/1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea/6f4b2b06-c90b-4a81-a0c5-d273d24a34bf.pdf "HTTP/2 200 OK"
+2026-10-04 19:27:54,457 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/auth/v1/user "HTTP/2 200 OK"
+2026-10-04 19:27:54,925 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/profiles?select=%2A&id=eq.1c1fc9fc-ea62-4c7a-9f28-fac5f3b129ea "HTTP/2 200 OK"
+2026-10-04 19:27:55,509 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=%2A&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:56,279 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/files?select=overview_cache&id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"
+2026-10-04 19:27:56,279 | app.services.overview_service | INFO | [OVERVIEW_SERVICE] Returning cached overview for 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:27:56,461 | app.services.clause_analysis_service | INFO | [CLAUSE_SERVICE] Fetching ordered clause status for document: 6f4b2b06-c90b-4a81-a0c5-d273d24a34bf
+2026-10-04 19:27:56,914 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/chunks?select=id%2Cchunk_no%2Ctext%2Caliases%2Cclassification_id&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf&order=chunk_no.asc "HTTP/2 200 OK"
+2026-10-04 19:27:57,112 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/classifications?select=id%2Cname "HTTP/2 200 OK"
+2026-10-04 19:27:57,313 | httpx | INFO | HTTP Request: GET https://mydpiogiqxzskauankxv.supabase.co/rest/v1/clause_analysis?select=%2A&document_id=eq.6f4b2b06-c90b-4a81-a0c5-d273d24a34bf "HTTP/2 200 OK"

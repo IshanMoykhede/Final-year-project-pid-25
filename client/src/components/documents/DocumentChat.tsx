@@ -19,6 +19,7 @@ interface ChatMessage {
 interface DocumentChatProps {
   documentId: string;
   onCitation?: (clause: RetrievedClause) => void;
+  onClausesAvailable?: (clauses: RetrievedClause[]) => void;
   onAnalyzeClause?: (clause: RetrievedClause) => void;
   isAnalyzingClause?: boolean;
 }
@@ -34,6 +35,51 @@ const getErrorMessage = (error: unknown): string => {
 
   if (error instanceof Error) return error.message;
   return 'Unable to get an answer right now. Please try again.';
+};
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);
+
+const normalizeClause = (value: unknown): RetrievedClause | null => {
+  if (!isRecord(value) || typeof value.chunk_id !== 'string' || typeof value.chunk_no !== 'number') {
+    return null;
+  }
+
+  return {
+    chunk_id: value.chunk_id,
+    chunk_no: value.chunk_no,
+    text: typeof value.text === 'string' ? value.text : '',
+    aliases: Array.isArray(value.aliases)
+      ? value.aliases.filter((alias): alias is string => typeof alias === 'string')
+      : [],
+    similarity: typeof value.similarity === 'number' || value.similarity === null
+      ? value.similarity
+      : undefined,
+    is_expanded: value.is_expanded === true,
+    bbox: Array.isArray(value.bbox) ? value.bbox.filter(isRecord) : [],
+  };
+};
+
+const normalizeMessages = (value: unknown): ChatMessage[] => {
+  if (!Array.isArray(value)) return [];
+
+  return value.flatMap((item, index) => {
+    if (!isRecord(item)) return [];
+    const primaryClauses = Array.isArray(item.primaryClauses)
+      ? item.primaryClauses.map(normalizeClause).filter((clause): clause is RetrievedClause => clause !== null)
+      : [];
+    const expandedClauses = Array.isArray(item.expandedClauses)
+      ? item.expandedClauses.map(normalizeClause).filter((clause): clause is RetrievedClause => clause !== null)
+      : [];
+
+    return [{
+      id: typeof item.id === 'number' ? item.id : Date.now() + index,
+      question: typeof item.question === 'string' ? item.question : '',
+      answer: typeof item.answer === 'string' ? item.answer : '',
+      primaryClauses,
+      expandedClauses,
+    }];
+  });
 };
 
 const ClauseList: React.FC<{
@@ -126,6 +172,7 @@ const ClauseList: React.FC<{
 export const DocumentChat: React.FC<DocumentChatProps> = ({
   documentId,
   onCitation,
+  onClausesAvailable,
   onAnalyzeClause,
   isAnalyzingClause = false,
 }) => {
@@ -137,13 +184,19 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({
     try {
       const savedMessages = window.localStorage.getItem(`document-chat:${documentId}`);
       const parsedMessages: unknown = savedMessages ? JSON.parse(savedMessages) : [];
-      return Array.isArray(parsedMessages) ? (parsedMessages as ChatMessage[]) : [];
+      return normalizeMessages(parsedMessages);
     } catch {
       return [];
     }
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    onClausesAvailable?.(
+      messages.flatMap((message) => [...message.primaryClauses, ...message.expandedClauses])
+    );
+  }, [messages, onClausesAvailable]);
 
   useEffect(() => {
     try {
