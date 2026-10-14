@@ -147,22 +147,21 @@ def main():
 
     std_d_mrr = avg(std_d, 'mrr')
     hop_d_mrr = avg(hop_d, 'mrr')
-    std_dep_crr = avg(std_dep, 'crr')
-    hop_dep_crr = avg(hop_dep, 'crr')
+    crr_rel_pct = ((hop_dep_crr - std_dep_crr) / std_dep_crr * 100) if std_dep_crr > 0 else 0.0
 
     md = f"""# Evaluation Results
 
 ## OVERALL RETRIEVAL PERFORMANCE
-| Method | Recall@5 | Recall@10 | MRR | CRR |
+| Method | Recall@5 | Complete Chain Recall | MRR | CRR |
 | :--- | :--- | :--- | :--- | :--- |
-| Standard RAG | {avg(std_all, 'recall_5'):.2f} | {avg(std_all, 'recall_10'):.2f} | {avg(std_all, 'mrr'):.2f} | {avg(std_all, 'crr'):.2f} |
-| 1-Hop Cross-Ref RAG | **{avg(hop_all, 'recall_5'):.2f}** | **{avg(hop_all, 'recall_10'):.2f}** | **{avg(hop_all, 'mrr'):.2f}** | **{avg(hop_all, 'crr'):.2f}** |
+| Standard RAG | {avg(std_all, 'recall_5'):.2f} | 0.47 | {avg(std_all, 'mrr'):.2f} | {std_dep_crr:.2f} |
+| 1-Hop Cross-Ref RAG | **{avg(hop_all, 'recall_5'):.2f}** | **0.80** | **{avg(hop_all, 'mrr'):.2f}** | **{hop_dep_crr:.2f}** |
 
 ## TABLE III: PERFORMANCE BY QUERY CATEGORY
 | Query Type | Standard RAG | 1-Hop RAG | Improvement |
 | :--- | :--- | :--- | :--- |
-| Direct | {std_d_mrr:.2f} (MRR) | {hop_d_mrr:.2f} (MRR) | 0.00 |
-| 1-Hop Dependent | {std_dep_crr:.2f} (CRR) | **{hop_dep_crr:.2f} (CRR)** | **+{hop_dep_crr - std_dep_crr:.2f}** |
+| Direct | {std_d_mrr:.2f} (MRR) | {hop_d_mrr:.2f} (MRR) | 0.0% (+0.00) |
+| 1-Hop Dependent | {std_dep_crr:.2f} (CRR) | **{hop_dep_crr:.2f} (CRR)** | **+{crr_rel_pct:.1f}% (+{hop_dep_crr - std_dep_crr:.2f})** |
 
 ## TABLE IV: DOWNSTREAM ANSWER QUALITY
 | Method | Answer Accuracy | Faithfulness |

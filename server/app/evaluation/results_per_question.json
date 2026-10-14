@@ -37,8 +37,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 3.344489336013794,
-    "hop_time": 3.8730857372283936,
+    "std_time": 2.7842841148376465,
+    "hop_time": 2.786543130874634,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -93,8 +93,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.965394973754883,
-    "hop_time": 3.7964413166046143,
+    "std_time": 2.840179443359375,
+    "hop_time": 2.8644485473632812,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -152,8 +152,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.8631813526153564,
-    "hop_time": 2.9611411094665527,
+    "std_time": 2.0511343479156494,
+    "hop_time": 3.685652494430542,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -211,8 +211,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.836934804916382,
-    "hop_time": 3.4558780193328857,
+    "std_time": 1.8552770614624023,
+    "hop_time": 2.8830831050872803,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -267,8 +267,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.6208784580230713,
-    "hop_time": 2.3370962142944336,
+    "std_time": 2.277872323989868,
+    "hop_time": 2.440201759338379,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -326,8 +326,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.166396379470825,
-    "hop_time": 3.484272003173828,
+    "std_time": 2.4229114055633545,
+    "hop_time": 2.660170793533325,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -382,8 +382,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.664285182952881,
-    "hop_time": 2.8637166023254395,
+    "std_time": 2.3419575691223145,
+    "hop_time": 2.9789628982543945,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -441,8 +441,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.1497321128845215,
-    "hop_time": 2.56210994720459,
+    "std_time": 1.8480195999145508,
+    "hop_time": 2.6595475673675537,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -500,8 +500,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.2578823566436768,
-    "hop_time": 2.658315658569336,
+    "std_time": 2.051287889480591,
+    "hop_time": 2.864699125289917,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -559,8 +559,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.3379547595977783,
-    "hop_time": 2.7753353118896484,
+    "std_time": 2.0526154041290283,
+    "hop_time": 2.6581945419311523,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -615,8 +615,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.671792984008789,
-    "hop_time": 2.655975580215454,
+    "std_time": 2.2547342777252197,
+    "hop_time": 2.8652429580688477,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -674,8 +674,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.3788440227508545,
-    "hop_time": 3.1517977714538574,
+    "std_time": 2.043074131011963,
+    "hop_time": 2.97339129447937,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -730,8 +730,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.102515935897827,
-    "hop_time": 3.017759084701538,
+    "std_time": 1.9422533512115479,
+    "hop_time": 2.695319414138794,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -786,8 +786,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1476902961730957,
-    "hop_time": 2.7679853439331055,
+    "std_time": 1.8131341934204102,
+    "hop_time": 2.043649435043335,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -842,8 +842,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.253654956817627,
-    "hop_time": 2.4510509967803955,
+    "std_time": 2.066279649734497,
+    "hop_time": 2.746999979019165,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -898,8 +898,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1135363578796387,
-    "hop_time": 2.495246410369873,
+    "std_time": 2.246973752975464,
+    "hop_time": 2.523789405822754,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -954,8 +954,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1215293407440186,
-    "hop_time": 2.552123546600342,
+    "std_time": 2.307008981704712,
+    "hop_time": 2.497150182723999,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1010,8 +1010,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.189011573791504,
-    "hop_time": 2.3638644218444824,
+    "std_time": 2.423539638519287,
+    "hop_time": 2.423288345336914,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1066,8 +1066,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1972439289093018,
-    "hop_time": 2.314915895462036,
+    "std_time": 1.785832166671753,
+    "hop_time": 2.244119167327881,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1122,8 +1122,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.5499110221862793,
-    "hop_time": 2.450288772583008,
+    "std_time": 2.652111768722534,
+    "hop_time": 3.0664992332458496,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1178,8 +1178,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.0928375720977783,
-    "hop_time": 2.623903512954712,
+    "std_time": 2.0490312576293945,
+    "hop_time": 2.3018438816070557,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1234,8 +1234,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1468489170074463,
-    "hop_time": 2.5671467781066895,
+    "std_time": 1.9960851669311523,
+    "hop_time": 2.6781139373779297,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1290,8 +1290,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1248292922973633,
-    "hop_time": 2.3695075511932373,
+    "std_time": 1.879704475402832,
+    "hop_time": 2.4215359687805176,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1346,8 +1346,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.165829658508301,
-    "hop_time": 2.75457763671875,
+    "std_time": 2.0343034267425537,
+    "hop_time": 2.864637851715088,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1402,8 +1402,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1478848457336426,
-    "hop_time": 2.363528251647949,
+    "std_time": 1.8781893253326416,
+    "hop_time": 2.4234983921051025,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1458,8 +1458,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2498972415924072,
-    "hop_time": 2.4508190155029297,
+    "std_time": 2.2558975219726562,
+    "hop_time": 2.8643271923065186,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1514,8 +1514,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.6801607608795166,
-    "hop_time": 2.337841510772705,
+    "std_time": 1.8454487323760986,
+    "hop_time": 2.659123659133911,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1570,8 +1570,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.15129017829895,
-    "hop_time": 2.3665502071380615,
+    "std_time": 2.0486741065979004,
+    "hop_time": 3.0753378868103027,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -1629,8 +1629,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.3475286960601807,
-    "hop_time": 2.5552024841308594,
+    "std_time": 2.0443313121795654,
+    "hop_time": 2.6628916263580322,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1688,8 +1688,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.163815498352051,
-    "hop_time": 2.8566105365753174,
+    "std_time": 2.1494457721710205,
+    "hop_time": 2.5596606731414795,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1747,8 +1747,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.1475963592529297,
-    "hop_time": 2.6938259601593018,
+    "std_time": 2.0402586460113525,
+    "hop_time": 2.532226800918579,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1806,8 +1806,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.3284518718719482,
-    "hop_time": 3.065294027328491,
+    "std_time": 1.9803495407104492,
+    "hop_time": 2.458824872970581,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1865,8 +1865,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.153195858001709,
-    "hop_time": 2.6610522270202637,
+    "std_time": 1.8405590057373047,
+    "hop_time": 2.664667844772339,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1924,8 +1924,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.3603551387786865,
-    "hop_time": 2.6658742427825928,
+    "std_time": 1.842970848083496,
+    "hop_time": 2.57832670211792,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -1983,8 +1983,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.1475179195404053,
-    "hop_time": 2.8737571239471436,
+    "std_time": 1.9304351806640625,
+    "hop_time": 2.7681803703308105,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2039,8 +2039,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.559133529663086,
-    "hop_time": 2.4821510314941406,
+    "std_time": 1.7480747699737549,
+    "hop_time": 1.9274115562438965,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2095,8 +2095,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.069458484649658,
-    "hop_time": 2.611922025680542,
+    "std_time": 1.747952938079834,
+    "hop_time": 2.4543464183807373,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2151,8 +2151,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2502098083496094,
-    "hop_time": 2.6599669456481934,
+    "std_time": 1.8462018966674805,
+    "hop_time": 2.189225673675537,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2207,8 +2207,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1489429473876953,
-    "hop_time": 2.3547372817993164,
+    "std_time": 2.126835584640503,
+    "hop_time": 2.0287222862243652,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -2260,8 +2260,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.1530280113220215,
-    "hop_time": 2.9718356132507324,
+    "std_time": 2.2564194202423096,
+    "hop_time": 2.670903205871582,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2313,8 +2313,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.1581480503082275,
-    "hop_time": 2.9060122966766357,
+    "std_time": 1.7987892627716064,
+    "hop_time": 2.5169577598571777,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2366,8 +2366,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.3077971935272217,
-    "hop_time": 2.868809223175049,
+    "std_time": 2.0188159942626953,
+    "hop_time": 2.1964027881622314,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2419,8 +2419,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.3711166381835938,
-    "hop_time": 2.672177791595459,
+    "std_time": 2.1142351627349854,
+    "hop_time": 2.609910488128662,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2472,8 +2472,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 4,
     "newly_recovered": false,
-    "std_time": 2.3435111045837402,
-    "hop_time": 2.8529655933380127,
+    "std_time": 1.8952102661132812,
+    "hop_time": 2.6578826904296875,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2531,8 +2531,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.460806369781494,
-    "hop_time": 2.6704986095428467,
+    "std_time": 2.2589964866638184,
+    "hop_time": 2.4451215267181396,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2590,8 +2590,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.139281988143921,
-    "hop_time": 2.9705121517181396,
+    "std_time": 1.6263442039489746,
+    "hop_time": 3.4969122409820557,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2649,8 +2649,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.2070114612579346,
-    "hop_time": 2.890070676803589,
+    "std_time": 1.948265552520752,
+    "hop_time": 2.8774592876434326,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2708,8 +2708,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.097487449645996,
-    "hop_time": 2.8391714096069336,
+    "std_time": 1.8653011322021484,
+    "hop_time": 2.8315787315368652,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2767,8 +2767,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.120929718017578,
-    "hop_time": 2.991619110107422,
+    "std_time": 2.6687510013580322,
+    "hop_time": 2.659095048904419,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2823,8 +2823,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.158357858657837,
-    "hop_time": 2.7964375019073486,
+    "std_time": 2.0573525428771973,
+    "hop_time": 2.5639562606811523,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2879,8 +2879,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2209692001342773,
-    "hop_time": 2.865565776824951,
+    "std_time": 1.9384915828704834,
+    "hop_time": 2.855379581451416,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2935,8 +2935,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1597771644592285,
-    "hop_time": 2.4675545692443848,
+    "std_time": 1.7595620155334473,
+    "hop_time": 2.5388052463531494,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -2991,8 +2991,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2294697761535645,
-    "hop_time": 2.522536516189575,
+    "std_time": 2.2601311206817627,
+    "hop_time": 2.252119302749634,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3047,8 +3047,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.144380569458008,
-    "hop_time": 2.498843193054199,
+    "std_time": 1.7355320453643799,
+    "hop_time": 2.164909601211548,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3103,8 +3103,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.3858816623687744,
-    "hop_time": 2.324680805206299,
+    "std_time": 1.8637549877166748,
+    "hop_time": 2.441704750061035,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3159,8 +3159,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.152360200881958,
-    "hop_time": 2.559274911880493,
+    "std_time": 2.0349373817443848,
+    "hop_time": 2.2887513637542725,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3215,8 +3215,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.1558196544647217,
-    "hop_time": 2.4607391357421875,
+    "std_time": 1.9735000133514404,
+    "hop_time": 2.182669162750244,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3276,8 +3276,8 @@
     "num_expanded_chunks": 2,
     "num_final_chunks": 7,
     "newly_recovered": true,
-    "std_time": 2.1673851013183594,
-    "hop_time": 3.1551713943481445,
+    "std_time": 1.7424530982971191,
+    "hop_time": 2.8688604831695557,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3335,8 +3335,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.145895481109619,
-    "hop_time": 2.763228178024292,
+    "std_time": 2.017141580581665,
+    "hop_time": 2.690131664276123,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3394,8 +3394,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.1508493423461914,
-    "hop_time": 2.97298264503479,
+    "std_time": 1.741610050201416,
+    "hop_time": 2.561439037322998,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3453,8 +3453,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.2578787803649902,
-    "hop_time": 2.8713889122009277,
+    "std_time": 1.7043464183807373,
+    "hop_time": 2.8347008228302,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3512,8 +3512,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.149056911468506,
-    "hop_time": 2.955854892730713,
+    "std_time": 2.0129404067993164,
+    "hop_time": 2.8640296459198,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3571,8 +3571,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.2608494758605957,
-    "hop_time": 2.8656818866729736,
+    "std_time": 2.309823513031006,
+    "hop_time": 3.2294411659240723,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3630,8 +3630,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.258047580718994,
-    "hop_time": 3.0665674209594727,
+    "std_time": 2.152733087539673,
+    "hop_time": 2.9854133129119873,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3689,8 +3689,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.2499120235443115,
-    "hop_time": 2.8658950328826904,
+    "std_time": 2.124828338623047,
+    "hop_time": 3.2733755111694336,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3748,8 +3748,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.148103713989258,
-    "hop_time": 2.7575106620788574,
+    "std_time": 2.2618818283081055,
+    "hop_time": 2.7590408325195312,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -3807,8 +3807,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.1607677936553955,
-    "hop_time": 2.9774515628814697,
+    "std_time": 1.892259120941162,
+    "hop_time": 2.2765986919403076,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3845,8 +3845,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.1735939979553223,
-    "hop_time": 2.1385388374328613,
+    "std_time": 2.1473467350006104,
+    "hop_time": 1.9800136089324951,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3883,8 +3883,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.4408907890319824,
-    "hop_time": 2.2508533000946045,
+    "std_time": 2.0471301078796387,
+    "hop_time": 1.632547378540039,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3921,8 +3921,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.0435574054718018,
-    "hop_time": 2.3543953895568848,
+    "std_time": 1.9463143348693848,
+    "hop_time": 2.362847328186035,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3959,8 +3959,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.3632194995880127,
-    "hop_time": 2.245523691177368,
+    "std_time": 2.0442347526550293,
+    "hop_time": 1.7378756999969482,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -3997,8 +3997,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.0701065063476562,
-    "hop_time": 2.231180429458618,
+    "std_time": 1.6574406623840332,
+    "hop_time": 1.9310331344604492,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -4035,8 +4035,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.0955898761749268,
-    "hop_time": 2.2955398559570312,
+    "std_time": 2.0934858322143555,
+    "hop_time": 2.410169839859009,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -4073,8 +4073,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 0,
     "newly_recovered": false,
-    "std_time": 2.578071117401123,
-    "hop_time": 2.094632625579834,
+    "std_time": 2.0487844944000244,
+    "hop_time": 2.04900860786438,
     "std": {
       "recall_5": 0.0,
       "recall_10": 0.0,
@@ -4129,8 +4129,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.3497533798217773,
-    "hop_time": 2.927471160888672,
+    "std_time": 1.915515661239624,
+    "hop_time": 2.584930419921875,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4185,8 +4185,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2498939037323,
-    "hop_time": 2.561943292617798,
+    "std_time": 1.8471581935882568,
+    "hop_time": 3.0213565826416016,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4248,8 +4248,8 @@
     "num_expanded_chunks": 3,
     "num_final_chunks": 8,
     "newly_recovered": true,
-    "std_time": 2.159595489501953,
-    "hop_time": 2.6597070693969727,
+    "std_time": 1.8954288959503174,
+    "hop_time": 2.6595704555511475,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4304,8 +4304,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.142298698425293,
-    "hop_time": 3.1733083724975586,
+    "std_time": 1.7507193088531494,
+    "hop_time": 2.550468921661377,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4363,8 +4363,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.1517066955566406,
-    "hop_time": 2.565739393234253,
+    "std_time": 1.9562819004058838,
+    "hop_time": 3.368601083755493,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4422,8 +4422,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": true,
-    "std_time": 2.1599056720733643,
-    "hop_time": 2.7478525638580322,
+    "std_time": 2.1535074710845947,
+    "hop_time": 2.805253744125366,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4481,8 +4481,8 @@
     "num_expanded_chunks": 1,
     "num_final_chunks": 6,
     "newly_recovered": false,
-    "std_time": 2.2544147968292236,
-    "hop_time": 2.865614891052246,
+    "std_time": 1.803168535232544,
+    "hop_time": 2.3486533164978027,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4542,8 +4542,8 @@
     "num_expanded_chunks": 2,
     "num_final_chunks": 7,
     "newly_recovered": true,
-    "std_time": 2.1529483795166016,
-    "hop_time": 2.9816579818725586,
+    "std_time": 1.9472310543060303,
+    "hop_time": 2.458536386489868,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4603,8 +4603,8 @@
     "num_expanded_chunks": 2,
     "num_final_chunks": 7,
     "newly_recovered": true,
-    "std_time": 2.2398250102996826,
-    "hop_time": 2.865402936935425,
+    "std_time": 2.077739715576172,
+    "hop_time": 3.451798677444458,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4659,8 +4659,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2565951347351074,
-    "hop_time": 2.912445545196533,
+    "std_time": 2.6716928482055664,
+    "hop_time": 2.930232048034668,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4715,8 +4715,8 @@
     "num_expanded_chunks": 0,
     "num_final_chunks": 5,
     "newly_recovered": false,
-    "std_time": 2.2048470973968506,
-    "hop_time": 2.738722324371338,
+    "std_time": 2.794830560684204,
+    "hop_time": 3.686957836151123,
     "std": {
       "recall_5": 1.0,
       "recall_10": 1.0,
@@ -4730,6 +4730,911 @@
       "recall_5": 1.0,
       "recall_10": 1.0,
       "mrr": 0.2,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 86,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What design standards and subchannel placements are specified in Exhibit A and Exhibit B for the Diet Center\u2019s Gateway Page as referenced in the source clause?",
+    "gold_chunks": [
+      2
+    ],
+    "gold_referenced_chunk": 56,
+    "std_retrieved": [
+      2,
+      57,
+      12,
+      56,
+      13
+    ],
+    "hop_primary": [
+      2,
+      57,
+      12,
+      56,
+      13
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      57,
+      12,
+      56,
+      13
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 3.0767412185668945,
+    "hop_time": 3.2747092247009277,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 87,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "According to the agreement, which specific subchannels within the Fitness, Health, and Food channels are designated for the Diet Center logos as set out in Exhibit B?",
+    "gold_chunks": [
+      2
+    ],
+    "gold_referenced_chunk": 56,
+    "std_retrieved": [
+      2,
+      57,
+      13,
+      56,
+      14
+    ],
+    "hop_primary": [
+      2,
+      57,
+      13,
+      56,
+      14
+    ],
+    "hop_expanded": [],
+    "hop_retrieved": [
+      2,
+      57,
+      13,
+      56,
+      14
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 0,
+    "num_final_chunks": 5,
+    "newly_recovered": false,
+    "std_time": 2.6611545085906982,
+    "hop_time": 3.6096301078796387,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 88,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What does Section 1.2 specify about which party must store and maintain the Gateway Page and the Diet Center, and where the servers for each may be located?",
+    "gold_chunks": [
+      4
+    ],
+    "gold_referenced_chunk": 3,
+    "std_retrieved": [
+      3,
+      2,
+      4,
+      13,
+      14
+    ],
+    "hop_primary": [
+      3,
+      2,
+      4,
+      13,
+      14
+    ],
+    "hop_expanded": [
+      56
+    ],
+    "hop_retrieved": [
+      3,
+      2,
+      4,
+      13,
+      14,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.5970709323883057,
+    "hop_time": 3.3425488471984863,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 89,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What is the required timeframe for creating a new category after the client provides all coded links, descriptions, and images, as set out in Exhibit D?",
+    "gold_chunks": [
+      7
+    ],
+    "gold_referenced_chunk": 57,
+    "std_retrieved": [
+      57,
+      28,
+      12,
+      7,
+      8
+    ],
+    "hop_primary": [
+      57,
+      28,
+      12,
+      7,
+      8
+    ],
+    "hop_expanded": [
+      29,
+      56
+    ],
+    "hop_retrieved": [
+      57,
+      28,
+      12,
+      7,
+      8,
+      29,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": false,
+    "std_time": 2.7657887935638428,
+    "hop_time": 3.2490885257720947,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 90,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What specific impression guarantees and rates are set out in Exhibit B, and how does the agreement treat Exhibit B in terms of incorporation and amendment?",
+    "gold_chunks": [
+      12
+    ],
+    "gold_referenced_chunk": 56,
+    "std_retrieved": [
+      12,
+      57,
+      40,
+      45,
+      47
+    ],
+    "hop_primary": [
+      12,
+      57,
+      40,
+      45,
+      47
+    ],
+    "hop_expanded": [
+      56
+    ],
+    "hop_retrieved": [
+      12,
+      57,
+      40,
+      45,
+      47,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": true,
+    "std_time": 2.457453727722168,
+    "hop_time": 3.5860087871551514,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 91,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What specific terms and procedures does Exhibit D impose on the advertising and promotional inventory, such as requirements for category creation and the impression guarantees referenced in the source clause?",
+    "gold_chunks": [
+      12
+    ],
+    "gold_referenced_chunk": 57,
+    "std_retrieved": [
+      57,
+      12,
+      18,
+      17,
+      15
+    ],
+    "hop_primary": [
+      57,
+      12,
+      18,
+      17,
+      15
+    ],
+    "hop_expanded": [
+      56
+    ],
+    "hop_retrieved": [
+      57,
+      12,
+      18,
+      17,
+      15,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.556896448135376,
+    "hop_time": 3.635688543319702,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 92,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What conditions in Section 3.1 must be satisfied before the payment schedule referenced in Section 6.1 can be increased?",
+    "gold_chunks": [
+      16
+    ],
+    "gold_referenced_chunk": 12,
+    "std_retrieved": [
+      16,
+      28,
+      31,
+      5,
+      12
+    ],
+    "hop_primary": [
+      16,
+      28,
+      31,
+      5,
+      12
+    ],
+    "hop_expanded": [
+      18,
+      13,
+      57,
+      29,
+      56
+    ],
+    "hop_retrieved": [
+      16,
+      28,
+      31,
+      5,
+      12,
+      18,
+      13,
+      57,
+      29,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 5,
+    "num_final_chunks": 10,
+    "newly_recovered": false,
+    "std_time": 3.025240182876587,
+    "hop_time": 3.304623603820801,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 93,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What obligations and performance guarantees concerning advertising and promotional inventory are established in the referenced Section 3.1?",
+    "gold_chunks": [
+      18
+    ],
+    "gold_referenced_chunk": 12,
+    "std_retrieved": [
+      12,
+      13,
+      18,
+      57,
+      14
+    ],
+    "hop_primary": [
+      12,
+      13,
+      18,
+      57,
+      14
+    ],
+    "hop_expanded": [
+      56
+    ],
+    "hop_retrieved": [
+      12,
+      13,
+      18,
+      57,
+      14,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 3.0443713665008545,
+    "hop_time": 3.2109575271606445,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.3333333333333333,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 94,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What performance standards in Section 3.1 could trigger an early termination of the agreement under the provision in Section 10.1?",
+    "gold_chunks": [
+      28
+    ],
+    "gold_referenced_chunk": 12,
+    "std_retrieved": [
+      31,
+      28,
+      30,
+      29,
+      54
+    ],
+    "hop_primary": [
+      31,
+      28,
+      30,
+      29,
+      54
+    ],
+    "hop_expanded": [
+      12,
+      18,
+      13
+    ],
+    "hop_retrieved": [
+      31,
+      28,
+      30,
+      29,
+      54,
+      12,
+      18,
+      13
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 3,
+    "num_final_chunks": 8,
+    "newly_recovered": true,
+    "std_time": 2.7260303497314453,
+    "hop_time": 4.092668056488037,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 95,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What notice and cure period must be provided to terminate the agreement for a material breach under the referenced Section 10.2?",
+    "gold_chunks": [
+      28
+    ],
+    "gold_referenced_chunk": 29,
+    "std_retrieved": [
+      29,
+      30,
+      31,
+      28,
+      52
+    ],
+    "hop_primary": [
+      29,
+      30,
+      31,
+      28,
+      52
+    ],
+    "hop_expanded": [
+      12,
+      18,
+      13
+    ],
+    "hop_retrieved": [
+      29,
+      30,
+      31,
+      28,
+      52,
+      12,
+      18,
+      13
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 3,
+    "num_final_chunks": 8,
+    "newly_recovered": false,
+    "std_time": 2.8654286861419678,
+    "hop_time": 3.6889727115631104,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.25,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 96,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "Upon termination, does Women.com retain any ongoing advertising or promotional obligations to eDiets under the terms set out in Section 3.1, or are its duties limited to the removal of eDiets Content as described in Section 10.3(d)?",
+    "gold_chunks": [
+      30
+    ],
+    "gold_referenced_chunk": 12,
+    "std_retrieved": [
+      7,
+      25,
+      15,
+      10,
+      20
+    ],
+    "hop_primary": [
+      7,
+      25,
+      15,
+      10,
+      20
+    ],
+    "hop_expanded": [
+      57
+    ],
+    "hop_retrieved": [
+      7,
+      25,
+      15,
+      10,
+      20,
+      57
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.5607893466949463,
+    "hop_time": 3.29049015045166,
+    "std": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 0.0,
+      "recall_10": 0.0,
+      "mrr": 0.0,
+      "crr": 0.0,
+      "joint_recall": 0.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 97,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What restrictions on making public statements about the agreement remain enforceable after the contract terminates?",
+    "gold_chunks": [
+      31
+    ],
+    "gold_referenced_chunk": 13,
+    "std_retrieved": [
+      33,
+      39,
+      30,
+      55,
+      31
+    ],
+    "hop_primary": [
+      33,
+      39,
+      30,
+      55,
+      31
+    ],
+    "hop_expanded": [
+      12,
+      18,
+      13
+    ],
+    "hop_retrieved": [
+      33,
+      39,
+      30,
+      55,
+      31,
+      12,
+      18,
+      13
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 3,
+    "num_final_chunks": 8,
+    "newly_recovered": true,
+    "std_time": 3.265240430831909,
+    "hop_time": 3.1639492511749268,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.2,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.2,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 98,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "Which ownership rights and obligations set out in Section 8 remain enforceable after the agreement expires or is terminated?",
+    "gold_chunks": [
+      31
+    ],
+    "gold_referenced_chunk": 18,
+    "std_retrieved": [
+      31,
+      30,
+      39,
+      18,
+      51
+    ],
+    "hop_primary": [
+      31,
+      30,
+      39,
+      18,
+      51
+    ],
+    "hop_expanded": [
+      12,
+      13
+    ],
+    "hop_retrieved": [
+      31,
+      30,
+      39,
+      18,
+      51,
+      12,
+      13
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": false,
+    "std_time": 2.6705992221832275,
+    "hop_time": 3.7852883338928223,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 99,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "What operational requirements and performance metrics are specified in Exhibit D that relate to the use of eDiets content and marks, and how do they interact with the warranties provided in clause 12.2?",
+    "gold_chunks": [
+      41
+    ],
+    "gold_referenced_chunk": 57,
+    "std_retrieved": [
+      41,
+      8,
+      57,
+      7,
+      40
+    ],
+    "hop_primary": [
+      41,
+      8,
+      57,
+      7,
+      40
+    ],
+    "hop_expanded": [
+      56
+    ],
+    "hop_retrieved": [
+      41,
+      8,
+      57,
+      7,
+      40,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 1,
+    "num_final_chunks": 6,
+    "newly_recovered": false,
+    "std_time": 2.4660794734954834,
+    "hop_time": 3.7848474979400635,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 1.0,
+      "crr": 1.0,
+      "joint_recall": 1.0,
+      "accuracy": null,
+      "faithfulness": null
+    }
+  },
+  {
+    "question_id": 100,
+    "document_id": "955573d0-e1de-4835-a7bc-b772b4a1d008",
+    "type": "1-Hop Dependent",
+    "question": "How can the terms governing the category creation timeline and guaranteed advertising impressions be altered under the agreement, and what formal requirements must be met for such a modification?",
+    "gold_chunks": [
+      57
+    ],
+    "gold_referenced_chunk": 56,
+    "std_retrieved": [
+      12,
+      57,
+      28,
+      18,
+      27
+    ],
+    "hop_primary": [
+      12,
+      57,
+      28,
+      18,
+      27
+    ],
+    "hop_expanded": [
+      29,
+      56
+    ],
+    "hop_retrieved": [
+      12,
+      57,
+      28,
+      18,
+      27,
+      29,
+      56
+    ],
+    "num_primary_chunks": 5,
+    "num_expanded_chunks": 2,
+    "num_final_chunks": 7,
+    "newly_recovered": true,
+    "std_time": 2.868410587310791,
+    "hop_time": 2.9458367824554443,
+    "std": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
+      "crr": 0.0,
+      "joint_recall": 0.5,
+      "accuracy": null,
+      "faithfulness": null
+    },
+    "hop": {
+      "recall_5": 1.0,
+      "recall_10": 1.0,
+      "mrr": 0.5,
       "crr": 1.0,
       "joint_recall": 1.0,
       "accuracy": null,

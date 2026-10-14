@@ -48,19 +48,21 @@ async def main():
     user_id = user_res.data[0]["user_id"]
     logger.info(f"Using User ID: {user_id}")
 
-    logger.info("Downloading CUAD dataset from HuggingFace (theatticusproject/cuad)...")
-    # In datasets, theatticusproject/cuad returns rows with a 'pdf' feature containing a pdfplumber.PDF object!
+    logger.info("Streaming CUAD dataset from HuggingFace (theatticusproject/cuad)...")
     dataset = load_dataset(
         "theatticusproject/cuad", 
         split="train", 
-        verification_mode="no_checks"
+        streaming=True
     )
     
     unique_contexts = []
     titles = []
     
-    logger.info("Extracting contract text from CUAD PDF objects...")
+    logger.info("Extracting contract text for Contract 14 (idx 13)...")
     for idx, item in enumerate(dataset):
+        if idx != 13:
+            continue
+            
         pdf_obj = item.get("pdf")
         if not pdf_obj:
             continue
@@ -75,22 +77,20 @@ async def main():
         full_text = "\n\n".join(text_parts).strip()
         
         if len(full_text) > 1000:
-            title = f"Contract_{idx+1}"
+            title = f"Contract_14_eDiets"
             unique_contexts.append(full_text)
             titles.append(title)
             logger.info(f"Loaded {title} ({len(full_text)} characters, {len(pdf_obj.pages)} pages)")
-            
-        if len(unique_contexts) >= 3:
             break
 
     logger.info(f"Found {len(unique_contexts)} contracts to ingest: {titles}")
 
     for idx, (title, context) in enumerate(zip(titles, unique_contexts), 1):
         file_id = str(uuid4())
-        filename = f"CUAD_{title[:30]}_{idx}.txt"
+        filename = f"CUAD_{title}.txt"
         storage_path = f"{user_id}/{file_id}.txt"
         
-        logger.info(f"[{idx}/3] Uploading {filename} to Supabase Storage...")
+        logger.info(f"[{idx}/{len(titles)}] Uploading {filename} to Supabase Storage...")
         
         # Save locally to a temp file and upload
         with tempfile.NamedTemporaryFile(delete=False, suffix=".txt", mode="w", encoding="utf-8") as tmp:
@@ -101,20 +101,15 @@ async def main():
             with open(tmp_path, "rb") as f:
                 supabase.storage.from_("Files").upload(storage_path, f)
                 
-            # Prepare raw_items structure that chunking_service expects from OCR
             # Prepare raw_items structure that chunking_service expects
             import re
-            paragraphs = [p.strip() for p in context.split("\n\n") if p.strip()]
+            lines = [l.strip() for l in context.split("\n") if l.strip()]
             items = []
-            for p in paragraphs:
-                lines = [l.strip() for l in p.split("\n") if l.strip()]
-                if lines and len(lines[0]) < 120 and re.match(r'^(ARTICLE|SECTION|CLAUSE|\d+(\.\d+)*)\b', lines[0], re.I):
-                    items.append({"type": "heading", "md": lines[0], "text": lines[0], "bbox": None})
-                    body = "\n".join(lines[1:])
-                    if body:
-                        items.append({"type": "paragraph", "md": body, "text": body, "bbox": None})
+            for l in lines:
+                if re.match(r'^(?:(?:SECTION|ARTICLE|CLAUSE)\s+\d+(?:\.\d+)*|\d+\.\d+)\b', l, re.I) and len(l) < 120:
+                    items.append({"type": "heading", "md": l, "text": l, "bbox": None})
                 else:
-                    items.append({"type": "paragraph", "md": p, "text": p, "bbox": None})
+                    items.append({"type": "paragraph", "md": l, "text": l, "bbox": None})
 
             raw_items = {
                 "pages": [

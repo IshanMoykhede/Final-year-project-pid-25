@@ -25,10 +25,7 @@ groq_client = Groq(api_key=os.getenv("GROQ_API_KEY", ""))
 
 # Documents to use for generation — only fully processed ones
 TARGET_DOCUMENT_IDS = [
-    "242b451f-c178-4b64-827b-ed35ea096765",  # Commercial Office Lease (26 chunks, 7 links)
-    "c61a4e59-caf3-49e7-a6c1-0fdb8993bcf6",  # Commercial Lease (28 chunks, 7 links)
-    "0ea1bfbc-f422-4130-aed6-b9ddb151e75e",  # Commercial Lease (28 chunks, 8 links)
-    "c1e2f28d-9a7b-4ae0-92dc-74fb2e8fff12",  # Leave Policy (43 chunks, 2 links)
+    "955573d0-e1de-4835-a7bc-b772b4a1d008",  # CUAD Contract 14 eDiets (57 chunks, 15 cross-references)
 ]
 
 # How many Direct questions to generate per chunk
@@ -179,6 +176,9 @@ def main():
 
             if not src_chunk or not tgt_chunk:
                 logger.warning(f"  Skipping ref — missing src or tgt chunk.")
+                continue
+
+            if src_chunk["chunk_no"] == tgt_chunk["chunk_no"]:
                 continue
 
             if not src_chunk.get("text") or not tgt_chunk.get("text"):
