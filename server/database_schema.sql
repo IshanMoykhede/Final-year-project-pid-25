@@ -144,3 +144,5 @@ ON storage.objects
 FOR SELECT
 TO public
 USING (bucket_id = 'Files');
+
+>uvicorn app.main:app --reload
