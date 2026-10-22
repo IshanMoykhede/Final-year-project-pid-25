@@ -6,6 +6,7 @@ from app.router.auth import router as auth_router
 from app.router.file_upload import router as file_upload_router
 from app.router.chat import router as chat_router
 from app.router.analyzer import router as analyzer_router
+from app.router.flash_analysis import router as flash_analysis_router
 
 # Initialize central logging configuration once
 setup_logging()
@@ -27,6 +28,7 @@ app.include_router(auth_router)
 app.include_router(file_upload_router)
 app.include_router(chat_router)
 app.include_router(analyzer_router)
+app.include_router(flash_analysis_router)
 
 @app.get('/')
 def boot_server():
