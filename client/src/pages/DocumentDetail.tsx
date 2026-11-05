@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { getMyFiles, preprocessDocument, viewFile } from '../api/files';
 import type { FileData } from '../api/files';
 import {
@@ -335,14 +335,24 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
           <p className="text-sm uppercase tracking-wide text-gray-500">{previewOnly ? 'Document preview' : 'Document analysis'}</p>
           <h1 className="text-2xl font-bold text-gray-900">{file.file_name}</h1>
         </div>
-        <Button
-          variant="outline"
-          onClick={() => (previewOnly ? window.close() : window.history.back())}
-          className="inline-flex items-center gap-2"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          {previewOnly ? 'Close preview' : 'Back to dashboard'}
-        </Button>
+        <div className="flex flex-wrap items-center gap-2">
+          {!previewOnly && file.status === 'COMPLETED' && (
+            <Link to={`/document/${file.id}/flash-analysis`}>
+              <Button variant="brass" className="inline-flex items-center gap-2">
+                <Sparkles className="h-4 w-4" />
+                Flash Analysis
+              </Button>
+            </Link>
+          )}
+          <Button
+            variant="outline"
+            onClick={() => (previewOnly ? window.close() : window.history.back())}
+            className="inline-flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            {previewOnly ? 'Close preview' : 'Back to dashboard'}
+          </Button>
+        </div>
       </div>
 
       {!previewOnly && preprocessingMessage && (

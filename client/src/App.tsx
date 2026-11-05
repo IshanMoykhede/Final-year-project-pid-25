@@ -6,6 +6,7 @@ import { Landing } from './pages/Landing';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { DocumentDetail } from './pages/DocumentDetail';
+import { FlashAnalysis } from './pages/FlashAnalysis';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/document/:fileId" element={<DocumentDetail />} />
           <Route path="/document/:fileId/preview" element={<DocumentDetail previewOnly />} />
+          <Route path="/document/:fileId/flash-analysis" element={<FlashAnalysis />} />
         </Route>
 
         <Route path="*" element={<Navigate to="/" replace />} />
