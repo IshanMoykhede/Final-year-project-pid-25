@@ -37,9 +37,14 @@ export interface ChatMessageData {
   role: 'user' | 'assistant';
   content: string;
   retrieved_chunk_ids: string[];
+  primary_chunk_ids: string[];
+  expanded_chunk_ids: string[];
   is_expanded: boolean;
   created_at: string;
+  // Resolved clause objects attached by the backend history endpoint
   clauses?: RetrievedClause[];
+  primary_clauses?: RetrievedClause[];
+  expanded_clauses?: RetrievedClause[];
 }
 
 export const getChatHistory = async (documentId: string): Promise<ChatMessageData[]> => {

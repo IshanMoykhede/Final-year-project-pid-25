@@ -49,19 +49,24 @@ async def ask_document_question(
                 "is_expanded": False
             }
             
-            # Extract chunk IDs from response
-            chunk_ids = [c["chunk_id"] for c in response.get("primary_clauses", [])] + [c["chunk_id"] for c in response.get("expanded_clauses", [])]
+            # Separate primary and expanded chunk IDs so they can be restored on reload
+            primary_ids  = [c["chunk_id"] for c in response.get("primary_clauses",  [])]
+            expanded_ids = [c["chunk_id"] for c in response.get("expanded_clauses", [])]
             
             assistant_msg = {
                 "document_id": data.document_id,
                 "user_id": str(current_user["id"]),
                 "role": "assistant",
                 "content": response.get("answer", ""),
-                "retrieved_chunk_ids": chunk_ids,
+                "retrieved_chunk_ids": primary_ids + expanded_ids,   # all IDs for backwards compat
+                "primary_chunk_ids":   primary_ids,                   # new: primary only
+                "expanded_chunk_ids":  expanded_ids,                  # new: expanded only
                 "is_expanded": data.use_1hop_expansion
             }
             
-            supabase.table("chat_messages").insert([user_msg, assistant_msg]).execute()
+            # Insert user message first, then assistant to ensure strictly sequential created_at timestamps
+            supabase.table("chat_messages").insert(user_msg).execute()
+            supabase.table("chat_messages").insert(assistant_msg).execute()
         
         return response
     except Exception as e:
@@ -86,7 +91,7 @@ async def get_chat_history(
         raise HTTPException(status_code=403, detail="You do not have access to this document")
         
     try:
-        history = supabase.table("chat_messages").select("*").eq("document_id", document_id).eq("user_id", str(current_user["id"])).order("created_at", desc=False).order("id", desc=False).execute()
+        history = supabase.table("chat_messages").select("*").eq("document_id", document_id).eq("user_id", str(current_user["id"])).order("created_at", desc=False).order("role", desc=True).order("id", desc=False).execute()
         messages = history.data or []
 
         # Collect all chunk IDs referenced across assistant messages
@@ -110,10 +115,25 @@ async def get_chat_history(
                     "bbox": c.get("bbox") or [],
                 }
 
-        # Attach resolved clauses to messages
+        # Attach resolved clauses to messages, split into primary and expanded
         for msg in messages:
-            msg_chunk_ids = msg.get("retrieved_chunk_ids") or []
-            msg["clauses"] = [chunks_map[cid] for cid in msg_chunk_ids if cid in chunks_map]
+            if msg["role"] == "assistant":
+                primary_ids  = msg.get("primary_chunk_ids")  or []
+                expanded_ids = msg.get("expanded_chunk_ids") or []
+
+                # Fallback: if new columns are empty (old rows), treat all chunks as primary
+                if not primary_ids and not expanded_ids:
+                    all_ids = msg.get("retrieved_chunk_ids") or []
+                    primary_ids = all_ids
+
+                msg["primary_clauses"]  = [chunks_map[cid] for cid in primary_ids  if cid in chunks_map]
+                msg["expanded_clauses"] = [chunks_map[cid] for cid in expanded_ids if cid in chunks_map]
+                # Keep flat list for backwards compat
+                msg["clauses"] = msg["primary_clauses"] + msg["expanded_clauses"]
+            else:
+                msg["primary_clauses"]  = []
+                msg["expanded_clauses"] = []
+                msg["clauses"]          = []
 
         return {"messages": messages}
     except Exception as e:

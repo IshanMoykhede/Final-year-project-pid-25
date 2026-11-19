@@ -64,19 +64,19 @@ const Band: React.FC<{
 const faqs = [
   {
     q: 'How does Legalyze differ from regular AI chat tools?',
-    a: 'General purpose AI tools compress documents into arbitrary token chunks, cutting clauses in half and hallucinating terms when cross-references span multiple pages. Legalyze parses documents along actual statutory and clause boundaries, building a deterministic dependency graph of all cross-references before synthesizing any response.',
+    a: 'General purpose AI tools compress documents into arbitrary chunks and frequently miss related terms across sections. Legalyze structures documents into clause-level segments, retrieves directly relevant passages with semantic context expansion, and links answers back to source coordinates.',
   },
   {
     q: 'Does Legalyze use my confidential agreements to train models?',
-    a: 'No. Never. We enforce a strict Zero Model Training guarantee. Your contracts, NDAs, and deal memos are processed strictly inside private tenant-isolated containers and are discarded or stored according to your data retention policies.',
+    a: 'No. We do not use your uploaded agreements to train our own models. Your documents are stored per user account and are only accessible to you.',
   },
   {
     q: 'Can Legalyze handle scanned PDFs and low-resolution documents?',
-    a: 'Yes. Our processing engine combines specialized judicial OCR with document structure restoration. It correctly recognizes multi-column layouts, tables of contents, margin notes, and signed annexes.',
+    a: 'Legalyze is built primarily for native digital PDFs, DOCX, and TXT files. Scanned PDF extraction depends on document legibility and OCR quality.',
   },
   {
     q: 'What file formats and sizes are supported?',
-    a: 'We support PDF (both native digital and scanned), DOCX, and TXT files up to 200MB or 400 pages per document. Batch analysis and multi-document comparisons are available for enterprise accounts.',
+    a: 'We support PDF, DOCX, and TXT files up to 200MB per document. Note that interactive in-browser preview is currently available for PDF files.',
   },
   {
     q: 'Can Legalyze substitute for my legal counsel?',
@@ -108,9 +108,9 @@ const problems = [
 ];
 
 const steps = [
-  { n: '01', title: 'Upload', body: 'Drop in a PDF. We read it reliably, including multi-column scans, headers, footers, and complex table schedules.' },
-  { n: '02', title: 'Understand', body: 'Legalyze breaks the document into its real clauses and maps how they relate to one another across sections, annexes, and rider addenda.' },
-  { n: '03', title: 'Ask', body: 'Get clear answers, each paired with the exact clauses it came from. Verify citations in one click on the original high-resolution page.' },
+  { n: '01', title: 'Upload', body: 'Drop in a PDF, DOCX, or TXT file. We parse sections, headers, and structured schedules.' },
+  { n: '02', title: 'Understand', body: 'Legalyze segments the document into clauses and indexes key obligations and definitions across sections.' },
+  { n: '03', title: 'Ask', body: 'Get clear answers, each paired with the exact clauses it came from. Verify citations in one click on the original document page.' },
 ];
 
 const pipeline = [
@@ -122,26 +122,40 @@ const pipeline = [
 
 
 // span = column span on lg (grid is 3 cols) → 2/1, 1/2, 2/1 bento rhythm
-const features = [
+interface FeatureItem {
+  icon: React.ComponentType<{ className?: string }>;
+  span: string;
+  title: string;
+  body: string;
+  foot: React.ReactNode;
+}
+
+const features: FeatureItem[] = [
   { icon: CheckCircle2, span: 'lg:col-span-2', title: 'Answers you can verify.', body: 'Every response cites the exact clauses it draws from. Click a citation and the original document opens with the text highlighted directly on the page.', foot: <span className="font-mono text-[11px] font-semibold text-brass-deep">Citation link: Clause 8.3</span> },
-  { icon: Layers, span: '', title: 'Nothing slips through.', body: 'When one clause depends on another, Legalyze brings both into the answer, so you see the full picture, not half of it.', foot: <span className="font-mono text-[11px] text-muted">Dependency graph activated</span> },
-  { icon: Scale, span: '', title: 'Reads like a lawyer.', body: 'Documents are split along real clause boundaries, never cut mid-sentence, so structural and statutory meaning stays intact.', foot: <span className="font-mono text-[11px] text-muted">Clause-boundary parser</span> },
-  { icon: Table, span: 'lg:col-span-2', title: 'Instant overview.', body: 'See the parties, governing law, effective dates, key terms, and a navigable structured map of the document before you read a single page.', foot: <span className="font-mono text-[11px] text-muted">Entity &amp; jurisdiction extractor</span> },
-  { icon: Shield, span: '', title: 'Risk at a glance.', body: 'Flags one-sided rights, uncapped liability, and unbalanced indemnity with a clear score and suggested counter-proposals.', foot: (
+  { icon: Layers, span: '', title: 'Nothing slips through.', body: 'When one clause connects to another, Legalyze pulls related context into the answer so you see the broader picture.', foot: <span className="font-mono text-[11px] text-muted">Semantic context expansion</span> },
+  { icon: Scale, span: '', title: 'Reads with structure.', body: 'Documents are segmented into coherent clause-level chunks so key obligations and definitions stay intact during retrieval.', foot: <span className="font-mono text-[11px] text-muted">Clause-level segmentation</span> },
+  { icon: Table, span: 'lg:col-span-2', title: 'Instant overview.', body: 'See the parties, governing law, document type, clause breakdown, and recommended reading order before you read a single page.', foot: <span className="font-mono text-[11px] text-muted">AI-extracted overview</span> },
+  { icon: Shield, span: '', title: 'Risk at a glance.', body: 'Step through individual clauses to surface potential risks, plain-English explanations, and practical negotiation options.', foot: (
     <div className="flex gap-2">
       <span className="rounded-full border border-olive/30 bg-olive-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-olive">Low</span>
       <span className="rounded-full border border-amber/30 bg-amber-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-amber-deep">Medium</span>
       <span className="rounded-full border border-crimson/30 bg-crimson-soft px-2 py-0.5 font-mono text-[10px] font-semibold text-crimson">High</span>
     </div>
   ) },
-  { icon: Tag, span: 'lg:col-span-2', title: 'Organized automatically.', body: 'Clauses are labeled by type (financial, termination, indemnity, and more) so you can jump straight to what matters without keyword hunting.', foot: <span className="font-mono text-[11px] text-muted">34 standard legal taxonomies</span> },
+  { icon: Tag, span: 'lg:col-span-2', title: 'Organized automatically.', body: 'Clauses are automatically categorized by topic (termination, indemnity, liability, and more) so you can navigate straight to what matters.', foot: <span className="font-mono text-[11px] text-muted">Automated clause categorization</span> },
 ];
 
 const audience = [
-  { icon: Gavel, title: 'Legal teams', body: 'First-pass reviews in a fraction of the time. Run redlines, extract non-standard language, and prepare briefs with zero hallucinated answers.', tag: 'Appellate & Corporate' },
-  { icon: Rocket, title: 'Founders & Startups', body: "Understand what you're signing without a $500 hour. Surface non-standard investor covenants, lockups, and IP assignment clauses instantly.", tag: 'Financing & Commercial' },
-  { icon: Boxes, title: 'Procurement & Ops', body: 'Compare vendor terms quickly and surface discrepancies. Track renewal deadlines, SLA penalties, and data protection commitments.', tag: 'Vendor Risk Analysis' },
-  { icon: GraduationCap, title: 'Students & Researchers', body: 'Study real agreements with clarity and structured navigation. Trace judicial interpretation and boilerplate drift across precedents.', tag: 'Jurisprudential Study' },
+  { icon: Gavel, title: 'Legal teams', body: 'First-pass reviews in a fraction of the time. Review key clauses, extract non-standard terms, and prepare summaries with grounded citations.', tag: 'Commercial & Corporate' },
+  { icon: Rocket, title: 'Founders & Startups', body: "Understand what you're signing without an expensive hourly consult. Surface key covenants, lockups, and IP assignment clauses quickly.", tag: 'Financing & Commercial' },
+  { icon: Boxes, title: 'Procurement & Ops', body: 'Review vendor agreements quickly. Identify termination notice periods, SLA commitments, and liability caps with exact source citations.', tag: 'Vendor Review' },
+  { icon: GraduationCap, title: 'Students & Researchers', body: 'Navigate complex commercial agreements with structured clause indexing and grounded explanations in plain English.', tag: 'Academic Study' },
+];
+
+const securityBadges = [
+  { icon: Lock, label: 'No model training on user files' },
+  { icon: ShieldCheck, label: 'Isolated per-user storage' },
+  { icon: Lock, label: 'HTTPS encrypted in transit' },
 ];
 
 type ClauseId = '14-2' | '18-4' | 'ex-a';
@@ -238,7 +252,7 @@ export const Landing: React.FC = () => {
                 <span className="ml-2 truncate font-mono text-xs text-muted">MSA_ApexTechnologies_v3.pdf · 42 clauses indexed</span>
               </div>
               <div className="hidden items-center gap-3 sm:flex">
-                <span className="rounded-full border border-olive/30 bg-olive-soft px-2.5 py-0.5 font-mono text-[10px] font-medium text-olive">Verified archive</span>
+                <span className="rounded-full border border-olive/30 bg-olive-soft px-2.5 py-0.5 font-mono text-[10px] font-medium text-olive">Indexed document</span>
                 <span className="font-mono text-[11px] text-muted">Page 14 of 38</span>
               </div>
             </div>
@@ -292,7 +306,7 @@ export const Landing: React.FC = () => {
                     <div className="max-w-[90%] rounded-2xl rounded-tr-md border border-sand bg-parchment px-4 py-2.5 shadow-xs">
                       <p className="text-xs font-medium">Can the supplier terminate without notice?</p>
                     </div>
-                    <span className="mr-1 mt-1 font-mono text-[10px] text-muted">Counsel · Verified prompt</span>
+                    <span className="mr-1 mt-1 font-mono text-[10px] text-muted">User inquiry</span>
                   </div>
 
                   <div className="w-full rounded-2xl rounded-tl-md border border-sand bg-surface p-4 shadow-subtle">
@@ -383,11 +397,11 @@ export const Landing: React.FC = () => {
       <Band id="how-it-works" tone="parchment">
         <div className="mb-14 flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
-            <Eyebrow>Deterministic extraction</Eyebrow>
+            <Eyebrow>Structured extraction</Eyebrow>
             <h2 className="font-display text-3xl font-bold sm:text-4xl">From upload to answer in three steps.</h2>
           </div>
           <p className="max-w-md text-sm text-stone-muted">
-            Every file is decomposed structurally into clean legal tokens without cutting sentences or dropping footnote cross-references.
+            Documents are structured into readable clause segments with associated context for accurate retrieval.
           </p>
         </div>
 
@@ -595,10 +609,10 @@ export const Landing: React.FC = () => {
       <Band id="security" tone="surface">
         <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-center">
           <div className="max-w-xl">
-            <Eyebrow>Institutional privacy</Eyebrow>
+            <Eyebrow>Account privacy</Eyebrow>
             <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">Your documents are yours.</h2>
             <p className="mb-6 text-sm leading-relaxed text-stone-muted">
-              Each account is isolated, and files are accessible only to you. We don't sell your data and never use your agreements to train models. Storage is encrypted with AES-256 at rest and TLS 1.3 in transit.
+              Each account is isolated, and files are accessible only to you. We don't sell your data and we do not use your uploaded agreements to train our own models. Traffic is encrypted over HTTPS in transit.
             </p>
             <div className="inline-flex items-center gap-2 rounded-full border border-sand bg-parchment px-4 py-2">
               <ShieldCheck className="h-3.5 w-3.5 text-brass" />
@@ -607,15 +621,12 @@ export const Landing: React.FC = () => {
           </div>
 
           <div className="flex w-full flex-col gap-3 md:w-auto">
-            {[[Lock, 'Zero training policy'], [ShieldCheck, 'SOC 2 Type II compliant infra'], [Lock, 'Tenant-isolated key enclaves']].map(([Icon, label]) => {
-              const I = Icon as typeof Lock;
-              return (
-                <div key={label as string} className="flex items-center gap-3 rounded-full border border-sand bg-parchment px-5 py-3 font-sans text-sm">
-                  <I className="h-4 w-4 text-olive" />
-                  <span>{label as string}</span>
-                </div>
-              );
-            })}
+            {securityBadges.map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-3 rounded-full border border-sand bg-parchment px-5 py-3 font-sans text-sm">
+                <Icon className="h-4 w-4 text-olive" />
+                <span>{label}</span>
+              </div>
+            ))}
           </div>
         </div>
       </Band>

@@ -6,7 +6,6 @@ import { FileUpload } from '../components/documents/FileUpload';
 import { Button } from '../components/common/Button';
 import { Eyebrow } from '../components/common/Eyebrow';
 import { FileText, Trash2, Eye, File, ScanEye } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
 
 export const Dashboard: React.FC = () => {
   const [files, setFiles] = useState<FileData[]>([]);
@@ -31,7 +30,7 @@ export const Dashboard: React.FC = () => {
   }, []);
 
   const handleDelete = async (fileId: string) => {
-    if (!window.confirm('Delete this contract and purge its audit trail? This cannot be undone.')) return;
+    if (!window.confirm('Delete this document? This cannot be undone.')) return;
     try {
       await deleteFile(fileId);
       setFiles((currentFiles) => currentFiles.filter((file) => file.id !== fileId));
@@ -52,7 +51,7 @@ export const Dashboard: React.FC = () => {
     if (norm === 'COMPLETED' || norm === 'READY') {
       return (
         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-medium bg-olive-soft text-olive border border-olive/30">
-          Audited
+          Ready
         </span>
       );
     }
@@ -75,12 +74,12 @@ export const Dashboard: React.FC = () => {
       {/* Header */}
       <section className="px-4 py-6 sm:px-8 rounded-[40px] bg-surface border border-sand shadow-card flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <Eyebrow>Statutory Repository & Benchmarking</Eyebrow>
+          <Eyebrow>Document Repository</Eyebrow>
           <h1 className="font-display text-2xl sm:text-3xl font-normal text-charcoal">
             Good {new Date().getHours() < 12 ? 'morning' : 'afternoon'}.
           </h1>
           <p className="mt-2 text-sm text-stone-muted font-sans max-w-lg">
-            Contracts ingested into isolated graph stores with clause-level coordinate indexing.
+            Contracts indexed with clause-level segmentation and coordinate mapping.
           </p>
         </div>
         <div className="hidden sm:flex items-center gap-2 rounded-full border border-sand bg-parchment px-4 py-2">
@@ -95,7 +94,7 @@ export const Dashboard: React.FC = () => {
       {/* Metrics strip */}
       <section className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         <div className="rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:border-brass/40 transition-colors">
-          <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Audited Contracts</p>
+          <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Uploaded Documents</p>
           <p className="mt-3 font-display text-4xl text-charcoal">{files.length}</p>
         </div>
         <div className="rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:border-brass/40 transition-colors">

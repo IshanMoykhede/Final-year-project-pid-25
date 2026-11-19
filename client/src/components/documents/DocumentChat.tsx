@@ -37,29 +37,6 @@ const getErrorMessage = (error: unknown): string => {
   return 'Unable to get an answer right now. Please try again.';
 };
 
-const isRecord = (value: unknown): value is Record<string, unknown> =>
-  typeof value === 'object' && value !== null && !Array.isArray(value);
-
-const normalizeClause = (value: unknown): RetrievedClause | null => {
-  if (!isRecord(value) || typeof value.chunk_id !== 'string' || typeof value.chunk_no !== 'number') {
-    return null;
-  }
-
-  return {
-    chunk_id: value.chunk_id,
-    chunk_no: value.chunk_no,
-    text: typeof value.text === 'string' ? value.text : '',
-    aliases: Array.isArray(value.aliases)
-      ? value.aliases.filter((alias): alias is string => typeof alias === 'string')
-      : [],
-    similarity: typeof value.similarity === 'number'
-      ? (value.similarity as number)
-      : undefined,
-    is_expanded: value.is_expanded === true,
-    bbox: Array.isArray(value.bbox) ? value.bbox.filter(isRecord) : [],
-  };
-};
-
 
 
 const ClauseList: React.FC<{
@@ -181,13 +158,14 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({
             }
             
             if (nextMsgIndex < history.length) {
-              const nextMsg = history[nextMsgIndex];
+              const nextMsg: ChatMessageData = history[nextMsgIndex];
               pairedMessages.push({
                 id: msg.id,
                 question: msg.content,
                 answer: nextMsg.content,
-                primaryClauses: nextMsg.clauses || [],
-                expandedClauses: []
+                // Use the backend-resolved split; fall back to all-as-primary for old rows
+                primaryClauses:  nextMsg.primary_clauses  ?? nextMsg.clauses ?? [],
+                expandedClauses: nextMsg.expanded_clauses ?? [],
               });
               i = nextMsgIndex + 1;
             } else {
@@ -227,6 +205,7 @@ export const DocumentChat: React.FC<DocumentChatProps> = ({
         document_id: documentId,
         question: trimmedQuestion,
         use_1hop_expansion: useExpansion,
+        save_history: true,
       });
 
       setMessages((currentMessages) => [

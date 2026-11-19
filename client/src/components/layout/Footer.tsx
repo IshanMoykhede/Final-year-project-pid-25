@@ -41,8 +41,8 @@ export const Footer: React.FC = () => (
             </Link>
 
             <p className="mt-4 max-w-xs font-[Inter] text-[13px] leading-5 text-[#8A857C]">
-              Grounded contract intelligence and playbook variance
-              benchmarking engineered for corporate legal counsel.
+              Grounded contract intelligence with clause-level citation tracing
+              and plain-English analysis.
             </p>
           </div>
 
@@ -52,12 +52,12 @@ export const Footer: React.FC = () => (
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a href="/#how-it-works" className={linkClass}>
-                  Architecture & RAG
+                  How It Works
                 </a>
               </li>
               <li>
                 <a href="/#features" className={linkClass}>
-                  Clause Variance Engine
+                  Platform Capabilities
                 </a>
               </li>
               {/* <li>
@@ -79,33 +79,30 @@ export const Footer: React.FC = () => (
             <ul className="mt-4 space-y-2.5">
               <li>
                 <a href="/#faq" className={linkClass}>
-                  FAQ & Security Model
+                  FAQ &amp; Security Model
                 </a>
               </li>
               <li>
-                <span className={mutedClass}>Enterprise Playbook Config</span>
+                <span className={mutedClass}>PDF, DOCX &amp; TXT Support</span>
               </li>
               <li>
-                <span className={mutedClass}>Export API & Audit Trail</span>
-              </li>
-              <li>
-                <span className={mutedClass}>Zero-Retention Policy</span>
+                <span className={mutedClass}>Clause Coordinate Citations</span>
               </li>
             </ul>
           </div>
 
           {/* ===================== REGULATORY & ETHICS ===================== */}
           <div>
-            <p className={headingClass}>Regulatory & Ethics</p>
+            <p className={headingClass}>Principles</p>
             <ul className="mt-4 space-y-2.5">
               <li>
                 <span className={mutedClass}>Strict Citation Grounding</span>
               </li>
               <li>
-                <span className={mutedClass}>Privacy & Data Isolation</span>
+                <span className={mutedClass}>Per-Account Data Isolation</span>
               </li>
               <li>
-                <span className={mutedClass}>Terms of Service</span>
+                <span className={mutedClass}>Informational Tool Only</span>
               </li>
             </ul>
           </div>
