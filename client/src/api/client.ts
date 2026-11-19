@@ -13,16 +13,15 @@ export const apiClient = axios.create({
 apiClient.interceptors.response.use(
   (response) => response,
   async (error) => {
-    const request = error.config as (typeof error.config & { _retry?: boolean }) | undefined;
+    const request = error.config;
 
-    if (error.response?.status === 401 && request && !request._retry && !request.url?.includes('/auth/refresh')) {
-      request._retry = true;
-      try {
-        await apiClient.post('/auth/refresh');
-        return apiClient(request);
-      } catch {
-        window.dispatchEvent(new Event('unauthorized'));
-      }
+    if (
+      error.response?.status === 401 &&
+      request &&
+      !request.url?.includes('/auth/login') &&
+      !request.url?.includes('/auth/register')
+    ) {
+      window.dispatchEvent(new Event('unauthorized'));
     }
 
     return Promise.reject(error);

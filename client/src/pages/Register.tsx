@@ -25,8 +25,18 @@ export const Register: React.FC = () => {
     try {
       await registerUser({ username, email, password });
       navigate('/login');
-    } catch (err: any) {
-      setError(err.response?.data?.detail || 'Registration failed');
+    } catch (err: unknown) {
+      const axiosErr = err as { response?: { data?: { detail?: unknown } } };
+      const detail = axiosErr.response?.data?.detail;
+      let msg = 'Registration failed';
+      if (typeof detail === 'string') {
+        msg = detail;
+      } else if (Array.isArray(detail) && detail.length > 0 && typeof detail[0] === 'object' && detail[0] !== null && 'msg' in detail[0]) {
+        msg = String((detail[0] as { msg: unknown }).msg);
+      } else if (detail && typeof detail === 'object' && 'message' in detail) {
+        msg = String((detail as { message: unknown }).message);
+      }
+      setError(msg);
     } finally {
       setIsLoading(false);
     }

@@ -10,23 +10,39 @@ import { FileText, Trash2, Eye, File, ScanEye } from 'lucide-react';
 export const Dashboard: React.FC = () => {
   const [files, setFiles] = useState<FileData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const fetchFiles = async () => {
-    setIsLoading(true);
+  const fetchFiles = async (silent = false) => {
+    if (!silent) setIsLoading(true);
+    setError(null);
     try {
       const response = await getMyFiles();
       if (response.success && response.data) {
         setFiles(response.data);
       }
-    } catch (error) {
-      console.error('Failed to fetch files', error);
+    } catch (err: unknown) {
+      console.error('Failed to fetch files', err);
+      setError('Unable to load documents. Please check your backend connection.');
     } finally {
-      setIsLoading(false);
+      if (!silent) setIsLoading(false);
     }
   };
 
   useEffect(() => {
     fetchFiles();
+
+    // Auto-refresh pending files every 5s during processing
+    const interval = setInterval(() => {
+      setFiles((current) => {
+        const hasPending = current.some((f) => (f.status || '').toUpperCase() !== 'COMPLETED');
+        if (hasPending) {
+          fetchFiles(true);
+        }
+        return current;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const handleDelete = async (fileId: string) => {
@@ -100,22 +116,28 @@ export const Dashboard: React.FC = () => {
         <div className="rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:border-brass/40 transition-colors">
           <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Verified & Indexed</p>
           <p className="mt-3 font-display text-4xl text-charcoal">
-            {files.filter((f) => f.status.toUpperCase() === 'COMPLETED').length}
+            {files.filter((f) => (f.status || '').toUpperCase() === 'COMPLETED').length}
           </p>
         </div>
         <div className="rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:border-brass/40 transition-colors">
           <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Awaiting Processing</p>
           <p className="mt-3 font-display text-4xl text-charcoal">
-            {files.filter((f) => f.status.toUpperCase() !== 'COMPLETED').length}
+            {files.filter((f) => (f.status || '').toUpperCase() !== 'COMPLETED').length}
           </p>
         </div>
         <div className="rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:border-brass/40 transition-colors">
-           <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Risk Flags</p>
+           <p className="text-[11px] font-mono font-semibold uppercase tracking-wider text-brass-deep">Needs Attention</p>
            <p className="mt-3 font-display text-4xl text-charcoal">
-             {files.filter((f) => f.status.toUpperCase() === 'FAILED' || f.status.toUpperCase() === 'NEEDS ATTENTION').length}
+             {files.filter((f) => ['FAILED', 'NEEDS ATTENTION'].includes((f.status || '').toUpperCase())).length}
            </p>
         </div>
       </section>
+
+      {error && (
+        <div className="rounded-xl border border-rose-300 bg-rose-50 p-4 text-xs font-mono text-rose-800">
+          {error}
+        </div>
+      )}
 
       {/* Upload Drop Zone */}
       <section>
@@ -137,7 +159,7 @@ export const Dashboard: React.FC = () => {
         </div>
 
         {isLoading ? (
-          <div className="flex flex-col items-center justify-center py-20 min-h-[300px]">
+          <div className="flex flex-col items-center justify-center py-20 min-h-75">
              <div className="space-y-4 w-full max-w-sm">
                 <div className="flex items-center justify-between rounded-2xl border border-sand bg-parchment/60 p-4">
                   <div className="flex items-center gap-3">
@@ -170,7 +192,7 @@ export const Dashboard: React.FC = () => {
             {files.map((file) => (
               <div
                 key={file.id}
-                className="group rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:shadow-card hover:border-brass/40 transition-all flex flex-col justify-between min-h-[220px]"
+                className="group rounded-3xl border border-sand bg-surface p-6 shadow-subtle hover:shadow-card hover:border-brass/40 transition-all flex flex-col justify-between min-h-55"
               >
                 <div>
                   <div className="flex items-start justify-between gap-3 mb-5">

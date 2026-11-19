@@ -538,49 +538,6 @@ export const Landing: React.FC = () => {
         </div>
       </Band>
 
-      {/* ========================== 7. BENCHMARK (COMMENTED OUT: UNPROVABLE CLAIMS) ========================== */}
-      {/*
-      <Container id="cuad-benchmark">
-        <div className="mb-12 max-w-2xl">
-          <Eyebrow>Empirical proof</Eyebrow>
-          <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">Tested on real contracts.</h2>
-          <p className="text-base text-stone-muted sm:text-lg">
-            In our benchmark on the CUAD legal contract dataset, Legalyze recovered every related clause that a standard AI search missed, roughly 1 in 4 in our tests.
-          </p>
-        </div>
-
-        <div className="grid gap-5 md:grid-cols-2">
-          <div className="rounded-3xl border border-sand bg-parchment p-8">
-            <span className="mb-4 block font-sans text-sm font-medium text-muted">Standard AI vector search</span>
-            <div className="mb-2 font-display text-[44px] font-normal leading-tight text-crimson">Missed 25.7%</div>
-            <p className="text-sm leading-relaxed text-stone-muted">
-              Missed 25.7% of related clauses when cross-references were separated by more than 10 pages or referenced in appendix sections.
-            </p>
-            <div className="mt-8">
-              <div className="mb-2 flex justify-between font-mono text-xs text-muted"><span>Related clauses found</span><span className="font-medium text-crimson">74.3%</span></div>
-              <div className="h-2 rounded-full bg-sand/70"><div className="h-full rounded-full bg-crimson/70" style={{ width: '74.3%' }} /></div>
-            </div>
-          </div>
-
-          <div className="rounded-3xl border-2 border-charcoal bg-surface p-8 shadow-card">
-            <span className="mb-4 block font-sans text-sm font-medium text-brass-deep">Legalyze structural graph</span>
-            <div className="mb-2 font-display text-[44px] font-normal leading-tight">Missed none</div>
-            <p className="text-sm leading-relaxed text-stone-muted">
-              Missed none in our benchmark across all interconnected clause clusters, cross-liability riders, and governing law schedules.
-            </p>
-            <div className="mt-8">
-              <div className="mb-2 flex justify-between font-mono text-xs text-muted"><span>Related clauses found</span><span className="font-semibold text-olive">100%</span></div>
-              <div className="h-2 rounded-full bg-sand/70"><div className="h-full w-full rounded-full bg-olive" /></div>
-            </div>
-          </div>
-        </div>
-
-        <p className="mt-5 font-mono text-xs text-muted">
-          * Tested across 510 commercial contracts evaluated on CUAD (Contract Understanding Atticus Dataset) benchmarks.
-        </p>
-      </Container>
-      */}
-
       {/* ========================== 8. AUDIENCE ========================== */}
       <Band tone="parchment">
         <div className="mb-12 max-w-2xl">

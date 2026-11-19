@@ -73,8 +73,18 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onUploadSuccess }) => {
         setIsSuccess(false);
         onUploadSuccess();
       }, 1500);
-    } catch (err: any) {
-      setError(err.response?.data?.detail?.message || err.response?.data?.detail || 'Failed to upload file');
+    } catch (err: unknown) {
+      const axiosErr = err as { response?: { data?: { detail?: unknown } } };
+      const detail = axiosErr.response?.data?.detail;
+      let msg = 'Failed to upload file';
+      if (typeof detail === 'string') {
+        msg = detail;
+      } else if (Array.isArray(detail) && detail.length > 0 && typeof detail[0] === 'object' && detail[0] !== null && 'msg' in detail[0]) {
+        msg = String((detail[0] as { msg: unknown }).msg);
+      } else if (detail && typeof detail === 'object' && 'message' in detail) {
+        msg = String((detail as { message: unknown }).message);
+      }
+      setError(msg);
       setIsUploading(false);
     }
   };
@@ -144,7 +154,7 @@ export const FileUpload: React.FC<FileUploadProps> = ({ onUploadSuccess }) => {
                 <div className="w-14 h-14 mb-4 flex items-center justify-center rounded-full border border-sand bg-parchment">
                    <FileIcon className="w-6 h-6 text-brass-deep" />
                 </div>
-                <p className="font-display text-base font-bold text-charcoal truncate max-w-[250px] sm:max-w-xs mb-1">
+                <p className="font-display text-base font-bold text-charcoal truncate max-w-62.5 sm:max-w-xs mb-1">
                   {selectedFile.name}
                 </p>
                 <p className="font-mono text-[11px] text-muted mb-6">

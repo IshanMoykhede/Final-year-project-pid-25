@@ -27,8 +27,18 @@ export const Login: React.FC = () => {
       await loginUser({ email, password });
       login();
       navigate('/dashboard');
-    } catch (err: any) {
-      setError(err.response?.data?.detail || 'Invalid email or password');
+    } catch (err: unknown) {
+      const axiosErr = err as { response?: { data?: { detail?: unknown } } };
+      const detail = axiosErr.response?.data?.detail;
+      let msg = 'Invalid email or password';
+      if (typeof detail === 'string') {
+        msg = detail;
+      } else if (Array.isArray(detail) && detail.length > 0 && typeof detail[0] === 'object' && detail[0] !== null && 'msg' in detail[0]) {
+        msg = String((detail[0] as { msg: unknown }).msg);
+      } else if (detail && typeof detail === 'object' && 'message' in detail) {
+        msg = String((detail as { message: unknown }).message);
+      }
+      setError(msg);
     } finally {
       setIsLoading(false);
     }

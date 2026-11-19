@@ -16,7 +16,7 @@ interface RenderedPage {
   pageNumber: number;
   width: number;
   height: number;
-  canvas: HTMLCanvasElement;
+  dataUrl: string;
 }
 
 const numberValue = (box: PdfBox, keys: string[]): number | null => {
@@ -75,13 +75,16 @@ export const DocumentPdfViewer: React.FC<DocumentPdfViewerProps> = ({ url, selec
           const canvas = document.createElement('canvas');
           canvas.width = viewport.width;
           canvas.height = viewport.height;
-          await page.render({ canvasContext: canvas.getContext('2d')!, viewport }).promise;
-          renderedPages.push({
-            pageNumber,
-            width: baseViewport.width,
-            height: baseViewport.height,
-            canvas,
-          });
+          const ctx = canvas.getContext('2d');
+          if (ctx) {
+            await page.render({ canvasContext: ctx, viewport }).promise;
+            renderedPages.push({
+              pageNumber,
+              width: baseViewport.width,
+              height: baseViewport.height,
+              dataUrl: canvas.toDataURL(),
+            });
+          }
         }
         if (!cancelled) setPages(renderedPages);
       } catch (loadError) {
@@ -93,8 +96,8 @@ export const DocumentPdfViewer: React.FC<DocumentPdfViewerProps> = ({ url, selec
   }, [url]);
 
   useEffect(() => {
-    if (!selectedClause || !containerRef.current) return;
-    const firstBox = selectedClause.bbox.find((box) => {
+    if (!selectedClause || !containerRef.current || !selectedClause.bbox) return;
+    const firstBox = (selectedClause.bbox ?? []).find((box) => {
       const pageNumber = numberValue(box, ['page_number', 'page']);
       return pageNumber !== null;
     });
@@ -109,10 +112,10 @@ export const DocumentPdfViewer: React.FC<DocumentPdfViewerProps> = ({ url, selec
   return (
     <div ref={containerRef} className="h-full min-h-0 space-y-4 overflow-auto rounded-lg bg-slate-200 p-3">
       {pages.map((page) => {
-        const boxes = selectedClause?.bbox.filter((box) => numberValue(box, ['page_number', 'page']) === page.pageNumber) ?? [];
+        const boxes = (selectedClause?.bbox ?? []).filter((box) => numberValue(box, ['page_number', 'page']) === page.pageNumber);
         return (
           <div key={page.pageNumber} data-page-number={page.pageNumber} className="relative mx-auto w-fit shadow-md">
-            <img src={page.canvas.toDataURL()} alt={`Page ${page.pageNumber}`} className="block max-w-full" />
+            <img src={page.dataUrl} alt={`Page ${page.pageNumber}`} className="block max-w-full" />
             {boxes.map((box, index) => {
               const style = getBoxStyle(box, page.width, page.height);
               return style ? <div key={`${page.pageNumber}-${index}`} className="pointer-events-none absolute border-2 border-amber-400 bg-amber-300/30 shadow-[0_0_0_3px_rgba(251,191,36,0.18)]" style={style} /> : null;

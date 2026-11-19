@@ -93,9 +93,6 @@ export const Navbar: React.FC = () => {
                   <a href="/#features" className={navLinkClass}>
                     Playbook Auditing
                   </a>
-                  {/* <a href="/#benchmarks" className={navLinkClass}>
-                    Benchmarks
-                  </a> */}
                   <a href="/#faq" className={navLinkClass}>
                     FAQ
                   </a>

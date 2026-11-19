@@ -64,10 +64,11 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
   const activeAnalysisChunkIdRef = useRef<string | null>(null);
   const citationCacheRef = useRef(new Map<string, RetrievedClause>());
   const citationRequestsRef = useRef(new Map<string, Promise<RetrievedClause>>());
+  const previewUrlRef = useRef<string>('');
 
   const rememberChatClauses = useCallback((clauses: RetrievedClause[]) => {
     clauses.forEach((clause) => {
-      if (clause.bbox.length) citationCacheRef.current.set(clause.chunk_id, clause);
+      if (clause.bbox?.length) citationCacheRef.current.set(clause.chunk_id, clause);
     });
   }, []);
 
@@ -236,7 +237,9 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
             if (String(fileMatch.content_type).includes('word') || contentType.includes('officedocument') || contentType.includes('zip')) {
               setPreviewError('DOCX preview is not supported in this viewer. Please download the file to view it.');
             } else if (contentType.includes('pdf') || String(fileMatch.content_type).includes('pdf')) {
+              if (previewUrlRef.current) URL.revokeObjectURL(previewUrlRef.current);
               const objectUrl = URL.createObjectURL(blob);
+              previewUrlRef.current = objectUrl;
               setPreviewUrl(objectUrl);
             } else {
               setPreviewError('This file type cannot be previewed in the browser.');
@@ -295,8 +298,9 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
 
     return () => {
       isMounted = false;
-      if (previewUrl) {
-        URL.revokeObjectURL(previewUrl);
+      if (previewUrlRef.current) {
+        URL.revokeObjectURL(previewUrlRef.current);
+        previewUrlRef.current = '';
       }
     };
   }, [fileId, previewOnly]);
@@ -679,8 +683,10 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                           {overview.jurisdiction}
                         </div>
                       </div>
-                      {overview.parties.length > 0 && <p><strong>Parties:</strong> {overview.parties.join(', ')}</p>}
-                      {overview.recommended_roadmap.length > 0 && (
+                      {overview.parties && overview.parties.length > 0 && (
+                        <p><strong>Parties:</strong> {overview.parties.join(', ')}</p>
+                      )}
+                      {overview.recommended_roadmap && overview.recommended_roadmap.length > 0 && (
                         <section className="space-y-2">
                           <h3 className="font-semibold text-gray-900">Recommended reading order</h3>
                           {overview.recommended_starting_point && (
@@ -696,7 +702,7 @@ export const DocumentDetail: React.FC<DocumentDetailProps> = ({ previewOnly = fa
                           </ol>
                         </section>
                       )}
-                      {overview.breakdown.length > 0 && (
+                      {overview.breakdown && overview.breakdown.length > 0 && (
                         <section className="space-y-2">
                           <h3 className="font-semibold text-gray-900">Clause breakdown</h3>
                           <ul className="space-y-1">

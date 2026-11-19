@@ -64,6 +64,9 @@ export const viewFile = async (fileId: string) => {
   // Fetch the actual file blob using the temporary signed URL
   if (signedUrl) {
     const fileResponse = await fetch(signedUrl);
+    if (!fileResponse.ok) {
+      throw new Error(`Failed to load document preview (HTTP ${fileResponse.status}).`);
+    }
     const blob = await fileResponse.blob();
     return {
       data: blob,
@@ -132,11 +135,18 @@ export const preprocessDocument = async (
       const payload = line.slice(5).trim();
       if (!payload) continue;
 
-      const event = JSON.parse(payload) as PreprocessEvent;
-      events.push(event);
-      onEvent?.(event);
-      if (event.status === 'error') {
-        throw new Error(event.message || `Document preprocessing failed during ${event.step.toLowerCase()}.`);
+      try {
+        const event = JSON.parse(payload) as PreprocessEvent;
+        events.push(event);
+        onEvent?.(event);
+        if (event.status === 'error') {
+          throw new Error(event.message || `Document preprocessing failed during ${event.step.toLowerCase()}.`);
+        }
+      } catch (parseErr) {
+        if (parseErr instanceof Error && parseErr.message.includes('Document preprocessing failed')) {
+          throw parseErr;
+        }
+        // Ignore malformed non-JSON heartbeats/comments
       }
     }
   };

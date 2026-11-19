@@ -50,12 +50,6 @@ const ClauseList: React.FC<{
 
   if (!clauses.length) return null;
 
-  const handleAnalyze = () => {
-    if (!onAnalyzeClause) return;
-    const clause = clauses[0];
-    if (clause) onAnalyzeClause(clause);
-  };
-
   return (
     <div className="overflow-hidden rounded-xl border border-sand bg-[#FAF7F0]/60 shadow-xs transition-colors">
       <button
@@ -83,16 +77,17 @@ const ClauseList: React.FC<{
             >
               <div className="mb-2 flex flex-wrap items-center justify-between gap-2 border-b border-sand/50 pb-2">
                 <span className="font-serif font-semibold tracking-tight text-charcoal">
-                  {clause.aliases.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
+                  {clause.aliases?.length ? clause.aliases.join(', ') : `Clause ${clause.chunk_no}`}
                 </span>
 
                 <div className="flex items-center gap-2">
                   {onAnalyzeClause && (
                     <button
                       type="button"
-                      onClick={handleAnalyze}
+                      onClick={() => onAnalyzeClause(clause)}
                       disabled={isAnalyzingClause}
-                      className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"                    >
+                      className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
+                    >
                       {isAnalyzingClause ? 'Analyzing…' : 'Analyze'}
                     </button>
                   )}
@@ -100,8 +95,8 @@ const ClauseList: React.FC<{
                     <button
                       type="button"
                       onClick={() => onCitation(clause)}
-                      disabled={!clause.bbox.length}
-                      title={clause.bbox.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
+                      disabled={!clause.bbox?.length}
+                      title={clause.bbox?.length ? 'Locate and highlight this citation in document preview' : 'No coordinates available'}
                       className="inline-flex items-center gap-1 rounded-md border border-brass/40 bg-surface px-2.5 py-1 font-mono text-[11px] font-medium text-brass-deep transition hover:bg-brass-subtle hover:border-brass disabled:cursor-not-allowed disabled:opacity-40"
                     >
                       <LocateFixed className="h-3 w-3 text-brass" />

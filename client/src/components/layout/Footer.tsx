@@ -60,11 +60,6 @@ export const Footer: React.FC = () => (
                   Platform Capabilities
                 </a>
               </li>
-              {/* <li>
-                <a href="/#benchmarks" className={linkClass}>
-                  CUAD Benchmark Validation
-                </a>
-              </li> */}
               <li>
                 <Link to="/dashboard" className={linkClass}>
                   Review Console

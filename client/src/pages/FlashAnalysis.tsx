@@ -51,9 +51,9 @@ export const FlashAnalysis: React.FC = () => {
     (event) => PREPROCESS_STEPS.includes(event.step) && event.status === 'completed'
   ).length;
   const preprocessProgress = Math.round((completedPreprocessSteps / PREPROCESS_STEPS.length) * 100);
-  const categories = analysis?.report.category_analysis ?? [];
-  const warnings = analysis?.report.important_warnings ?? [];
-  const nextSteps = analysis?.report.before_you_sign ?? [];
+  const categories = analysis?.report?.category_analysis ?? [];
+  const warnings = analysis?.report?.important_warnings ?? [];
+  const nextSteps = analysis?.report?.before_you_sign ?? [];
 
   useEffect(() => {
     let isMounted = true;
@@ -92,7 +92,7 @@ export const FlashAnalysis: React.FC = () => {
     setIsGenerating(true);
     setProgressEvents([]);
     try {
-      if (file.status.toUpperCase() !== 'COMPLETED') {
+      if ((file.status || '').toUpperCase() !== 'COMPLETED') {
         setProgressStatus('preprocessing');
         await preprocessDocument(file.id, (event) => {
           setProgressEvents((current) => {
@@ -110,7 +110,7 @@ export const FlashAnalysis: React.FC = () => {
           throw new Error('Preprocessing finished, but the document status could not be retrieved.');
         }
         setFile(refreshedFile);
-        if (refreshedFile.status.toUpperCase() !== 'COMPLETED') {
+        if ((refreshedFile.status || '').toUpperCase() !== 'COMPLETED') {
           throw new Error(`Preprocessing finished with document status "${refreshedFile.status}".`);
         }
       }
@@ -200,7 +200,7 @@ export const FlashAnalysis: React.FC = () => {
                   : analysis ? 'Run again' : 'Generate analysis'}
               </Button>
             </div>
-            {file.status.toUpperCase() !== 'COMPLETED' && (
+            {(file.status || '').toUpperCase() !== 'COMPLETED' && (
               <p className="mt-4 text-xs text-amber-deep">
                 The document will be preprocessed first. Live updates from the existing server progress stream will appear here.
               </p>
@@ -364,7 +364,7 @@ export const FlashAnalysis: React.FC = () => {
             </div>
           )}
 
-          {analysis && (
+          {analysis?.report && (
             <div className="space-y-6">
               <section className="rounded-3xl border border-brass/30 bg-brass-subtle p-6 sm:p-8">
                 <div className="flex items-start gap-4">
